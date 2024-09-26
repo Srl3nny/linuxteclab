@@ -38,10 +38,10 @@ Você pode remover um diretório com o comando rmdir.
 $ rmdir dir
 ```
 
-<span style="color: #000000;">Uma dica para não apagar dados indesejados com o</span> <span style="color: #000000;">rm</span><span style="color: #000000;">, é sempre recomendado usar o caminho absoluto do diretório. Por exemplo caso queira excluir os dados dentro da pasta “/home/bruno/backup”, use:</span>
+Uma dica para não apagar dados indesejados com o rm, é sempre recomendado usar o caminho absoluto do diretório. Por exemplo caso queira excluir os dados dentro da pasta “/home/bruno/backup”, use:
 
 ```bash
 $ rm -rf /home/bruno/backup/
 ```
 
-&nbsp;<span style="color: #000000;">Isso evita o erro de usar o comando</span> <span style="color: #000000;">rm \*</span> <span style="color: #000000;">pensando estar dentro da pasta backup quando na verdade estava dentro de outra pasta. Lembre-se o terminal não tem lixeira!</span>
+Isso evita o erro de usar o comando rm pensando estar dentro da pasta backup quando na verdade estava dentro de outra pasta. Lembre-se o terminal não tem lixeira!
