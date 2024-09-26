@@ -3,65 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout com Dois Sidebars</title>
+  <title>LinuxTecLab</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
-  <style>
-    body {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
-    .content {
-      flex: 1;
-    }
-    .sidebar-left {
-      height: 100vh;
-      position: sticky;
-      top: 0;
-      background-color: #134b5f; /* Azul escuro */
-      color: white; /* Texto branco */
-    }
-    .sidebar-right {
-      height: 100vh;
-      position: sticky;
-      top: 0;
-      background-color: #f8f9fa; /* Mantém o fundo claro */
-    }
-    .main-content {
-      padding: 20px;
-      background-color: #d0e7ff; /* Azul claro */
-    }
-    .nav-link {
-      color: white; /* Links em branco */
-    }
-    .nav-link:hover {
-      color: #cccccc; /* Cor ao passar o mouse */
-    }
-    .home-btn {
-      margin-top: 20px;
-    }
-    code {
-    
-    color: #ffffff;
-    padding: 2px 4px;
-    border-radius: 4px;
-    font-size: 90%;
-}
-
-/* Estilo para blocos de código */
-pre {
-    background-color: #282c34;
-   
-    padding: 10px;
-    border-radius: 6px;
-    overflow-x: auto;
-}
-pre code {
-    color: #ffffff; /* cor do texto */
-}
-  </style>
+  <link href="css/stylesaux.css" rel="stylesheet" />
 </head>
 <body>
   <div class="container-fluid">
@@ -70,46 +16,46 @@ pre code {
       <nav class="col-md-2 sidebar-left">
         <div class="position-sticky">
             <a href="index.html" class="btn btn-primary home-btn">Home</a>
-          <h5 class="pt-3">Comandos</h5>
+          
           <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/cd.md')">cd</a>
+              <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/cd.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">cd</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/ls.md')">ls</a>
+              <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/ls.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">ls</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/touch.md')">touch</a>
+            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/touch.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">touch</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/file.md')">file</a>
+            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/file.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">file</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/cat.md')">cat</a>
+              <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/cat.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">cat</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/less.md')">less</a>
+            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/less.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">less</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/history.md')">history</a>
+          <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/history.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">history</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/cp.md')">cp</a>
+          <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/cp.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">cp</a>
           </li>
           <li class="nav-item"></li>
-            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/mv.md')">mv</a>
+            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/mv.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">mv</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/mkdir.md')">mkdir</a>
+              <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/mkdir.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">mkdir</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/rm.md')">rm</a>
+            <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/rm.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">rm</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/find.md')">find</a>
+          <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/find.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">find</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/help.md')">help</a>
+          <a class="nav-link" href="#" onclick="loadMarkdown('conteudos/linhadecomando/help.md')"><img src="assets/setas.svg" style="width: 16px; height: 16px; margin-right: 5px;" alt=">>">help</a>
           </li>
 
             <!-- Adicione mais links conforme necessário -->
