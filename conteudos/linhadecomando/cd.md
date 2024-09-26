@@ -7,13 +7,17 @@ Agora que você sabe onde está, vamos nos movimentar um pouco no sistema de arq
 
 Agora que você sabe como funcionam os caminhos, só precisamos de algo que nos ajude a mudar para o diretório que desejamos. Felizmente, temos cd ou “change directory” para fazer isso.
 
-`$ cd /home/bruno/backup`
+```bash
+$ cd /home/bruno/backup
+```
 
 Aqui me movi para dentro do diretório /home/bruno/backup.
 
 Agora estando dentro desse diretório, tenho ali uma outra pasta chamada isos, posso navegar até ela com
 
-`$ cd iso`
+```bash
+$ cd iso
+```
 
 Pode ser muito cansativo navegar por caminhos absolutos e relativos o tempo todo, felizmente existem alguns atalhos para ajudá-lo.
 
