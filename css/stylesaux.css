@@ -53,3 +53,24 @@ pre {
 pre code {
   color: #ffffff; /* cor do texto */
 }
+.menu-item {
+  display: block; /* Faz com que cada link ocupe uma linha inteira */
+  align-items: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333;
+  padding: 10px; /* Espaçamento interno */
+}
+
+.menu-item:hover {
+  color: #007bff;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item img {
+  margin-right: 5px;
+  width: 16px;  /* Define a largura da imagem */
+  height: 16px; /* Define a altura da imagem */
+  vertical-align: middle; /* Mantém a imagem alinhada ao texto */
+}
