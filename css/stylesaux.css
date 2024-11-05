@@ -53,12 +53,17 @@ pre {
 pre code {
   color: #ffffff; /* cor do texto */
 }
+code {
+  color: hsl(0, 100%, 0%);  /* Altera a cor do texto */
+  font-weight: bold;  /* Altera o texto para negrito */
+  
+}
 .menu-item {
   display: block; /* Faz com que cada link ocupe uma linha inteira */
   align-items: center;
   margin-bottom: 10px;
   text-decoration: none;
-  color: #333;
+  color: #fff;
   padding: 10px; /* Espaçamento interno */
 }
 

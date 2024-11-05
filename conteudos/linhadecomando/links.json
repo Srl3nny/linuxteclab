@@ -1,0 +1,72 @@
+{ "arquivos": [
+  {
+    "nome": "pwd",
+    "url": "conteudos/linhadecomando/1-pwd.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "cd",
+    "url": "conteudos/linhadecomando/2-cd.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "ls",
+    "url": "conteudos/linhadecomando/3-ls.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "touch",
+    "url": "conteudos/linhadecomando/4-touch.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "file",
+    "url": "conteudos/linhadecomando/5-file.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "cat",
+    "url": "conteudos/linhadecomando/6-cat.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "less",
+    "url": "conteudos/linhadecomando/7-less.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "history",
+    "url": "conteudos/linhadecomando/8-history.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "cp",
+    "url": "conteudos/linhadecomando/9-cp.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "mv",
+    "url": "conteudos/linhadecomando/10-mv.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "mkdir",
+    "url": "conteudos/linhadecomando/11-mkdir.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "rm",
+    "url": "conteudos/linhadecomando/12-rm.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "man",
+    "url": "conteudos/linhadecomando/13-man.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "find",
+    "url": "conteudos/linhadecomando/14-find.md",
+    "imagem": "assets/setas.svg"
+  }
+] }
