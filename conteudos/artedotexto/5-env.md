@@ -12,7 +12,7 @@ E esse comando?
 $ echo $USER
 ```
 
-Você deverá ver seu nome de usuário! De onde vem essa informação? Está vindo de suas variáveis ​​de ambiente.
+Você deverá ver seu nome de usuário! De onde vem essa informação? Está vindo de suas variáveis de ambiente.
 
 Você pode visualizá-los digitando:
 

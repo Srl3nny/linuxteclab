@@ -13,7 +13,7 @@ Ok, mas reparou que foi exibido na tela:
 ls: não foi possível acessar '/tmp/naoexiste': Arquivo ou diretório inexistente
 ```
 
-Agora você provavelmente está pensando: aquela mensagem não deveria ter sido enviada para o arquivo? Na verdade, há outro fluxo de E/S em jogo aqui chamado erro padrão (stderr). Por padrão, o stderr também envia sua saída para a tela, é um fluxo completamente diferente do stdout.
+Agora você provavelmente está pensando: aquela mensagem não deveria ter sido enviada para o arquivo? Na verdade, há outro fluxo de E/S em jogo aqui chamado erro padrão (stderr). Por padrão, o stderr também envia sua saída para a tela, mas é um fluxo completamente diferente do stdout.
 
 Então você precisará redirecionar sua saída de uma maneira diferente. Teremos que usar descritores de arquivo. Um descritor de arquivo é um número não negativo usado para acessar um arquivo ou fluxo. Iremos aprofundar isso mais tarde, mas por enquanto sabemos que o descritor de arquivo para stdin, stdout e stderr é 0, 1 e 2 respectivamente. Então agora, se quisermos redirecionar nosso stderr para o arquivo, podemos fazer isso:
 
@@ -35,7 +35,7 @@ Existe uma maneira mais curta de redirecionar stdout e stderr para um arquivo, e
 $ ls /tmp/naoexiste &> arq.txt
 ```
 
-Agora, e se eu não quiser nada desse lixo e quiser me livrar completamente das mensagens stderr? Bem, você também pode redirecionar a saída para uma chamada de arquivo especial /dev/null e ela descartará qualquer entrada.
+Agora, e se eu não quiser nada desse lixo e quiser se livrar completamente das mensagens stderr? Bem, você também pode redirecionar a saída para uma chamada de arquivo especial /dev/null e ela descartará qualquer entrada.
 
 ```bash
 $ ls /tmp/naoexiste 2> /dev/null

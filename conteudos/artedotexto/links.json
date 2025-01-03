@@ -38,5 +38,30 @@
     "nome": "paste",
     "url": "conteudos/artedotexto/8-paste.md",
     "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "grep",
+    "url": "conteudos/artedotexto/9-grep.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "sort",
+    "url": "conteudos/artedotexto/10-sort.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "tail",
+    "url": "conteudos/artedotexto/11-tail.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "tr",
+    "url": "conteudos/artedotexto/12-tr.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "uniq",
+    "url": "conteudos/artedotexto/13-uniq.md",
+    "imagem": "assets/setas.svg"
   }
 ] }
