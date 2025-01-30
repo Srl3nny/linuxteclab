@@ -1,5 +1,30 @@
 { "arquivos": [
   {
+    "nome": "mv",
+    "url": "conteudos/linhadecomando/10-mv.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "mkdir",
+    "url": "conteudos/linhadecomando/11-mkdir.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "rm",
+    "url": "conteudos/linhadecomando/12-rm.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "man",
+    "url": "conteudos/linhadecomando/13-man.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "find",
+    "url": "conteudos/linhadecomando/14-find.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
     "nome": "pwd",
     "url": "conteudos/linhadecomando/1-pwd.md",
     "imagem": "assets/setas.svg"
@@ -42,31 +67,6 @@
   {
     "nome": "cp",
     "url": "conteudos/linhadecomando/9-cp.md",
-    "imagem": "assets/setas.svg"
-  },
-  {
-    "nome": "mv",
-    "url": "conteudos/linhadecomando/10-mv.md",
-    "imagem": "assets/setas.svg"
-  },
-  {
-    "nome": "mkdir",
-    "url": "conteudos/linhadecomando/11-mkdir.md",
-    "imagem": "assets/setas.svg"
-  },
-  {
-    "nome": "rm",
-    "url": "conteudos/linhadecomando/12-rm.md",
-    "imagem": "assets/setas.svg"
-  },
-  {
-    "nome": "man",
-    "url": "conteudos/linhadecomando/13-man.md",
-    "imagem": "assets/setas.svg"
-  },
-  {
-    "nome": "find",
-    "url": "conteudos/linhadecomando/14-find.md",
     "imagem": "assets/setas.svg"
   }
 ] }
