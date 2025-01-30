@@ -1,0 +1,67 @@
+{ "arquivos": [
+  {
+    "nome": "sort",
+    "url": "conteudos/artedotexto/10-sort.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "tail",
+    "url": "conteudos/artedotexto/11-tail.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "tr",
+    "url": "conteudos/artedotexto/12-tr.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "uniq",
+    "url": "conteudos/artedotexto/13-uniq.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "stdout",
+    "url": "conteudos/artedotexto/1-stdout.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "stdin",
+    "url": "conteudos/artedotexto/2-stdin.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "stderr",
+    "url": "conteudos/artedotexto/3-stderr.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "pipe and tee",
+    "url": "conteudos/artedotexto/4-pipe_and_tee.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "env",
+    "url": "conteudos/artedotexto/5-env.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "cut",
+    "url": "conteudos/artedotexto/6-cut.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "head",
+    "url": "conteudos/artedotexto/7-head.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "paste",
+    "url": "conteudos/artedotexto/8-paste.md",
+    "imagem": "assets/setas.svg"
+  },
+  {
+    "nome": "grep",
+    "url": "conteudos/artedotexto/9-grep.md",
+    "imagem": "assets/setas.svg"
+  }
+] }
