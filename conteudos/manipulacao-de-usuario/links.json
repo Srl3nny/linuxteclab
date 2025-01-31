@@ -1,32 +1,32 @@
 { "arquivos": [
   {
     "nome": " Usuario e grupo",
-    "url": "conteudos/manipulacao-de-usuario/1- Usuario e grupo.md",
-    "imagem": "assets/setas.svg"
+    "url": "1- Usuario e grupo.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " root",
-    "url": "conteudos/manipulacao-de-usuario/2- root.md",
-    "imagem": "assets/setas.svg"
+    "url": "2- root.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": "  etc passwd",
-    "url": "conteudos/manipulacao-de-usuario/3- _etc_passwd.md",
-    "imagem": "assets/setas.svg"
+    "url": "3- _etc_passwd.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": "  etc shadow",
-    "url": "conteudos/manipulacao-de-usuario/4- _etc_shadow.md",
-    "imagem": "assets/setas.svg"
+    "url": "4- _etc_shadow.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": "  etc group",
-    "url": "conteudos/manipulacao-de-usuario/5- _etc_group.md",
-    "imagem": "assets/setas.svg"
+    "url": "5- _etc_group.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Gerenciamento de usuários",
-    "url": "conteudos/manipulacao-de-usuario/6- Gerenciamento de usuários.md",
-    "imagem": "assets/setas.svg"
+    "url": "6- Gerenciamento de usuários.md",
+    "imagem": "../../assets/setas.svg"
   }
 ] }

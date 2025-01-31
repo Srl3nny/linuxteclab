@@ -1,57 +1,57 @@
 { "arquivos": [
   {
     "nome": "  proc filesystem",
-    "url": "conteudos/processos/10 - _proc filesystem.md",
-    "imagem": "assets/setas.svg"
+    "url": "10 - _proc filesystem.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Status de processos",
-    "url": "conteudos/processos/11 - Status de processos.md",
-    "imagem": "assets/setas.svg"
+    "url": "11 - Status de processos.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Comando ps",
-    "url": "conteudos/processos/1- Comando ps.md",
-    "imagem": "assets/setas.svg"
+    "url": "1- Comando ps.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Controlando o Terminal",
-    "url": "conteudos/processos/2 - Controlando o Terminal.md",
-    "imagem": "assets/setas.svg"
+    "url": "2 - Controlando o Terminal.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Sobre processos",
-    "url": "conteudos/processos/3 - Sobre processos.md",
-    "imagem": "assets/setas.svg"
+    "url": "3 - Sobre processos.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Criação de processos",
-    "url": "conteudos/processos/4 - Criação de processos.md",
-    "imagem": "assets/setas.svg"
+    "url": "4 - Criação de processos.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Finalização de processos",
-    "url": "conteudos/processos/5 - Finalização de processos.md",
-    "imagem": "assets/setas.svg"
+    "url": "5 - Finalização de processos.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Sinais no Linux",
-    "url": "conteudos/processos/6 - Sinais no Linux.md",
-    "imagem": "assets/setas.svg"
+    "url": "6 - Sinais no Linux.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " kill(Terminate)",
-    "url": "conteudos/processos/7 - kill(Terminate).md",
-    "imagem": "assets/setas.svg"
+    "url": "7 - kill(Terminate).md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " niceness",
-    "url": "conteudos/processos/8 - niceness.md",
-    "imagem": "assets/setas.svg"
+    "url": "8 - niceness.md",
+    "imagem": "../../assets/setas.svg"
   },
   {
     "nome": " Controle de Job",
-    "url": "conteudos/processos/9 - Controle de Job.md",
-    "imagem": "assets/setas.svg"
+    "url": "9 - Controle de Job.md",
+    "imagem": "../../assets/setas.svg"
   }
 ] }
