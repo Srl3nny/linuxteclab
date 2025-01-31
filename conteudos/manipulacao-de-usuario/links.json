@@ -10,13 +10,28 @@
     "imagem": "../../assets/setas.svg"
   },
   {
+    "nome": " Arquivo passwd",
+    "url": "3- Arquivo passwd.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
     "nome": "  etc passwd",
     "url": "3- _etc_passwd.md",
     "imagem": "../../assets/setas.svg"
   },
   {
+    "nome": " Arquivo shadow",
+    "url": "4- Arquivo shadow.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
     "nome": "  etc shadow",
     "url": "4- _etc_shadow.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": " Arquivo group",
+    "url": "5- Arquivo group.md",
     "imagem": "../../assets/setas.svg"
   },
   {
