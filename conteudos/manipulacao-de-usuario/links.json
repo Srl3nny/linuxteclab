@@ -11,17 +11,17 @@
   },
   {
     "nome": "  etc passwd",
-    "url": "3- /etc/passwd.md",
+    "url": "3- _etc_passwd.md",
     "imagem": "../../assets/setas.svg"
   },
   {
     "nome": "  etc shadow",
-    "url": "4- /etc/shadow.md",
+    "url": "4- _etc_shadow.md",
     "imagem": "../../assets/setas.svg"
   },
   {
     "nome": "  etc group",
-    "url": "5- /etc/group.md",
+    "url": "5- _etc_group.md",
     "imagem": "../../assets/setas.svg"
   },
   {
