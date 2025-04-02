@@ -1,0 +1,112 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  navbar:
+    left:
+    - href: index.qmd
+      text: Home
+    - href: about.qmd
+      text: Sobre
+  sidebar:
+    collapse-level: 1
+    contents:
+    - contents:
+      - href: conteudos/linha-de-comando/1-pwd.qmd
+        text: ✅ Pwd
+      - href: conteudos/linha-de-comando/2-cd.qmd
+        text: ✅ Cd
+      - href: conteudos/linha-de-comando/3-ls.qmd
+        text: ✅ Ls
+      - href: conteudos/linha-de-comando/4-touch.qmd
+        text: ✅ Touch
+      - href: conteudos/linha-de-comando/5-file.qmd
+        text: ✅ File
+      - href: conteudos/linha-de-comando/6-cat.qmd
+        text: ✅ Cat
+      - href: conteudos/linha-de-comando/7-less.qmd
+        text: ✅ Less
+      - href: conteudos/linha-de-comando/8-history.qmd
+        text: ✅ History
+      - href: conteudos/linha-de-comando/9-cp.qmd
+        text: ✅ Cp
+      - href: conteudos/linha-de-comando/10-mv.qmd
+        text: ✅ Mv
+      - href: conteudos/linha-de-comando/11-mkdir.qmd
+        text: ✅ Mkdir
+      - href: conteudos/linha-de-comando/12-rm.qmd
+        text: ✅ Rm
+      - href: conteudos/linha-de-comando/13-man.qmd
+        text: ✅ Man
+      - href: conteudos/linha-de-comando/14-find.qmd
+        text: ✅ Find
+      section: 📂 Linha De Comando
+    - contents:
+      - href: conteudos/arte-do-texto/1-stdout.qmd
+        text: ✅ Stdout
+      - href: conteudos/arte-do-texto/2-stdin.qmd
+        text: ✅ Stdin
+      - href: conteudos/arte-do-texto/3-stderr.qmd
+        text: ✅ Stderr
+      - href: conteudos/arte-do-texto/4-pipe_and_tee.qmd
+        text: ✅ Pipe_And_Tee
+      - href: conteudos/arte-do-texto/5-env.qmd
+        text: ✅ Env
+      - href: conteudos/arte-do-texto/6-cut.qmd
+        text: ✅ Cut
+      - href: conteudos/arte-do-texto/7-head.qmd
+        text: ✅ Head
+      - href: conteudos/arte-do-texto/8-paste.qmd
+        text: ✅ Paste
+      - href: conteudos/arte-do-texto/9-grep.qmd
+        text: ✅ Grep
+      - href: conteudos/arte-do-texto/10-sort.qmd
+        text: ✅ Sort
+      - href: conteudos/arte-do-texto/11-tail.qmd
+        text: ✅ Tail
+      - href: conteudos/arte-do-texto/12-tr.qmd
+        text: ✅ Tr
+      - href: conteudos/arte-do-texto/13-uniq.qmd
+        text: ✅ Uniq
+      section: 📂 Arte Do Texto
+    - contents:
+      - href: conteudos/manipulacao-de-usuario/1- Usuario e grupo.qmd
+        text: ✅ Usuario E Grupo
+      - href: conteudos/manipulacao-de-usuario/2- root.qmd
+        text: ✅ Root
+      - href: conteudos/manipulacao-de-usuario/3- Arquivo passwd.qmd
+        text: ✅ Arquivo Passwd
+      - href: conteudos/manipulacao-de-usuario/4- Arquivo shadow.qmd
+        text: ✅ Arquivo Shadow
+      - href: conteudos/manipulacao-de-usuario/5- Arquivo group.qmd
+        text: ✅ Arquivo Group
+      - href: conteudos/manipulacao-de-usuario/6- Gerenciamento de usuários.qmd
+        text: ✅ Gerenciamento De Usuários
+      section: 📂 Manipulacao De Usuario
+    - contents:
+      - href: conteudos/processos/1- Comando ps.qmd
+        text: ✅ Comando Ps
+      - href: conteudos/processos/2 - Controlando o Terminal.qmd
+        text: ✅ Controlando O Terminal
+      - href: conteudos/processos/3 - Sobre processos.qmd
+        text: ✅ Sobre Processos
+      - href: conteudos/processos/4 - Criação de processos.qmd
+        text: ✅ Criação De Processos
+      - href: conteudos/processos/5 - Finalização de processos.qmd
+        text: ✅ Finalização De Processos
+      - href: conteudos/processos/6 - Sinais no Linux.qmd
+        text: ✅ Sinais No Linux
+      - href: conteudos/processos/7 - kill(Terminate).qmd
+        text: ✅ Kill(Terminate)
+      - href: conteudos/processos/8 - niceness.qmd
+        text: ✅ Niceness
+      - href: conteudos/processos/9 - Controle de Job.qmd
+        text: ✅ Controle De Job
+      - href: conteudos/processos/10 - _proc filesystem.qmd
+        text: ✅ Proc Filesystem
+      - href: conteudos/processos/11 - Status de processos.qmd
+        text: ✅ Status De Processos
+      section: 📂 Processos
+    search: true
+    style: docked
+  title: linuxteclab

@@ -1,0 +1,652 @@
+[
+  {
+    "objectID": "conteudos/linha-de-comando/10-mv.html",
+    "href": "conteudos/linha-de-comando/10-mv.html",
+    "title": "mv",
+    "section": "",
+    "text": "mv\nUsado para mover arquivos e também renomeá-los. Bastante semelhante ao comando cp em termos de opções, você verá que na realidade muito comandos tem opção semelhantes.\nVocê pode renomear arquivos assim:\n$ mv arquivoantigo arquivonovo\nOu você pode mover um arquivo para um diretório diferente:\n$ mv arquivo /home/bruno/Documentos\nE mova mais de um arquivo:\n$ mv aruivo1 arquivo2 /tmp/nova\nRenomear diretórios segue a mesma lógica.\n$ mv dir1 dir2\nAssim como o cp, se você mover um arquivo ou diretório, ele substituirá qualquer coisa no mesmo diretório. Portanto, você pode usar a opção -i para avisar antes de substituir qualquer coisa.\n$ mv -i dir1 dir2\nDigamos que você queira mover um arquivo para substituir outro. Você também pode fazer um backup desse arquivo e ele apenas renomeará a versão antiga com ~.\n$ mv -b dir1 dir2",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Mv"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/14-find.html",
+    "href": "conteudos/linha-de-comando/14-find.html",
+    "title": "find",
+    "section": "",
+    "text": "find\nCom todos esses arquivos que temos no sistema pode ser um pouco desafiador tentar encontrar um arquivo específico. Para isso podemos usar o find.\n$ find /home -name livro.pdf\nNo uso básico do comando find, você terá que especificar o diretório que irá pesquisar e o que está procurando, neste caso estamos tentando encontrar um arquivo com o nome de livro.pdf.\nVocê pode especificar que tipo de arquivo está tentando encontrar, como um diretório.\n$ find /home -type d -name documentos\nJunto ao -type a opção d se refere a diretório, a opção f se refere a um arquivo comum.\nUma coisa legal a se notar é que find não para no diretório que você está pesquisando, ele também procurará dentro de quaisquer subdiretórios que esse diretório possa ter.\nE caso você queira que a pesquisa seja case insensitive, use -iname.",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Find"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/9-cp.html",
+    "href": "conteudos/linha-de-comando/9-cp.html",
+    "title": "cp",
+    "section": "",
+    "text": "cp\nVamos começar a fazer algumas cópias desses arquivos. Assim como copiar e colar arquivos em outros sistemas operacionais, o shell nos oferece uma maneira ainda mais simples de fazer isso, e nem precisamos do mouse para isso :).\n$ cp meuarquivo /home/bruno/\nmeuqrquivo é o arquivo que você deseja copiar e /home/bruno é para onde você está copiando o arquivo. Você pode copiar vários arquivos e diretórios, bem como usar curingas. Um curinga é um caractere que pode substituir uma seleção baseada em padrão, proporcionando mais flexibilidade. Você pode usar curingas em vários comandos para obter mais flexibilidade.\n\n* o curinga dos curingas, é usado para representar todos os caracteres únicos ou qualquer string.\n? usado para representar um caractere.\n[] usado para representar qualquer caractere entre colchetes.\n\n$ cp *.jpg /home/bruno/Imagens\nIsso copiará todos os arquivos com extensão .jpg em seu diretório atual para o diretório Imagens. Uma opção útil é  a  -r, isso copiará recursivamente os arquivos e diretórios dentro de um diretório. Tente fazer um cp em um diretório que contém alguns arquivos no diretório Documentos. Não funcionou, não é? Bem, isso é porque você também precisará copiar os arquivos e diretórios internos com o comando -r.\nUma coisa a observar: se você copiar um arquivo para um diretório que tenha o mesmo nome de arquivo, o arquivo será substituído por tudo o que você está copiando. Isso não é legal se você tiver um arquivo que não deseja que seja substituído acidentalmente, pior ainda se não tiver backup. Você pode usar a opção -i (interativo) para avisar antes de substituir um arquivo.\n$ cp -i meuarquivo /home/bruno/",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Cp"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/5-file.html",
+    "href": "conteudos/linha-de-comando/5-file.html",
+    "title": "file",
+    "section": "",
+    "text": "file\nOk, acabamos de aprender sobre o comando touch, vamos voltar um pouco a isso. Você notou que o nome do arquivo não estava de acordo com a extensão padrão, como você provavelmente já viu em outros sistemas operacionais como o Windows? Normalmente você esperaria um arquivo chamado banana.jpeg e um arquivo de imagem JPEG.\nNo Linux, os nomes de arquivos não são necessários para representar o conteúdo do arquivo. Você pode criar um arquivo chamado engraçado.gif que na verdade não é um GIF. Para descobrir que tipo de arquivo é , você pode usar o comando file. Ele mostrará uma descrição do conteúdo do arquivo.\n$ file banana.jpg",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ File"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/7-less.html",
+    "href": "conteudos/linha-de-comando/7-less.html",
+    "title": "less",
+    "section": "",
+    "text": "less\nSe você estiver visualizando arquivos de texto maiores que uma saída simples, use o comando less. (existe um comando chamado more que faz algo semelhante, mas nesse caso menos é mais :)) O texto é exibido em forma de página, para que você possa navegar por um arquivo de texto página por página. Vá em frente e observe o conteúdo de um arquivo com menos. Quando estiver no comando less, você poderá usar outros comandos de teclado para navegar no arquivo.\n$ less /tmp/arquivo\nUse os seguintes comandos para navegar usando less:\nq - Usado para sair do less e voltar para o seu shell.\nPage up, Page down, Up e Down - Navegue usando as teclas de seta e de página.\ng - Vai para o início do arquivo de texto.\nG - Vai para o final do arquivo de texto.\n/search - Você pode pesquisar um texto específico dentro do documento de texto. Prefaciando as palavras que você deseja pesquisar com /\nh - Se você precisar de uma ajudinha sobre como usar o less, use a ajuda.",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Less"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/13-man.html",
+    "href": "conteudos/linha-de-comando/13-man.html",
+    "title": "man",
+    "section": "",
+    "text": "man\nUm comando que pode te salvar em muitos momentos é o man. É uma interface para manuais, com ele você pode buscar ajuda sem precisar do chatGPT :) .\nO man é organizado por seções, cada seção é representada por um número, veja a tabela abaixo que descreve as seções. Mas basicamente, os comandos são da seção 1.\nPodemos fazer uma pesquisa sobre o comando ls.\n$ man ls\nE para fazer um pesquisa sobre manuais que contenham a palavra passwd:\n$ man -k passwd",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Man"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/11-mkdir.html",
+    "href": "conteudos/linha-de-comando/11-mkdir.html",
+    "title": "mkdir",
+    "section": "",
+    "text": "mkdir\nPrecisaremos de alguns diretórios para armazenar todos esses arquivos nos quais estamos trabalhando. O comando mkdir (Make Directory) é útil para isso, ele criará um diretório caso ele ainda não exista. Você pode até criar vários diretórios ao mesmo tempo.\n$ mkdir livros textos\nVocê também pode criar vários subdiretórios ao mesmo tempo com a opção -p.\n$ mkdir -p livros/linux/favoritos\nPerceba como o conhecimento do que já vimos irá se acumulando. podemos ver o uso de caminho relativo na criação de diretórios.",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Mkdir"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/8-paste.html",
+    "href": "conteudos/arte-do-texto/8-paste.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "O comando paste no Linux é utilizado para combinar linhas de diferentes arquivos de forma horizontal, ou seja, ele “cola” o conteúdo das linhas correspondentes de dois ou mais arquivos lado a lado, separando-as por um delimitador (por padrão, o caractere de tabulação).\nVamos tomar como exemplo os dois arquivos a seguir:\nArq1.txt\n1\n2\n3\nArq2.txt\na\nb\nc\nUsando o paste.\n$ paste arqu1.txt arq2.txt\nComo resultado teria:\n1   a\n2   b\n3   c",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Paste"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/5-env.html",
+    "href": "conteudos/arte-do-texto/5-env.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Execute o seguinte comando, mas digite a variável como em letras maiúsculas:\n$ echo $HOME\nVocê deverá ver o caminho para o seu diretório home, o meu se parece com /home/bruno.\nE esse comando?\n$ echo $USER\nVocê deverá ver seu nome de usuário! De onde vem essa informação? Está vindo de suas variáveis de ambiente.\nVocê pode visualizá-los digitando:\n$ env\nIsso exibirá muitas informações sobre as variáveis ​​de ambiente que estão definidas atualmente. Essas variáveis ​​contêm informações úteis que o shell e outros processos podem usar.\nVamos fazer um teste, crie uma variável qualquer e depois verifique com o comando env.\n$ export my_var=\"teste\"\n$ env\nO comando export no Linux é usado para definir variáveis de ambiente e torná-las acessíveis para processos filhos do shell atual.\nUma variável particularmente importante é a variável PATH. Você pode acessar essas variáveis ​​colocando $ na frente do nome da variável, assim:\n$ echo $PATH\nIsso retorna uma lista de caminhos separados por dois pontos que seu sistema pesquisa quando procura um comando. Digamos que você baixe e instale manualmente um pacote da Internet e o coloque em um diretório não padrão e queira executar esse comando, o sistema irá reclamar de comando não encontrado. Mas você está olhando o binário em uma pasta e sabe que ele existe. O que está acontecendo é que a variável $PATH não verifica esse diretório onde este o binário, então está gerando um erro. Digamos que você tenha vários binários que deseja executar nesse diretório. Você pode simplesmente modificar a variável PATH para incluir esse diretório em sua variável de ambiente PATH.",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Env"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/1-stdout.html",
+    "href": "conteudos/arte-do-texto/1-stdout.html",
+    "title": "stdout (standard Out)",
+    "section": "",
+    "text": "stdout (standard Out)\nUm assunto bem interessante no mundo do terminal são os fluxos de E/S (entrada/saída). Veja o comando abaixo.\n$ echo Hello World &gt; arq.txt\nO que aconteceu? Bem, verifique o diretório onde você executou esse comando e eis que você deverá ver um arquivo chamado arq.txt, olhe dentro desse arquivo e deverá ver o texto Hello World. Muitas coisas aconteceram em um comando, então vamos detalhar.\nA primeira parte desse comando é:\n$ echo Hello World\nSabemos que o comando echo imprime Hello World na tela, mas como? Os processos usam fluxos de E/S para receber entrada e retornar saída. Por padrão, o comando echo pega a entrada (entrada padrão ou stdin) do teclado e retorna a saída (saída padrão ou stdout) para a tela. É por isso que quando você digita echo Hello World em seu shell, você obtém Hello World na tela. No entanto, o redirecionamento de E/S nos permite alterar esse comportamento padrão, proporcionando maior flexibilidade de arquivos.\nVamos prosseguir para a próxima parte do comando:\n&gt;\nO &gt; é um operador de redirecionamento que nos permite alterar para onde vai a saída padrão (stdout). Ele nos permite enviar a saída de echo Hello World para um arquivo em vez de para a tela. Se o arquivo ainda não existir, ele será criado para nós. No entanto, se existir, ele será sobrescrito. E é basicamente assim que funciona o redirecionamento stdout!\nBem, digamos que eu não queira sobrescrever meu arq.txt, felizmente também existe um operador de redirecionamento para isso, &gt;&gt; ou seja você fará um append no arquivo.\n$ echo Hello World &gt;&gt; saida.txt",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Stdout"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/3-stderr.html",
+    "href": "conteudos/arte-do-texto/3-stderr.html",
+    "title": "stderr",
+    "section": "",
+    "text": "stderr\nVamos tentar algo um pouco diferente agora, vamos tentar listar o conteúdo de um diretório que não existe no seu sistema e redirecionar a saída para o arquivo arq.txt novamente.\n$ ls /tmp/naoexiste &gt; arq.txt\nOk, mas reparou que foi exibido na tela:\nls: não foi possível acessar '/tmp/naoexiste': Arquivo ou diretório inexistente\nAgora você provavelmente está pensando: aquela mensagem não deveria ter sido enviada para o arquivo? Na verdade, há outro fluxo de E/S em jogo aqui chamado erro padrão (stderr). Por padrão, o stderr também envia sua saída para a tela, mas é um fluxo completamente diferente do stdout.\nEntão você precisará redirecionar sua saída de uma maneira diferente. Teremos que usar descritores de arquivo. Um descritor de arquivo é um número não negativo usado para acessar um arquivo ou fluxo. Iremos aprofundar isso mais tarde, mas por enquanto sabemos que o descritor de arquivo para stdin, stdout e stderr é 0, 1 e 2 respectivamente. Então agora, se quisermos redirecionar nosso stderr para o arquivo, podemos fazer isso:\n$ ls /tmp/naoexiste 2&gt; arq.txt\nAgora, e se eu quisesse ver stderr e stdout no arquivo arq.txt? Também é possível fazer isso com descritores de arquivo:\n$ ls /tmp/naoexiste &gt; arq.txt 2&gt;&1\nIsso envia os resultados de ls /tmp/naoexiste para o arquivo arq.txt e então redireciona o stderr para o stdout via 2&gt;&1. A ordem das operações aqui é importante, 2&gt;&1 envia stderr para qualquer que seja o stdout que esteja apontando. Nesse caso, stdout está apontando para um arquivo, então 2&gt;&1 também envia stderr para um arquivo. Portanto, se você abrir o arquivo arq.txt, verá stderr e stdout. No nosso caso, o comando acima gera apenas stderr.\nExiste uma maneira mais curta de redirecionar stdout e stderr para um arquivo, e você verá ele bastante por aí:\n$ ls /tmp/naoexiste &&gt; arq.txt\nAgora, e se eu não quiser nada desse lixo e quiser se livrar completamente das mensagens stderr? Bem, você também pode redirecionar a saída para uma chamada de arquivo especial /dev/null e ela descartará qualquer entrada.\n$ ls /tmp/naoexiste 2&gt; /dev/null",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Stderr"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/4-pipe_and_tee.html",
+    "href": "conteudos/arte-do-texto/4-pipe_and_tee.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Iremos conhecer o pipe (|) agora, vamos primeiro executar o comando:\n$ ls -lah /etc\n Você deverá ver uma lista muito longa de itens; é até um pouco difícil de ler. Em vez de redirecionar essa saída para um arquivo, não seria bom se pudéssemos ver a saída em outro comando como less, lembre que o less é um paginador? Bem, nós podemos!\n$ ls -lah /etc | less\nO operador pipe |, representado por uma barra vertical, permite-nos obter o stdout de um comando e torná-lo o stdin para outro processo. Nesse caso, pegamos o stdout do comando ls  e o direcionamos para a entrada do comando less. O comando pipe é extremamente útil e continuaremos a usá-lo por toda a eternidade.\nBem, e se eu quisesse escrever a saída do meu comando em dois fluxos diferentes? Isso é possível com o comando tee, nesse caso veremos a saída de ls na tela e também será armazenada no arquivo saida.txt:\n$ ls | tee saida.txt",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Pipe_And_Tee"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/10-sort.html",
+    "href": "conteudos/arte-do-texto/10-sort.html",
+    "title": "Ordenação de Textos com o Comando sort",
+    "section": "",
+    "text": "Ordenação de Textos com o Comando sort\nO comando sort é uma ferramenta útil para organizar linhas de texto de acordo com um critério predeterminado. Vamos ver exemplos de como usá-lo para ordenar linhas de um arquivo de texto.\n\nExemplo 1: Ordenação Alfabética\nContinuemos com o arquivo exemplo.txt, que contém os seguintes termos:\narq.txt\n rato\n cachorro\n gato\n elefante\n pato\nQuando executamos o comando sort sobre esse arquivo, obtemos o seguinte resultado:\n$ sort arq.txt\n cachorro\n elefante\n gato\n pato\n rato\nA ordenação é feita alfabeticamente, portanto, os termos começam a aparecer na ordem correta.\n\n\nExemplo 2: Ordenação em Ordem inversa\nMais um exemplo interessante é a ordenação em ordem inversa. Para isso, podemos usar a opção -r do comando sort. Vou mostrar como:\n$ sort -r arq.txt\n rato\n pato\n gato\n elefante\n cachorro\nAgora, a ordenação é feita em ordem inversa, portanto, os termos aparecem na ordem oposta.",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Sort"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/7-head.html",
+    "href": "conteudos/arte-do-texto/7-head.html",
+    "title": "Usando o comando head",
+    "section": "",
+    "text": "Usando o comando head\nVamos imaginar que temos um arquivo muito extenso; na verdade, temos muitos arquivos longos para escolher.\nExperimente executar o comando\n$ cat /var/log/syslog\nVocê verá várias páginas de texto. Mas e se eu quiser ver apenas as primeiras linhas desse arquivo? Podemos fazer isso com o comando head.\nPor padrão, o comando head mostra as primeiras 10 linhas de um arquivo. Portanto, ao executar:\n$ head /var/log/syslog\nVocê verá essas linhas iniciais. Se desejar modificar a contagem de linhas para um número específico, como por exemplo, as primeiras 15 linhas, você pode usar a opção -n.\nO comando ficaria assim:\n$ head -n 15 /var/log/syslog\nAqui, a flag -n indica o número de linhas que você deseja visualizar.",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Head"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/8 - niceness.html",
+    "href": "conteudos/processos/8 - niceness.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Quando executamos vários softwares, como Chrome, Microsoft Word or Photoshop ao mesmo tempo, Pode parecer que o computador roda tudo ao mesmo tempo. No entanto, isso não é exatamente verdade. Os processos utilizam o processador para um pequeno período de tempo chamado time slice. Em seguida, pausam por milissegundos e outro processo recebe um time slice. Por padrão, a gestão de processos ocorre em uma sequência round-robin. Cada processo recebe um número suficiente de time slices até ser concluído. O kernel é responsável por fazer as trocas entre os processos e faz um ótimo trabalho nisso a maioria do tempo.\nOs processos não podem decidir quando e por quanto tempo recebem tempo da CPU. Se todos os processos se comportassem normalmente, cada um (aproximadamente) receberia uma quantidade igual de tempo da CPU. No entanto, há uma maneira de influenciar o algoritmo de agendamento de processos do kernel com um valor de nice. A nice é um nome um pouco estranho, mas o que significa é que os processos têm um número para determinar sua prioridade para a CPU. Um número alto significa que o processo é “nice” e tem uma prioridade baixa para a CPU, enquanto um número baixo ou negativo significa que o processo não é tão “nice” e deseja obter tanto tempo da CPU quanto possível.\n$ top\nVocê pode ver uma coluna chamada “NI” agora, que é o nível de nice de um processo. Para mudar o nível de nice, você pode usar os comandos nice e renice:\n$ nice -n 5 apt upgrade\nO comando nice é usado para definir a prioridade para um processo novo. O comando renice é usado para definir prioridade em um processo existente.\n$ renice 10 -p 3245",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Niceness"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/6 - Sinais no Linux.html",
+    "href": "conteudos/processos/6 - Sinais no Linux.html",
+    "title": "Sinais no sistema operacional",
+    "section": "",
+    "text": "Sinais no sistema operacional\nO sistema operacional emite um sinal (ou notification) para um processo sempre que algo acontece. Por que os sinais? Eles são interrupções de software e têm inúmeras utilizações: * O usuário pode digitar um caractere especial no terminal (Ctrl+C ou Ctrl+Z) para matar, interromper ou suspender processos * Problemas de hardware podem ocorrer e o kernel deseja notificar o processo * Problemas de software podem ocorrer e o kernel deseja notificar o processo * São basicamente formas pelas quais processos podem se comunicar\n\n\nProcessamento de sinais\nQuando um sinal é gerado por um evento, é então entregue a um processo, é considerado em estado pendente até ser entregue. Quando o processo é executado, o sinal será entregue. No entanto, os processos têm máscaras de sinal e podem configurar a entrega de sinais para ser bloqueada se especificado. Quando um sinal é entregue, um processo pode fazer várias coisas: * Ignorar o sinal * “Capturar” o sinal e executar uma rotina de tratamento específica * O processo pode ser interrompido, ao invés da chamada de sistema de saída normal * Blockar o sinal, dependendo da máscara de sinal\nSinais comuns Cada sinal é definido por inteiros com nomes simbólicos no formato SIGxxx. Algumas das principais sinais são: * SIGHUP ou HUP ou 1: Encerramento do conector * SIGINT ou INT ou 2: Interrupção * SIGKILL ou KILL ou 9: Parar * SIGSEGV ou SEGV ou 11: Erro de segmentação * SIGTERM ou TERM ou 15: Encerramento por software * SIGSTOP ou STOP: Parar\nOs números dos sinais podem variar, portanto é comum referir-se a eles por seus nomes. Alguns sinais são impossíveis de bloquear, um exemplo é o sinal SIGKILL. O sinal de parar destrói o processo.\nExemplo de utilização de sinais Para testar o funcionamento dos sinais, execute o comando kill seguido do número do sinal desejado. Por exemplo, para gerar o sinal de parada (SIGTERM) para um processo, use kill 15 &lt;nome_do_processo&gt;.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Sinais No Linux"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/7 - kill(Terminate).html",
+    "href": "conteudos/processos/7 - kill(Terminate).html",
+    "title": "Sinalização e Processos",
+    "section": "",
+    "text": "Sinalização e Processos\nVocê pode enviar sinais que terminam processos, por exemplo, o comando kill. Veja como funciona:\n$ kill 12445\nO número 12445 é o PID do processo que você deseja matar. Por padrão, ele envia o sinal SIGTERM. O sinal SIGTERM é enviado para um processo para solicitar sua término permitindo que ele libere seus recursos de forma limpa e guarde seu estado.\nVocê também pode especificar um sinal com o comando kill:\n$ kill -9 12445\nIsso executará o sinal SIGKILL e matará o processo imediatamente.\n\n\nDiferença entre SIGHUP, SIGINT, SIGTERM, SIGKILL e SIGSTOP\nEsses sinais podem parecer muito semelhantes, mas tem suas diferenças.\nSIGHUP: É um sinal de “hangup”, enviado para um processo quando o terminal de controle é fechado. Por exemplo, se você fechasse uma janela de terminal que havia um processo rodando nele, você receberia um sinal SIGHUP. Nesse caso, você está sendo “colocado na espera”.\nSIGINT: É um sinal de “interrupt”, portanto, você pode usar Ctrl+C e o sistema tentará matar o processo de forma graciosa.\nSIGTERM: Mata o processo, mas permite que ele faça alguns arranjos antes de parar. Isso é útil porque os processos podem ter recursos que precisam ser liberados antes de serem encerrados.\nSIGKILL: Mata o processo! Não há nenhuma limpeza ou arranjo.\nSIGSTOP: Pare/suspende um processo.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Kill(Terminate)"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/5 - Finalização de processos.html",
+    "href": "conteudos/processos/5 - Finalização de processos.html",
+    "title": "Processos Órfãos",
+    "section": "",
+    "text": "Agora que sabemos o que acontece quando um processo é criado, o que está acontecendo quando não precisamos mais dele? Um processo pode sair usando o chamada de sistema _exit, o que liberará os recursos que o processo estava usando para realocação. Quando um processo está pronto para terminar, ele avisa o kernel por que está terminando com algo chamado um status de término. A maioria comumente, um status de 0 significa que o processo teve sucesso. No entanto, isso não é o suficiente para terminar completamente um processo. O processo pai precisa confirmar a término do processo filho usando a chamada de sistema wait e o que isso faz é verificar o status de término do processo filho. Eu sei que é um pouco macabro pensar nisso, mas a chamada de sistema wait é uma necessidade, afinal, qual pai não gostaria de saber como seu filho morreu? Há outro jeito de terminar um processo e isso envolve usar sinais, o que discutiremos em breve.\n\nProcessos Órfãos\nQuando um processo pai morre antes de um processo filho, o kernel sabe que não vai obter uma chamada de sistema wait, então em vez disso, os processos tornam-se “órfãos” e são collocados sob o cuidado de init (lembre-se, a “mãe de todos os processos”). Init irá realizar a chamada de sistema wait para esses órfãos eventualmente, permitindo que eles morram.\n\n\nProcessos Zumbis\nO que acontece quando um processo filho termina e o processo pai não fez uma chamada de sistema wait? Ainda queremos saber como um processo filho terminou, então embora o processo filho tenha terminado, o kernel converte o processo filho em um processo zumbi. Os recursos utilizados pelo processo filho estão ainda liberados para outros processos, no entanto, há ainda uma entrada na tabela de processos para esse zumbi. Processos zumbis também não podem ser terminados, pois estão tecnicamente “mortos”, portanto, você não pode usar sinais para matá-los. Se o processo pai realizar uma chamada de sistema wait, o zumbi desaparecerá. Se o processo pai não realizar uma chamada de sistema wait, init adotará o zumbi e realizará automaticamente wait e removerá o zumbi. Ter muitos processos zumbis pode ser ruim, pois eles ocupam espaço na tabela de processos, se ela se preencher, isso impedirá que outros processos iniciem. ***",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Finalização De Processos"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/1- Comando ps.html",
+    "href": "conteudos/processos/1- Comando ps.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Processos são programas que estão sendo executados na sua máquina. Eles são gerenciados pelo kernel e cada processo tem um ID associado a ele, chamado de ID de processo (PID). Esse PID é atribuído na ordem em que os processos são criados.\nexecute o comando ps para ver uma lista de processos em execução:\n$ ps\nPID        TTY     STAT   TIME          CMD\n41230    pts/4    Ss        00:00:00     bash\n51224    pts/4    R+        00:00:00     ps\nIsso mostra um quadro dos processos atuais, com informações relevantes para o administrador da máquina:\n\nPID: ID de processo\nTTY: Terminal de controle associado ao processo\nSTAT: Código de status do processo\nTIME: Tempo de uso do CPU total\nCMD: Nome do executável/comando\n\nSe você revisar a página do manual do comando ps, verá que há muitas opções de comando que você pode passar, que variarão dependendo das opções que você deseja usar - BSD, GNU ou Unix. Em minha opinião, o estilo BSD é mais popular para usar, por isso vamos trabalhar com isso. Se você estiver curioso, a diferença entre estilos é o número de traços/hífens que você usa nas opções.\n$ ps aux\nO caractere a exibe todos os processos em execução, incluindo os que estão being executados por outros usuários. O caractere u mostra mais detalhes sobre os processos. E finalmente, o caractere x lista todos os processos que não têm um terminal associado, que são os programas mais comuns em processos daemon que são executados como parte do início do sistema.\nVocê notará que está vendo muitos campos agora, não há necessidade de memorizar todos eles.\n\nUSER: Usuário efetivo (o que estamos usando).\nPID: ID de processo.\n%CPU: CPU tempo usado dividido pelo tempo que o processo tem estado rodando.\n%MEM: Razão da tamanho de conjunto residente do processo sobre a memória física da máquina.\nVSZ: Uso de memória virtual do processo.\nRSS: Tamanho de conjunto residente, a memória física não substituível que um processo usou.\nTTY: Terminal de controle associado ao processo.\nSTAT: Código de status do processo.\nSTART: Tempo de início do processo.\nTIME: Tempo de uso do CPU total.\nCOMMAND: Nome do executável/comando.\n\nO comando ps pode se tornar um pouco confuso para ser lido, por ora os campos que vamos usar mais frequentemente são PID, STAT e COMMAND.\nOutra ferramenta muito útil é o comando top, que fornece informações em tempo real sobre os processos em execução no seu sistema em vez de um instantâneo. Por padrão, você terá uma atualização a cada 10 segundos. O comando top é uma ferramenta extremamente útil para ver quais processos estão usando muitos de seus recursos.\n$ top",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Comando Ps"
+    ]
+  },
+  {
+    "objectID": "conteudos/manipulacao-de-usuario/5- Arquivo group.html",
+    "href": "conteudos/manipulacao-de-usuario/5- Arquivo group.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Além do arquivo /etc/password, outro elemento importante no gerenciamento de usuários é o arquivo /etc/group. Esse arquivo permite criar grupos com permissões diferentes.\nVeremos um exemplo do conteúdo desse arquivo com o comando cat:\n$ cat /etc/group\nroot:*:0:bruno\nAs colunas do arquivo /etc/group são semelhantes às do /etc/password, com as seguintes características:\n\n1: Nome do Grupo - Nome do grupo criado.\n2: Senha do Grupo - Embora não seja necessário definir uma senha para o grupo, é comum usar privilégios elevados, como o sudo, para gerenciar grupos. O valor padrão é “*”.\n3: ID do Grupo (GID) - Identificador único do grupo.\n4: Lista de usuários - Você pode especificar manualmente usuários que deseja incluir em um grupo específico.",
+    "crumbs": [
+      "Home",
+      "📂 Manipulacao De Usuario",
+      "✅ Arquivo Group"
+    ]
+  },
+  {
+    "objectID": "conteudos/manipulacao-de-usuario/6- Gerenciamento de usuários.html",
+    "href": "conteudos/manipulacao-de-usuario/6- Gerenciamento de usuários.html",
+    "title": "Adicionar Usuários",
+    "section": "",
+    "text": "Muitas infraestruturas empresariais utilizam sistemas de gerenciamento para gerenciar usuários, contas e senhas. No entanto, em um computador local, há comandos úteis para gerenciar usuários.\n\nAdicionar Usuários\nPode ser utilizado o comando adduser ou useradd. O comando adduser apresenta recursos mais úteis, como criar um diretório home e outros. Existem arquivos de configuração para adicionar novos usuários e podem ser personalizados de acordo com as necessidades do usuário padrão.\nExemplo:\n$ sudo useradd bob\nVocê verá que o comando acima cria uma entrada no arquivo /etc/passwd para bob, configura grupos padrão e adiciona uma entrada no arquivo /etc/shadow.\n\n\nRemover Usuários\nPara remover um usuário, você pode usar o comando userdel.\nExemplo:\n$ sudo userdel bob\nEste comando basicamente desfaz as alterações feitas pelo comando useradd.\n\n\nAlterar Senhas\n$ passwd bob\nIsso permitirá que você altere a senha do próprio usuário ou de outro usuário (se você for root).\nNota: É recomendável usar o comando adduser em vez de useradd, pois o primeiro é mais fácil de usar e apresenta recursos mais avançados.",
+    "crumbs": [
+      "Home",
+      "📂 Manipulacao De Usuario",
+      "✅ Gerenciamento De Usuários"
+    ]
+  },
+  {
+    "objectID": "conteudos/manipulacao-de-usuario/3- Arquivo passwd.html",
+    "href": "conteudos/manipulacao-de-usuario/3- Arquivo passwd.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Lembre-se de que os nomes de usuário não são, em realidade, identificadores de usuários. O sistema utiliza um IDENTIFIER DE USUÁRIO (UID) para identificar um usuário. Para descobrir quais usuários estão mapeados para que identificador, veja o arquivo /etc/passwd.\n$ cat /etc/passwd```\n\nEsse arquivo lista usuários e informações detalhadas sobre eles. Por exemplo, a primeira linha desse arquivo provavelmente se assemelha a essa:\n\n```bash\nroot:x:0:0:root:/root:/bin/bash\nCada linha exibe informações de usuário para um usuário, sendo que o usuário root é comummente apresentado como a primeira linha. Existem muitos campos separados por dois pontos que fornecem informações adicionais sobre o usuário, veja que no caso são 7 campos, vamos analisá-los:\n\n1: Nome de usuário.\n2: Senha do usuário - embora a senha não esteja armazenada neste arquivo, está geralmente armazenada no arquivo /etc/shadow. Discutiremos mais sobre /etc/shadow na próxima aula, mas por agora, saiba que contém senhas de usuário criptografadas. Você pode ver muitos símbolos diferentes nesse campo, se vir um “x”, isso significa que a senha está armazenada no arquivo /etc/shadow, um “*” indica que o usuário não tem acesso ao login e um campo em branco indica que o usuário não tem senha.\n3: ID do usuário - como você pode ver, o usuário root tem o ID de usuário 0.\n4: ID do grupo.\n5: Campo GECOS - este é utilizado para deixar comentários geralmente sobre o usuário ou conta, como nome real ou número de telefone, e é delimitado por vírgulas.\n6: Diretório de home do usuário.\n\n7: Shell do usuário - provavelmente verá muitos usuários utilizando o shell padrão bash.\n\nNormalmente, na página de configuração de usuário, você espera ver apenas usuários humanos. No entanto, você notará que /etc/passwd contém outros usuários. Lembre-se de que os usuários são, na realidade, apenas no sistema para executar processos com permissões diferentes. Às vezes, queremos executar processos com permissões pré-definidas. Por exemplo, o usuário daemon é utilizado para processos daemon.\nAlém disso, é importante notar que você pode editar o arquivo /etc/passwd manualmente se quiser adicionar usuários e modificar informações com o tool vipw, no entanto, coisas como essas são melhor deixadas para tools, como useradd e userdel.",
+    "crumbs": [
+      "Home",
+      "📂 Manipulacao De Usuario",
+      "✅ Arquivo Passwd"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Aprenda Linux com conteúdo estruturado e organizado.\nEste projeto é inspirado no site https://linuxjourney.com/\nConteúdo produzido por Bruno Caires."
+  },
+  {
+    "objectID": "conteudos/manipulacao-de-usuario/1- Usuario e grupo.html",
+    "href": "conteudos/manipulacao-de-usuario/1- Usuario e grupo.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Em qualquer sistema operacional tradicional, existem usuários e grupos. Eles têm como único propósito gerenciar o acesso e as permissões. Quando um processo é executado, ele executará como proprietário do processo. O acesso a arquivos e a propriedade também são dependentes das permissões. Você não quer que outro usuário veja seus arquivos.\nCada usuário tem seu próprio diretório home, onde seus arquivos específicos são armazenados. Esse diretório pode ser encontrado em /home/usuario, mas pode variar dependendo da distribuição e configuração.\nO sistema usa IDs de usuário (UID) para gerenciar os usuários. Os nomes de usuário são uma forma de associar usuários com identificação, mas o sistema identifica os usuários por suas IDs. O sistema também usa grupos para gerenciar permissões. Os grupos são apenas conjuntos de usuários com permissões definidas por esse grupo e são identificados pelo sistema com seu ID de grupo (GID).\nNo Linux, você também encontrará usuários além dos humanos normais que usam o sistema. Esses usuários podem ser de serviços de sistema, daemons que executam processos contínuos para manter o sistema funcionando. Um dos usuários mais importantes é o root ou superusuário. O root é o usuário mais poderoso do sistema e pode acessar qualquer arquivo e começar ou parar qualquer processo. Por essa razão, é perigoso operar como root o tempo todo, pois você pode remover arquivos críticos do sistema. Felizmente, se precisar de acesso root e um usuário tiver acesso root, ele pode executar um comando como root em vez disso usando o comando sudo. O comando sudo é usado para executar um comando com acesso root, assim é possível dar esse acesso para vários usuários.\nTente visualizar um arquivo protegido como /etc/shadow:\n$ cat /etc/shadow\nObserve como você recebe um erro de permissão negada. Olhe as permissões com:\n$ ls -la /etc/shadow\n-rw-r----- 1 root shadow 1134 Dec 1 11:45 /etc/shadow\nNão vamos abordar permissões ainda, mas o que está acontecendo é que o arquivo é proprietário do root e você precisará de acesso root ou ser membro do grupo shadow para ler o conteúdo. Agora, execute o comando com sudo:\n$ sudo cat /etc/shadow\nAgora você poderá ver o conteúdo do arquivo, caso esteja com permissões de execução do sudo, mas antes terá que usar sua senha!",
+    "crumbs": [
+      "Home",
+      "📂 Manipulacao De Usuario",
+      "✅ Usuario E Grupo"
+    ]
+  },
+  {
+    "objectID": "conteudos/manipulacao-de-usuario/4- Arquivo shadow.html",
+    "href": "conteudos/manipulacao-de-usuario/4- Arquivo shadow.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "O arquivo /etc/shadow tem como objetivo armazenar informações sobre autenticação de usuários. Para ler este arquivo, é necessário ter permissões de leitura como superusuário.\nExemplo:\n$ sudo cat /etc/shadow\nroot:MyEPTEa$6Nonsense:15000:0:99999:7::: \nObserve que o conteúdo é muito semelhante ao do arquivo /etc/passwd, mas o campo de senha apresenta uma senha criptografada. Os campos são separados por coluns, como segue:\n\n1: Nome de usuário.\n2: Senha criptografada.\n3: Data da última alteração da senha - (exprimida em dias desde 1º de janeiro de 1970). Se for apresentado um zero, isso significa que o usuário deve alterar sua senha ao logging em seguida.\n4: Período mínimo para alteração da senha - (em dias) - o período que um usuário precisará esperar antes de poder alterar sua senha novamente.\n5: Período máximo para alteração da senha - (em dias) - o período máximo antes que um usuário tenha que alterar sua senha.\n6: Período de aviso para senha (em dias) - o período antes que uma senha expira.\n7: Período de inatividade para senha (em dias) - o período após a senha expirar para permitir que o usuário logging com a senha.\n8: Data de expiração do conta - (data em que o usuário não poderá logar)\n9: Campo reservado para uso futuro\n\nÉ importante notar que, em muitas das distribuições de hoje, a autenticação de usuários não depende apenas do arquivo /etc/shadow, existem outros mecanismos em uso, como as Módulas de Autenticação Pluggable (PAM), que substituem a autenticação.",
+    "crumbs": [
+      "Home",
+      "📂 Manipulacao De Usuario",
+      "✅ Arquivo Shadow"
+    ]
+  },
+  {
+    "objectID": "conteudos/manipulacao-de-usuario/2- root.html",
+    "href": "conteudos/manipulacao-de-usuario/2- root.html",
+    "title": "Arquivo /etc/sudoers",
+    "section": "",
+    "text": "Já aprendemos como obter acesso como superusuário usando o comando sudo. Outra forma de obter esse acesso é com o comando su. Este comando substitui usuários e abre uma shell raiz se não houver usuário especificado. Você pode usá-lo para substituir qualquer usuário desde que saiba a senha.\n$ su\nNo entanto, há algumas desvantagens em usar esse método: é muito fácil cometer um erro crítico executando todos os comandos como raiz, todas as ações são realizadas como root, tornando difícil rastrear qual usuário realizou uma operação específica, etc. Em resumo, se você precisar executar comandos como superusuário, basta usar sudo.\nAgora que sabemos quais comandos usar como superusuário, a pergunta é: Como você sabe quem tem acesso para fazer isso? O sistema não permite que qualquer um execute comandos como superusuário, então como saber?\nExiste um arquivo chamado /etc/sudoers que lista os usuários que podem executar o comando sudo. Você pode editar esse arquivo com o comando visudo.\n\nArquivo /etc/sudoers\nEste arquivo é onde o sistema armazena a lista de usuários que podem executar comandos como superusuário. Se você quiser adicionar ou remover usuários da lista, use o comando visudo. Além disso, o arquivo /etc/sudoers é protegido por senha, garantindo que apenas usuários autorizados possam realizá-las alterações.\n\n\nArquivo visudo\nO comando visudo é o executor de edição do arquivo /etc/sudoers. Ele abre o arquivo em modo de edição segura, permitindo que você adicione ou remova usuários da lista de usuários autorizados. Além disso, o comando visudo também verifica se as alterações feitas são corretas antes de permitir que elas sejam aplicadas ao sistema.\n\n\nExemplos\n\nsudo -l: Mostra a lista de comandos que você como superusuário pode executar.\nvisudo: Abre o arquivo /etc/sudoers em modo de edição segura.\nsudo nano /etc/sudoers: Abre o arquivo /etc/sudoers para editar com o nano.",
+    "crumbs": [
+      "Home",
+      "📂 Manipulacao De Usuario",
+      "✅ Root"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/10 - _proc filesystem.html",
+    "href": "conteudos/processos/10 - _proc filesystem.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Em Linux, tudo é considerado um arquivo, inclusive informações de processos. A detalhada informações de processos são armazenadas em um filesystem especial chamado /proc.\n$ ls /proc\nVocê deve ver vários valores aqui. Existem sub-diretórios para cada PID. Se você olhasse um PID no output do comando ps, poderia encontrá-lo no diretório /proc.\nVá em frente e entre em um dos processos e observe o arquivo:\n$ cat /proc/12345/status\nVocê deve ver informações de estado do processo e informações mais detalhadas. O diretório /proc é como o kernel vê o sistema, então há muito mais informações aqui do que você veria no comando ps.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Proc Filesystem"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/4 - Criação de processos.html",
+    "href": "conteudos/processos/4 - Criação de processos.html",
+    "title": "Ação",
+    "section": "",
+    "text": "Nesse próximo passo, vamos explorar a criação de processos em profundidade. O conteúdo destas lições e da próxima são meramente informativos, para que você possa entender como as coisas funcionam por baixo dos panos. É livre para voltar a este material mais tarde, após trabalhar com processos por um determinado tempo.\nCriando Processos\nQuando um novo processo é criado, um processo existente basicamente clona a si mesmo utilizando chamadas de sistema chamadas fork. A chamada de sistema fork cria um processo filho quase idêntico, que recebe um novo ID de processo (PID) e o processo original se torna seu processo pai e tem algo chamado ID de processo pai (PPID). Em seguida, o processo filho pode continuar a usar o mesmo programa que seu processo pai estava usando anteriormente, ou mais frequentemente, usar a chamada de sistema execve para lançar um programa novo. Essa chamada de sistema destrói a gestão de memória que o kernel criou para aquele processo e configura novas para o programa novo.\n\nAção\nVeja isso em ação:\n$ ps l\nA opção l fornece uma “visão longa” ou mais detalhada dos processos em execução. Você verá uma coluna rotulada PPID, que é o ID de pai. Agora, olhe para o seu terminal, você verá um processo rodando que é o seu shell, então, em meu sistema, tenho um processo rodando bash. Agora, lembre-se quando você executou o comando ps l, você o executou a partir do processo que estava rodando bash. Agora, você verá que o PID do shell bash é o PPID do comando ps l.\n\n\nA “Mãe” de todos os Processos\nSe todos os processos têm que ter um pai e são apenas cópias um do outro, haverá uma “mãe” de todos os processos, certo? Sim, você está correto. Quando o sistema inicializa, o kernel cria um processo chamado init, que tem um PID de 1. O processo init não pode ser interrompido a menos que o sistema feche. Ele é executado com privilégios de root e executa muitos processos que mantém o sistema em execução.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Criação De Processos"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/2 - Controlando o Terminal.html",
+    "href": "conteudos/processos/2 - Controlando o Terminal.html",
+    "title": "Voltando ao terminal de controle",
+    "section": "",
+    "text": "Vimos o campo TTY na saída do comando ps. O TTY é o terminal que executou o comando.\nExistem dois tipos de terminais: dispositivos de terminal regulares e dispositivos de pseudo terminal. Um dispositivo de terminal regular é um dispositivo de terminal nativo que você pode digitar e enviar saída para o seu sistema. Isso pode soar como a aplicação de terminal que você está lançando para acessar a sua shell, mas não é.\nVamos adiantar um passo e você verá como tudo isso se desenvolve. Digite Ctrl-Alt-F1 para se conectar ao TTY1 (a primeira.console virtual), você notará que não há nada exceto o terminal, sem gráficos, etc. Isso é considerado um dispositivo de terminal regular. Você pode sair desta modalidade pressionando Ctrl-Alt-F7.\nUm pseudo terminal é o que você tem sido usado para trabalhar, pode ser o terminator, qterminal, gnome terminal, etc… Eles emulam terminais com janela de shell terminal e são denotados por PTS. Se você olhar novamente para a saída do ps, verá o processo da sua shell sob pts/*.\n\nVoltando ao terminal de controle\nProcessos são geralmente ligados a um terminal de controle. Por exemplo, se você estivesse executando um programa em sua janela de shell, como o comando find, e fechou a janela, o seu processo também iria com ele.\nExistem processos especiais como processos de demons, que são processos especiais que estão mantendo o sistema em funcionamento. Eles começam durante a inicialização do sistema e usualmente são terminados quando o sistema é encerrado. Eles funcionam em segundo plano e, já que não queremos que esses processos especiais sejam terminados, eles não estão ligados a um terminal de controle. Na saída do ps, o TTY é listado como ?, indicando que não tem um terminal de controle.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Controlando O Terminal"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/3 - Sobre processos.html",
+    "href": "conteudos/processos/3 - Sobre processos.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Antes de mergulhar em aplicações práticas de processo, precisamos entender o que são e como funcionam. Este tema pode ser confuso, pois estamos mergulhando nos detalhes.\nUm processo, como disse antes, é um programa em execução no sistema, seja mais preciso, é o sistema alocando memória, processador, I/O para que o programa execute. Um processo é uma instância de um programa em execução - abra três janelas de terminal, em duas janelas, execute o comando cat sem passar opções (o processo do cat ficará aberto porque espera stdin). Agora, em uma janela adicional, execute: ps aux | grep cat. Você verá que há dois processos para o cat, embora estejam executando o mesmo programa.\nÉ o kernel que está encarregado dos processos. Quando executamos um programa, o kernel carrega o código do programa na memória, determina e aloca recursos e, em seguida, mantém controle sobre cada processo. O kernel sabe:\n\nO status do processo\nOs recursos que o processo está usando e recebe\nO proprietário do processo\nTratamento de sinais (mais sobre isso posteriormente)\nE basicamente, tudo o mais\n\nTodos os processos tentam pegar um pedaço desses “recursos”, é o trabalho do kernel garantir que processos recebam a quantidade certa de recursos com base na demanda do processo. Quando um processo termina, os recursos que ele usou agora estão livre para outros processos.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Sobre Processos"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/9 - Controle de Job.html",
+    "href": "conteudos/processos/9 - Controle de Job.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Imagine que você está trabalhando em uma janela de terminal única e está executando um comando que está levando muito tempo. Não pode interagir com o shell até que seja completo, mas quer continuar trabalhando no seu computador. Felizmente, podemos controlar como nossos processos são executados com jobs:",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Controle De Job"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/9 - Controle de Job.html#envio-de-um-job-para-o-background",
+    "href": "conteudos/processos/9 - Controle de Job.html#envio-de-um-job-para-o-background",
+    "title": "linuxteclab",
+    "section": "Envio de um job para o background",
+    "text": "Envio de um job para o background\nUsando um ampersand (&) ao fim do comando, você poderá executá-lo em segundo plano e continuar usando o shell. Vamos ver um exemplo:\n$ sleep 1000 &\n$ sleep 1001 &\n$ sleep 1002 &",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Controle De Job"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/9 - Controle de Job.html#visualizar-todos-os-jobs-de-background",
+    "href": "conteudos/processos/9 - Controle de Job.html#visualizar-todos-os-jobs-de-background",
+    "title": "linuxteclab",
+    "section": "Visualizar todos os jobs de background",
+    "text": "Visualizar todos os jobs de background\nAgora você pode visualizar os jobs que enviou para o background.\n$ jobs\n[1]    Running     sleep 1000 &\n[2]-   Running     sleep 1001 &\n[3]+   Running     sleep 1002 &\nIsso mostrará o ID do job na primeira coluna, seguido pelo status e o comando que rodou. o sinal de “+” próximo ao job ID significa que esse é o job mais recente iniciado. Já o sinal de ’“-” indica o segundo comando mais recente.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Controle De Job"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/9 - Controle de Job.html#mandando-um-job-já-iniciado-para-o-background",
+    "href": "conteudos/processos/9 - Controle de Job.html#mandando-um-job-já-iniciado-para-o-background",
+    "title": "linuxteclab",
+    "section": "Mandando um job já iniciado para o background",
+    "text": "Mandando um job já iniciado para o background\nSe você já executou um job e quer enviar para o background, não precisa terminá-lo e começar novamente. Primeiro, suspenda o job com Ctrl-Z, então rode o comando bg assim o job será enviado para o background.\nbruno@angus ~ $ sleep 1003\n^Z\n[4]+    Stopped     sleep 1003\nbruno@angus ~ $ bg\n[4]+    sleep 1003 &\nbruno@angus ~ $ jobs\n[1]    Running     sleep 1000 &\n[2]    Running     sleep 1001 &\n[3]-   Running     sleep 1002 &\n[4]+   Running     sleep 1003 &",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Controle De Job"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/9 - Controle de Job.html#movendo-um-job-do-background-para-o-foreground",
+    "href": "conteudos/processos/9 - Controle de Job.html#movendo-um-job-do-background-para-o-foreground",
+    "title": "linuxteclab",
+    "section": "Movendo um job do background para o foreground",
+    "text": "Movendo um job do background para o foreground\nPara mover um job fuera do background, especifique o ID do job que você deseja. Se você executar fg sem parâmetros, ele trará o job mais recente para o foreground (o job com o sinal + ao lado dele)\n$ fg %1",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Controle De Job"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/9 - Controle de Job.html#matando-jobs-de-background",
+    "href": "conteudos/processos/9 - Controle de Job.html#matando-jobs-de-background",
+    "title": "linuxteclab",
+    "section": "Matando jobs de background",
+    "text": "Matando jobs de background\nSimilarmente, você pode usar a mesma forma para matar processos usando IDs de Job.\nkill %1\nEm caso de dúvida, é sempre recomendável consultar o manual do jobs com man jobs para obter mais informações.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Controle De Job"
+    ]
+  },
+  {
+    "objectID": "conteudos/processos/11 - Status de processos.html",
+    "href": "conteudos/processos/11 - Status de processos.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Vamos dar outra olhada no comando ps aux:\n$ ps aux\nNa coluna STATE, você verá muitas combinações de valores. Um processo no Linux pode estar em um número de estados diferentes. Os códigos de estado mais comuns que você irá encontrar estão descritos abaixo:\n\nR: O processo está em execução ou pronto para ser executado, apenas aguardando a liberação do CPU.\nS: O processo está dormindo, aguardando a conclusão de um evento, como a entrada de dados na terminal.\nD: O processo está indiferente ao sinal, não pode ser interrompido ou cancelado, normalmente porque está causando problemas e precisa ser reiniciado ou corrigido.\nZ: O processo zumbi, um processo que foi concluído, mas está aguardando pela coleta de status. Discutimos isso detalhadamente em aula anterior.\nT: O processo está parado, suspensamente ou interrompido.\n\nLembre-se de que entender o estado de um processo é essencial para troubleshooting e gerenciamento de processos no Linux.",
+    "crumbs": [
+      "Home",
+      "📂 Processos",
+      "✅ Status De Processos"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/9-grep.html",
+    "href": "conteudos/arte-do-texto/9-grep.html",
+    "title": "O comando grep: o seu melhor amigo no tratamento de texto",
+    "section": "",
+    "text": "O comando grep: o seu melhor amigo no tratamento de texto\nO grep é provavelmente o comando de tratamento de texto mais utilizado. Permite que você procure em arquivos por caracteres que correspondam a um padrão específico. Se você quisesse saber se um arquivo existe em um diretório específico ou se um determinada string esta presente em um arquivo, você pode utilizar o grep!\nVamos usar o arquivo exemplo.txt como referência:\n rato\n cachorro\n gato\n elefante\n pato\n$ grep rato exemplo.txt\nE você descobrirá se o grep encontrou o termo “rato” no arquivo exemplo.txt, pois ele mostrará a linha com a palavra!\nAlém disso, você também pode procurar padrões que não dependem da case (maiúsculas ou minúsculas) com a flag -i:\n$ grep -i patrimOnio pat_arquivo.txt\nPara tornar ainda mais flexível o grep, você pode combinar ele com outros comandos utilizando o operador |:\n$ env | grep -i User\nComo você pode ver, o grep é muito versátil. Além disso, você também pode usar expressões regulares no seu padrão:\n$ ls /diretório | grep -E '.txt$'\nIsso deve retornar todos os arquivos que terminam com “.txt” no diretório especificado!",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Grep"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/11-tail.html",
+    "href": "conteudos/arte-do-texto/11-tail.html",
+    "title": "Comandos úteis para visualizar arquivos: tail e head",
+    "section": "",
+    "text": "Comandos úteis para visualizar arquivos: tail e head\nO comando tail funciona de forma semelhante ao comando head. Mas ele permite visualizar as últimas 10 linhas de um arquivo por padrão.\nExemplo:\n$ tail /var/log/syslog\nComo no head o tail, você pode alterar o número de linhas que deseja visualizar.\nExemplo:\n$ tail -n 15 /var/log/syslog\nUma opção interessante é a flag -f (follow). Ela permite seguir o arquivo à medida que ele cresce, bom para monitorar um serviço em tempo real.\nExemplo:\n$ tail -f /var/log/syslog\nEnquanto você interage com seu sistema, o arquivo syslog estará constantemente mudando. Com tail -f, você pode acompanhar tudo o que é adicionado a esse arquivo.",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Tail"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/13-uniq.html",
+    "href": "conteudos/arte-do-texto/13-uniq.html",
+    "title": "Comandos úteis para manipulação de texto",
+    "section": "",
+    "text": "Existem muitos comandos úteis para manipular texto no console. Um desses comandos é o uniq, que é uma ferramenta muito prática para eliminar linhas duplicadas em um arquivo.\n\n\nImagine que você tem um arquivo chamado arq.txt com várias linhas duplicadas:\narq.txt\nlivro\nlivro\nrevista\nrevista\ncomputador\nSe você quiser remover essas linhas duplicadas, basta utilizar o comando uniq:\n$ uniq arq.txt\nlivro\nrevista\ncomputador\n\n\n\nSe você quiser saber quantas vezes cada linha aparece no arquivo, basta adicionar a opção -c ao comando uniq:\n$ uniq -c arq.txt\n2 livro\n2 revista\n1 computador\n\n\n\nSe você quiser exibir apenas as linhas únicas do arquivo, basta utilizar a opção -u ao comando uniq:\n$ uniq -u arq.txt\ncomputador\n\n\n\nSe você quiser exibir apenas as linhas duplicadas do arquivo, basta utilizar a opção -d ao comando uniq:\n$ uniq -d arq.txt\nlivro\nrevista",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Uniq"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/13-uniq.html#exemplo-de-uso",
+    "href": "conteudos/arte-do-texto/13-uniq.html#exemplo-de-uso",
+    "title": "Comandos úteis para manipulação de texto",
+    "section": "",
+    "text": "Imagine que você tem um arquivo chamado arq.txt com várias linhas duplicadas:\narq.txt\nlivro\nlivro\nrevista\nrevista\ncomputador\nSe você quiser remover essas linhas duplicadas, basta utilizar o comando uniq:\n$ uniq arq.txt\nlivro\nrevista\ncomputador",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Uniq"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/13-uniq.html#contagem-de-ocorrências",
+    "href": "conteudos/arte-do-texto/13-uniq.html#contagem-de-ocorrências",
+    "title": "Comandos úteis para manipulação de texto",
+    "section": "",
+    "text": "Se você quiser saber quantas vezes cada linha aparece no arquivo, basta adicionar a opção -c ao comando uniq:\n$ uniq -c arq.txt\n2 livro\n2 revista\n1 computador",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Uniq"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/13-uniq.html#exibição-de-valores-únicos",
+    "href": "conteudos/arte-do-texto/13-uniq.html#exibição-de-valores-únicos",
+    "title": "Comandos úteis para manipulação de texto",
+    "section": "",
+    "text": "Se você quiser exibir apenas as linhas únicas do arquivo, basta utilizar a opção -u ao comando uniq:\n$ uniq -u arq.txt\ncomputador",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Uniq"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/13-uniq.html#exibição-de-valores-duplicados",
+    "href": "conteudos/arte-do-texto/13-uniq.html#exibição-de-valores-duplicados",
+    "title": "Comandos úteis para manipulação de texto",
+    "section": "",
+    "text": "Se você quiser exibir apenas as linhas duplicadas do arquivo, basta utilizar a opção -d ao comando uniq:\n$ uniq -d arq.txt\nlivro\nrevista",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Uniq"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/12-tr.html",
+    "href": "conteudos/arte-do-texto/12-tr.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Comandos de Tradução\nO comando tr permite que você traduza um conjunto de caracteres em outro conjunto de caracteres. Vamos tentar um exemplo de traduzir todos os caracteres minusculos em maiúsculos.\nPor exemplo, se você digitar $ tr a-z A-Z e em seguida pressionar Enter, obterá o seguinte resultado:\n$ echo \"linux\" | tr a-z A-Z\nLINUX\nNesse exemplo, podemos ver que todos os caracteres minusculados (a-z) foram convertidos para maiúsculos (A-Z).\nEsse comando é útil em diversas situações, tais como quando você precisa corrigir arquivos de texto com erros de formatação, alterar nomes de times de futebol (por exemplo, transformar “Barça” em “BARÇA”) ou qualquer necessidade para alteração de caracter.",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Tr"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/2-stdin.html",
+    "href": "conteudos/arte-do-texto/2-stdin.html",
+    "title": "stdin (Standard in)",
+    "section": "",
+    "text": "stdin (Standard in)\nOk vimos que temos o stdout que podemos usar, como um arquivo ou a tela como forma de saída. Bem, também existem diferentes fluxos de entrada padrão (stdin) que podemos usar. Sabemos que temos stdin de dispositivos como o teclado, mas podemos usar arquivos, saída de outros processos e do terminal também, vamos ver um exemplo.\nVamos usar o arquivo arq.txt neste exemplo, lembre-se de que ele continha o texto Hello World.\n$ cat &lt; arq.txt\nExecutando o comando vemos que o arq.txt é colocado no stdin do comando cat, e o conteúdo do arquivo é mostrado na tela.\nPodemos agora enviar o stdout do comando cat para um arquivo.\n$ cat &lt; arq.txt &gt; saida.txt",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Stdin"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/6-cut.html",
+    "href": "conteudos/arte-do-texto/6-cut.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Aprenderemos alguns comandos úteis que você pode usar para processar texto. Antes de começarmos, vamos criar um arquivo com o qual trabalharemos. Copie e cole o seguinte comando, depois de fazer isso, adicione uma TAB entre cachorro e preguiçoso (pressione Ctrl-v + TAB, isso insere um caractere de tabulação real).\n$ echo 'O Linux é rápido; o Linux é seguro' &gt; exemplo.txt\nO comando que aprenderemos é o comando cut. Extrai partes de texto de um arquivo.\nPara extrair o conteúdo por uma lista de caracteres:\n   $ cut -c 5 exemplo.txt\n Isso mostra o quinto caractere em cada linha do arquivo. Neste caso é “n”, observe que o espaço também conta como caractere.\nPara extrair o conteúdo de um campo, precisaremos fazer uma pequena modificação. O sinalizador -f ou campo corta o texto com base nos campos; por padrão, ele usa TABs como delimitadores, portanto, tudo separado por uma TAB é considerado um campo.\nVocê pode combinar o sinalizador de campo com o sinalizador de delimitador para extrair o conteúdo por um delimitador personalizado, assim o -d indica o delimitador que por padrão é o TAB:\n$ cut -f 1 -d \";\" exemplo.txt\nVocê pegará o primeiro campo -f 1, e usará como delimitador o caracter “;” -d “;”. Deverá ver no terminal “O Linux é rápido”.",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Cut"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/6-cat.html",
+    "href": "conteudos/linha-de-comando/6-cat.html",
+    "title": "cat",
+    "section": "",
+    "text": "cat\nEstamos indo bem e vimos como navegar pelo sistema e arquivos, mas agora vamos aprender a ler um arquivo. Um comando simples para usar é o comando cat, abreviação de concatenar, ele não apenas exibe o conteúdo do arquivo, mas pode combinar vários arquivos e mostrar a saída deles.\n$ cat cores frutas\nNão é ótimo para visualizar arquivos grandes e destina-se apenas a conteúdos curtos. Existem muitas outras ferramentas que usamos para visualizar arquivos de texto maiores que discutiremos na próxima lição.",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Cat"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/1-pwd.html",
+    "href": "conteudos/linha-de-comando/1-pwd.html",
+    "title": "pwd",
+    "section": "",
+    "text": "pwd\nTudo no Linux é um arquivo. À medida que você se aprofunda no Linux, você entenderá isso, mas por enquanto mantenha isso em mente. Cada arquivo é organizado em uma árvore de diretórios hierárquica. O primeiro diretório no sistema de arquivos é apropriadamente denominado diretório raiz ou root, seria semelhante a unidade C: no Windows. O diretório raiz possui muitas pastas e arquivos nos quais você pode armazenar mais pastas e arquivos, etc. Aqui está um exemplo de diretórios:\n/\n/etc/fstab\n/home/bruno\n/home/bruno/arquivo.txt\n/tmp\nA localização desses arquivos e diretórios é chamada de caminho ou path. Observe no exemplo acima que tenho um arquivo.txt que fica no caminho /home/bruno, esse caminho também é conhecido como diretório home do usuário.\nA navegação no sistema de arquivos, assim como na vida real, é útil se você souber onde está e para onde está indo. Para ver onde você está, você pode usar o comando pwd, este comando significa “print working directory” e apenas mostra em qual diretório você está, observe que o caminho vem do diretório raiz.\n$ pwd",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Pwd"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/4-touch.html",
+    "href": "conteudos/linha-de-comando/4-touch.html",
+    "title": "touch",
+    "section": "",
+    "text": "touch\nVamos aprender como fazer alguns arquivos. Uma maneira muito simples é usar o comando touch, touch permite criar novos arquivos vazios.\n$ touch meuarquivo\nE bum, novo arquivo!\nO touch também é usado para alterar carimbos de data/hora em arquivos e diretórios existentes, na verdade essa seria a principal função, pois para criar arquivos temos meios mais eficientes. Experimente, faça um ls -l em um arquivo e anote o carimbo de data/hora, depois execute touch nesse arquivo e ele atualizará o carimbo(informação) de data/hora.\nExistem muitas outras maneiras de criar arquivos que envolvem outras coisas como redirecionamento e editores de texto, mas falaremos disso no curso Manipulação de Texto.",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Touch"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/12-rm.html",
+    "href": "conteudos/linha-de-comando/12-rm.html",
+    "title": "rm",
+    "section": "",
+    "text": "rm\nAgora acho que temos muitos arquivos, vamos remover alguns arquivos. Para remover arquivos você pode usar o comando rm. O comando rm (remove) é usado para excluir arquivos e diretórios.\n$ rm arquivo\nTome cuidado ao usar o rm, não existe lixeira onde você possa restaurar os arquivos removidos. Depois que eles desaparecerem, eles desaparecerão para sempre, então tome cuidado.\nFelizmente, existem algumas medidas de segurança implementadas, então o cidadão comum não pode simplesmente remover um monte de arquivos importantes. Os arquivos protegidos contra gravação solicitarão confirmação antes de excluí-los. Se um diretório estiver protegido contra gravação, ele também não será facilmente removido.\nAgora, se você não se importa com nada disso, você pode remover absolutamente vários arquivos.\n$ rm -f arquivo1\nA opção -f ou force diz ao rm para remover todos os arquivos, sejam eles protegidos contra gravação ou não, sem avisar o usuário (desde que você tenha as permissões apropriadas).\n$ rm -i arquivo\nAdicionar a opção -i como muitos dos outros comandos informará se você deseja realmente remover os arquivos ou diretórios.\n$ rm -r diretório\nVocê não pode simplesmente rm um diretório por padrão, você precisará usar a opção -r (recursivo) para remover todos os arquivos e quaisquer subdiretórios que ele possa ter.\nVocê pode remover um diretório com o comando rmdir.\n$ rmdir dir\nUma dica para não apagar dados indesejados com o rm, é sempre recomendado usar o caminho absoluto do diretório. Por exemplo caso queira excluir os dados dentro da pasta “/home/bruno/backup”, use:\n$ rm -rf /home/bruno/backup/\nIsso evita o erro de usar o comando rm * pensando estar dentro da pasta backup quando na verdade estava dentro de outra pasta. Lembre-se o terminal não tem lixeira!",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Rm"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/8-history.html",
+    "href": "conteudos/linha-de-comando/8-history.html",
+    "title": "history",
+    "section": "",
+    "text": "history\nEm seu shell, há um histórico dos comandos que você digitou anteriormente, você pode realmente consultar esses comandos. Isso é bastante útil quando você deseja localizar e executar um comando usado anteriormente sem digitá-lo novamente.\n$ history\nQuer executar o mesmo comando que você fez antes, basta clicar na seta para cima ↑.\nQuer executar o comando anterior sem digitá-lo novamente? Usar !!. Se você digitou cat file1 e deseja executá-lo novamente, basta ir !! e executará o último comando que você executou.\nOutro atalho do histórico é ctrl-R, este é o comando de pesquisa reversa, se você pressionar ctrl-R e começar a digitar partes do comando que deseja, ele mostrará as correspondências e você poderá navegar por elas pressionando a tecla ctrl-R de novo. Depois de encontrar o comando que deseja usar novamente, basta pressionar a tecla Enter.\nNosso terminal está ficando um pouco confuso, não? Vamos fazer uma pequena limpeza, use o comando clear para limpar sua tela.\n$ clear\nEnquanto falamos sobre coisas úteis, um dos recursos mais úteis em qualquer ambiente de linha de comando é o Autocompletar usando o TAB. Se você começar a digitar o início de um comando, arquivo, diretório, etc. e pressionar a tecla TAB, ele será preenchido automaticamente com base no que encontrar no diretório que você está pesquisando, desde que você não tenha nenhum outro arquivo que comece com aqueles letras. Por exemplo, se você estava tentando executar o comando chrome, você pode digitar chr e pressionar TAB e ele preencherá automaticamente o chrome.\nExperimente usar o TAB, isso facilita e vida.",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ History"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/3-ls.html",
+    "href": "conteudos/linha-de-comando/3-ls.html",
+    "title": "ls",
+    "section": "",
+    "text": "ls\nAgora que sabemos como nos movimentar pelo sistema, como podemos descobrir o que está disponível para nós? Neste momento é como se estivéssemos nos movendo no escuro. Bem, não mais, podemos usar o maravilhoso comando ls para listar o conteúdo do diretório. O comando ls listará diretórios e arquivos no diretório atual por padrão, mas você pode especificar qual caminho deseja listar os diretórios.\n$ ls -l /home/bruno\ntotal 36\ndrwxr-xr-x 2 caires caires 4096 jun 29 14:29 'Área de trabalho'\ndrwxr-xr-x 3 caires caires 4096 jun 29 14:26  book\ndrwxr-xr-x 2 caires caires 4096 jun 29 14:29  Documentos\ndrwxr-xr-x 2 caires caires 4096 jun 29 14:29  Downloads\ndrwxr-xr-x 2 caires caires 4096 jun 29 14:29  Imagens\ndrwxr-xr-x 2 caires caires 4096 jun 29 14:29  Modelos\ndrwxr-xr-x 2 caires caires 4096 jun 29 14:29  Música\ndrwxr-xr-x 2 caires caires 4096 jun 29 14:29  Público\ndrwxr-xr-x 2 caires caires 4096 jun 29 14:29  Vídeos\n \nls é uma ferramenta bastante útil, mas também mostra informações detalhadas sobre os arquivos e diretórios que você está visualizando.\n$ ls -la\ntotal 84\ndrwxr-xr-x 15 caires caires 4096 jun 29 14:16  .\ndrwxr-xr-x  4 root   root   4096 jun 29 03:14  ..\ndrwxr-xr-x  2 caires caires 4096 jun 29 14:29 'Área de trabalho'\n-rw-------  1 caires caires   35 jun 29 15:56  .bash_history\n-rw-r--r--  1 caires caires  220 jun 29 03:14  .bash_logout\n-rw-r--r--  1 caires caires 3391 jun 29 03:14  .bashrc\n-rw-r--r--  1 caires caires 3526 jun 29 03:14  .bashrc.original\ndrwxr-xr-x  3 caires caires 4096 jun 29 14:26  book\ndrwx------  9 caires caires 4096 jun 29 15:56  .cache\ndrwx------  9 caires caires 4096 jun 29 15:56  .config\ndrwxr-xr-x  2 caires caires 4096 jun 29 14:29  Documentos\nObserve também que nem todos os arquivos em um diretório estarão visíveis. Nomes de arquivos que começam com . estão ocultos, você pode visualizá-los com o comando ls e passar a opção -a para ele (amostra todos arquivos).\nHá também mais uma opção ls útil, -l para long, que mostra uma lista detalhada de arquivos em um formato longo. Isso mostrará informações detalhadas, começando pela esquerda: permissões de arquivo, número de links, nome do proprietário, grupo de proprietários, tamanho do arquivo, carimbo de data/hora da última modificação e nome do arquivo/diretório.\nOs comandos têm opções (ou argumentos, como você quiser chamá-los) para adicionar mais funcionalidades. Veja como adicionamos -a e -l, bem, você pode adicionar os dois junto com -la. A ordem dos argumentos determina a ordem em que eles entram, na maioria das vezes isso realmente não importa, então você também pode fazer ls -al e ainda assim funcionaria.",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Ls"
+    ]
+  },
+  {
+    "objectID": "conteudos/linha-de-comando/2-cd.html",
+    "href": "conteudos/linha-de-comando/2-cd.html",
+    "title": "cd",
+    "section": "",
+    "text": "cd\nAgora que você sabe onde está, vamos nos movimentar um pouco no sistema de arquivos. Existem duas maneiras diferentes de especificar um caminho, também conhecidos com PATH, como caminhos absolutos e relativos.\n\nCaminho absoluto: este é o caminho do diretório raiz. A raiz é o chefe. O diretório raiz é comumente mostrado como uma barra. Cada vez que seu caminho começa com / significa que você está iniciando no diretório raiz. Por exemplo, /home/bruno/Desktop.\nCaminho relativo: Este é o caminho de onde você está atualmente no sistema de arquivos. Se eu estivesse no local /home/pete/Documents e quisesse chegar a um diretório dentro de Documentos chamado impostos, não preciso especificar o caminho completo da raiz como /home/bruno/Documentos/impostos, posso simplesmente ir para impostos/ em vez disso.\n\nAgora que você sabe como funcionam os caminhos, só precisamos de algo que nos ajude a mudar para o diretório que desejamos. Felizmente, temos cd ou “change directory” para fazer isso.\n$ cd /home/bruno/backup\nAqui me movi para dentro do diretório /home/bruno/backup.\nAgora estando dentro desse diretório, tenho ali uma outra pasta chamada isos, posso navegar até ela com\n$ cd iso\nPode ser muito cansativo navegar por caminhos absolutos e relativos o tempo todo, felizmente existem alguns atalhos para ajudá-lo.\n\n. (diretório atual). Este é o diretório em que você está atualmente.\n… (diretório pai). Leva você ao diretório acima do seu atual.\n~ (diretório inicial). Este diretório é padronizado como seu “diretório inicial”. Como /home/pete.\n- (diretório anterior). Isso o levará ao diretório anterior em que você estava.\n\n$cd.\n\n$cd..\n\n$cd~\n\n$cd-",
+    "crumbs": [
+      "Home",
+      "📂 Linha De Comando",
+      "✅ Cd"
+    ]
+  }
+]
