@@ -34,7 +34,7 @@ for pasta in pastas_encontradas:
 
     if os.path.isdir(caminho_pasta):
         arquivos = sorted(
-            (f for f in os.listdir(caminho_pasta) if f.endswith((".qmd", ".md"))),
+            (f for f in os.listdir(caminho_pasta) if f.endswith((".md"))),
             key=lambda x: int(re.match(r"(\d+)", x).group(1)) if re.match(r"(\d+)", x) else 999
         )
 

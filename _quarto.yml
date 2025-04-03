@@ -1,6 +1,6 @@
 project:
-  type: website
   output-dir: docs
+  type: website
 website:
   navbar:
     left:
@@ -12,99 +12,99 @@ website:
     collapse-level: 1
     contents:
     - contents:
-      - href: conteudos/linha-de-comando/1-pwd.qmd
+      - href: conteudos/linha-de-comando/1-pwd.md
         text: ✅ Pwd
-      - href: conteudos/linha-de-comando/2-cd.qmd
+      - href: conteudos/linha-de-comando/2-cd.md
         text: ✅ Cd
-      - href: conteudos/linha-de-comando/3-ls.qmd
+      - href: conteudos/linha-de-comando/3-ls.md
         text: ✅ Ls
-      - href: conteudos/linha-de-comando/4-touch.qmd
+      - href: conteudos/linha-de-comando/4-touch.md
         text: ✅ Touch
-      - href: conteudos/linha-de-comando/5-file.qmd
+      - href: conteudos/linha-de-comando/5-file.md
         text: ✅ File
-      - href: conteudos/linha-de-comando/6-cat.qmd
+      - href: conteudos/linha-de-comando/6-cat.md
         text: ✅ Cat
-      - href: conteudos/linha-de-comando/7-less.qmd
+      - href: conteudos/linha-de-comando/7-less.md
         text: ✅ Less
-      - href: conteudos/linha-de-comando/8-history.qmd
+      - href: conteudos/linha-de-comando/8-history.md
         text: ✅ History
-      - href: conteudos/linha-de-comando/9-cp.qmd
+      - href: conteudos/linha-de-comando/9-cp.md
         text: ✅ Cp
-      - href: conteudos/linha-de-comando/10-mv.qmd
+      - href: conteudos/linha-de-comando/10-mv.md
         text: ✅ Mv
-      - href: conteudos/linha-de-comando/11-mkdir.qmd
+      - href: conteudos/linha-de-comando/11-mkdir.md
         text: ✅ Mkdir
-      - href: conteudos/linha-de-comando/12-rm.qmd
+      - href: conteudos/linha-de-comando/12-rm.md
         text: ✅ Rm
-      - href: conteudos/linha-de-comando/13-man.qmd
+      - href: conteudos/linha-de-comando/13-man.md
         text: ✅ Man
-      - href: conteudos/linha-de-comando/14-find.qmd
+      - href: conteudos/linha-de-comando/14-find.md
         text: ✅ Find
       section: 📂 Linha De Comando
     - contents:
-      - href: conteudos/arte-do-texto/1-stdout.qmd
+      - href: conteudos/arte-do-texto/1-stdout.md
         text: ✅ Stdout
-      - href: conteudos/arte-do-texto/2-stdin.qmd
+      - href: conteudos/arte-do-texto/2-stdin.md
         text: ✅ Stdin
-      - href: conteudos/arte-do-texto/3-stderr.qmd
+      - href: conteudos/arte-do-texto/3-stderr.md
         text: ✅ Stderr
-      - href: conteudos/arte-do-texto/4-pipe_and_tee.qmd
+      - href: conteudos/arte-do-texto/4-pipe_and_tee.md
         text: ✅ Pipe_And_Tee
-      - href: conteudos/arte-do-texto/5-env.qmd
+      - href: conteudos/arte-do-texto/5-env.md
         text: ✅ Env
-      - href: conteudos/arte-do-texto/6-cut.qmd
+      - href: conteudos/arte-do-texto/6-cut.md
         text: ✅ Cut
-      - href: conteudos/arte-do-texto/7-head.qmd
+      - href: conteudos/arte-do-texto/7-head.md
         text: ✅ Head
-      - href: conteudos/arte-do-texto/8-paste.qmd
+      - href: conteudos/arte-do-texto/8-paste.md
         text: ✅ Paste
-      - href: conteudos/arte-do-texto/9-grep.qmd
+      - href: conteudos/arte-do-texto/9-grep.md
         text: ✅ Grep
-      - href: conteudos/arte-do-texto/10-sort.qmd
+      - href: conteudos/arte-do-texto/10-sort.md
         text: ✅ Sort
-      - href: conteudos/arte-do-texto/11-tail.qmd
+      - href: conteudos/arte-do-texto/11-tail.md
         text: ✅ Tail
-      - href: conteudos/arte-do-texto/12-tr.qmd
+      - href: conteudos/arte-do-texto/12-tr.md
         text: ✅ Tr
-      - href: conteudos/arte-do-texto/13-uniq.qmd
+      - href: conteudos/arte-do-texto/13-uniq.md
         text: ✅ Uniq
       section: 📂 Arte Do Texto
     - contents:
-      - href: conteudos/manipulacao-de-usuario/1- Usuario e grupo.qmd
+      - href: conteudos/manipulacao-de-usuario/1- Usuario e grupo.md
         text: ✅ Usuario E Grupo
-      - href: conteudos/manipulacao-de-usuario/2- root.qmd
+      - href: conteudos/manipulacao-de-usuario/2- root.md
         text: ✅ Root
-      - href: conteudos/manipulacao-de-usuario/3- Arquivo passwd.qmd
+      - href: conteudos/manipulacao-de-usuario/3- Arquivo passwd.md
         text: ✅ Arquivo Passwd
-      - href: conteudos/manipulacao-de-usuario/4- Arquivo shadow.qmd
+      - href: conteudos/manipulacao-de-usuario/4- Arquivo shadow.md
         text: ✅ Arquivo Shadow
-      - href: conteudos/manipulacao-de-usuario/5- Arquivo group.qmd
+      - href: conteudos/manipulacao-de-usuario/5- Arquivo group.md
         text: ✅ Arquivo Group
-      - href: conteudos/manipulacao-de-usuario/6- Gerenciamento de usuários.qmd
+      - href: conteudos/manipulacao-de-usuario/6- Gerenciamento de usuários.md
         text: ✅ Gerenciamento De Usuários
       section: 📂 Manipulacao De Usuario
     - contents:
-      - href: conteudos/processos/1- Comando ps.qmd
+      - href: conteudos/processos/1- Comando ps.md
         text: ✅ Comando Ps
-      - href: conteudos/processos/2 - Controlando o Terminal.qmd
+      - href: conteudos/processos/2 - Controlando o Terminal.md
         text: ✅ Controlando O Terminal
-      - href: conteudos/processos/3 - Sobre processos.qmd
+      - href: conteudos/processos/3 - Sobre processos.md
         text: ✅ Sobre Processos
-      - href: conteudos/processos/4 - Criação de processos.qmd
+      - href: conteudos/processos/4 - Criação de processos.md
         text: ✅ Criação De Processos
-      - href: conteudos/processos/5 - Finalização de processos.qmd
+      - href: conteudos/processos/5 - Finalização de processos.md
         text: ✅ Finalização De Processos
-      - href: conteudos/processos/6 - Sinais no Linux.qmd
+      - href: conteudos/processos/6 - Sinais no Linux.md
         text: ✅ Sinais No Linux
-      - href: conteudos/processos/7 - kill(Terminate).qmd
+      - href: conteudos/processos/7 - kill(Terminate).md
         text: ✅ Kill(Terminate)
-      - href: conteudos/processos/8 - niceness.qmd
+      - href: conteudos/processos/8 - niceness.md
         text: ✅ Niceness
-      - href: conteudos/processos/9 - Controle de Job.qmd
+      - href: conteudos/processos/9 - Controle de Job.md
         text: ✅ Controle De Job
-      - href: conteudos/processos/10 - _proc filesystem.qmd
+      - href: conteudos/processos/10 - _proc filesystem.md
         text: ✅ Proc Filesystem
-      - href: conteudos/processos/11 - Status de processos.qmd
+      - href: conteudos/processos/11 - Status de processos.md
         text: ✅ Status De Processos
       section: 📂 Processos
     search: true
