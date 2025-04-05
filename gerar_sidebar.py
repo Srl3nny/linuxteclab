@@ -9,7 +9,8 @@ ORDEM_SECOES = [
     "linha-de-comando",
     "arte-do-texto",
     "manipulacao-de-usuario",
-    "processos"
+    "processos",
+    "pacotes"
 ]
 
 # Função para formatar o nome da seção (troca "-" por espaço e capitaliza)
@@ -34,20 +35,23 @@ for pasta in pastas_encontradas:
 
     if os.path.isdir(caminho_pasta):
         arquivos = sorted(
-            (f for f in os.listdir(caminho_pasta) if f.endswith((".md"))),
+            (f for f in os.listdir(caminho_pasta) if f.endswith((".md", ".qmd"))),
             key=lambda x: int(re.match(r"(\d+)", x).group(1)) if re.match(r"(\d+)", x) else 999
         )
 
         if arquivos:  # Só adiciona se houver arquivos
+            contents = []
+            for arquivo in arquivos:
+                href = f"{PASTA_CONTEUDOS}/{pasta}/{arquivo}"
+                nome_arquivo = re.sub(r'^\d+[-_ ]*', '', arquivo).replace('.qmd', '').replace('.md', '').title()
+                contents.append({
+                    "href": href,
+                    "text": f"✅ {nome_arquivo}"
+                })
+
             conteudo_sidebar.append({
                 "section": f"📂 {formatar_secao(pasta)}",
-                "contents": [
-                    {
-                        "href": f"{PASTA_CONTEUDOS}/{pasta}/{arquivo}",
-                        "text": f"✅ {re.sub(r'^\d+[-_ ]*', '', arquivo).replace('.qmd', '').replace('.md', '').title()}"
-                    }
-                    for arquivo in arquivos
-                ]
+                "contents": contents
             })
 
 # Se não encontrou nada, algo está errado

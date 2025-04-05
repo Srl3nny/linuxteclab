@@ -648,5 +648,173 @@
       "📂 Linha De Comando",
       "✅ Cd"
     ]
+  },
+  {
+    "objectID": "conteudos/pacotes/1 - Distribuição de programas.html",
+    "href": "conteudos/pacotes/1 - Distribuição de programas.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Seu sistema computacional é composto por muitos pacotes, como navegadores de internet, editores de texto, reprodutores de mídia, etc. Esses pacotes são gerenciados por gerenciadores de pacotes, que instalam e mantém o software no seu sistema. No entanto, nem todos os pacotes são instalados via gerenciadores de pacotes. É comum instalar pacotes diretamente a partir do seu código fonte. Mas a maioria do tempo você usará um gerenciador de pacotes para instalar software (apt, dnf..).\nOs pacotes mais comuns são do tipo Debian (.deb) e Red Hat (.rpm). Os pacotes do estilo Debian são usados nas distribuições como Debian, Ubuntu, LinuxMint, etc. Já os pacotes do estilo Red Hat são vistos nas distribuições Red Hat Enterprise Linux, Fedora, CentOS, Rocky etc.\nO que são Pacotes?\nVocê pode conhecê-los como Chrome, Photoshop, etc. Mas eles realmente são apenas muitos arquivos compilados em um único arquivo. Os desenvolvedores (ou em algum caso, uma pessoa única) que escrevem esse software são conhecidos como fornecedores upstream. Eles compilam seu código e criam um manual sobre como instalar o software. Esses fornecedores upstream trabalham para desenvolver novas funcionalidades e atualizar o software existente. Quando estiverem prontos para liberar para o mundo, eles enviam o pacote para os mantenedores de pacotes, que são responsáveis por distribuir o software em forma de pacotes.\nArquivo de Exemplo\nSe você quiser explorar um pacote Debian, por exemplo, você pode baixar o arquivo chromium-browser_91.0.4472.114-1_amd64.deb e instalar o navegador Chromium.\nOutro Exemplo\nSe você quiser olhar o código fonte do pacote RPM, você pode fazer isso baixando o arquivo wget-1.21.1-5.2.amd64.rpm e examinando as informações sobre a instalação.\nLembre-se de que esses são apenas exemplos, e os pacotes podem ter nomes e extensões diferentes, dependendo do tipo de pacote e da distribuição utilizada.",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Distribuição De Programas"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/4 - Dependência de pacotes.html",
+    "href": "conteudos/pacotes/4 - Dependência de pacotes.html",
+    "title": "Pacotes e Dependências",
+    "section": "",
+    "text": "Pacotes e Dependências\nEm geral, os pacotes funcionam melhor quando são acompanhados por dependências que os ajudam a trabalhar. Por exemplo, imagine um grupo de restaurantes que preparam diferentes tipos de comida, mas que obtêm seus ingredientes de uma mesma granja. A comida dos restaurantes depende da granja. Se a granja parasasse de fornecer ingredientes abruptamente, os restaurantes estariam em situação gravíssima.\nNas distribuições Linux, essas dependências são frequentemente outros pacotes ou bibliotecas compartilhadas. Bibliotecas compartilhadas são coleções de código que outros programas desejam utilizar e não desejam ter que rewriting para si mesmos. Pense novamente nos restaurantes, quantas horas cada um teria que trabalhar se também tivessem que cultivar seus próprios ingredientes? \nApenas lembre-se de que os pacotes têm dependências para funcionar, seja essas dependências outros pacotes ou bibliotecas. Se as dependências não forem encontradas, o pacote ficará em estado quebrado e muitas vezes nem sequer será possível instalar.",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Dependência De Pacotes"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/7 - Compilando.html",
+    "href": "conteudos/pacotes/7 - Compilando.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Instalando um pacote em forma de código-fonte\nMuitas vezes, você encontrará um pacote obscuro que apenas vem em forma de código-fonte puro. Nesse caso, você precisará usar alguns comandos para converter esse código-fonte em pacote compilável e instalável em seu sistema.\nPasso 1: Instalar ferramentas de compilação\nPrimeiramente, você precisará instalar ferramentas para compilar código-fonte. Use o comando a seguir:\n$ sudo apt install build-essential\nPasso 2: EXTRAIR conteúdo do pacote\nExtrai o conteúdo do pacote em forma de arquivo .tar.gz. Use o comando a seguir:\n$ tar -xzvf package.tar.gz\nLer README e INSTALL\nAntes de começar a instalar o pacote, certifique-se de ler o arquivo README ou INSTALL dentro do pacote. Algumas vezes, há instruções de instalação específicas.\nCompilar o pacote\nO método de compilação utilizado pelo desenvolvedor pode variar. No entanto, a maioria dos pacotes é compilável usando o método de compilação básica. Nessa seção, vamos discutir como compilar usando o método make.\nConfigure a compilação\nDentro do conteúdo do pacote, há um script de configuração que verifica as dependências do sistema e se você estiver faltando alguma coisa, você verá um erro e precisará resolver essas dependências.\nUse o comando a seguir:\n$ ./configure\nO caractere './' permite executar um script no diretório atual.\nCompilar o pacote\nEm seguida, compilar o pacote usando o comando seguinte:\n$ make\nO comando make analisa o arquivo Makefile e constrói o software de acordo com as regras definidas nesse arquivo.\nInstalar o pacote\nPara instalar o pacote, use o comando a seguir:\n$ sudo make install\nEssa comandos copia os arquivos corretos para as localizações corretas no seu computador.\nDessinstalar o pacote\nSe você quiser remover o pacote, use o comando a seguir:\n$ sudo make uninstall\nNo entanto, é importante ter cuidado ao usar o comando make install, pois você pode não estar ciente do que está acontecendo em segundo plano. Em vez disso, use o comando checkinstall, que constrói um arquivo .deb para você e o instala facilmente.\nUse o comando a seguir:\n$ sudo checkinstall\nEsse comando executará o comando make install e construirá um arquivo .deb e o instalará. Isso torna mais fácil remover o pacote mais tarde.",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Compilando"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html",
+    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html",
+    "title": "Arquivos e Compressão no Linux",
+    "section": "",
+    "text": "Aprenda a gerenciar arquivos compactados no Linux antes de instalar pacotes de diferentes gerenciadores. Você provavelmente já conhece o conceito de arquivo ZIP ou RAR, que é uma coleção de arquivos compactados em um único arquivo, é bem comum no mundo do Windows.\n\n\nO gzip é um programa comum em Linux que compreende arquivo em formato .gz. Para comprimir um arquivo:\n$ gzip meuarquivo.txt\nPara descomprimir:\n$ gunzip meuarquivo.txt.gz\n\n\n\nInfelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo ZIP com tar, ele terá um prefixo .tar.\nExemplo:\n$ tar cvf meuarquivo.tar arquivo1.txt arquivo2.txt\nOpções:\n\nc: criar um novo arquivo\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP\n\n\n\n\nPara extrair os conteúdo de um arquivo ZIP, use:\n$ tar xvf meuarquivo.tar\nOpções:\n\nx: extrair os conteúdos do arquivo ZIP\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP\n\n\n\n\nMuitas vezes, você encontrará um arquivo ZIP que foi compresso, como meuarquivo.tar.gz. Basta descomprimir com gunzip e, em seguida, extrair os conteúdos do arquivo ZIP com tar.\nExemplo:\n$ gunzip meuarquivo.tar.gz\n$ tar xvf meuarquivo.tar\nAlternativamente, você pode usar a opção z com tar, que irá usar o gzip ou gunzip automaticamente.\nCriar um arquivo ZIP compresso:\n$ tar czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt\nDescompressizar e extrair:\n$ tar xzf meuarquivo.tar.gz\n\n\n\nDurante seu caminho em Linux, você encontrará outras ferramentas de compressão e arquivamento, como bzip2, compress, zip e unzip. Lembre-se de que cada ferramenta tem suas próprias opções e comandos.",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Arquivos Tar E Zip"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#compressão-com-gzip",
+    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#compressão-com-gzip",
+    "title": "Arquivos e Compressão no Linux",
+    "section": "",
+    "text": "O gzip é um programa comum em Linux que compreende arquivo em formato .gz. Para comprimir um arquivo:\n$ gzip meuarquivo.txt\nPara descomprimir:\n$ gunzip meuarquivo.txt.gz",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Arquivos Tar E Zip"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#criar-arquivos-zip-com-tar",
+    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#criar-arquivos-zip-com-tar",
+    "title": "Arquivos e Compressão no Linux",
+    "section": "",
+    "text": "Infelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo ZIP com tar, ele terá um prefixo .tar.\nExemplo:\n$ tar cvf meuarquivo.tar arquivo1.txt arquivo2.txt\nOpções:\n\nc: criar um novo arquivo\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Arquivos Tar E Zip"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#extrair-arquivos-zip-com-tar",
+    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#extrair-arquivos-zip-com-tar",
+    "title": "Arquivos e Compressão no Linux",
+    "section": "",
+    "text": "Para extrair os conteúdo de um arquivo ZIP, use:\n$ tar xvf meuarquivo.tar\nOpções:\n\nx: extrair os conteúdos do arquivo ZIP\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Arquivos Tar E Zip"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#compressão-e-descompressão-com-tar-e-gzip",
+    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#compressão-e-descompressão-com-tar-e-gzip",
+    "title": "Arquivos e Compressão no Linux",
+    "section": "",
+    "text": "Muitas vezes, você encontrará um arquivo ZIP que foi compresso, como meuarquivo.tar.gz. Basta descomprimir com gunzip e, em seguida, extrair os conteúdos do arquivo ZIP com tar.\nExemplo:\n$ gunzip meuarquivo.tar.gz\n$ tar xvf meuarquivo.tar\nAlternativamente, você pode usar a opção z com tar, que irá usar o gzip ou gunzip automaticamente.\nCriar um arquivo ZIP compresso:\n$ tar czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt\nDescompressizar e extrair:\n$ tar xzf meuarquivo.tar.gz",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Arquivos Tar E Zip"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#outras-ferramentas",
+    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#outras-ferramentas",
+    "title": "Arquivos e Compressão no Linux",
+    "section": "",
+    "text": "Durante seu caminho em Linux, você encontrará outras ferramentas de compressão e arquivamento, como bzip2, compress, zip e unzip. Lembre-se de que cada ferramenta tem suas próprias opções e comandos.",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Arquivos Tar E Zip"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/2 - Repositórios.html",
+    "href": "conteudos/pacotes/2 - Repositórios.html",
+    "title": "Compreendendo os Repositórios de Pacotes",
+    "section": "",
+    "text": "Compreendendo os Repositórios de Pacotes\nVocê provavelmente já se perguntou como os pacotes que são subidos na internet acabam chegando nos seus computadores? Você vai a página de download de cada pacote que deseja e clica em download e instalação? Bem, é possível fazer isso, mas há algo melhor chamado repositórios de pacotes. Repositórios são simplesmente locais de armazenamento centralizados para pacotes. Existem montes de repositórios que guardam uma diversidade de pacotes e, melhor ainda, eles estão todos disponíveis na internet.\nPara exemplo, imagine que eu quero instalar o software fictício linuxteclab no meu computador. linuxteclab gerencia seus próprios repositórios para pacotes. Ele hospeda esse repositório no endereço-fonte: http://download.linuxteclab.com.br/linux/deb/\nEm vez de ir à sua página inicial para baixar o pacote diretamente, você pode instruir o seu computador a encontrar o software no endereço do link acima.\nSua distribuição já vem com fontes pré-aulilizadas para obter pacotes e isso é como ela instala todos os pacotes básicos que você vê em seu sistema. Em um sistema Debian, esse arquivo de fontes é o /etc/apt/sources.list. O seu computador saberá buscar lá e verificar se há repositórios fontes adicionais.\nExemplo:\nVocê pode adicionar fontes adicionais em seu arquivo /etc/apt/sources.list para obter pacotes personalizados. Por exemplo, você pode adicionar a seguinte linha para obter o repositório do Ubuntu:\ndeb http://archive.ubuntu.com/ubuntu xenial main restricted\nIsso permitirá que você obtenha pacotes do Ubuntu Xenial naquela fonte.",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Repositórios"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/5 - RPM e dpkg.html",
+    "href": "conteudos/pacotes/5 - RPM e dpkg.html",
+    "title": "rpm e dpkg",
+    "section": "",
+    "text": "Pense assim, o .exe é um arquivo executável único, assim como .deb e .rpm. Você provavelmente não verá esses arquivos se usar repositórios de pacotes, mas se baixar pacotes diretamente, provavelmente terá que lidar com esses formatos. É claro que eles são exclusivos às suas distribuições, .deb para Debian-based e .rpm para Red Hat-based.\nPara instalar esses pacotes diretos, você pode usar os comandos do gerenciamento de pacotes: rpm e dpkg. Esse são os ferramentas utilizadas para instalar arquivos de pacotes, no entanto, não instalam dependências de pacotes, então, se o seu pacote tiver 10 dependências, você precisaria instalar pacotes separadamente e, em seguida, suas dependências e assim por diante. Como você pode ver, isso foi um dos motivos que levaram ao surgimento dos sistemas de gerenciamento com apt.\nLembre-se de que haverá inúmeras vezes em que precisará instalar, consultar ou verificar um pacote com uma dessas ferramentas, então, lembre sempre esses comandos.\n\n\n\n\nDebian:\n$ dpkg -i some_deb_package.deb\n$ dpkg -r some_deb_package.deb\nNo Debian, -i significa install (instalar) e -r significa remove (remover).\nRPM:\n$ rpm -i some_rpm_package.rpm\n$ rpm -e some_rpm_package.rpm\nNo RPM, -i significa install (instalar) e -e significa erase (remover).\n\n\n\nDebian:\n$ dpkg -l\n-l significa list (lista).\nRPM:\n$ rpm -qa\n-q significa query (consulta) e a significa all (todos).",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Rpm E Dpkg"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/5 - RPM e dpkg.html#install-consulta-e-remoção-de-pacotes",
+    "href": "conteudos/pacotes/5 - RPM e dpkg.html#install-consulta-e-remoção-de-pacotes",
+    "title": "rpm e dpkg",
+    "section": "",
+    "text": "Debian:\n$ dpkg -i some_deb_package.deb\n$ dpkg -r some_deb_package.deb\nNo Debian, -i significa install (instalar) e -r significa remove (remover).\nRPM:\n$ rpm -i some_rpm_package.rpm\n$ rpm -e some_rpm_package.rpm\nNo RPM, -i significa install (instalar) e -e significa erase (remover).\n\n\n\nDebian:\n$ dpkg -l\n-l significa list (lista).\nRPM:\n$ rpm -qa\n-q significa query (consulta) e a significa all (todos).",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Rpm E Dpkg"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/6 - Yum e Apt.html",
+    "href": "conteudos/pacotes/6 - Yum e Apt.html",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Esses sistemas acompanham todos os recursos necessários para tornar a instalação, remoção e alteração de pacotes mais fáceis, incluindo a instalação de dependências de pacote. Dois dos gerenciadores de pacotes mais populares são o dnf e o apt. O dnf é exclusivo da família Red Hat, enquanto o apt é exclusivo da família Debian.\n \nInstalar um pacote de um repositório\n\nNo Debian: $ apt install package_name\nNo RPM: $ dnf install package_name\n\nRemover um pacote\n\nNo Debian: $ apt remove package_name\nNo RPM: $ dnf remove package_name\n\nAtualizar pacotes de um repositório\nÉ sempre uma boa prática atualizar seus repositórios de pacotes para que estejam atualizados antes de instalar e atualizar um pacote.\n\nNo Debian: apt update; apt upgrade\n\nNo RPM: dnf update\n\n\nObter informações sobre um pacote instalado\n\nNo Debian: apt show package_name\nNo RPM: dnf info package_name\n\nExemplo: Instalar o pacote htop no Debian:\n$ sudo apt install htop\nExemplo: Remover o pacote git no RPM:\n$ sudo dnf remove git\nNota: é importante verificar se o repositório é confiável antes de realizar as atualizações.",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Yum E Apt"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/6 - Yum e Apt.html#gerenciamento-de-pacotes-yum-e-apt",
+    "href": "conteudos/pacotes/6 - Yum e Apt.html#gerenciamento-de-pacotes-yum-e-apt",
+    "title": "linuxteclab",
+    "section": "",
+    "text": "Esses sistemas acompanham todos os recursos necessários para tornar a instalação, remoção e alteração de pacotes mais fáceis, incluindo a instalação de dependências de pacote. Dois dos gerenciadores de pacotes mais populares são o dnf e o apt. O dnf é exclusivo da família Red Hat, enquanto o apt é exclusivo da família Debian.\n \nInstalar um pacote de um repositório\n\nNo Debian: $ apt install package_name\nNo RPM: $ dnf install package_name\n\nRemover um pacote\n\nNo Debian: $ apt remove package_name\nNo RPM: $ dnf remove package_name\n\nAtualizar pacotes de um repositório\nÉ sempre uma boa prática atualizar seus repositórios de pacotes para que estejam atualizados antes de instalar e atualizar um pacote.\n\nNo Debian: apt update; apt upgrade\n\nNo RPM: dnf update\n\n\nObter informações sobre um pacote instalado\n\nNo Debian: apt show package_name\nNo RPM: dnf info package_name\n\nExemplo: Instalar o pacote htop no Debian:\n$ sudo apt install htop\nExemplo: Remover o pacote git no RPM:\n$ sudo dnf remove git\nNota: é importante verificar se o repositório é confiável antes de realizar as atualizações.",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Yum E Apt"
+    ]
   }
 ]

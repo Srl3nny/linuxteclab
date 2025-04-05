@@ -107,6 +107,22 @@ website:
       - href: conteudos/processos/11 - Status de processos.md
         text: ✅ Status De Processos
       section: 📂 Processos
+    - contents:
+      - href: conteudos/pacotes/1 - Distribuição de programas.md
+        text: ✅ Distribuição De Programas
+      - href: conteudos/pacotes/2 - Repositórios.md
+        text: ✅ Repositórios
+      - href: conteudos/pacotes/3 - Arquivos Tar e Zip.md
+        text: ✅ Arquivos Tar E Zip
+      - href: conteudos/pacotes/4 - Dependência de pacotes.md
+        text: ✅ Dependência De Pacotes
+      - href: conteudos/pacotes/5 - RPM e dpkg.md
+        text: ✅ Rpm E Dpkg
+      - href: conteudos/pacotes/6 - Yum e Apt.md
+        text: ✅ Yum E Apt
+      - href: conteudos/pacotes/7 - Compilando.md
+        text: ✅ Compilando
+      section: 📂 Pacotes
     search: true
     style: docked
   title: linuxteclab
