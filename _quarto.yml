@@ -123,6 +123,24 @@ website:
       - href: conteudos/pacotes/7 - Compilando.md
         text: ✅ Compilando
       section: 📂 Pacotes
+    - contents:
+      - href: conteudos/permissoes/1 - Permissões.md
+        text: ✅ Permissões
+      - href: conteudos/permissoes/2 - Modificando Permissões.md
+        text: ✅ Modificando Permissões
+      - href: conteudos/permissoes/3 - Alterando proprietário.md
+        text: ✅ Alterando Proprietário
+      - href: conteudos/permissoes/4 - Umask.md
+        text: ✅ Umask
+      - href: conteudos/permissoes/5 - Setuid.md
+        text: ✅ Setuid
+      - href: conteudos/permissoes/6 - Setgid.md
+        text: ✅ Setgid
+      - href: conteudos/permissoes/7 - ProcessPermissions.md
+        text: ✅ Processpermissions
+      - href: conteudos/permissoes/8 - Sticky Bit.md
+        text: ✅ Sticky Bit
+      section: 📂 Permissoes
     search: true
     style: docked
   title: linuxteclab

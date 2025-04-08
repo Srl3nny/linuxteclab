@@ -10,7 +10,8 @@ ORDEM_SECOES = [
     "arte-do-texto",
     "manipulacao-de-usuario",
     "processos",
-    "pacotes"
+    "pacotes",
+    "permissoes"
 ]
 
 # Função para formatar o nome da seção (troca "-" por espaço e capitaliza)
