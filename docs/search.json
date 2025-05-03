@@ -682,42 +682,72 @@
     "href": "conteudos/compartilhamento/3-SimpleHTTPServer.html",
     "title": "Servidor de Arquivos Local com Python",
     "section": "",
-    "text": "Servidor de Arquivos Local com Python\nO Python tem uma ferramenta muito útil para servir arquivos sob demanda através do protocolo HTTP. Isso é muito útil se você quiser criar uma compartilhamento de rede rápido que outras máquinas em sua rede possam acessar. Para fazê-lo, simplemente vá ao diretório que deseja compartilhar e execute:\n$ sudo python3 -m http.server\n[sudo] senha para bruno: \nServing HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...\nPortanto, obtenha a endereço IP da máquina que você executou este comando e, em outra máquina, acesse-o no navegador com: http://IP_ADDRESS:8000. Na sua própria máquina, você pode visualizar os arquivos disponíveis digitando: http://localhost:8000 no navegador."
+    "text": "Servidor de Arquivos Local com Python\nO Python tem uma ferramenta muito útil para servir arquivos sob demanda através do protocolo HTTP. Isso é muito útil se você quiser criar uma compartilhamento de rede rápido que outras máquinas em sua rede possam acessar. Para fazê-lo, simplemente vá ao diretório que deseja compartilhar e execute:\n$ sudo python3 -m http.server\n[sudo] senha para bruno: \nServing HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...\nPortanto, obtenha a endereço IP da máquina que você executou este comando e, em outra máquina, acesse-o no navegador com: http://IP_ADDRESS:8000. Na sua própria máquina, você pode visualizar os arquivos disponíveis digitando: http://localhost:8000 no navegador.",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Simplehttpserver"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/2-rsync.html",
     "href": "conteudos/compartilhamento/2-rsync.html",
     "title": "Rsync: um Poderoso Ferramenta de Sincronização de Arquivos",
     "section": "",
-    "text": "Se você precisa copiar dados de diversos hosts, é provável que tenha ouvido falar sobre o rsync (ou “remote synchronization”). Embora semelhante ao scp, o rsync apresenta uma diferença fundamental. Ele utiliza um algoritmo especial que compara, avançadamente, se os arquivos que está copiando já existem no destino e apenas copia as diferenças. Por exemplo, imagine que você estava copiando um arquivo quando sua conexão foi interrompida, parando o processo de cópia no meio. Em vez de ter que recopiar tudo desde o início, o rsync apenas copia os que não foram copiados.\nAlém disso, o rsync verifica a integridade dos arquivos que está copiando com checksums. Essas pequenas otimizações permitem uma transferência de arquivos mais flexível e tornam o rsync ideial para a sincronização de diretórios remotamente e localmente, backups de dados e transferências de dados de grande porte.\n\n\n\nv: saída VERBOSE.\nr: recursividade na pasta.\nh: saída legível por humanos.\nz: compressão para transferências mais fáceis, ótimo para conexões lentas.\n\n\n\n\n$ rsync -zvr /meu/local/dir/a /meu/local/dir/b\n\n\n\n$ rsync /local/dir bruno@192.168.15.100:/remoto/dir\n\n\n\n$ rsync bruno@192.168.15.100/remoto/dir /local/dir"
+    "text": "Se você precisa copiar dados de diversos hosts, é provável que tenha ouvido falar sobre o rsync (ou “remote synchronization”). Embora semelhante ao scp, o rsync apresenta uma diferença fundamental. Ele utiliza um algoritmo especial que compara, avançadamente, se os arquivos que está copiando já existem no destino e apenas copia as diferenças. Por exemplo, imagine que você estava copiando um arquivo quando sua conexão foi interrompida, parando o processo de cópia no meio. Em vez de ter que recopiar tudo desde o início, o rsync apenas copia os que não foram copiados.\nAlém disso, o rsync verifica a integridade dos arquivos que está copiando com checksums. Essas pequenas otimizações permitem uma transferência de arquivos mais flexível e tornam o rsync ideial para a sincronização de diretórios remotamente e localmente, backups de dados e transferências de dados de grande porte.\n\n\n\nv: saída VERBOSE.\nr: recursividade na pasta.\nh: saída legível por humanos.\nz: compressão para transferências mais fáceis, ótimo para conexões lentas.\n\n\n\n\n$ rsync -zvr /meu/local/dir/a /meu/local/dir/b\n\n\n\n$ rsync /local/dir bruno@192.168.15.100:/remoto/dir\n\n\n\n$ rsync bruno@192.168.15.100/remoto/dir /local/dir",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Rsync"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/2-rsync.html#opções-comuns-de-uso-do-rsync",
     "href": "conteudos/compartilhamento/2-rsync.html#opções-comuns-de-uso-do-rsync",
     "title": "Rsync: um Poderoso Ferramenta de Sincronização de Arquivos",
     "section": "",
-    "text": "v: saída VERBOSE.\nr: recursividade na pasta.\nh: saída legível por humanos.\nz: compressão para transferências mais fáceis, ótimo para conexões lentas."
+    "text": "v: saída VERBOSE.\nr: recursividade na pasta.\nh: saída legível por humanos.\nz: compressão para transferências mais fáceis, ótimo para conexões lentas.",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Rsync"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/2-rsync.html#copiar-ou-sincronizar-arquivos-no-mesmo-host",
     "href": "conteudos/compartilhamento/2-rsync.html#copiar-ou-sincronizar-arquivos-no-mesmo-host",
     "title": "Rsync: um Poderoso Ferramenta de Sincronização de Arquivos",
     "section": "",
-    "text": "$ rsync -zvr /meu/local/dir/a /meu/local/dir/b"
+    "text": "$ rsync -zvr /meu/local/dir/a /meu/local/dir/b",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Rsync"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/2-rsync.html#copiar-ou-sincronizar-arquivos-do-host-remoto-para-o-host-local",
     "href": "conteudos/compartilhamento/2-rsync.html#copiar-ou-sincronizar-arquivos-do-host-remoto-para-o-host-local",
     "title": "Rsync: um Poderoso Ferramenta de Sincronização de Arquivos",
     "section": "",
-    "text": "$ rsync /local/dir bruno@192.168.15.100:/remoto/dir"
+    "text": "$ rsync /local/dir bruno@192.168.15.100:/remoto/dir",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Rsync"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/2-rsync.html#copiar-ou-sincronizar-arquivos-do-host-local-para-o-host-remoto",
     "href": "conteudos/compartilhamento/2-rsync.html#copiar-ou-sincronizar-arquivos-do-host-local-para-o-host-remoto",
     "title": "Rsync: um Poderoso Ferramenta de Sincronização de Arquivos",
     "section": "",
-    "text": "$ rsync bruno@192.168.15.100/remoto/dir /local/dir"
+    "text": "$ rsync bruno@192.168.15.100/remoto/dir /local/dir",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Rsync"
+    ]
   },
   {
     "objectID": "conteudos/subnetting/SubnetMath.html",
@@ -836,77 +866,132 @@
     "href": "conteudos/compartilhamento/5-Samba.html",
     "title": "Compartilhando arquivos entre Windows e Linux com Samba",
     "section": "",
-    "text": "Desde os primórdios da computação, é necessário para as máquinas Windows compartilharem arquivos com as máquinas Linux, e foi assim que nasceu o protocolo Server Message Block (SMB). Além disso, o SMB foi posteriormente aprimorado e otimizado no formato do protocolo Common Internet File System (CIFS).\n\n\nSamba é o conjunto de ferramentas Linux para trabalhar com CIFS no Linux. Além de compartilhar arquivos, também é possível compartilhar recursos como impressoras.\n\n\n\nVamos passar pelos passos básicos para criar uma compartilhamento de rede que pode ser acessada por uma máquina Windows: ### Instalar Samba\n$ sudo apt update\n$ sudo apt install samba\n\n\nO arquivo de configuração do Samba é encontrado em /etc/samba/smb.conf. Este arquivo deve indicar quais diretórios devem ser compartilhados, quais são os permissoes de acesso e mais opções. O arquivo de configuração default vem com muitos códigos comentados que podem ser usados como exemplos para configurar sua própria configuração. Deixarei um exemplo de compartilhamento abaixo, basta copiar para o fim do arquivo smb.conf.\n$ sudo vi /etc/samba/smb.conf\n[Compartilhado]\n   path = /srv/samba/compartilhado\n   browseable = yes\n   read only = no\n   guest ok = no\n   valid users = nome_do_usuario\n\n\n\n$ sudo smbpasswd -a [nome_do_usuario]\n\n\n\nsudo mkdir -p /srv/samba/compartilhado\nsudo chown nome_do_usuario:nome_do_usuario /srv/samba/compartilhado\n\n\n\nsudo systemctl restart smbd\n\n\n\nEm um Windows, basta digitar a conexão de rede no prompt de iniciar: \\\\HOST\\sharename.\n\n\n\n$ smbclient //HOST/directory -U user\nO pacote de Samba inclui uma ferramenta de linha de comando chamada smbclient que você pode usar para acessar qualquer servidor Windows ou Samba. Uma vez conectado ao compartilhamento, você pode navegar e transferir arquivos.\n\n\n\nEm vez de transferir arquivos um a um, você pode simplesmente montar o compartilhamento de rede no seu sistema.\n$ sudo apt install cifs-utils\n$ sudo mount -t cifs //IP_do_servidor/Compartilhado /mnt/samba -o username=nome_do_usuario"
+    "text": "Desde os primórdios da computação, é necessário para as máquinas Windows compartilharem arquivos com as máquinas Linux, e foi assim que nasceu o protocolo Server Message Block (SMB). Além disso, o SMB foi posteriormente aprimorado e otimizado no formato do protocolo Common Internet File System (CIFS).\n\n\nSamba é o conjunto de ferramentas Linux para trabalhar com CIFS no Linux. Além de compartilhar arquivos, também é possível compartilhar recursos como impressoras.\n\n\n\nVamos passar pelos passos básicos para criar uma compartilhamento de rede que pode ser acessada por uma máquina Windows: ### Instalar Samba\n$ sudo apt update\n$ sudo apt install samba\n\n\nO arquivo de configuração do Samba é encontrado em /etc/samba/smb.conf. Este arquivo deve indicar quais diretórios devem ser compartilhados, quais são os permissoes de acesso e mais opções. O arquivo de configuração default vem com muitos códigos comentados que podem ser usados como exemplos para configurar sua própria configuração. Deixarei um exemplo de compartilhamento abaixo, basta copiar para o fim do arquivo smb.conf.\n$ sudo vi /etc/samba/smb.conf\n[Compartilhado]\n   path = /srv/samba/compartilhado\n   browseable = yes\n   read only = no\n   guest ok = no\n   valid users = nome_do_usuario\n\n\n\n$ sudo smbpasswd -a [nome_do_usuario]\n\n\n\nsudo mkdir -p /srv/samba/compartilhado\nsudo chown nome_do_usuario:nome_do_usuario /srv/samba/compartilhado\n\n\n\nsudo systemctl restart smbd\n\n\n\nEm um Windows, basta digitar a conexão de rede no prompt de iniciar: \\\\HOST\\sharename.\n\n\n\n$ smbclient //HOST/directory -U user\nO pacote de Samba inclui uma ferramenta de linha de comando chamada smbclient que você pode usar para acessar qualquer servidor Windows ou Samba. Uma vez conectado ao compartilhamento, você pode navegar e transferir arquivos.\n\n\n\nEm vez de transferir arquivos um a um, você pode simplesmente montar o compartilhamento de rede no seu sistema.\n$ sudo apt install cifs-utils\n$ sudo mount -t cifs //IP_do_servidor/Compartilhado /mnt/samba -o username=nome_do_usuario",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Samba"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/5-Samba.html#o-que-é-samba",
     "href": "conteudos/compartilhamento/5-Samba.html#o-que-é-samba",
     "title": "Compartilhando arquivos entre Windows e Linux com Samba",
     "section": "",
-    "text": "Samba é o conjunto de ferramentas Linux para trabalhar com CIFS no Linux. Além de compartilhar arquivos, também é possível compartilhar recursos como impressoras."
+    "text": "Samba é o conjunto de ferramentas Linux para trabalhar com CIFS no Linux. Além de compartilhar arquivos, também é possível compartilhar recursos como impressoras.",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Samba"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/5-Samba.html#criar-uma-compartilhamento-de-rede-com-samba",
     "href": "conteudos/compartilhamento/5-Samba.html#criar-uma-compartilhamento-de-rede-com-samba",
     "title": "Compartilhando arquivos entre Windows e Linux com Samba",
     "section": "",
-    "text": "Vamos passar pelos passos básicos para criar uma compartilhamento de rede que pode ser acessada por uma máquina Windows: ### Instalar Samba\n$ sudo apt update\n$ sudo apt install samba\n\n\nO arquivo de configuração do Samba é encontrado em /etc/samba/smb.conf. Este arquivo deve indicar quais diretórios devem ser compartilhados, quais são os permissoes de acesso e mais opções. O arquivo de configuração default vem com muitos códigos comentados que podem ser usados como exemplos para configurar sua própria configuração. Deixarei um exemplo de compartilhamento abaixo, basta copiar para o fim do arquivo smb.conf.\n$ sudo vi /etc/samba/smb.conf\n[Compartilhado]\n   path = /srv/samba/compartilhado\n   browseable = yes\n   read only = no\n   guest ok = no\n   valid users = nome_do_usuario\n\n\n\n$ sudo smbpasswd -a [nome_do_usuario]\n\n\n\nsudo mkdir -p /srv/samba/compartilhado\nsudo chown nome_do_usuario:nome_do_usuario /srv/samba/compartilhado\n\n\n\nsudo systemctl restart smbd\n\n\n\nEm um Windows, basta digitar a conexão de rede no prompt de iniciar: \\\\HOST\\sharename.\n\n\n\n$ smbclient //HOST/directory -U user\nO pacote de Samba inclui uma ferramenta de linha de comando chamada smbclient que você pode usar para acessar qualquer servidor Windows ou Samba. Uma vez conectado ao compartilhamento, você pode navegar e transferir arquivos.\n\n\n\nEm vez de transferir arquivos um a um, você pode simplesmente montar o compartilhamento de rede no seu sistema.\n$ sudo apt install cifs-utils\n$ sudo mount -t cifs //IP_do_servidor/Compartilhado /mnt/samba -o username=nome_do_usuario"
+    "text": "Vamos passar pelos passos básicos para criar uma compartilhamento de rede que pode ser acessada por uma máquina Windows: ### Instalar Samba\n$ sudo apt update\n$ sudo apt install samba\n\n\nO arquivo de configuração do Samba é encontrado em /etc/samba/smb.conf. Este arquivo deve indicar quais diretórios devem ser compartilhados, quais são os permissoes de acesso e mais opções. O arquivo de configuração default vem com muitos códigos comentados que podem ser usados como exemplos para configurar sua própria configuração. Deixarei um exemplo de compartilhamento abaixo, basta copiar para o fim do arquivo smb.conf.\n$ sudo vi /etc/samba/smb.conf\n[Compartilhado]\n   path = /srv/samba/compartilhado\n   browseable = yes\n   read only = no\n   guest ok = no\n   valid users = nome_do_usuario\n\n\n\n$ sudo smbpasswd -a [nome_do_usuario]\n\n\n\nsudo mkdir -p /srv/samba/compartilhado\nsudo chown nome_do_usuario:nome_do_usuario /srv/samba/compartilhado\n\n\n\nsudo systemctl restart smbd\n\n\n\nEm um Windows, basta digitar a conexão de rede no prompt de iniciar: \\\\HOST\\sharename.\n\n\n\n$ smbclient //HOST/directory -U user\nO pacote de Samba inclui uma ferramenta de linha de comando chamada smbclient que você pode usar para acessar qualquer servidor Windows ou Samba. Uma vez conectado ao compartilhamento, você pode navegar e transferir arquivos.\n\n\n\nEm vez de transferir arquivos um a um, você pode simplesmente montar o compartilhamento de rede no seu sistema.\n$ sudo apt install cifs-utils\n$ sudo mount -t cifs //IP_do_servidor/Compartilhado /mnt/samba -o username=nome_do_usuario",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Samba"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/4-NFS.html",
     "href": "conteudos/compartilhamento/4-NFS.html",
     "title": "Como configurar um cliente NFS no Linux",
     "section": "",
-    "text": "O NFS (Network File System) continua sendo uma das formas mais comuns de compartilhamento de arquivos entre sistemas Linux em uma rede. Ele permite que um servidor disponibilize diretórios para que clientes possam acessá-los como se fossem locais.\nNesta seção, focaremos na configuração do cliente NFS, assumindo que o servidor NFS já está corretamente configurado na rede.\n\n\nsudo apt update\nsudo apt install nfs-common\n\n\n\nPara montar um diretório exportado por um servidor NFS:\nsudo mount -t nfs 192.168.1.100:/export/dados /mnt/dados\nCertifique-se de que o diretório /mnt/dados exista previamente. Crie com sudo mkdir -p /mnt/dados se necessário.\n\n\n\nSe você usa o servidor NFS com frequência e deseja mantê-lo montado permanentemente, você pode pensar em editar o arquivo /etc/fstab.\n192.168.1.100:/export/dados /mnt/dados nfs defaults,_netdev 0 0"
+    "text": "O NFS (Network File System) continua sendo uma das formas mais comuns de compartilhamento de arquivos entre sistemas Linux em uma rede. Ele permite que um servidor disponibilize diretórios para que clientes possam acessá-los como se fossem locais.\nNesta seção, focaremos na configuração do cliente NFS, assumindo que o servidor NFS já está corretamente configurado na rede.\n\n\nsudo apt update\nsudo apt install nfs-common\n\n\n\nPara montar um diretório exportado por um servidor NFS:\nsudo mount -t nfs 192.168.1.100:/export/dados /mnt/dados\nCertifique-se de que o diretório /mnt/dados exista previamente. Crie com sudo mkdir -p /mnt/dados se necessário.\n\n\n\nSe você usa o servidor NFS com frequência e deseja mantê-lo montado permanentemente, você pode pensar em editar o arquivo /etc/fstab.\n192.168.1.100:/export/dados /mnt/dados nfs defaults,_netdev 0 0",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Nfs"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/4-NFS.html#instale-o-pacote-necessário",
     "href": "conteudos/compartilhamento/4-NFS.html#instale-o-pacote-necessário",
     "title": "Como configurar um cliente NFS no Linux",
     "section": "",
-    "text": "sudo apt update\nsudo apt install nfs-common"
+    "text": "sudo apt update\nsudo apt install nfs-common",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Nfs"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/4-NFS.html#monte-o-compartilhamento-nfs-manualmente",
     "href": "conteudos/compartilhamento/4-NFS.html#monte-o-compartilhamento-nfs-manualmente",
     "title": "Como configurar um cliente NFS no Linux",
     "section": "",
-    "text": "Para montar um diretório exportado por um servidor NFS:\nsudo mount -t nfs 192.168.1.100:/export/dados /mnt/dados\nCertifique-se de que o diretório /mnt/dados exista previamente. Crie com sudo mkdir -p /mnt/dados se necessário."
+    "text": "Para montar um diretório exportado por um servidor NFS:\nsudo mount -t nfs 192.168.1.100:/export/dados /mnt/dados\nCertifique-se de que o diretório /mnt/dados exista previamente. Crie com sudo mkdir -p /mnt/dados se necessário.",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Nfs"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/4-NFS.html#automontagem",
     "href": "conteudos/compartilhamento/4-NFS.html#automontagem",
     "title": "Como configurar um cliente NFS no Linux",
     "section": "",
-    "text": "Se você usa o servidor NFS com frequência e deseja mantê-lo montado permanentemente, você pode pensar em editar o arquivo /etc/fstab.\n192.168.1.100:/export/dados /mnt/dados nfs defaults,_netdev 0 0"
+    "text": "Se você usa o servidor NFS com frequência e deseja mantê-lo montado permanentemente, você pode pensar em editar o arquivo /etc/fstab.\n192.168.1.100:/export/dados /mnt/dados nfs defaults,_netdev 0 0",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Nfs"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/1-compartilhando-arquivos.html",
     "href": "conteudos/compartilhamento/1-compartilhando-arquivos.html",
     "title": "Transferencia de dados entre máquinas na rede",
     "section": "",
-    "text": "Quando você trabalha em um ambiente comercial, é comum compartilhar redes com outros computadores. Se você precisa transferir dados de uma máquina para outra, pode ser mais prático usar um drive USB e copiar manualmente os arquivos. No entanto, se você trabalha com máquinas na mesma rede, a forma mais comum de transferir dados é por meio da compartilhamento de arquivos de rede.\n\n\nVamos explorar alguns métodos simples para copiar dados inclusive em máquinas diferentes na sua rede. Vamos discutir algumas copias de arquivos fáceis, e em seguida, vamos falar sobre montar diretórios inteiros em sua máquina como um dispositivo de armazenamento separado.\n\n\n\nO comando scp (secure copy) é uma ferramenta simples e segura para compartilhar arquivos entre máquinas na mesma rede. O scp funciona da mesma maneira que o comando cp, mas permite copiar arquivos de uma máquina para outra, todos usando a autenticação e segurança do protocolo ssh.\n\n\n\nCopiar um arquivo da máquina local para uma máquina remota:\n$ scp arq1.txt bruno@192.168.15.100:/remote/directory\nCopiar um arquivo da máquina remota para a máquina local:\n$ scp bruno@192.168.15.100:/remote/directory/arq1.txt /home/bruno\nCopiar um diretório da máquina local para uma máquina remota:\n$ scp -r /home/bruno bruno@192.168.15.100:/remote/directory"
+    "text": "Quando você trabalha em um ambiente comercial, é comum compartilhar redes com outros computadores. Se você precisa transferir dados de uma máquina para outra, pode ser mais prático usar um drive USB e copiar manualmente os arquivos. No entanto, se você trabalha com máquinas na mesma rede, a forma mais comum de transferir dados é por meio da compartilhamento de arquivos de rede.\n\n\nVamos explorar alguns métodos simples para copiar dados inclusive em máquinas diferentes na sua rede. Vamos discutir algumas copias de arquivos fáceis, e em seguida, vamos falar sobre montar diretórios inteiros em sua máquina como um dispositivo de armazenamento separado.\n\n\n\nO comando scp (secure copy) é uma ferramenta simples e segura para compartilhar arquivos entre máquinas na mesma rede. O scp funciona da mesma maneira que o comando cp, mas permite copiar arquivos de uma máquina para outra, todos usando a autenticação e segurança do protocolo ssh.\n\n\n\nCopiar um arquivo da máquina local para uma máquina remota:\n$ scp arq1.txt bruno@192.168.15.100:/remote/directory\nCopiar um arquivo da máquina remota para a máquina local:\n$ scp bruno@192.168.15.100:/remote/directory/arq1.txt /home/bruno\nCopiar um diretório da máquina local para uma máquina remota:\n$ scp -r /home/bruno bruno@192.168.15.100:/remote/directory",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Compartilhando-Arquivos"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/1-compartilhando-arquivos.html#compartilhamento-de-arquivos",
     "href": "conteudos/compartilhamento/1-compartilhando-arquivos.html#compartilhamento-de-arquivos",
     "title": "Transferencia de dados entre máquinas na rede",
     "section": "",
-    "text": "Vamos explorar alguns métodos simples para copiar dados inclusive em máquinas diferentes na sua rede. Vamos discutir algumas copias de arquivos fáceis, e em seguida, vamos falar sobre montar diretórios inteiros em sua máquina como um dispositivo de armazenamento separado."
+    "text": "Vamos explorar alguns métodos simples para copiar dados inclusive em máquinas diferentes na sua rede. Vamos discutir algumas copias de arquivos fáceis, e em seguida, vamos falar sobre montar diretórios inteiros em sua máquina como um dispositivo de armazenamento separado.",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Compartilhando-Arquivos"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/1-compartilhando-arquivos.html#o-comando-scp-secure-copy",
     "href": "conteudos/compartilhamento/1-compartilhando-arquivos.html#o-comando-scp-secure-copy",
     "title": "Transferencia de dados entre máquinas na rede",
     "section": "",
-    "text": "O comando scp (secure copy) é uma ferramenta simples e segura para compartilhar arquivos entre máquinas na mesma rede. O scp funciona da mesma maneira que o comando cp, mas permite copiar arquivos de uma máquina para outra, todos usando a autenticação e segurança do protocolo ssh."
+    "text": "O comando scp (secure copy) é uma ferramenta simples e segura para compartilhar arquivos entre máquinas na mesma rede. O scp funciona da mesma maneira que o comando cp, mas permite copiar arquivos de uma máquina para outra, todos usando a autenticação e segurança do protocolo ssh.",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Compartilhando-Arquivos"
+    ]
   },
   {
     "objectID": "conteudos/compartilhamento/1-compartilhando-arquivos.html#exemplos-de-uso-do-comando-scp",
     "href": "conteudos/compartilhamento/1-compartilhando-arquivos.html#exemplos-de-uso-do-comando-scp",
     "title": "Transferencia de dados entre máquinas na rede",
     "section": "",
-    "text": "Copiar um arquivo da máquina local para uma máquina remota:\n$ scp arq1.txt bruno@192.168.15.100:/remote/directory\nCopiar um arquivo da máquina remota para a máquina local:\n$ scp bruno@192.168.15.100:/remote/directory/arq1.txt /home/bruno\nCopiar um diretório da máquina local para uma máquina remota:\n$ scp -r /home/bruno bruno@192.168.15.100:/remote/directory"
+    "text": "Copiar um arquivo da máquina local para uma máquina remota:\n$ scp arq1.txt bruno@192.168.15.100:/remote/directory\nCopiar um arquivo da máquina remota para a máquina local:\n$ scp bruno@192.168.15.100:/remote/directory/arq1.txt /home/bruno\nCopiar um diretório da máquina local para uma máquina remota:\n$ scp -r /home/bruno bruno@192.168.15.100:/remote/directory",
+    "crumbs": [
+      "Home",
+      "📂 Compartilhamento",
+      "✅ Compartilhando-Arquivos"
+    ]
   },
   {
     "objectID": "conteudos/processos/2 - Controlando o Terminal.html",

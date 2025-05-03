@@ -153,6 +153,18 @@ website:
       - href: conteudos/troubleshooting/5-Analise-de-pacotes.md
         text: ✅ Analise-De-Pacotes
       section: 📂 Troubleshooting
+    - contents:
+      - href: conteudos/compartilhamento/1-compartilhando-arquivos.md
+        text: ✅ Compartilhando-Arquivos
+      - href: conteudos/compartilhamento/2-rsync.md
+        text: ✅ Rsync
+      - href: conteudos/compartilhamento/3-SimpleHTTPServer.md
+        text: ✅ Simplehttpserver
+      - href: conteudos/compartilhamento/4-NFS.md
+        text: ✅ Nfs
+      - href: conteudos/compartilhamento/5-Samba.md
+        text: ✅ Samba
+      section: 📂 Compartilhamento
     search: true
     style: docked
   title: linuxteclab
