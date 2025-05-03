@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>traceroute – linuxteclab</title>
+<title>dhclient – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,7 +38,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-06e7e98cba7f23e6e3637df4b63211cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-eeee2804ecd2abcd400c4b397636e04c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -580,6 +546,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">📂 Troubleshooting</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/1-ICMP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Icmp</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/2-ping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Ping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/3-traceroute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Traceroute</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/4-netstat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Netstat</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/5-Analise-de-pacotes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Analise-De-Pacotes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -592,18 +599,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p><strong>Comandos de rastreamento de rotas</strong></p>
-<p>O comando <code>traceroute</code> é utilizado para entender como os pacotes de dados são rotas na internet. Ele funciona enviando pacotes com valores de TTL (Time To Live) aumentados, começando com 1. Quando um roteador recebe um pacote, decrementa o valor de TTL em um e, portanto, o lança. O roteador então retorna um mensagem ICMP de “Tempo Excedido” para nós. Em seguida, o próximo pacote recebe um TTL de 2, o que o permite passar pelo primeiro roteador, mas quando chega ao segundo roteador, o TTL é 0 e retorna outra mensagem ICMP de “Tempo Excedido”. O <code>traceroute</code> funciona desse jeito porque, ao enviar e lançar pacotes, está construindo uma lista de roteadores que os pacotes percorrem, até que finalmente chegue ao seu destino e receba uma mensagem ICMP de “Réplica de Eco”.</p>
-<p>Aqui está um exemplo de um <code>traceroute</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>$ traceroute google.com</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>traceroute to google.com (216.58.216.174), 30 hops max, 60 byte packets</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a> 1 192.168.4.254 (192.168.4.254)  0.028 ms  0.009 ms  0.008 ms</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a> 2 100.64.1.113 (100.64.1.113)  1.227 ms  1.226 ms 0.920 ms</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> 3 100.64.0.20 (100.64.0.20)  1.501 ms 1.556 ms  0.855 ms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Cada linha representa um roteador ou máquina entre mim e o meu destino. Mostra o nome do destino e sua endereço IP, e as últimas três colunas correspondem ao tempo de volta-trip da comunicação de um pacote para alcançar aquele roteador. Por padrão, enviaremos três pacotes ao longo da rota.</p>
-<p>No exemplo acima, o <code>traceroute</code> foi executado para o endereço <code>google.com</code>, que é uma plataforma de entretenimento da internet. Os resultados mostram os 3 primeiros roteadores ou máquinas que os pacotes precisaram transitar para alcançar o destino.</p>
+<section id="configuração-de-rede-com-dhcp" class="level1">
+<h1><strong>Configuração de rede com DHCP</strong></h1>
+<p>Já discutimos sobre DHCP e em geral, você nunca precisará configurar manualmente seus endereços IP, máscaras de subrede, etc. Em vez disso, você utilizará DHCP! O <code>dhclient</code> é executado ao boot e obtém uma lista de interfaces de rede a partir do arquivo <code>dhclient.conf</code>. Para cada interface listada, ele tenta configurar a interface utilizando o protocolo DHCP.</p>
+<p>O arquivo <code>dhclient.leases</code> é usado pelo <code>dhclient</code> para manter um registro de leases across system reboots. Após ler o arquivo <code>dhclient.conf</code>, o arquivo <code>dhclient.leases</code> é lido para informar ao <code>dhclient</code> quais leases foram atribuídas anteriormente.</p>
+<p>Para obter um endereço IP novo:</p>
+<pre><code>$ sudo dhclient example.txt</code></pre>
+<p><strong>Nota:</strong> É importante lembrar que, ao executar o comando <code>dhclient</code>, você deve substituir <code>example.txt</code> pelo arquivo de configuração de rede adequado.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

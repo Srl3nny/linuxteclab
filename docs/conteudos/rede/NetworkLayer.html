@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ping – linuxteclab</title>
+<title>networklayer – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,7 +38,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-06e7e98cba7f23e6e3637df4b63211cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-eeee2804ecd2abcd400c4b397636e04c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -580,6 +546,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">📂 Troubleshooting</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/1-ICMP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Icmp</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/2-ping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Ping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/3-traceroute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Traceroute</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/4-netstat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Netstat</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/5-Analise-de-pacotes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Analise-De-Pacotes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -592,33 +599,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="compreendendo-o-ping" class="level1">
-<h1><strong>Compreendendo o Ping</strong></h1>
-<p>O ping é um dos ferramentas de rede mais simples e poderosas, usada para testar se um pacote pode alcançar um host. Funciona enviando solicitações de eco ICMP (Type 8) para o host de destino e aguardando uma resposta ICMP (Type 0). O ping é considerado bem-sucedido quando o host envia o pacote de solicitação e recebe uma resposta do alvo.</p>
-<p>Vamos analisar um exemplo:</p>
-<p><code>pete@icebox:~$ ping -c 3 www.google.com</code></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>PING www.google.com (74.125.239.112) 56(84) bytes of data.</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>64 bytes from nuq05s01-in-f16.1e100.net (74.125.239.112): icmp_seq=1 ttl=128 time=29.0 ms</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>64 bytes from nuq05s01-in-f16.1e100.net (74.125.239.112): icmp_seq=2 ttl=128 time=23.7 ms</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>64 bytes from nuq05s01-in-f16.1e100.net (74.125.239.112): icmp_seq=3 ttl=128 time=15.1 ms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Nesse exemplo, estamos usando o ping para verificar se podemos acessar o www.google.com. O flag <code>-c</code> (contagem) é usado para parar de enviar pacotes de solicitação de eco após atingir o número especificado.</p>
-<p>A primeira parte indica que estamos enviando pacotes de 64 bytes para o endereço 74.125.239.112 (google.com), e o resto mostra os detalhes do viagem. Por padrão,ele envia um pacote por segundo.</p>
-<section id="campo-icmp_seq" class="level2">
-<h2 class="anchored" data-anchor-id="campo-icmp_seq"><strong>campo icmp_seq</strong></h2>
-<p>O campo icmp_seq é usado para exibir a sequência de números de pacotes enviados, portanto, nesse caso, enviei 3 pacotes e podemos ver que 3 pacotes voltaram. Se você faz um ping e recebe sequência de números ausentes, isso significa que há um problema de conectividade e não todos os seus pacotes estão passando pela rede. Se a sequência de número for desordenada, provavelmente sua conexão está muito lenta, pois os pacotes estão ultrapassando o padrão de um segundo.</p>
-</section>
-<section id="campo-ttl" class="level2">
-<h2 class="anchored" data-anchor-id="campo-ttl"><strong>campo ttl</strong></h2>
-<p>O campo TTL (Time To Live) é usado como um contador de hops, ao fazer hops, o contador é decrementado por um e, quando o contador atinge 0, o pacote morre. Isso é feito para dar ao pacote uma vida útil, não desejamos que nossos pacotes viajem por toda a eternidade.</p>
-</section>
-<section id="campo-time" class="level2">
-<h2 class="anchored" data-anchor-id="campo-time"><strong>campo time</strong></h2>
-<p>O tempo de volta é calculado do momento em que você envia o pacote de solicitação de eco até que receba a resposta de eco.</p>
-<p>Espero que isso tenha ajudado a iluminar o funcionamento do ping!</p>
+<p>A camada de rede determina a rota que o nosso pacote segue desde o nosso host de origem até um host de destino. Felizmente, no nosso exemplo, o nosso pacote está apenas viajando pela mesma rede, mas a Internet é composta por muitas redes. Essas redes menores que compõem a Internet são conhecidas como sub-redes. Todas essas sub-redes se connectam mutuamente de alguma forma, é isso que nos permite acessar o www.google.com, apesar de estar em sua própra rede. Não vou entrar em detalhes, pois temos um curso inteiro dedicado às sub-redes, mas por hora, em relação à nossa camada de rede, é importante saber que as endereços IP definem as regras para se deslocar para diferentes sub-redes.</p>
+<p>Na camada de rede, ela receives o segmento vindo da camada de transportes e encapsula esse segmento em um pacote IP, dopo que lhe anexa o endereço IP do host de origem e o endereço IP do host de destino ao cabeçalho do pacote. Então, nesse ponto, o nosso pacote tem informações sobre para onde está indo e de onde veio. Agora, envia o nosso pacote para a camada de hardware físico.</p>
+<pre><code>===== ""
+resources/data.txt
+1ª rede 255.255.255.0
+1ª rede 192.168.1.1
+2ª rede 10.0.0.0/16
+3ª rede 172.16.31.1
+4ª rede 192.168.1.100
+5ª rede 10.0.0.1</code></pre>
+<pre><code> network-layer
+   Source Host: 192.168.1.100
+   Destination Host: 192.168.1.1
+   IP Address: 192.168.1.100
+   HTTP
+
+ transport-layer
+   Packet Size: 65.512 bytes
+   checksum-type 0x0000c000
+   UDP: Source Port: 80, Destination Port: 53
+   TCP: Source Port: 2000, Destination Port: 2000
+   No error-check</code></pre>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

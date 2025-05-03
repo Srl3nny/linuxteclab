@@ -141,6 +141,18 @@ website:
       - href: conteudos/permissoes/8 - Sticky Bit.md
         text: ✅ Sticky Bit
       section: 📂 Permissoes
+    - contents:
+      - href: conteudos/troubleshooting/1-ICMP.md
+        text: ✅ Icmp
+      - href: conteudos/troubleshooting/2-ping.md
+        text: ✅ Ping
+      - href: conteudos/troubleshooting/3-traceroute.md
+        text: ✅ Traceroute
+      - href: conteudos/troubleshooting/4-netstat.md
+        text: ✅ Netstat
+      - href: conteudos/troubleshooting/5-Analise-de-pacotes.md
+        text: ✅ Analise-De-Pacotes
+      section: 📂 Troubleshooting
     search: true
     style: docked
   title: linuxteclab

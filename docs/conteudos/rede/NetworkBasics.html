@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>icmp – linuxteclab</title>
+<title>networkbasics – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -38,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-06e7e98cba7f23e6e3637df4b63211cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-eeee2804ecd2abcd400c4b397636e04c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -546,6 +580,47 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">📂 Troubleshooting</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/1-ICMP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Icmp</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/2-ping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Ping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/3-traceroute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Traceroute</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/4-netstat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Netstat</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/troubleshooting/5-Analise-de-pacotes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Analise-De-Pacotes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -558,34 +633,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="protocolo-de-controle-de-mensagens-da-internet-icmp" class="level1">
-<h1><strong>Protocolo de Controle de Mensagens da Internet (ICMP)</strong></h1>
-<p>O Protocolo de Controle de Mensagens da Internet (ICMP) é um componente essencial do conjunto de protocolos TCP/IP. Seu objetivo é enviar atualizações e mensagens de erro, tornando-se um protocolo extremamente útil para depurar problemas de rede, como entrega de pacotes falhada.</p>
-<section id="estrutura-de-um-pacote-icmp" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-de-um-pacote-icmp"><strong>Estrutura de um pacote ICMP</strong></h2>
-<p>Cada mensagem ICMP contém campos de tipo, código e checksum. O campo de tipo define o tipo de mensagem ICMP, o código é um sub-tipo que fornece mais informações sobre a mensagem e o checksum é usado para detectar qualquer problema com a integridade da mensagem.</p>
-</section>
-<section id="tipos-de-mensagens-icmp" class="level2">
-<h2 class="anchored" data-anchor-id="tipos-de-mensagens-icmp"><strong>Tipos de mensagens ICMP</strong></h2>
-<p>Vamos explorar alguns dos tipos de mensagens ICMP mais comuns:</p>
-<ul>
-<li><strong>Tipo 0 - Resposta de Eco</strong>: resposta a um pedido de eco.</li>
-<li><strong>Tipo 3 - Desvio para o destino</strong>: mensagem gerada quando um pacote não consegue chegar ao seu destino. Dentro desse tipo, há 16 valores de código que fornecem mais informações sobre por que o pacote não conseguiu chegar ao destino.</li>
-<li><strong>Tipo 8 - Pedido de Eco</strong>: pedido para que o roteador retorne uma resposta de eco.</li>
-<li><strong>Tipo 11 - Tempo Excedido</strong>: mensagem gerada quando um pacote expira antes de ser recebido.</li>
-</ul>
-</section>
-<section id="exemplos-de-códigos-de-desvio-para-o-destino" class="level2">
-<h2 class="anchored" data-anchor-id="exemplos-de-códigos-de-desvio-para-o-destino"><strong>Exemplos de códigos de desvio para o destino</strong></h2>
-<ul>
-<li><strong>Código 0 - Roteador inalcançável</strong>: o roteador não consegue ser alcançado.</li>
-<li><strong>Código 1 - Host inalcançável</strong>: o host não consegue ser alcançado.</li>
-</ul>
-<p>Essas mensagens only crescerão em sentido quando utilizarmos ferramentas de depuração de rede.</p>
+<p>Vamos explorar uma rede doméstica típica. Você tem algunscomponentes diferentes.</p>
+<p>Proveedor de Internet (ISP) - A empresa para a qual você paga para obter Internet em sua casa. Rotador (Router) - O rotador permite que cada máquina na sua rede se conecte à Internet. Em muitos rotadores modernos, você pode se conectar via WiFi ou cabo Ethernet. Rede Wide Area Network (WAN) - Essa é a rede que abrange tudo entre o seu rotador e uma rede mais ampla, como a Internet. Rede Local Wirelless (WLAN) - Essa é a rede entre o seu rotador e qualquer dispositivo sem fio que você tenha, como laptops. Rede Local (LAN) - Essa é a rede entre o seu rotador e qualquer dispositivo com cabo, como PCs desktop. Anfitriões (Hosts) - Cada máquina numa rede é conhecida como anfitrião.</p>
+<p>Os dados e informações que são transmitidos por redes são conhecidos como pacotes e, ao final do segmento Networking Nomad, você entenderá detalhadamente como um pacote se movimenta para e desde os anfitriões.</p>
+<p>Exemplo: <code>arq.txt</code></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Componentes da rede doméstica</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Proveedor de Internet (ISP)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rotador (Router)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rede Wide Area Network (WAN)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rede Local Wirelless (WLAN)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rede Local (LAN)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Anfitriões (Hosts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note: Eu fiz algumas alterações para que o texto fosse mais legível e fácil de entender. Além disso, adicionei um exemplo de como o texto pode ser formatado com markdown para criar uma tabela de componentes da rede doméstica.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
