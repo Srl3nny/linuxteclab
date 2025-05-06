@@ -165,6 +165,18 @@ website:
       - href: conteudos/compartilhamento/5-Samba.md
         text: ✅ Samba
       section: 📂 Compartilhamento
+    - contents:
+      - href: conteudos/configurar-rede/1-interfaces-de-rede.md
+        text: ✅ Interfaces-De-Rede
+      - href: conteudos/configurar-rede/2-route.md
+        text: ✅ Route
+      - href: conteudos/configurar-rede/3-dhclient.md
+        text: ✅ Dhclient
+      - href: conteudos/configurar-rede/4-NetworkManager.md
+        text: ✅ Networkmanager
+      - href: conteudos/configurar-rede/5-arp.md
+        text: ✅ Arp
+      section: 📂 Configurar Rede
     search: true
     style: docked
   title: linuxteclab
