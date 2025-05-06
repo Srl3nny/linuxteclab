@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>simplehttpserver – linuxteclab</title>
+<title>dhclient – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/compartilhamento/1-compartilhando-arquivos.html">📂 Compartilhamento</a></li><li class="breadcrumb-item"><a href="../../conteudos/compartilhamento/3-SimpleHTTPServer.html">✅ Simplehttpserver</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -589,13 +589,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
  <span class="menu-text">📂 Compartilhamento</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../conteudos/compartilhamento/1-compartilhando-arquivos.html" class="sidebar-item-text sidebar-link">
@@ -610,7 +610,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conteudos/compartilhamento/3-SimpleHTTPServer.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../conteudos/compartilhamento/3-SimpleHTTPServer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✅ Simplehttpserver</span></a>
   </div>
 </li>
@@ -635,18 +635,18 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/compartilhamento/1-compartilhando-arquivos.html">📂 Compartilhamento</a></li><li class="breadcrumb-item"><a href="../../conteudos/compartilhamento/3-SimpleHTTPServer.html">✅ Simplehttpserver</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="servidor-de-arquivos-local-com-python" class="level1">
-<h1><strong>Servidor de Arquivos Local com Python</strong></h1>
-<p>O Python tem uma ferramenta muito útil para servir arquivos sob demanda através do protocolo HTTP. Isso é muito útil se você quiser criar uma compartilhamento de rede rápido que outras máquinas em sua rede possam acessar. Para fazê-lo, simplemente vá ao diretório que deseja compartilhar e execute:</p>
-<pre><code>$ sudo python3 -m http.server
-[sudo] senha para bruno: 
-Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...</code></pre>
-<p>Portanto, obtenha a endereço IP da máquina que você executou este comando e, em outra máquina, acesse-o no navegador com: http://IP_ADDRESS:8000. Na sua própria máquina, você pode visualizar os arquivos disponíveis digitando: http://localhost:8000 no navegador.</p>
+<section id="configuração-de-rede-com-dhcp" class="level1">
+<h1><strong>Configuração de rede com DHCP</strong></h1>
+<p>Já discutimos sobre DHCP e em geral, você nunca precisará configurar manualmente seus endereços IP, máscaras de subrede, etc. Em vez disso, você utilizará DHCP! O <code>dhclient</code> é executado ao boot e obtém uma lista de interfaces de rede a partir do arquivo <code>dhclient.conf</code>. Para cada interface listada, ele tenta configurar a interface utilizando o protocolo DHCP.</p>
+<p>O arquivo <code>dhclient.leases</code> é usado pelo <code>dhclient</code> para manter um registro de leases across system reboots. Após ler o arquivo <code>dhclient.conf</code>, o arquivo <code>dhclient.leases</code> é lido para informar ao <code>dhclient</code> quais leases foram atribuídas anteriormente.</p>
+<p>Para obter um endereço IP novo:</p>
+<pre><code>$ sudo dhclient example.txt</code></pre>
+<p><strong>Nota:</strong> É importante lembrar que, ao executar o comando <code>dhclient</code>, você deve substituir <code>example.txt</code> pelo arquivo de configuração de rede adequado.</p>
 
 
 </section>

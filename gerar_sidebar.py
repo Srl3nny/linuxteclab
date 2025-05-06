@@ -13,7 +13,8 @@ ORDEM_SECOES = [
     "pacotes",
     "permissoes",
     "troubleshooting",
-    "compartilhamento"
+    "compartilhamento",
+    "configurar-rede"
 ]
 
 # Função para formatar o nome da seção (troca "-" por espaço e capitaliza)
