@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html">📂 Configurar Rede</a></li><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/3-dhclient.html">✅ Dhclient</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -628,6 +628,47 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">📂 Configurar Rede</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Interfaces-De-Rede</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/2-route.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Route</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/3-dhclient.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">✅ Dhclient</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/4-NetworkManager.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Networkmanager</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/5-arp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Arp</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -635,18 +676,18 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html">📂 Configurar Rede</a></li><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/3-dhclient.html">✅ Dhclient</a></li></ol></nav></header>
 
 
 
 
 <section id="configuração-de-rede-com-dhcp" class="level1">
 <h1><strong>Configuração de rede com DHCP</strong></h1>
-<p>Já discutimos sobre DHCP e em geral, você nunca precisará configurar manualmente seus endereços IP, máscaras de subrede, etc. Em vez disso, você utilizará DHCP! O <code>dhclient</code> é executado ao boot e obtém uma lista de interfaces de rede a partir do arquivo <code>dhclient.conf</code>. Para cada interface listada, ele tenta configurar a interface utilizando o protocolo DHCP.</p>
-<p>O arquivo <code>dhclient.leases</code> é usado pelo <code>dhclient</code> para manter um registro de leases across system reboots. Após ler o arquivo <code>dhclient.conf</code>, o arquivo <code>dhclient.leases</code> é lido para informar ao <code>dhclient</code> quais leases foram atribuídas anteriormente.</p>
+<p>Sobre DHCP e em geral, você nunca precisará configurar manualmente seus endereços IP, máscaras de subrede, etc. Em vez disso, você utilizará DHCP! O <code>dhclient</code> é executado ao boot e obtém uma lista de interfaces de rede a partir do arquivo <code>dhclient.conf</code>. Para cada interface listada, ele tenta configurar a interface utilizando o protocolo DHCP.</p>
+<p>O arquivo <code>dhclient.leases</code> é usado pelo <code>dhclient</code> para manter um registro de leases. Após ler o arquivo <code>dhclient.conf</code>, o arquivo <code>dhclient.leases</code> é lido para informar ao <code>dhclient</code> quais leases foram atribuídas anteriormente.</p>
 <p>Para obter um endereço IP novo:</p>
-<pre><code>$ sudo dhclient example.txt</code></pre>
-<p><strong>Nota:</strong> É importante lembrar que, ao executar o comando <code>dhclient</code>, você deve substituir <code>example.txt</code> pelo arquivo de configuração de rede adequado.</p>
+<pre><code>$ sudo dhclient</code></pre>
+<p>Nos sistemas mais modernos (como Ubuntu com systemd), o dhclient pode ser substituído por outros gerenciadores de rede.</p>
 
 
 </section>

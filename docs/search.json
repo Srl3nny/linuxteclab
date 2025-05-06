@@ -907,7 +907,12 @@
     "href": "conteudos/configurar-rede/4-NetworkManager.html",
     "title": "linuxteclab",
     "section": "",
-    "text": "Gerenciando a Rede com NetworkManager\nClaro que, se deseja que o networking do seu sistema esteja sempre online, há ferramenta pronta para isso. A maioria das distribuições utiliza o daemon NetworkManager para configurar as redes automaticamente.Você pode notar o NetworkManager na forma de um applet em sua barra de tarefa do desktop, se estiver usando uma interface gráfica. Como você pode ver, ele gerencia a informação de hardware e conexões da rede. Por exemplo, ao iniciar, o NetworkManager irá coletar informações de hardware de rede, procurar conexões wireless, wired, etc. e as activará.\nAlém disso, há ferramentas de linha de comando para interagir com o NetworkManager: ### nm-tool\nA ferramenta nm-tool reporta o estado do NetworkManager e seus dispositivos.\nExemplo:\npete@icebox:/$ nm-tool\nFerramenta NetworkManager\nEstado: conectado (global)\n- Dispositivo: eth0  [Conexão Wired 1] -------------------------------------------\n  Tipo:              Wired\n  Driver:            pcnet32\n  Estado:             conectado\n  Padrão:           sim\n  Endereço MAC:        12:3D:45:56:7D:CC\n  Capacidades:\n    Detecção de Carregamento:  sim\n  Propriedades Wired\n    Carregamento:         sim\n  Configurações de IPv4:\n    Endereço:         192.168.22.1\n    Prefixo:          24 (255.255.255.0)\n    Gateway:         192.168.22.2\n    DNS:             192.168.22.2\n\nnmcli\nA comando nmcli permite controlar e modificar o NetworkManager, veja a página de manual para obter mais informações.\n(Lembre-se de que o exemplo nm-tool é um arquivo de texto chamado arq.txt, por exemplo)"
+    "text": "Gerenciando a Rede com NetworkManager\nClaro que, se deseja que o networking do seu sistema esteja sempre online, há ferramenta pronta para isso. A maioria das distribuições utiliza o daemon NetworkManager para configurar as redes automaticamente.Você pode notar o NetworkManager na forma de um applet em sua barra de tarefa do desktop, se estiver usando uma interface gráfica. Como você pode ver, ele gerencia a informação de hardware e conexões da rede. Por exemplo, ao iniciar, o NetworkManager irá coletar informações de hardware de rede, procurar conexões wireless, cabeadas, etc. e as activará.\nAlém disso, há ferramentas de linha de comando para interagir com o NetworkManager:\n\nnmcli\nferramenta de linha de comando para interagir com o NetworkManager.\nPor exemplo, para listar conexões.\nnmcli connection show\nPara ativar uma interface.\nnmcli radio wifi on\n\n\nnmtui\nInterface de terminal baseada em texto (menu interativo).\n\n\nNetworkManager e o systemd\nO NetworkManager roda como serviço:\nsudo systemctl status NetworkManager",
+    "crumbs": [
+      "Home",
+      "📂 Configurar Rede",
+      "✅ Networkmanager"
+    ]
   },
   {
     "objectID": "index.html",
@@ -928,14 +933,24 @@
     "href": "conteudos/configurar-rede/3-dhclient.html",
     "title": "Configuração de rede com DHCP",
     "section": "",
-    "text": "Configuração de rede com DHCP\nJá discutimos sobre DHCP e em geral, você nunca precisará configurar manualmente seus endereços IP, máscaras de subrede, etc. Em vez disso, você utilizará DHCP! O dhclient é executado ao boot e obtém uma lista de interfaces de rede a partir do arquivo dhclient.conf. Para cada interface listada, ele tenta configurar a interface utilizando o protocolo DHCP.\nO arquivo dhclient.leases é usado pelo dhclient para manter um registro de leases across system reboots. Após ler o arquivo dhclient.conf, o arquivo dhclient.leases é lido para informar ao dhclient quais leases foram atribuídas anteriormente.\nPara obter um endereço IP novo:\n$ sudo dhclient example.txt\nNota: É importante lembrar que, ao executar o comando dhclient, você deve substituir example.txt pelo arquivo de configuração de rede adequado."
+    "text": "Configuração de rede com DHCP\nSobre DHCP e em geral, você nunca precisará configurar manualmente seus endereços IP, máscaras de subrede, etc. Em vez disso, você utilizará DHCP! O dhclient é executado ao boot e obtém uma lista de interfaces de rede a partir do arquivo dhclient.conf. Para cada interface listada, ele tenta configurar a interface utilizando o protocolo DHCP.\nO arquivo dhclient.leases é usado pelo dhclient para manter um registro de leases. Após ler o arquivo dhclient.conf, o arquivo dhclient.leases é lido para informar ao dhclient quais leases foram atribuídas anteriormente.\nPara obter um endereço IP novo:\n$ sudo dhclient\nNos sistemas mais modernos (como Ubuntu com systemd), o dhclient pode ser substituído por outros gerenciadores de rede.",
+    "crumbs": [
+      "Home",
+      "📂 Configurar Rede",
+      "✅ Dhclient"
+    ]
   },
   {
     "objectID": "conteudos/configurar-rede/5-arp.html",
     "href": "conteudos/configurar-rede/5-arp.html",
     "title": "linuxteclab",
     "section": "",
-    "text": "Como o ARP cache funciona\nLembre-se de quando procuramos uma endereço MAC com ARP? Primeiramente, o sistema verifica o cache ARP localmente armazenado no nosso sistema. Você pode visualizar esse cache execute o comando arp:\npete@icebox:~$ arp\nEndereço            Tipo HW   Endereço HW   Flags   Máscara        Interface\n192.168.22.1       ether   00:12:24:fc:12:cc   C          eth0\n192.168.22.254     ether   00:12:45:f2:84:64   C          eth0\nO cache ARP está vazio quando a máquina é inicializada, e é populado à medida que os pacotes são enviados para outros servidores. Se enviamos um pacote para umdestino que não está no cache ARP, o que acontece é o seguinte:\nO host fonte cria o quadro Ethernet com um pacote de solicitação ARP O host fonte broadcasta esse quadro para toda a rede Se algum dos hosts na rede sabe o endereço MAC correto, ele enviará um pacote de resposta e quadro contendo o endereço MAC O host fonte adiciona a correspondência IP-MAC ao cache ARP e, em seguida, prossegue com a entrega do pacote\nVocê também pode visualizar seu cache ARP com o comando ip neighbor show:\n$ ip neighbour show\nNotícias adicionais\nArp Cache é uma área de armazenamento na memória RAM que armazena as correspondências entre os endereços IP e as respectivas mídias [1] (Mac Address). Essa cache é populada automaticamente quando um pacote é enviado para um host que não está presente na cache."
+    "text": "Como o ARP cache funciona\nLembre-se de quando procuramos uma endereço MAC com ARP? Primeiramente, o sistema verifica o cache ARP localmente armazenado no nosso sistema. Você pode visualizar esse cache execute o comando arp:\n$ arp\nEndereço            Tipo HW   Endereço HW   Flags   Máscara        Interface\n192.168.22.1       ether   00:12:24:fc:12:cc   C          eth0\n192.168.22.254     ether   00:12:45:f2:84:64   C          eth0\nO cache ARP está vazio quando a máquina é inicializada, e é populado à medida que os pacotes são enviados para outros servidores. Se enviamos um pacote para um destino que não está no cache ARP, o que acontece é o seguinte:\n\nO host de origem cria o quadro Ethernet com um pacote de solicitação ARP.\nO host de origem faz im broadcast com esse quadro para toda a rede.\nSe algum dos hosts na rede tiver o endereço correto, ele enviará um pacote de resposta e quadro contendo o endereço MAC\nO host de origem adiciona a correspondência IP-MAC ao cache ARP e, em seguida, prossegue com a entrega do pacote\n\nVocê também pode visualizar seu cache ARP com o comando ip neighbor show:\n$ ip neighbour show\nNotícias adicionais\nArp Cache é uma área de armazenamento na memória RAM que armazena as correspondências entre os endereços IP e as respectivas mídias [1] (Mac Address). Essa cache é populada automaticamente quando um pacote é enviado para um host que não está presente na cache.",
+    "crumbs": [
+      "Home",
+      "📂 Configurar Rede",
+      "✅ Arp"
+    ]
   },
   {
     "objectID": "conteudos/permissoes/2 - Modificando Permissões.html",

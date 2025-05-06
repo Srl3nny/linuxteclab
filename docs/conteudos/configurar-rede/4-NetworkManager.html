@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -106,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html">📂 Configurar Rede</a></li><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/4-NetworkManager.html">✅ Networkmanager</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -628,6 +662,47 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">📂 Configurar Rede</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Interfaces-De-Rede</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/2-route.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Route</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/3-dhclient.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Dhclient</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/4-NetworkManager.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">✅ Networkmanager</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/5-arp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Arp</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -635,38 +710,30 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html">📂 Configurar Rede</a></li><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/4-NetworkManager.html">✅ Networkmanager</a></li></ol></nav></header>
 
 
 
 
 <p><strong>Gerenciando a Rede com NetworkManager</strong></p>
-<p>Claro que, se deseja que o networking do seu sistema esteja sempre online, há ferramenta pronta para isso. A maioria das distribuições utiliza o daemon NetworkManager para configurar as redes automaticamente.Você pode notar o NetworkManager na forma de um applet em sua barra de tarefa do desktop, se estiver usando uma interface gráfica. Como você pode ver, ele gerencia a informação de hardware e conexões da rede. Por exemplo, ao iniciar, o NetworkManager irá coletar informações de hardware de rede, procurar conexões wireless, wired, etc. e as activará.</p>
-<p>Além disso, há ferramentas de linha de comando para interagir com o NetworkManager: ### nm-tool</p>
-<p>A ferramenta nm-tool reporta o estado do NetworkManager e seus dispositivos.</p>
-<p>Exemplo:</p>
-<pre><code>pete@icebox:/$ nm-tool
-Ferramenta NetworkManager
-Estado: conectado (global)
-- Dispositivo: eth0  [Conexão Wired 1] -------------------------------------------
-  Tipo:              Wired
-  Driver:            pcnet32
-  Estado:             conectado
-  Padrão:           sim
-  Endereço MAC:        12:3D:45:56:7D:CC
-  Capacidades:
-    Detecção de Carregamento:  sim
-  Propriedades Wired
-    Carregamento:         sim
-  Configurações de IPv4:
-    Endereço:         192.168.22.1
-    Prefixo:          24 (255.255.255.0)
-    Gateway:         192.168.22.2
-    DNS:             192.168.22.2</code></pre>
+<p>Claro que, se deseja que o networking do seu sistema esteja sempre online, há ferramenta pronta para isso. A maioria das distribuições utiliza o daemon NetworkManager para configurar as redes automaticamente.Você pode notar o NetworkManager na forma de um applet em sua barra de tarefa do desktop, se estiver usando uma interface gráfica. Como você pode ver, ele gerencia a informação de hardware e conexões da rede. Por exemplo, ao iniciar, o NetworkManager irá coletar informações de hardware de rede, procurar conexões wireless, cabeadas, etc. e as activará.</p>
+<p>Além disso, há ferramentas de linha de comando para interagir com o NetworkManager:</p>
 <section id="nmcli" class="level3">
 <h3 class="anchored" data-anchor-id="nmcli">nmcli</h3>
-<p>A comando nmcli permite controlar e modificar o NetworkManager, veja a página de manual para obter mais informações.</p>
-<p>(Lembre-se de que o exemplo <code>nm-tool</code> é um arquivo de texto chamado <code>arq.txt</code>, por exemplo)</p>
+<p>ferramenta de linha de comando para interagir com o NetworkManager.</p>
+<p>Por exemplo, para listar conexões.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nmcli</span> connection show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para ativar uma interface.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nmcli</span> radio wifi on</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="nmtui" class="level3">
+<h3 class="anchored" data-anchor-id="nmtui">nmtui</h3>
+<p>Interface de terminal baseada em texto (menu interativo).</p>
+</section>
+<section id="networkmanager-e-o-systemd" class="level3">
+<h3 class="anchored" data-anchor-id="networkmanager-e-o-systemd">NetworkManager e o systemd</h3>
+<p>O NetworkManager roda como serviço:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl status NetworkManager</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

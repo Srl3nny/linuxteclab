@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html">📂 Configurar Rede</a></li><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/5-arp.html">✅ Arp</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -628,6 +628,47 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">📂 Configurar Rede</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Interfaces-De-Rede</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/2-route.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Route</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/3-dhclient.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Dhclient</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/4-NetworkManager.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">✅ Networkmanager</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../conteudos/configurar-rede/5-arp.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">✅ Arp</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -635,19 +676,24 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html">📂 Configurar Rede</a></li><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/5-arp.html">✅ Arp</a></li></ol></nav></header>
 
 
 
 
 <p><strong>Como o ARP cache funciona</strong></p>
 <p>Lembre-se de quando procuramos uma endereço MAC com ARP? Primeiramente, o sistema verifica o cache ARP localmente armazenado no nosso sistema. Você pode visualizar esse cache execute o comando <code>arp</code>:</p>
-<pre><code>pete@icebox:~$ arp
+<pre><code>$ arp
 Endereço            Tipo HW   Endereço HW   Flags   Máscara        Interface
 192.168.22.1       ether   00:12:24:fc:12:cc   C          eth0
 192.168.22.254     ether   00:12:45:f2:84:64   C          eth0</code></pre>
-<p>O cache ARP está vazio quando a máquina é inicializada, e é populado à medida que os pacotes são enviados para outros servidores. Se enviamos um pacote para umdestino que não está no cache ARP, o que acontece é o seguinte:</p>
-<p>O host fonte cria o quadro Ethernet com um pacote de solicitação ARP O host fonte broadcasta esse quadro para toda a rede Se algum dos hosts na rede sabe o endereço MAC correto, ele enviará um pacote de resposta e quadro contendo o endereço MAC O host fonte adiciona a correspondência IP-MAC ao cache ARP e, em seguida, prossegue com a entrega do pacote</p>
+<p>O cache ARP está vazio quando a máquina é inicializada, e é populado à medida que os pacotes são enviados para outros servidores. Se enviamos um pacote para um destino que não está no cache ARP, o que acontece é o seguinte:</p>
+<ul>
+<li>O host de origem cria o quadro Ethernet com um pacote de solicitação ARP.</li>
+<li>O host de origem faz im broadcast com esse quadro para toda a rede.</li>
+<li>Se algum dos hosts na rede tiver o endereço correto, ele enviará um pacote de resposta e quadro contendo o endereço MAC</li>
+<li>O host de origem adiciona a correspondência IP-MAC ao cache ARP e, em seguida, prossegue com a entrega do pacote</li>
+</ul>
 <p>Você também pode visualizar seu cache ARP com o comando <code>ip neighbor show</code>:</p>
 <pre><code>$ ip neighbour show</code></pre>
 <p>Notícias adicionais</p>
