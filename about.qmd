@@ -1,5 +1,8 @@
 ---
 title: "About"
 ---
+O **LinuxTecLab** nasceu da vontade de compartilhar o que venho documentando ao longo dos anos de estudo e trabalho com Linux, redes e tecnologias livres. Sempre acreditei que conhecimento só tem valor quando é compartilhado — e essa é a essência deste projeto.
 
-About this site
+Além disso, o LinuxTecLab também é uma homenagem ao linuxjourney.com, um site excelente para quem quer aprender Linux de forma descontraída e por tópicos, mas que infelizmente está inativo há algum tempo. Quero traduzir e adaptar os conceitos dele para o português, trazendo o conteúdo para uma nova roupagem e mantendo vivo esse espírito de aprendizagem acessível e contínua.
+
+Aqui você vai encontrar tutoriais, guias, anotações e recursos que espero que te ajudem na sua própria jornada no mundo Linux.

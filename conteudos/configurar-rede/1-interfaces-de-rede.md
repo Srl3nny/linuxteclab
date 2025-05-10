@@ -3,7 +3,7 @@
 A interface de rede é a conexão entre o lado de software e o lado de hardware da rede, ligando o kernel. podemos ver um exemplo disso:
 
 ```
-pete@icebox:~$ ifconfig -a
+$ ifconfig -a
 ```
 
 O comando `ifconfig` permite configure nossas interfaces de rede, caso contrário, o kernel e os drivers de dispositivo não saberiam se falar. Ele é executado no bootup e configura nossas interfaces a partir de arquivos de configuração, mas podemos também modificá-las manualmente.
