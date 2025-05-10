@@ -683,7 +683,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p><strong>Interface de Rede e Comandos ifconfig e ip</strong></p>
 <p>A interface de rede é a conexão entre o lado de software e o lado de hardware da rede, ligando o kernel. podemos ver um exemplo disso:</p>
-<pre><code>pete@icebox:~$ ifconfig -a</code></pre>
+<pre><code>$ ifconfig -a</code></pre>
 <p>O comando <code>ifconfig</code> permite configure nossas interfaces de rede, caso contrário, o kernel e os drivers de dispositivo não saberiam se falar. Ele é executado no bootup e configura nossas interfaces a partir de arquivos de configuração, mas podemos também modificá-las manualmente.</p>
 <p>O output do comando <code>ifconfig</code> mostra o nome da interface na coluna da esquerda e as informações detalhadas na direita. As interfaces mais comuns são eth0 (interface Ethernet padrão), wlan0 (interface wireless) e lo (interface de loopback).</p>
 <p>O loopback é uma interface que representa seu computador, simplesmente voltando você de volta a si mesmo. É útil para depuração ou para conectar-se a servidores rodando localmente.</p>

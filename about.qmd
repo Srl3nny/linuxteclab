@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Sobre"
 ---
 O **LinuxTecLab** nasceu da vontade de compartilhar o que venho documentando ao longo dos anos de estudo e trabalho com Linux, redes e tecnologias livres. Sempre acreditei que conhecimento só tem valor quando é compartilhado — e essa é a essência deste projeto.
 
