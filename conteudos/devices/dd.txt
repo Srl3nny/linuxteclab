@@ -1,0 +1,34 @@
+**O Poderoso dd: Convertendo e Copiando Dados**
+======================================================
+
+O dd é um ferramenta bem útil para converter e copiar dados. Ele lê entrada a partir de um arquivo ou fluxo de dados e escreve para um arquivo ou fluxo de dados.
+
+Vamos analisar um exemplo comand:
+```
+$ dd if=/home/pete/backup.img of=/dev/sdb bs=1024
+```
+Este comando está copiando o conteúdo do arquivo `backup.img` para `"/dev/sdb`. Ele copiará os dados em blocos de 1024 bytes até não haver mais dados para ser copiados.
+
+ some opções úteis:
+- `if=file`: especifica que o dd deve ler arquivo em vez de entrada padrão
+- `of=file`: especifica que o dd deve escrever para arquivo em vez de saída padrão
+- `bs=bytes`: tamanho de bloco para leitura e escrita. Você pode usar métricas de tamanho diferentes para designar o tamanho com "k" para quilobyte, "m" para megabyte, etc. Logo, 1024 bytes é igual a 1k
+- `count=number`: número de blocos a ser copiado
+
+Você verá alguns comandos dd que usam a opção `count`, frequentemente com dd quando você deseja copiar um arquivo que é 1 megabyte, você geralmente deseja vê-lo como 1 megabyte quando estiver pronto para ser copiado. Vamos utilizar o exemplo seguinte:
+```
+$ dd if=/home/pete/backup.img of=/dev/sdb bs=1M count=2
+```
+Nesse comando, estamos dizendo para copiar sobre 1M 2 vezes, então apenas 2M está sendo copiado, deixando o nosso dados copiados incompletos. O `count` pode ser útil em muitas situações, mas se você estiver apenas copiando dados, pode omitir o `count` e até mesmo o `bs`. Se você realmente quiser otimizar suas transferências de dados, então você precisará começar a usar essas opções.
+
+O dd é incrivelmente poderoso - você pode usá-lo para fazer backups de qualquer coisa, incluindo discos rígidos inteiros, restauração de imagens de disco e muito mais. Mas, é importante lembrar que uma ferramenta tão poderosa pode vir a um preço se você não estiver seguro do que está fazendo.
+
+Por exemplo, você pode usar o dd para backup do arquivo `example.txt`:
+```
+$ dd if=example.txt of=/dev/sdb bs=1M count=1
+```
+Nesse caso, você está copiando o conteúdo do arquivo `example.txt` para `"/dev/sdb"` em blocos de 1 megabyte, no entanto, você pode ter mais controle sobre a copia mudando as opções para `bs=1024` e `count=1000` para copiar mais fielmente o arquivo original.
+
+[Arq.txt](https://github.com/rodolfotrade/arq.txt)
+
+[Exemplo.txt](https://github.com/rodolfotrade/exemplo.txt)

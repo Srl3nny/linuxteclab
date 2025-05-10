@@ -1,0 +1,37 @@
+**Monitoração de Sistema com sar**
+
+Ao ficar com problemas em sua máquina, é comum utilizar ferramentas de monitoração para identificar a causa do problema. No entanto, o que fazer quando a máquina está tendo problemas enquanto você não está olhando? Nesse caso, você precisará de uma ferramenta de monitoração contínua que colecente, relatorie e salve informações de atividade do sistema.
+
+Nesta aula, vamos explorar a ferramenta `sar`, que é uma ferramenta muito útil para análise histórica do sistema.
+
+**Instalação do sar**
+
+O `sar` é uma ferramenta utilizada para análise histórica do sistema. Para começar, certifique-se de que a ferramenta está instalada executando o comando `sudo apt install sysstat`.
+
+**Configuração da coleta de dados**
+
+Quando a instalação do `sysstat` estiver concluída, o seu sistema deve começar a coletar automaticamente dados. Se não estiver funcionando corretamente, você pode habilitar a coleta de dados modificando o campo `ENABLED` no arquivo `/etc/default/sysstat`.
+
+**Usando o sar**
+
+Para utilizar o `sar`, execute os seguintes comandos:
+```
+$ sudo sar -q
+```
+Este comando lista os detalhes desde o início do dia.
+
+```
+$ sudo sar -r
+```
+Este comando lista os detalhes do uso da memória desde o início do dia.
+
+```
+$ sudo sar -P
+```
+Este comando lista os detalhes do uso do procesador.
+
+Se você deseja ver os dados de um dia diferente, basta navegar até o diretório `/var/log/sysstat/saXX`, onde `XX` é o nome do dia que você deseja visualizar. Por exemplo:
+```
+$sar -q /var/log/sysstat/sa02
+```
+Isso lista os detalhes do dia 02.

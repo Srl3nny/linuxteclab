@@ -1,0 +1,26 @@
+Como você certamente lembra, no passado (e, sinceramente, ainda hoje), criar nós de dispositivo usava-se um comando como:
+```markdown
+$ mknod /dev/sdb1 b 8 3
+```
+Este comando cria um nó de dispositivo `/dev/sdb1` e o configura como um dispositivo de bloco (b) com um número de major 8 e um número de minor 3.
+
+Para remover um dispositivo, bastava simplesmente remover o arquivo de dispositivo na direção `/dev`.
+```
+$ rm /dev/sdb1
+```
+Mas, sorteirosamente, nós não precisamos mais fazer isso, graças ao udev. O sistema udev cria e remove automaticamente arquivos de dispositivo para nós, dependendo de se eles estão conectados ou não. Um daemon udevd está rodando no sistema e escuta mensagens do kernel sobre dispositivos conectados ao sistema. O udevd interpreta essa informação e a matcha com as regras especificadas em `/etc/udev/rules.d`, criando thereby nós de dispositivo e links simbólicos para os dispositivos. Você pode escrever suas próprias regras udev, mas isso é um pouco fora do escopo desse tutorial. Oportunamente, seu sistema veio equipado com muitas regras udev, então você pode nunca precisar escrever suas próprias.
+```
+$ udevadm info --query=all --name=/dev/sda
+```
+
+Pode-se também visualizar a base de dados udev e sistema de arquivos (/sys) com o comando `udevadm`. Essa ferramenta é muito útil, mas às vezes pode se tornar muito complicada.a```
+```
+**Exemplo:**
+
+* `arq.txt`
+
+```txt
+Nó de dispositivo: /dev/sdb1
+```
+
+**Note:** Como o texto de entrada pode estar um pouco confuso, melhorou a explicação e o formato da tradução.

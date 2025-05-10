@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>nat – linuxteclab</title>
+<title>diretorio-dev – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-06e7e98cba7f23e6e3637df4b63211cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-eeee2804ecd2abcd400c4b397636e04c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -681,14 +681,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><strong>Como o NAT funciona em nossas redes</strong></p>
-<p>Antes de abordar o NAT (tradução de endereço de rede), já o havíamos mencionado, mas não o detalhamos muito. Isso significa que o Internet pode ver nosso endereço IP quando estamos trabalhando em nossa rede? Não exatamente.</p>
-<p>O NAT faz com que um dispositivo como nosso roteador atue como um intermediário entre o Internet e nossa rede particular. Portanto, apenas um endereço IP único é necessário para representar um grupo inteiro de computadores.</p>
-<p>Pense no NAT como um recepcionista em um escritório grande. Se alguém quer contatá-lo, eles apenas sabem o número do escritório inteiro, o recepcionista então teria que encontrar o seu número de extensão e redirecionar o chamado para você.</p>
-<p><strong>Como isso funciona?</strong></p>
-<p>Um caso simples seria o seguinte:</p>
-<p>Patty deseja conectar-se ao www.google.com, então seu computador envia esta solicitação por meio do roteador. O roteador toma essa solicitação e abre sua própria conexão com o google.com, então envia a solicitação de Patty apenas após fazer a conexão. O roteador é o intermediário entre Patty e www.google.com. O Google não sabe sobre Patty; tudo o que pode ver é o roteador.</p>
-<p>O NAT e a roteamento de pacotes em geral podem ficar muito feios, mas não vamos detalhar as especificidades.</p>
+<div class="markdown">
+<p>Quando você conecta um dispositivo a sua máquina, geralmente é necessário um driver de dispositivo para funcionar corretamente. Pode interagir com os drivers de dispositivo através de arquivos de dispositivo ou nós de dispositivo, que são arquivos especiais que se parecem com arquivos regulares. Como esses arquivos de dispositivo são apenas como arquivos regulares, pode usar programas como <code>ls</code>, <code>cat</code>, etc. para interagir com eles. Esses arquivos de dispositivo são geralmente armazenados na diretório <code>/dev</code>. Vá em frente e execute o comando <code>ls /dev</code> no seu sistema, verá uma grande quantidade de arquivos de dispositivo que estão no seu sistema.</p>
+<p>por exemplo, se você executar o comando:</p>
+<pre><code>$ ls /dev</code></pre>
+<p>verá arquivos como <code>/dev/null</code>, que é um dispositivo especial que descarta qualquer entrada que for enviada para ele.</p>
+<p>antigamente, se você queria acrescentar um dispositivo ao seu sistema, adicionava-se o arquivo de dispositivo no diretório <code>/dev</code> e provavelmente esquecia-se dele. Mas se fazia isso várias vezes, o diretório <code>/dev</code> ficava cheio de arquivos de dispositivo estáticos de dispositivos que você havia desatualizado, parado de usar, etc. Além disso, dispositivos também eram atribuídos arquivos de dispositivo na ordem em que o kernel os encontrava. Portanto, se cada vez que reiniciava o seu sistema, os dispositivos poderiam ter arquivos de dispositivo diferentes dependendo do momento em que foram descobertos.</p>
+<p>Felizmente, não usamos mais esse método. Agora, temos algo que usamos para adicionar e remover dispositivos dinamicamente que estão sendo usados no sistema, e vamos discutir isso nas lições futuras.</p>
+</div>
+<p>Reforcei a tradução para que seja mais fluida e natural, acrescentei parênteses para esclarecer conceitos e usei exemplos para tornar o texto mais claro. Além disso, adicionei um código de block para incluir os exemplos de comando no texto.</p>
 
 
 

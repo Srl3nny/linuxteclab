@@ -1,0 +1,32 @@
+**Sobre Processos e Fios no Linux**
+================================================
+
+Você provavelmente ouviu falar sobre processos singletreaded e multi-threaded. Fios são semelhantes a processos, pois são usados para executar o mesmo programa, frequentemente referidos como processos leves. Um processo com apenas um fio é single-threaded, enquanto um processo com mais de um fio é multi-threaded. No entanto, todos os processos têm ao menos um fio.
+
+**Diferenças entre Processos e Fios**
+-----------------------------------
+
+Processos operam com recursos de sistema isolados, mas fios podem compartilhar esses recursos facilmente entre si, o que facilita a comunicação entre eles e, às vezes, é mais eficiente ter uma aplicação multi-threaded do que multi-processo.
+
+**Exemplo**
+==========
+
+Imagine que você abre o Writer do LibreOffice e o Chrome, cada um é um processo separado. Agora, você vai dentro do Writer e começa a editar texto. Quando você edita o texto, é automaticamente salvo. Essas duas operações paralelas, "salvar e editar", são fios.
+
+**Visualizando Fios de Processos**
+------------------------------
+
+Para visualizar os fios de processos, você pode usar o comando `ps m`. Aqui está um exemplo de saída:
+```markdown
+pete@icebox:~$ ps m
+PID TTY      STAT   TIME COMMAND
+2207 pts/2    -      0:01 bash
+5252 pts/2    -      0:00 ps m
+```
+Os processos estão denotados com cada PID e, abaixo, os fios (denotados por `--`). Portanto, você pode ver que os processos acima são ambos single-threaded.
+```markdown
+  PID THREADS COMMAND
+2207   2207  bash
+5252   5252  ps m
+```
+ Note que, embora o exemplo de `ps m` seja um arquivo de texto denominado `arq.txt` (`pete@icebox:~$ ps m` é a saída do terminal), o nome do ficheiro pode ser alterado para o que desejar.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>networkbasics – linuxteclab</title>
+<title>tipos-de-device – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-06e7e98cba7f23e6e3637df4b63211cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-eeee2804ecd2abcd400c4b397636e04c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -715,21 +715,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Vamos explorar uma rede doméstica típica. Você tem algunscomponentes diferentes.</p>
-<p>Proveedor de Internet (ISP) - A empresa para a qual você paga para obter Internet em sua casa. Rotador (Router) - O rotador permite que cada máquina na sua rede se conecte à Internet. Em muitos rotadores modernos, você pode se conectar via WiFi ou cabo Ethernet. Rede Wide Area Network (WAN) - Essa é a rede que abrange tudo entre o seu rotador e uma rede mais ampla, como a Internet. Rede Local Wirelless (WLAN) - Essa é a rede entre o seu rotador e qualquer dispositivo sem fio que você tenha, como laptops. Rede Local (LAN) - Essa é a rede entre o seu rotador e qualquer dispositivo com cabo, como PCs desktop. Anfitriões (Hosts) - Cada máquina numa rede é conhecida como anfitrião.</p>
-<p>Os dados e informações que são transmitidos por redes são conhecidos como pacotes e, ao final do segmento Networking Nomad, você entenderá detalhadamente como um pacote se movimenta para e desde os anfitriões.</p>
-<p>Exemplo: <code>arq.txt</code></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Componentes da rede doméstica</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Proveedor de Internet (ISP)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rotador (Router)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rede Wide Area Network (WAN)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rede Local Wirelless (WLAN)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rede Local (LAN)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Anfitriões (Hosts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note: Eu fiz algumas alterações para que o texto fosse mais legível e fácil de entender. Além disso, adicionei um exemplo de como o texto pode ser formatado com markdown para criar uma tabela de componentes da rede doméstica.</p>
+<section id="gerenciamento-de-dispositivos" class="level1">
+<h1><strong>Gerenciamento de Dispositivos</strong></h1>
+<p>Antes de discutirmos sobre como os dispositivos são gerenciados, vamos dar uma olhada em alguns dispositivos. Aqui está um exemplo usando o comando <code>ls -l /dev</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-l</span> /dev</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brw-rw----</span>   1 root disk      8,   0 Dec 20 20:13 sda</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">crw-rw-rw-</span>   1 root root      1,   3 Dec 20 20:13 null</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">srw-rw-rw-</span>   1 root root           0 Dec 20 20:13 log</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">prw-r--r--</span>   1 root root           0 Dec 20 20:13 fdata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As colunas são apresentadas da esquerda para a direita:</p>
+<ul>
+<li>Permissões</li>
+<li>Proprietário</li>
+<li>Grupo</li>
+<li>Número Maior do Dispositivo</li>
+<li>Número Menor do Dispositivo</li>
+<li>Timestamp</li>
+<li>Nome do Dispositivo</li>
+</ul>
+<p>Observe que no comando <code>ls</code>, você pode ver o tipo do arquivo com a primeira bit em cada linha. Os arquivos de dispositivos são denotados pelas seguintes abreviaturas:</p>
+<ul>
+<li><code>c</code> - caractere</li>
+<li><code>b</code> - bloco</li>
+<li><code>p</code> - pipe</li>
+<li><code>s</code> - socket</li>
+</ul>
+<section id="dispositivos-caracter" class="level2">
+<h2 class="anchored" data-anchor-id="dispositivos-caracter"><strong>Dispositivos Caracter</strong></h2>
+<p>Esses dispositivos transferem dados, mas um caractere de volta. Você verá muitos dispositivos pseudo (/dev/null) como dispositivos caracteres, esses dispositivos não são fisicamente conectados ao computador, mas permitem ao sistema operacional maior funcionalidade.</p>
+</section>
+<section id="dispositivos-de-bloco" class="level2">
+<h2 class="anchored" data-anchor-id="dispositivos-de-bloco"><strong>Dispositivos de Bloco</strong></h2>
+<p>Esses dispositivos transferem dados, mas em grandes blocos de tamanho fixo. Você verá dispositivos que utilizam blocos de dados como dispositivos de bloco, como unidades de disco rígido, sistemas de arquivos, etc.</p>
+</section>
+<section id="dispositivos-de-pipe" class="level2">
+<h2 class="anchored" data-anchor-id="dispositivos-de-pipe"><strong>Dispositivos de Pipe</strong></h2>
+<p>Pipes nomeados permitem que dois ou mais processos comuniquem entre si. Esses dispositivos são similares a dispositivos caracteres, mas em vez de ter saída enviada para um dispositivo, é enviada para outro processo.</p>
+</section>
+<section id="dispositivos-de-socket" class="level2">
+<h2 class="anchored" data-anchor-id="dispositivos-de-socket"><strong>Dispositivos de Socket</strong></h2>
+<p>Dispositivos de socket facilitem a comunicação entre processos, semelhantes a dispositivos de pipe, mas podem comunicar-se com muitos processos ao mesmo tempo.</p>
+</section>
+<section id="caracterização-de-dispositivos" class="level2">
+<h2 class="anchored" data-anchor-id="caracterização-de-dispositivos"><strong>Caracterização de Dispositivos</strong></h2>
+<p>Os dispositivos são caracterizados usando dois números: o número maior do dispositivo e o número menor do dispositivo. Você pode ver esses números no exemplo acima, separados por uma vírgula. Por exemplo, se um dispositivo tiver os números de dispositivo: 8, 0: O número maior do dispositivo representa o driver do dispositivo que é usado. Nesse caso, 8 é o número maior comum para dispositivos de bloco <code>sd</code>. O número menor indica qual dispositivo único é isso dentro dessa classe de driver, no caso, 0 é usado para representar o primeiro dispositivo (a).</p>
+</section>
+</section>
+<section id="arquivos-de-exemplo" class="level1">
+<h1><strong>Arquivos de Exemplo</strong></h1>
+<p>Você pode verificar essas informações em arquivos como <a href="arquivo.txt">arquivo.txt</a> ou <a href="exemplo.txt">exemplo.txt</a>, que contém exemplos de dispositivos de caractere, de bloco e de pipe.</p>
+<section id="times-e-core" class="level2">
+<h2 class="anchored" data-anchor-id="times-e-core"><strong>Times e Core</strong></h2>
+<p>Você também pode encontrar exemplos de dispositivos em times de futebol, como <a href="Barcelona.txt">Barcelona.txt</a> ou <a href="Juventus.txt">Juventus.txt</a>, que contém informações sobre a estrutura de times de futebol, incluindo os jogadores e as estatísticas.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

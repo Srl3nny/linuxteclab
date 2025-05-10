@@ -1,0 +1,49 @@
+**Monitorando uso de memória com vmstat**
+======================================
+
+Além de monitorar o uso do processador e do I/O, é também possível monitorar o uso de memória do seu sistema com o comando `vmstat`.
+
+**Exemplo de saída do vmstat:**
+--------------------------------
+```md
+pete@icebox:~$ vmstat
+procs-----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0      0 396528  38816 384036    0    0     4     2   38   79  0  0 99  0  0
+```
+**Explicação das colunas:**
+---------------------------
+
+### Processos
+
+* `r`: Número de processos em tempo de execução
+* `b`: Número de processos em sono não interrompido
+
+### Memória
+
+* `swpd`: Quantidade de memória virtual utilizada
+* `free`: Quantidade de memória livre
+* `buff`: Quantidade de memória utilizada como buffer
+* `cache`: Quantidade de memória utilizada como cache
+
+### Troca de memória
+
+* `si`: Quantidade de memória swapada para a discos
+* `so`: Quantidade de memória swapada para a discos
+
+### E/S
+
+* `bi`: Quantidade de blocos recebidos de um dispositivo de Bloqueio
+* `bo`: Quantidade de blocos enviados para um dispositivo de Bloqueio
+
+### Sistema
+
+* `in`: Número de interrupções por segundo
+* `cs`: Número de mudanças de contexto por segundo
+
+### Processador
+
+* `us`: Tempo gasto em tempo de usuário
+* `sy`: Tempo gasto no tempo do kernel
+* `id`: Tempo gasto em estado de inatividade
+* `wa`: Tempo gasto esperando por E/S

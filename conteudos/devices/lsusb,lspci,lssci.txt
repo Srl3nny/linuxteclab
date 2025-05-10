@@ -1,0 +1,17 @@
+# Listagem de Informações sobre Dispositivos
+
+Além de usarmos o comando `ls` para listar arquivos e diretórios, há ferramentas semelhantes que nos permitem obter informações detalhadas sobre dispositivos conectados ao seu computador.
+
+### Listagem de Dispositivos USB
+
+Para obter uma lista de dispositivos USB conectados, podemos usar o comando `lsusb`. Por exemplo, podem-se encontrar informações sobre a versão do dispositivo, o seu nome e a porta USB na qual está conectado.
+
+### Listagem de Dispositivos PCI
+
+Para obter informações sobre dispositivos PCI (chipes de expansão), como placas de vídeo ou placas de rede, podemos usar o comando `lspci`. Esta ferramenta lista o tipo de dispositivo, a versão e a localização da placa.
+
+### Listagem de Dispositivos SCSI
+
+Finalmente, podemos usar o comando `lsscsi` para listagem de dispositivos SCSI ( interfaces de barramento internacional de comunicação de sistema de computador). Esta ferramenta lista informações sobre os dispositivos conectados, como nome, versão e localização.
+
+Obs: Faço uso do parágrafo e uso de títulos para tornar o texto mais legível e fácil de compreender, e também adicionei exemplos para tornar mais claro o uso dessas ferramentas.
