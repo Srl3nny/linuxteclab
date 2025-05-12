@@ -17,6 +17,4 @@ about:
 
 Aprenda Linux com conteúdo estruturado e organizado.
 
-Este projeto é inspirado no site https://linuxjourney.com/
-
 Conteúdo produzido por Bruno Caires.

@@ -19,7 +19,7 @@ As colunas são apresentadas da esquerda para a direita:
 * Timestamp
 * Nome do Dispositivo
 
-Observe que no comando `ls`, você pode ver o tipo do arquivo com a primeira bit em cada linha. Os arquivos de dispositivos são denotados pelas seguintes abreviaturas:
+Observe que no comando `ls`, você pode ver o tipo do arquivo com o primeiro bit em cada linha. Os arquivos de dispositivos são denotados pelas seguintes abreviaturas:
 
 * `c` - caractere
 * `b` - bloco
