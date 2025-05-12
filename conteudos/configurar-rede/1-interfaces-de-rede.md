@@ -68,10 +68,3 @@ $ ip link set eth0 down
 $ ip address add 192.168.1.1/24 dev eth0
 ```
 
-Arquivos de exemplo:
-
-* `ifconfig.txt`
-* `ip.txt`
-* `interfaces.txt`
-
-**Obs:** O conteúdo acima é um exemplo de como traduzir o texto para o português, no entanto, é importante lembrar que a tradução não deve ser literal e deve-se buscar traduzir de forma que o texto seja natural e fluente para o leitor. Além disso, é recomendável melhorar o texto de entrada aumentando as explicações para que seja mais claro e fácil de entender.
