@@ -3,9 +3,9 @@ about:
   template: jolla
   id: about-block
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://x.com/LINUXTecLab
+    - icon: youtube
+      text: youtube
+      href: https://www.youtube.com/@LINUXTecLab
     - icon: github
       text: Github
       href: https://github.com/Srl3nny
