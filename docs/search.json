@@ -191,7 +191,19 @@
     "href": "conteudos/arte-do-texto/2-stdin.html",
     "title": "stdin (Standard in)",
     "section": "",
-    "text": "stdin (Standard in)\nOk vimos que temos o stdout que podemos usar, como um arquivo ou a tela como forma de saída. Bem, também existem diferentes fluxos de entrada padrão (stdin) que podemos usar. Sabemos que temos stdin de dispositivos como o teclado, mas podemos usar arquivos, saída de outros processos e do terminal também, vamos ver um exemplo.\nVamos usar o arquivo arq.txt neste exemplo, lembre-se de que ele continha o texto Hello World.\n$ cat &lt; arq.txt\nExecutando o comando vemos que o arq.txt é colocado no stdin do comando cat, e o conteúdo do arquivo é mostrado na tela.\nPodemos agora enviar o stdout do comando cat para um arquivo.\n$ cat &lt; arq.txt &gt; saida.txt",
+    "text": "Ok vimos que temos o stdout que podemos usar, como um arquivo ou a tela como forma de saída. Bem, também existem diferentes fluxos de entrada padrão (stdin) que podemos usar. Sabemos que temos stdin de dispositivos como o teclado, mas podemos usar arquivos, saída de outros processos e do terminal também, vamos ver um exemplo.\nVamos usar o arquivo arq.txt neste exemplo, lembre-se de que ele continha o texto Hello World.\nExecutando o comando vemos que o arq.txt é colocado no stdin do comando cat, e o conteúdo do arquivo é mostrado na tela.\nPodemos agora enviar o stdout do comando cat para um arquivo.",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Stdin"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/2-stdin.html#vídeo-relacionado",
+    "href": "conteudos/arte-do-texto/2-stdin.html#vídeo-relacionado",
+    "title": "stdin (Standard in)",
+    "section": "📺 Vídeo relacionado",
+    "text": "📺 Vídeo relacionado\n\nEste conteúdo também está disponível em vídeo:\n👉 Assista no YouTube",
     "crumbs": [
       "Home",
       "📂 Arte Do Texto",

@@ -1,4 +1,7 @@
-# stdin (Standard in)
+---
+title: "stdin (Standard in)"
+youtube: "https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO"
+---
 
 Ok vimos que temos o stdout que podemos usar, como um arquivo ou a tela como forma de saída. Bem, também existem diferentes fluxos de entrada padrão (stdin) que podemos usar. Sabemos que temos stdin de dispositivos como o teclado, mas podemos usar arquivos, saída de outros processos e do terminal também, vamos ver um exemplo.
 
@@ -15,3 +18,7 @@ Podemos agora enviar o stdout do comando cat para um arquivo.
 ```bash
 $ cat < arq.txt > saida.txt
 ```
+
+## 📺 Vídeo relacionado
+
+{{< video-youtube >}}

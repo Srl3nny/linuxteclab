@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>stdin – linuxteclab</title>
+<title>stdin (Standard in) – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -710,19 +710,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">📂 Arte Do Texto</a></li><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/2-stdin.html">✅ Stdin</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">📂 Arte Do Texto</a></li><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/2-stdin.html">✅ Stdin</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">stdin (Standard in)</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="stdin-standard-in" class="level1">
-<h1>stdin (Standard in)</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>Ok vimos que temos o stdout que podemos usar, como um arquivo ou a tela como forma de saída. Bem, também existem diferentes fluxos de entrada padrão (stdin) que podemos usar. Sabemos que temos stdin de dispositivos como o teclado, mas podemos usar arquivos, saída de outros processos e do terminal também, vamos ver um exemplo.</p>
 <p>Vamos usar o arquivo arq.txt neste exemplo, lembre-se de que ele continha o texto Hello World.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat <span class="op">&lt;</span> arq.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Executando o comando vemos que o arq.txt é colocado no stdin do comando cat, e o conteúdo do arquivo é mostrado na tela.</p>
 <p>Podemos agora enviar o stdout do comando cat para um arquivo.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat <span class="op">&lt;</span> arq.txt <span class="op">&gt;</span> saida.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="vídeo-relacionado" class="level2">
+<h2 class="anchored" data-anchor-id="vídeo-relacionado">📺 Vídeo relacionado</h2>
+<div class="youtube-box">
+<p><strong>Este conteúdo também está disponível em vídeo:</strong></p>
+<p><a href="https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO">👉 Assista no YouTube</a></p>
+</div>
 
 
 </section>
