@@ -1,1 +1,12 @@
 /.quarto/
+# Quarto caches
+.quarto/
+*_cache/
+*_files/
+
+# OS/Editor
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
