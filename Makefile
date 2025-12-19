@@ -29,6 +29,7 @@ sidebar:
 
 build: sidebar
 	$(QUARTO) render
+	@if [[ -f "CNAME" ]]; then cp -f CNAME docs/CNAME; fi
 	@echo "[build] Site gerado em $(OUTPUT_DIR)/"
 
 publish: build
@@ -38,6 +39,7 @@ publish: build
 	if [[ -z "$$msg" ]]; then msg="Atualiza site (Quarto)"; fi; \
 	git commit -m "$$msg" || true
 	git push
+
 
 clean:
 	@echo "Removendo $(OUTPUT_DIR)/ ..."

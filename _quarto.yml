@@ -1,5 +1,7 @@
 project:
   output-dir: docs
+  resources:
+  - CNAME
   type: website
 website:
   navbar:
