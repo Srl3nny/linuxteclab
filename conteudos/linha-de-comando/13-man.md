@@ -1,4 +1,9 @@
-#  man
+---
+title: "man"
+youtube: "https://youtu.be/FgfwdUl3i-s?si=ASXCPe0jeGiPSCCg"
+---
+
+
 
 Um comando que pode te salvar em muitos momentos é o man. É uma interface para manuais, com ele você pode buscar ajuda sem precisar do chatGPT :) . 
 
@@ -15,3 +20,11 @@ E para fazer um pesquisa sobre manuais que contenham a palavra passwd:
 ```bash
 $ man -k passwd
 ```
+
+
+---
+
+## 📺 Vídeo relacionado
+
+{{< video-youtube >}}
+

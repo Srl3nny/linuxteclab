@@ -1,4 +1,9 @@
-# cp
+---
+title: "cp"
+youtube: "https://youtu.be/7Zl1yXe-MB8?si=fb5BDL2H0AK6XXEv"
+---
+
+
 
 Vamos começar a fazer algumas cópias desses arquivos. Assim como copiar e colar arquivos em outros sistemas operacionais, o shell nos oferece uma maneira ainda mais simples de fazer isso, e nem precisamos do mouse para isso :).
 
@@ -23,3 +28,11 @@ Uma coisa a observar: se você copiar um arquivo para um diretório que tenha o 
 ```bash
 $ cp -i meuarquivo /home/bruno/
 ```
+
+
+---
+
+## 📺 Vídeo relacionado
+
+{{< video-youtube >}}
+

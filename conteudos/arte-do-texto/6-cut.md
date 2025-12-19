@@ -1,3 +1,9 @@
+---
+title: "cut"
+youtube: "https://youtu.be/_7kDsfHoz4k?si=vd7RTy57BcISoW6h"
+---
+
+
 Aprenderemos alguns comandos úteis que você pode usar para processar texto. Antes de começarmos, vamos criar um arquivo com o qual trabalharemos. Copie e cole o seguinte comando, depois de fazer isso, adicione uma TAB entre cachorro e preguiçoso (pressione Ctrl-v + TAB, isso insere um caractere de tabulação real). 
 
 ```bash
@@ -25,3 +31,10 @@ $ cut -f 1 -d ";" exemplo.txt
 Você pegará o primeiro campo -f 1, e usará como delimitador o caracter ";" -d ";". Deverá ver no terminal "O Linux é rápido".
 
 &nbsp;
+
+---
+
+## 📺 Vídeo relacionado
+
+{{< video-youtube >}}
+

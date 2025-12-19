@@ -1,4 +1,9 @@
-# cd
+---
+title: "cd"
+youtube: "https://youtu.be/FgfwdUl3i-s?si=IK4moEVv_NtbPE-O"
+---
+
+
 
 Agora que você sabe onde está, vamos nos movimentar um pouco no sistema de arquivos. Existem duas maneiras diferentes de especificar um caminho, também conhecidos com PATH, como caminhos absolutos e relativos.
 
@@ -35,3 +40,11 @@ $cd~
 
 $cd-
 ```
+
+
+---
+
+## 📺 Vídeo relacionado
+
+{{< video-youtube >}}
+

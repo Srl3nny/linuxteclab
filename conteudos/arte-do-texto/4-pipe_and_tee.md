@@ -1,3 +1,10 @@
+---
+title: "Pipe (|) e tee"
+youtube: "https://youtu.be/lOMrxK7q4yA?si=86yhzRFevp78MRRk"
+---
+
+
+
 Iremos conhecer o pipe (|) agora, vamos primeiro executar o comando:
 
 ```bash
@@ -19,3 +26,10 @@ $ ls | tee saida.txt
 ```
 
 &nbsp;
+
+---
+
+## 📺 Vídeo relacionado
+
+{{< video-youtube >}}
+

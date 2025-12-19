@@ -1,4 +1,9 @@
-# Usando o comando head
+---
+title: "head"
+youtube: ""
+---
+
+
 
 Vamos imaginar que temos um arquivo muito extenso; na verdade, temos muitos arquivos longos para escolher.
 
@@ -20,3 +25,11 @@ O comando ficaria assim:
     $ head -n 15 /var/log/syslog
 
 Aqui, a flag `-n` indica o número de linhas que você deseja visualizar.
+
+
+---
+
+## 📺 Vídeo relacionado
+
+{{< video-youtube >}}
+

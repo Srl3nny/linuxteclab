@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>stderr – linuxteclab</title>
+<title>stderr (standard error) – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -710,13 +710,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">📂 Arte Do Texto</a></li><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/3-stderr.html">✅ Stderr</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">📂 Arte Do Texto</a></li><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/3-stderr.html">✅ Stderr</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">stderr (standard error)</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="stderr" class="level1">
-<h1>stderr</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>Vamos tentar algo um pouco diferente agora, vamos tentar listar o conteúdo de um diretório que não existe no seu sistema e redirecionar a saída para o arquivo arq.txt novamente.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls /tmp/naoexiste <span class="op">&gt;</span> arq.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Ok, mas reparou que foi exibido na tela:</p>
@@ -731,6 +745,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls /tmp/naoexiste <span class="op">&amp;&gt;</span> arq.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Agora, e se eu não quiser nada desse lixo e quiser se livrar completamente das mensagens stderr? Bem, você também pode redirecionar a saída para uma chamada de arquivo especial /dev/null e ela descartará qualquer entrada.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls /tmp/naoexiste <span class="dv">2</span><span class="op">&gt;</span> /dev/null</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<section id="vídeo-relacionado" class="level2">
+<h2 class="anchored" data-anchor-id="vídeo-relacionado">📺 Vídeo relacionado</h2>
+<div class="youtube-box">
+<p><strong>Este conteúdo também está disponível em vídeo:</strong></p>
+<p><a href="https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO">👉 Assista no YouTube</a></p>
+</div>
 
 
 </section>
