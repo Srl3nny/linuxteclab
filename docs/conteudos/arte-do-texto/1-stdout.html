@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>stdout – linuxteclab</title>
+<title>stdout (standard out) – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -710,13 +710,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">📂 Arte Do Texto</a></li><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">✅ Stdout</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">📂 Arte Do Texto</a></li><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">✅ Stdout</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">stdout (standard out)</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="stdout-standard-out" class="level1">
-<h1>stdout (standard Out)</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>Um assunto bem interessante no mundo do terminal são os fluxos de E/S (entrada/saída). Veja o comando abaixo.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo Hello World <span class="op">&gt;</span> arq.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O que aconteceu? Bem, verifique o diretório onde você executou esse comando e eis que você deverá ver um arquivo chamado arq.txt, olhe dentro desse arquivo e deverá ver o texto Hello World. Muitas coisas aconteceram em um comando, então vamos detalhar.</p>
@@ -728,6 +742,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>O <strong>&gt;</strong> é um operador de redirecionamento que nos permite alterar para onde vai a saída padrão (stdout). Ele nos permite enviar a saída de echo Hello World para um arquivo em vez de para a tela. Se o arquivo ainda não existir, ele será criado para nós. No entanto, se existir, ele será sobrescrito. E é basicamente assim que funciona o redirecionamento stdout!</p>
 <p>Bem, digamos que eu não queira sobrescrever meu arq.txt, felizmente também existe um operador de redirecionamento para isso, <strong>&gt;&gt;</strong> ou seja você fará um append no arquivo.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo Hello World <span class="op">&gt;&gt;</span> saida.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="vídeo-relacionado" class="level2">
+<h2 class="anchored" data-anchor-id="vídeo-relacionado">📺 Vídeo relacionado</h2>
+<div class="youtube-box">
+<p><strong>Este conteúdo também está disponível em vídeo:</strong></p>
+<p><a href="https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO">👉 Assista no YouTube</a></p>
+</div>
 
 
 </section>

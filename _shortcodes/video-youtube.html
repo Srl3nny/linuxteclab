@@ -1,0 +1,10 @@
+{{ if .Page.Params.youtube }}
+<div class="youtube-box">
+  <p><strong>Este conteúdo também está disponível em vídeo:</strong></p>
+  <p>
+    <a href="{{ .Page.Params.youtube }}" target="_blank">
+      👉 Assista no YouTube
+    </a>
+  </p>
+</div>
+{{ end }}

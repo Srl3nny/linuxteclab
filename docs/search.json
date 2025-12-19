@@ -732,7 +732,7 @@
     "href": "index.html",
     "title": "linuxteclab",
     "section": "",
-    "text": "Aprenda Linux com conteúdo estruturado e organizado.\nConteúdo produzido por Bruno Caires."
+    "text": "Aprenda Linux com conteúdo estruturado e organizado.\nConteúdo produzido por Bruno Caires.."
   },
   {
     "objectID": "conteudos/configurar-rede/3-dhclient.html",
@@ -1164,9 +1164,21 @@
   {
     "objectID": "conteudos/arte-do-texto/1-stdout.html",
     "href": "conteudos/arte-do-texto/1-stdout.html",
-    "title": "stdout (standard Out)",
+    "title": "stdout (standard out)",
     "section": "",
-    "text": "stdout (standard Out)\nUm assunto bem interessante no mundo do terminal são os fluxos de E/S (entrada/saída). Veja o comando abaixo.\n$ echo Hello World &gt; arq.txt\nO que aconteceu? Bem, verifique o diretório onde você executou esse comando e eis que você deverá ver um arquivo chamado arq.txt, olhe dentro desse arquivo e deverá ver o texto Hello World. Muitas coisas aconteceram em um comando, então vamos detalhar.\nA primeira parte desse comando é:\n$ echo Hello World\nSabemos que o comando echo imprime Hello World na tela, mas como? Os processos usam fluxos de E/S para receber entrada e retornar saída. Por padrão, o comando echo pega a entrada (entrada padrão ou stdin) do teclado e retorna a saída (saída padrão ou stdout) para a tela. É por isso que quando você digita echo Hello World em seu shell, você obtém Hello World na tela. No entanto, o redirecionamento de E/S nos permite alterar esse comportamento padrão, proporcionando maior flexibilidade de arquivos.\nVamos prosseguir para a próxima parte do comando:\n&gt;\nO &gt; é um operador de redirecionamento que nos permite alterar para onde vai a saída padrão (stdout). Ele nos permite enviar a saída de echo Hello World para um arquivo em vez de para a tela. Se o arquivo ainda não existir, ele será criado para nós. No entanto, se existir, ele será sobrescrito. E é basicamente assim que funciona o redirecionamento stdout!\nBem, digamos que eu não queira sobrescrever meu arq.txt, felizmente também existe um operador de redirecionamento para isso, &gt;&gt; ou seja você fará um append no arquivo.\n$ echo Hello World &gt;&gt; saida.txt",
+    "text": "Um assunto bem interessante no mundo do terminal são os fluxos de E/S (entrada/saída). Veja o comando abaixo.\nO que aconteceu? Bem, verifique o diretório onde você executou esse comando e eis que você deverá ver um arquivo chamado arq.txt, olhe dentro desse arquivo e deverá ver o texto Hello World. Muitas coisas aconteceram em um comando, então vamos detalhar.\nA primeira parte desse comando é:\nSabemos que o comando echo imprime Hello World na tela, mas como? Os processos usam fluxos de E/S para receber entrada e retornar saída. Por padrão, o comando echo pega a entrada (entrada padrão ou stdin) do teclado e retorna a saída (saída padrão ou stdout) para a tela. É por isso que quando você digita echo Hello World em seu shell, você obtém Hello World na tela. No entanto, o redirecionamento de E/S nos permite alterar esse comportamento padrão, proporcionando maior flexibilidade de arquivos.\nVamos prosseguir para a próxima parte do comando:\nO &gt; é um operador de redirecionamento que nos permite alterar para onde vai a saída padrão (stdout). Ele nos permite enviar a saída de echo Hello World para um arquivo em vez de para a tela. Se o arquivo ainda não existir, ele será criado para nós. No entanto, se existir, ele será sobrescrito. E é basicamente assim que funciona o redirecionamento stdout!\nBem, digamos que eu não queira sobrescrever meu arq.txt, felizmente também existe um operador de redirecionamento para isso, &gt;&gt; ou seja você fará um append no arquivo.",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Stdout"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/1-stdout.html#vídeo-relacionado",
+    "href": "conteudos/arte-do-texto/1-stdout.html#vídeo-relacionado",
+    "title": "stdout (standard out)",
+    "section": "📺 Vídeo relacionado",
+    "text": "📺 Vídeo relacionado\n\nEste conteúdo também está disponível em vídeo:\n👉 Assista no YouTube",
     "crumbs": [
       "Home",
       "📂 Arte Do Texto",

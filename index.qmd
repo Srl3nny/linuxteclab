@@ -17,4 +17,4 @@ about:
 
 Aprenda Linux com conteúdo estruturado e organizado.
 
-Conteúdo produzido por Bruno Caires.
+Conteúdo produzido por Bruno Caires..

@@ -1,4 +1,8 @@
-# stdout (standard Out)
+---
+title: "stdout (standard out)"
+youtube: "https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO"
+---
+
 
 Um assunto bem interessante no mundo do terminal são os fluxos de E/S (entrada/saída). Veja o comando abaixo.
 
@@ -29,3 +33,8 @@ Bem, digamos que eu não queira sobrescrever meu arq.txt, felizmente também exi
 ```bash
 $ echo Hello World >> saida.txt
 ```
+
+## 📺 Vídeo relacionado
+
+{{< video-youtube >}}
+

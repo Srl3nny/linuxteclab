@@ -1,0 +1,6 @@
+title: Video YouTube
+author: Bruno
+version: 1.0.0
+contributes:
+  shortcodes:
+    - video-youtube.lua
