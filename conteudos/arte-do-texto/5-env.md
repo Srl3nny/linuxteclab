@@ -1,3 +1,8 @@
+---
+title: "env Linux"
+youtube:
+---
+
 Execute o seguinte comando, mas digite a variável como em letras maiúsculas:
 
 ```bash

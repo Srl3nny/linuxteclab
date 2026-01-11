@@ -292,7 +292,7 @@
   {
     "objectID": "conteudos/arte-do-texto/8-paste.html",
     "href": "conteudos/arte-do-texto/8-paste.html",
-    "title": "linuxteclab",
+    "title": "Coamdno Paste",
     "section": "",
     "text": "O comando paste no Linux é utilizado para combinar linhas de diferentes arquivos de forma horizontal, ou seja, ele “cola” o conteúdo das linhas correspondentes de dois ou mais arquivos lado a lado, separando-as por um delimitador (por padrão, o caractere de tabulação).\nVamos tomar como exemplo os dois arquivos a seguir:\nArq1.txt\n1\n2\n3\nArq2.txt\na\nb\nc\nUsando o paste.\n$ paste arqu1.txt arq2.txt\nComo resultado teria:\n1   a\n2   b\n3   c",
     "crumbs": [
@@ -1255,7 +1255,7 @@
   {
     "objectID": "conteudos/arte-do-texto/5-env.html",
     "href": "conteudos/arte-do-texto/5-env.html",
-    "title": "linuxteclab",
+    "title": "env Linux",
     "section": "",
     "text": "Execute o seguinte comando, mas digite a variável como em letras maiúsculas:\n$ echo $HOME\nVocê deverá ver o caminho para o seu diretório home, o meu se parece com /home/bruno.\nE esse comando?\n$ echo $USER\nVocê deverá ver seu nome de usuário! De onde vem essa informação? Está vindo de suas variáveis de ambiente.\nVocê pode visualizá-los digitando:\n$ env\nIsso exibirá muitas informações sobre as variáveis ​​de ambiente que estão definidas atualmente. Essas variáveis ​​contêm informações úteis que o shell e outros processos podem usar.\nVamos fazer um teste, crie uma variável qualquer e depois verifique com o comando env.\n$ export my_var=\"teste\"\n$ env\nO comando export no Linux é usado para definir variáveis de ambiente e torná-las acessíveis para processos filhos do shell atual.\nUma variável particularmente importante é a variável PATH. Você pode acessar essas variáveis ​​colocando $ na frente do nome da variável, assim:\n$ echo $PATH\nIsso retorna uma lista de caminhos separados por dois pontos que seu sistema pesquisa quando procura um comando. Digamos que você baixe e instale manualmente um pacote da Internet e o coloque em um diretório não padrão e queira executar esse comando, o sistema irá reclamar de comando não encontrado. Mas você está olhando o binário em uma pasta e sabe que ele existe. O que está acontecendo é que a variável $PATH não verifica esse diretório onde este o binário, então está gerando um erro. Digamos que você tenha vários binários que deseja executar nesse diretório. Você pode simplesmente modificar a variável PATH para incluir esse diretório em sua variável de ambiente PATH.",
     "crumbs": [
