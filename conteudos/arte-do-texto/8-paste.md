@@ -1,5 +1,5 @@
 ---
-title: "Coamdno Paste"
+title: "Comando Paste"
 youtube:
 ---
 

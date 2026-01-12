@@ -70,6 +70,8 @@ website:
         text: ✅ Tr
       - href: conteudos/arte-do-texto/13-uniq.md
         text: ✅ Uniq
+      - href: conteudos/arte-do-texto/14-sed.md
+        text: ✅ Sed
       section: 📂 Arte Do Texto
     - contents:
       - href: conteudos/manipulacao-de-usuario/1- Usuario e grupo.md

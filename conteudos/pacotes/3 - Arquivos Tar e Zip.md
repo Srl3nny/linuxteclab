@@ -40,12 +40,15 @@ Para extrair os conteúdo de um arquivo ZIP, use:
 $ tar xvf meuarquivo.tar
 ```
 
+
 Opções:
 
 - `x`: extrair os conteúdos do arquivo ZIP
 - `v`: ser verboso e mostrar o que está fazendo
 - `f`: fornece o nome do arquivo ZIP
 
+
+O 
 ## **Compressão e descompressão com Tar e Gzip**
 
 Muitas vezes, você encontrará um arquivo ZIP que foi compresso, como `meuarquivo.tar.gz`. Basta descomprimir com `gunzip` e, em seguida, extrair os conteúdos do arquivo ZIP com `tar`.

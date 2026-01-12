@@ -1,3 +1,8 @@
+---
+title: "Comando sort"
+youtube:
+---
+
 # Ordenação de Textos com o Comando `sort`
 
 O comando `sort` é uma ferramenta útil para organizar linhas de texto de acordo com um critério predeterminado. Vamos ver exemplos de como usá-lo para ordenar linhas de um arquivo de texto.

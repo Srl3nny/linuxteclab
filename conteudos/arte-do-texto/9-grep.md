@@ -1,3 +1,8 @@
+---
+title: "Comando Grep"
+youtube:
+---
+
 # O comando grep: o seu melhor amigo no tratamento de texto
 
 O **grep** é provavelmente o comando de tratamento de texto mais utilizado. Permite que você procure em arquivos por caracteres que correspondam a um padrão específico. Se você quisesse saber se um arquivo existe em um diretório específico ou se um determinada string esta presente em um arquivo, você pode utilizar o **grep**!

@@ -1,3 +1,8 @@
+---
+title: "Comando Tail"
+youtube:
+---
+
 # Comandos úteis para visualizar arquivos: tail e head
 
 O comando `tail` funciona de forma semelhante ao comando `head`. Mas ele permite visualizar as últimas 10 linhas de um arquivo por padrão.

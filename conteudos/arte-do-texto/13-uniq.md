@@ -1,3 +1,8 @@
+---
+title: "Comando uniq"
+youtube:
+---
+
 # **Comandos úteis para manipulação de texto**
 
 Existem muitos comandos úteis para manipular texto no console. Um desses comandos é o `uniq`, que é uma ferramenta muito prática para eliminar linhas duplicadas em um arquivo.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>alterando-proprietário – linuxteclab</title>
+<title>sed – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/permissoes/1 - Permissões.html">📂 Permissoes</a></li><li class="breadcrumb-item"><a href="../../conteudos/permissoes/3 - Alterando proprietário.html">✅ Alterando Proprietário</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">📂 Arte Do Texto</a></li><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/14-sed.html">✅ Sed</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -223,13 +223,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">📂 Arte Do Texto</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../conteudos/arte-do-texto/1-stdout.html" class="sidebar-item-text sidebar-link">
@@ -310,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conteudos/arte-do-texto/14-sed.html" class="sidebar-item-text sidebar-link">
+  <a href="../../conteudos/arte-do-texto/14-sed.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">✅ Sed</span></a>
   </div>
 </li>
@@ -495,13 +495,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">📂 Permissoes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../conteudos/permissoes/1 - Permissões.html" class="sidebar-item-text sidebar-link">
@@ -516,7 +516,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conteudos/permissoes/3 - Alterando proprietário.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../conteudos/permissoes/3 - Alterando proprietário.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✅ Alterando Proprietário</span></a>
   </div>
 </li>
@@ -682,21 +682,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/permissoes/1 - Permissões.html">📂 Permissoes</a></li><li class="breadcrumb-item"><a href="../../conteudos/permissoes/3 - Alterando proprietário.html">✅ Alterando Proprietário</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/1-stdout.html">📂 Arte Do Texto</a></li><li class="breadcrumb-item"><a href="../../conteudos/arte-do-texto/14-sed.html">✅ Sed</a></li></ol></nav></header>
 
 
 
 
-<p>Além de alterar os permissões de um arquivo, você também pode alterar a propriedade do usuário e do grupo associados ao arquivo.</p>
-<p><strong>Alterar proprietário do usuário</strong></p>
-<pre><code>sudo chown linuxteclab exemplos.txt</code></pre>
-<p>Este comando definirá o usuário dono do arquivo <code>exemplos.txt</code> como <code>linuxteclab</code>.</p>
-<p><strong>Alterar grupo do arquivo</strong></p>
-<pre><code>sudo chgrp TI arq.txt</code></pre>
-<p>Este comando definirá o grupo do arquivo <code>arq.txt</code> como <code>TI</code>.</p>
-<p><strong>Alterar proprietário do usuário e grupo ao mesmo tempo</strong></p>
-<p>Se você usar o carácter de dois pontos após o usuário, poderá alterar usuário e grupo ao mesmo tempo.</p>
-<pre><code>sudo chown linuxteclab:TI exemplos.txt</code></pre>
 
 
 
