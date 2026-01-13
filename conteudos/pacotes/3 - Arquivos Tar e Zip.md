@@ -1,6 +1,11 @@
 # **Arquivos e Compressão no Linux**
 
-Aprenda a gerenciar arquivos compactados no Linux antes de instalar pacotes de diferentes gerenciadores. Você provavelmente já conhece o conceito de arquivo ZIP ou RAR, que é uma coleção de arquivos compactados em um único arquivo, é bem comum no mundo do Windows.
+Aprenda a gerenciar arquivos compactados no Linux antes de instalar pacotes de diferentes gerenciadores.
+O gzip é um compactador que trabalha apenas com um único arquivo por vez, ou seja, ele não consegue juntar vários arquivos em um só.
+
+Para resolver isso, usamos o tar (Tape ARchiver), que serve para empacotar vários arquivos e diretórios em um único arquivo .tar.
+
+Vamos começar com gzip.
 
 ## **Compressão com Gzip**
 
@@ -18,12 +23,12 @@ $ gunzip meuarquivo.txt.gz
 
 ## **Criar arquivos ZIP com Tar**
 
-Infelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo ZIP com tar, ele terá um prefixo `.tar`.
+Infelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo com tar, ele terá um prefixo `.tar`.
 
 Exemplo:
 
 ```bash
-$ tar cvf meuarquivo.tar arquivo1.txt arquivo2.txt
+$ tar -cvf meuarquivo.tar arquivo1.txt arquivo2.txt
 ```
 
 Opções:
@@ -37,7 +42,7 @@ Opções:
 Para extrair os conteúdo de um arquivo ZIP, use:
 
 ```bash
-$ tar xvf meuarquivo.tar
+$ tar -xvf meuarquivo.tar
 ```
 
 
@@ -65,17 +70,36 @@ Alternativamente, você pode usar a opção `z` com `tar`, que irá usar o gzip 
 Criar um arquivo ZIP compresso:
 
 ```bash
-$ tar czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt
+$ tar -czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt
 ```
 
-Descompressizar e extrair:
+Descompremir e extrair:
 
 ```bash
-$ tar xzf meuarquivo.tar.gz
+$ tar -xzf meuarquivo.tar.gz
 ```
 
-## **Outras Ferramentas**
+## **Outras Opções**
 
-Durante seu caminho em Linux, você encontrará outras ferramentas de compressão e arquivamento, como `bzip2`, `compress`, `zip` e `unzip`. Lembre-se de que cada ferramenta tem suas próprias opções e comandos.
+- 'j': Utiliza o bzip2 para compactar e descompactar os arquivos .tar.bz2;
+- 'J': Utiliza o xz para compactar e descompactar os arquivos .tar.xz
 
-&nbsp;
+## **Exemplos de uso**
+
+Vamos usar de exemplo, fazer um backup do diretório Documentos do home do usuário Bruno.
+
+```bash
+$ tar -czvf /home/bruno/documentos.tar.gz /home/bruno/Documentos
+```
+
+Outra opção muito importante é verificar os arquivos existente, antes da descompactação.
+
+
+```bash
+ tar -tzf /home/bruno/Documentos.tar.gz
+```
+
+
+
+
+

@@ -1301,6 +1301,54 @@
     ]
   },
   {
+    "objectID": "conteudos/arte-do-texto/14-sed.html",
+    "href": "conteudos/arte-do-texto/14-sed.html",
+    "title": "Comando sed",
+    "section": "",
+    "text": "O sed (stream editor) é uma ferramenta do Linux usada para editar texto em fluxo, ou seja, ele lê a entrada linha por linha, aplica transformações e envia o resultado para a saída padrão — sem alterar o arquivo original, a menos que você peça explicitamente.\nEle é muito usado para:\n\nSubstituir textos\nRemover linhas\nInserir ou alterar conteúdo\nAutomatizar edições em massa\nTrabalhar com logs, arquivos .conf e dados estruturados\n\nPense em um arquivo com centenas ou milhares de linhas, e precisa alterar uma variável por exemplo, é assim que o sed pode brilhar.\nO fluxo básico de funcionamento de sed pode ser descrito como: - Lê uma linha - Aplica os comandos na linha - Imprime o rresultado - Passa para a próxima linha\nVamos iniciar mostrando o arquivo usado para demonstrar o uso do sed (exexmplo-sed.txt):\n\n  #===============================\n # Arquivo de testes para sed\n # LinuxTecLab - Arte do Texto\n # ===============================\n\n[AVISO] Sistema iniciado com sucesso\n[AVISO] Serviço ssh ativo\n[WARNING] Uso de CPU acima do esperado\n[ERROR] Falha ao iniciar o serviço nginx\n[AVISO] Conexão estabelecida com o banco de dados\n[ERROR] Timeout ao acessar o servidor remoto\n[DEBUG] Valor da variável X = 42\n[AVISO] Backup concluído com sucesso\n\n # Comentários que devem ser ignorados\n # Ajustar configurações futuramente\n\nusuario1:x:1001:1001:João Silva:/home/usuario1:/bin/bash\nusuario2:x:1002:1002:Maria Souza:/home/usuario2:/bin/zsh\nroot:x:0:0:root:/root:/bin/bash\n\narquivo.txt;1024;2026-01-10\nrelatorio.pdf;20480;2026-01-09\nbackup.tar.gz;512000;2026-01-08",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Sed"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/14-sed.html#sed-stream-editor-edição-de-texto-em-fluxo",
+    "href": "conteudos/arte-do-texto/14-sed.html#sed-stream-editor-edição-de-texto-em-fluxo",
+    "title": "Comando sed",
+    "section": "",
+    "text": "O sed (stream editor) é uma ferramenta do Linux usada para editar texto em fluxo, ou seja, ele lê a entrada linha por linha, aplica transformações e envia o resultado para a saída padrão — sem alterar o arquivo original, a menos que você peça explicitamente.\nEle é muito usado para:\n\nSubstituir textos\nRemover linhas\nInserir ou alterar conteúdo\nAutomatizar edições em massa\nTrabalhar com logs, arquivos .conf e dados estruturados\n\nPense em um arquivo com centenas ou milhares de linhas, e precisa alterar uma variável por exemplo, é assim que o sed pode brilhar.\nO fluxo básico de funcionamento de sed pode ser descrito como: - Lê uma linha - Aplica os comandos na linha - Imprime o rresultado - Passa para a próxima linha\nVamos iniciar mostrando o arquivo usado para demonstrar o uso do sed (exexmplo-sed.txt):\n\n  #===============================\n # Arquivo de testes para sed\n # LinuxTecLab - Arte do Texto\n # ===============================\n\n[AVISO] Sistema iniciado com sucesso\n[AVISO] Serviço ssh ativo\n[WARNING] Uso de CPU acima do esperado\n[ERROR] Falha ao iniciar o serviço nginx\n[AVISO] Conexão estabelecida com o banco de dados\n[ERROR] Timeout ao acessar o servidor remoto\n[DEBUG] Valor da variável X = 42\n[AVISO] Backup concluído com sucesso\n\n # Comentários que devem ser ignorados\n # Ajustar configurações futuramente\n\nusuario1:x:1001:1001:João Silva:/home/usuario1:/bin/bash\nusuario2:x:1002:1002:Maria Souza:/home/usuario2:/bin/zsh\nroot:x:0:0:root:/root:/bin/bash\n\narquivo.txt;1024;2026-01-10\nrelatorio.pdf;20480;2026-01-09\nbackup.tar.gz;512000;2026-01-08",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Sed"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/14-sed.html#substituição-de-texto",
+    "href": "conteudos/arte-do-texto/14-sed.html#substituição-de-texto",
+    "title": "Comando sed",
+    "section": "Substituição de texto",
+    "text": "Substituição de texto\n$ sed 's/AVISO/INFO/g'  exemplo-sed.tx\nVeja que delimitamos com aspas (’) ao redor da expressão, para impedir que o interpretador de comando expanda ou interprete algo nela. O s é para substiuição, após isso temos o padrão que estamos buscando (AVISO) e o padrão que estamos substtituindo o padrão (INFO), por fim o g diz para substituir em todas as ocorrências encontradas na linha.\nÉ possível ver após a execução do comando no arquivo, primeiro ele imprimiu de volta o arquivo com a alteração pedida, mas se verificar o arquivo original, este não foi modificado.\nPara modificar o arquivo, precisamos apenas usar a opção -i , essa opção altera o arquivo e não imprime na tela o resultado.\n$ sed  -i 's/AVISO/INFO/g'  exemplo-sed.tx\nOutra obseervação, o delimitador não precisa ser o “/” como usamos até agora, mas pode ser outro caracter como por exemplo o “,”\n$ sed  -i 's,AVISO,INFO,g'  exemplo-sed.tx",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Sed"
+    ]
+  },
+  {
+    "objectID": "conteudos/arte-do-texto/14-sed.html#deletando-e-trabalhando-com-linhas-específicas",
+    "href": "conteudos/arte-do-texto/14-sed.html#deletando-e-trabalhando-com-linhas-específicas",
+    "title": "Comando sed",
+    "section": "Deletando e trabalhando com linhas específicas",
+    "text": "Deletando e trabalhando com linhas específicas\nPara deletar uma linha que contenha o caracter do jogo da velha (#) podemos usar a sintaxe:\nsed '/#/d' exemplo-sed.txt\nPodemos ver uma mesmo comportamento do sed, onde temos oo padrão que é o # e o comando d que deleta a linha, mas lembre-se que não altera o arquivo original.\nAgora vamos usar o sed para mostrar apenas a linha que contenha a palavra INFO (o padrão). Destrinchando o comando abaixo, o p pede para imprimir as linhas com INFO e o -n impede que o sed imprima as outras linhas que é o padrão da ferramenta.\n sed -n '/INFO/p' exemplo-sed.txt",
+    "crumbs": [
+      "Home",
+      "📂 Arte Do Texto",
+      "✅ Sed"
+    ]
+  },
+  {
     "objectID": "conteudos/arte-do-texto/13-uniq.html",
     "href": "conteudos/arte-do-texto/13-uniq.html",
     "title": "Comando uniq",
@@ -1509,7 +1557,7 @@
     "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html",
     "title": "Arquivos e Compressão no Linux",
     "section": "",
-    "text": "Aprenda a gerenciar arquivos compactados no Linux antes de instalar pacotes de diferentes gerenciadores. Você provavelmente já conhece o conceito de arquivo ZIP ou RAR, que é uma coleção de arquivos compactados em um único arquivo, é bem comum no mundo do Windows.\n\n\nO gzip é um programa comum em Linux que compreende arquivo em formato .gz. Para comprimir um arquivo:\n$ gzip meuarquivo.txt\nPara descomprimir:\n$ gunzip meuarquivo.txt.gz\n\n\n\nInfelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo ZIP com tar, ele terá um prefixo .tar.\nExemplo:\n$ tar cvf meuarquivo.tar arquivo1.txt arquivo2.txt\nOpções:\n\nc: criar um novo arquivo\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP\n\n\n\n\nPara extrair os conteúdo de um arquivo ZIP, use:\n$ tar xvf meuarquivo.tar\nOpções:\n\nx: extrair os conteúdos do arquivo ZIP\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP\n\nO ## Compressão e descompressão com Tar e Gzip\nMuitas vezes, você encontrará um arquivo ZIP que foi compresso, como meuarquivo.tar.gz. Basta descomprimir com gunzip e, em seguida, extrair os conteúdos do arquivo ZIP com tar.\nExemplo:\n$ gunzip meuarquivo.tar.gz\n$ tar xvf meuarquivo.tar\nAlternativamente, você pode usar a opção z com tar, que irá usar o gzip ou gunzip automaticamente.\nCriar um arquivo ZIP compresso:\n$ tar czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt\nDescompressizar e extrair:\n$ tar xzf meuarquivo.tar.gz\n\n\n\nDurante seu caminho em Linux, você encontrará outras ferramentas de compressão e arquivamento, como bzip2, compress, zip e unzip. Lembre-se de que cada ferramenta tem suas próprias opções e comandos.",
+    "text": "Aprenda a gerenciar arquivos compactados no Linux antes de instalar pacotes de diferentes gerenciadores. O gzip é um compactador que trabalha apenas com um único arquivo por vez, ou seja, ele não consegue juntar vários arquivos em um só.\nPara resolver isso, usamos o tar (Tape ARchiver), que serve para empacotar vários arquivos e diretórios em um único arquivo .tar.\nVamos começar com gzip.\n\n\nO gzip é um programa comum em Linux que compreende arquivo em formato .gz. Para comprimir um arquivo:\n$ gzip meuarquivo.txt\nPara descomprimir:\n$ gunzip meuarquivo.txt.gz\n\n\n\nInfelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo com tar, ele terá um prefixo .tar.\nExemplo:\n$ tar -cvf meuarquivo.tar arquivo1.txt arquivo2.txt\nOpções:\n\nc: criar um novo arquivo\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP\n\n\n\n\nPara extrair os conteúdo de um arquivo ZIP, use:\n$ tar -xvf meuarquivo.tar\nOpções:\n\nx: extrair os conteúdos do arquivo ZIP\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP\n\nO ## Compressão e descompressão com Tar e Gzip\nMuitas vezes, você encontrará um arquivo ZIP que foi compresso, como meuarquivo.tar.gz. Basta descomprimir com gunzip e, em seguida, extrair os conteúdos do arquivo ZIP com tar.\nExemplo:\n$ gunzip meuarquivo.tar.gz\n$ tar xvf meuarquivo.tar\nAlternativamente, você pode usar a opção z com tar, que irá usar o gzip ou gunzip automaticamente.\nCriar um arquivo ZIP compresso:\n$ tar -czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt\nDescompremir e extrair:\n$ tar -xzf meuarquivo.tar.gz\n\n\n\n\n‘j’: Utiliza o bzip2 para compactar e descompactar os arquivos .tar.bz2;\n‘J’: Utiliza o xz para compactar e descompactar os arquivos .tar.xz\n\n\n\n\nVamos usar de exemplo, fazer um backup do diretório Documentos do home do usuário Bruno.\n$ tar -czvf /home/bruno/documentos.tar.gz /home/bruno/Documentos\nOutra opção muito importante é verificar os arquivos existente, antes da descompactação.\n tar -tzf /home/bruno/Documentos.tar.gz",
     "crumbs": [
       "Home",
       "📂 Pacotes",
@@ -1533,7 +1581,7 @@
     "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#criar-arquivos-zip-com-tar",
     "title": "Arquivos e Compressão no Linux",
     "section": "",
-    "text": "Infelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo ZIP com tar, ele terá um prefixo .tar.\nExemplo:\n$ tar cvf meuarquivo.tar arquivo1.txt arquivo2.txt\nOpções:\n\nc: criar um novo arquivo\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP",
+    "text": "Infelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo com tar, ele terá um prefixo .tar.\nExemplo:\n$ tar -cvf meuarquivo.tar arquivo1.txt arquivo2.txt\nOpções:\n\nc: criar um novo arquivo\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP",
     "crumbs": [
       "Home",
       "📂 Pacotes",
@@ -1545,7 +1593,7 @@
     "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#extrair-arquivos-zip-com-tar",
     "title": "Arquivos e Compressão no Linux",
     "section": "",
-    "text": "Para extrair os conteúdo de um arquivo ZIP, use:\n$ tar xvf meuarquivo.tar\nOpções:\n\nx: extrair os conteúdos do arquivo ZIP\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP\n\nO ## Compressão e descompressão com Tar e Gzip\nMuitas vezes, você encontrará um arquivo ZIP que foi compresso, como meuarquivo.tar.gz. Basta descomprimir com gunzip e, em seguida, extrair os conteúdos do arquivo ZIP com tar.\nExemplo:\n$ gunzip meuarquivo.tar.gz\n$ tar xvf meuarquivo.tar\nAlternativamente, você pode usar a opção z com tar, que irá usar o gzip ou gunzip automaticamente.\nCriar um arquivo ZIP compresso:\n$ tar czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt\nDescompressizar e extrair:\n$ tar xzf meuarquivo.tar.gz",
+    "text": "Para extrair os conteúdo de um arquivo ZIP, use:\n$ tar -xvf meuarquivo.tar\nOpções:\n\nx: extrair os conteúdos do arquivo ZIP\nv: ser verboso e mostrar o que está fazendo\nf: fornece o nome do arquivo ZIP\n\nO ## Compressão e descompressão com Tar e Gzip\nMuitas vezes, você encontrará um arquivo ZIP que foi compresso, como meuarquivo.tar.gz. Basta descomprimir com gunzip e, em seguida, extrair os conteúdos do arquivo ZIP com tar.\nExemplo:\n$ gunzip meuarquivo.tar.gz\n$ tar xvf meuarquivo.tar\nAlternativamente, você pode usar a opção z com tar, que irá usar o gzip ou gunzip automaticamente.\nCriar um arquivo ZIP compresso:\n$ tar -czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt\nDescompremir e extrair:\n$ tar -xzf meuarquivo.tar.gz",
     "crumbs": [
       "Home",
       "📂 Pacotes",
@@ -1553,11 +1601,23 @@
     ]
   },
   {
-    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#outras-ferramentas",
-    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#outras-ferramentas",
+    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#outras-opções",
+    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#outras-opções",
     "title": "Arquivos e Compressão no Linux",
     "section": "",
-    "text": "Durante seu caminho em Linux, você encontrará outras ferramentas de compressão e arquivamento, como bzip2, compress, zip e unzip. Lembre-se de que cada ferramenta tem suas próprias opções e comandos.",
+    "text": "‘j’: Utiliza o bzip2 para compactar e descompactar os arquivos .tar.bz2;\n‘J’: Utiliza o xz para compactar e descompactar os arquivos .tar.xz",
+    "crumbs": [
+      "Home",
+      "📂 Pacotes",
+      "✅ Arquivos Tar E Zip"
+    ]
+  },
+  {
+    "objectID": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#exemplos-de-uso",
+    "href": "conteudos/pacotes/3 - Arquivos Tar e Zip.html#exemplos-de-uso",
+    "title": "Arquivos e Compressão no Linux",
+    "section": "",
+    "text": "Vamos usar de exemplo, fazer um backup do diretório Documentos do home do usuário Bruno.\n$ tar -czvf /home/bruno/documentos.tar.gz /home/bruno/Documentos\nOutra opção muito importante é verificar os arquivos existente, antes da descompactação.\n tar -tzf /home/bruno/Documentos.tar.gz",
     "crumbs": [
       "Home",
       "📂 Pacotes",

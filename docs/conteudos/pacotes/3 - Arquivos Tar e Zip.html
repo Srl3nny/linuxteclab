@@ -723,7 +723,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="arquivos-e-compressão-no-linux" class="level1">
 <h1><strong>Arquivos e Compressão no Linux</strong></h1>
-<p>Aprenda a gerenciar arquivos compactados no Linux antes de instalar pacotes de diferentes gerenciadores. Você provavelmente já conhece o conceito de arquivo ZIP ou RAR, que é uma coleção de arquivos compactados em um único arquivo, é bem comum no mundo do Windows.</p>
+<p>Aprenda a gerenciar arquivos compactados no Linux antes de instalar pacotes de diferentes gerenciadores. O gzip é um compactador que trabalha apenas com um único arquivo por vez, ou seja, ele não consegue juntar vários arquivos em um só.</p>
+<p>Para resolver isso, usamos o tar (Tape ARchiver), que serve para empacotar vários arquivos e diretórios em um único arquivo .tar.</p>
+<p>Vamos começar com gzip.</p>
 <section id="compressão-com-gzip" class="level2">
 <h2 class="anchored" data-anchor-id="compressão-com-gzip"><strong>Compressão com Gzip</strong></h2>
 <p>O gzip é um programa comum em Linux que compreende arquivo em formato <code>.gz</code>. Para comprimir um arquivo:</p>
@@ -733,9 +735,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="criar-arquivos-zip-com-tar" class="level2">
 <h2 class="anchored" data-anchor-id="criar-arquivos-zip-com-tar"><strong>Criar arquivos ZIP com Tar</strong></h2>
-<p>Infelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo ZIP com tar, ele terá um prefixo <code>.tar</code>.</p>
+<p>Infelizmente, o gzip não é capaz de adicionar múltiplos arquivos em um arquivo ZIP. Felizmente, o programa tar (short for Tape ARchiver) permite fazer isso. Quando você cria um arquivo com tar, ele terá um prefixo <code>.tar</code>.</p>
 <p>Exemplo:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar cvf meuarquivo.tar arquivo1.txt arquivo2.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar <span class="at">-cvf</span> meuarquivo.tar arquivo1.txt arquivo2.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Opções:</p>
 <ul>
 <li><code>c</code>: criar um novo arquivo</li>
@@ -746,7 +748,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="extrair-arquivos-zip-com-tar" class="level2">
 <h2 class="anchored" data-anchor-id="extrair-arquivos-zip-com-tar"><strong>Extrair arquivos ZIP com Tar</strong></h2>
 <p>Para extrair os conteúdo de um arquivo ZIP, use:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar xvf meuarquivo.tar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar <span class="at">-xvf</span> meuarquivo.tar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Opções:</p>
 <ul>
 <li><code>x</code>: extrair os conteúdos do arquivo ZIP</li>
@@ -760,14 +762,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar xvf meuarquivo.tar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Alternativamente, você pode usar a opção <code>z</code> com <code>tar</code>, que irá usar o gzip ou gunzip automaticamente.</p>
 <p>Criar um arquivo ZIP compresso:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar czf meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Descompressizar e extrair:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar xzf meuarquivo.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar <span class="at">-czf</span> meuarquivo.tar.gz meuarquivo1.txt meuarquivo2.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Descompremir e extrair:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar <span class="at">-xzf</span> meuarquivo.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="outras-ferramentas" class="level2">
-<h2 class="anchored" data-anchor-id="outras-ferramentas"><strong>Outras Ferramentas</strong></h2>
-<p>Durante seu caminho em Linux, você encontrará outras ferramentas de compressão e arquivamento, como <code>bzip2</code>, <code>compress</code>, <code>zip</code> e <code>unzip</code>. Lembre-se de que cada ferramenta tem suas próprias opções e comandos.</p>
-<p>&nbsp;</p>
+<section id="outras-opções" class="level2">
+<h2 class="anchored" data-anchor-id="outras-opções"><strong>Outras Opções</strong></h2>
+<ul>
+<li>‘j’: Utiliza o bzip2 para compactar e descompactar os arquivos .tar.bz2;</li>
+<li>‘J’: Utiliza o xz para compactar e descompactar os arquivos .tar.xz</li>
+</ul>
+</section>
+<section id="exemplos-de-uso" class="level2">
+<h2 class="anchored" data-anchor-id="exemplos-de-uso"><strong>Exemplos de uso</strong></h2>
+<p>Vamos usar de exemplo, fazer um backup do diretório Documentos do home do usuário Bruno.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tar <span class="at">-czvf</span> /home/bruno/documentos.tar.gz /home/bruno/Documentos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Outra opção muito importante é verificar os arquivos existente, antes da descompactação.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">tar</span> <span class="at">-tzf</span> /home/bruno/Documentos.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
