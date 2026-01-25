@@ -742,7 +742,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install openssh-server</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O comportamento do servidor SSH é controlado pelo arquivo de configuração <strong>/etc/ssh/sshd_config</strong>. Esse arquivo define portas, métodos de autenticação, usuários permitidos e diversas opções de segurança. Alterações incorretas nesse arquivo podem impedir o acesso remoto ao servidor, por isso é recomendado sempre manter uma sessão SSH aberta enquanto se testa novas configurações.</p>
-<p>Uma das primeiras boas práticas de segurança é desabilitar o login direto do usuário root, evitando que ele seja alvo de ataques automatizados:</p>
+<p>Uma das primeiras boas práticas de segurança é desabilitar o login direto do usuário root, evitando que ele seja alvo de ataques automatizados.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">PermitRootLogin</span> no</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 

@@ -14,7 +14,7 @@ sudo apt install openssh-server
 
 O comportamento do servidor SSH é controlado pelo arquivo de configuração **/etc/ssh/sshd_config**. Esse arquivo define portas, métodos de autenticação, usuários permitidos e diversas opções de segurança. Alterações incorretas nesse arquivo podem impedir o acesso remoto ao servidor, por isso é recomendado sempre manter uma sessão SSH aberta enquanto se testa novas configurações.
 
-Uma das primeiras boas práticas de segurança é desabilitar o login direto do usuário root, evitando que ele seja alvo de ataques automatizados:
+Uma das primeiras boas práticas de segurança é desabilitar o login direto do usuário root, evitando que ele seja alvo de ataques automatizados.
 
 ```bash
 PermitRootLogin no
