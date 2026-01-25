@@ -3,14 +3,14 @@
 # LinuxTecLab - Arte do Texto
 # ===============================
 
-[AVISO] Sistema iniciado com sucesso
-[AVISO] Serviço ssh ativo
+[INFO] Sistema iniciado com sucesso INFO
+[INFO] Serviço ssh ativo
 [WARNING] Uso de CPU acima do esperado
 [ERROR] Falha ao iniciar o serviço nginx
-[AVISO] Conexão estabelecida com o banco de dados
+[INFO] Conexão estabelecida com o banco de dados
 [ERROR] Timeout ao acessar o servidor remoto
 [DEBUG] Valor da variável X = 42
-[AVISO] Backup concluído com sucesso
+[INFO] Backup concluído com sucesso
 
 # Comentários que devem ser ignorados
 # Ajustar configurações futuramente

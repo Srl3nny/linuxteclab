@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>rpm-e-dpkg – linuxteclab</title>
+<title>ssh – linuxteclab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -106,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/pacotes/1 - Distribuição de programas.html">📂 Pacotes</a></li><li class="breadcrumb-item"><a href="../../conteudos/pacotes/5 - RPM e dpkg.html">✅ Rpm E Dpkg</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html">📂 Configurar Rede</a></li><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/SSH.html">✅ Ssh</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -448,13 +482,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">📂 Pacotes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../conteudos/pacotes/1 - Distribuição de programas.html" class="sidebar-item-text sidebar-link">
@@ -481,7 +515,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conteudos/pacotes/5 - RPM e dpkg.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../conteudos/pacotes/5 - RPM e dpkg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✅ Rpm E Dpkg</span></a>
   </div>
 </li>
@@ -642,13 +676,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">📂 Configurar Rede</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html" class="sidebar-item-text sidebar-link">
@@ -681,7 +715,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conteudos/configurar-rede/SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="../../conteudos/configurar-rede/SSH.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">✅ Ssh</span></a>
   </div>
 </li>
@@ -694,41 +728,24 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/pacotes/1 - Distribuição de programas.html">📂 Pacotes</a></li><li class="breadcrumb-item"><a href="../../conteudos/pacotes/5 - RPM e dpkg.html">✅ Rpm E Dpkg</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/1-interfaces-de-rede.html">📂 Configurar Rede</a></li><li class="breadcrumb-item"><a href="../../conteudos/configurar-rede/SSH.html">✅ Ssh</a></li></ol></nav></header>
 
 
 
 
-<section id="rpm-e-dpkg" class="level1">
-<h1>rpm e dpkg</h1>
-<p>Pense assim, o .exe é um arquivo executável único, assim como .deb e .rpm. Você provavelmente não verá esses arquivos se usar repositórios de pacotes, mas se baixar pacotes diretamente, provavelmente terá que lidar com esses formatos. É claro que eles são exclusivos às suas distribuições, .deb para Debian-based e .rpm para Red Hat-based.</p>
-<p>Para instalar esses pacotes diretos, você pode usar os comandos do gerenciamento de pacotes: rpm e dpkg. Esse são os ferramentas utilizadas para instalar arquivos de pacotes, no entanto, não instalam dependências de pacotes, então, se o seu pacote tiver 10 dependências, você precisaria instalar pacotes separadamente e, em seguida, suas dependências e assim por diante. Como você pode ver, isso foi um dos motivos que levaram ao surgimento dos sistemas de gerenciamento com apt.</p>
-<p>Lembre-se de que haverá inúmeras vezes em que precisará instalar, consultar ou verificar um pacote com uma dessas ferramentas, então, lembre sempre esses comandos.</p>
-<section id="install-consulta-e-remoção-de-pacotes" class="level2">
-<h2 class="anchored" data-anchor-id="install-consulta-e-remoção-de-pacotes"><strong>Install</strong>, Consulta e Remoção de Pacotes</h2>
-<section id="install-e-remove-um-pacote" class="level3">
-<h3 class="anchored" data-anchor-id="install-e-remove-um-pacote">Install e Remove um Pacote</h3>
-<p><strong>Debian</strong>:</p>
-<pre><code>$ dpkg -i some_deb_package.deb</code></pre>
-<pre><code>$ dpkg -r some_deb_package.deb</code></pre>
-<p>No Debian, <code>-i</code> significa install (instalar) e <code>-r</code> significa remove (remover).</p>
-<p><strong>RPM</strong>:</p>
-<pre><code>$ rpm -i some_rpm_package.rpm</code></pre>
-<pre><code>$ rpm -e some_rpm_package.rpm</code></pre>
-<p>No RPM, <code>-i</code> significa install (instalar) e <code>-e</code> significa erase (remover).</p>
-</section>
-<section id="listar-pacotes-instalados" class="level3">
-<h3 class="anchored" data-anchor-id="listar-pacotes-instalados">Listar Pacotes Instalados</h3>
-<p><strong>Debian</strong>:</p>
-<pre><code>$ dpkg -l</code></pre>
-<p><code>-l</code> significa list (lista).</p>
-<p><strong>RPM</strong>:</p>
-<pre><code>$ rpm -qa</code></pre>
-<p><code>-q</code> significa query (consulta) e <code>a</code> significa all (todos).</p>
+<section id="ssh-acesso-remoto-seguro-no-linux" class="level1">
+<h1>SSH — Acesso remoto seguro no Linux</h1>
+<p>O SSH (Secure Shell) é um dos serviços mais importantes em ambientes Linux, servidores, homelabs e computação científica. Ele permite acessar máquinas remotamente de forma segura, substituindo protocolos antigos e inseguros como Telnet e rlogin. No LinuxTecLab, o SSH é tratado como um serviço essencial, pois praticamente todo servidor Linux em produção é administrado remotamente via SSH.</p>
+<p>O SSH é um protocolo de rede que permite acesso remoto ao terminal, execução de comandos à distância, cópia segura de arquivos e tunelamento de conexões. Toda a comunicação é criptografada, protegendo senhas, comandos e dados trafegados pela rede.</p>
+<p>O funcionamento do SSH segue o modelo cliente-servidor. O cliente SSH é a máquina de onde partem as conexões, enquanto o servidor SSH (sshd) é responsável por aceitá-las. Por padrão, o serviço escuta na porta TCP 22 e utiliza criptografia assimétrica baseada em chaves públicas e privadas para autenticação e segurança.</p>
+<p>Em distribuições baseadas em Debian e Ubuntu, a instalação do servidor SSH pode ser feita com:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install openssh-server</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O comportamento do servidor SSH é controlado pelo arquivo de configuração <strong>/etc/ssh/sshd_config</strong>. Esse arquivo define portas, métodos de autenticação, usuários permitidos e diversas opções de segurança. Alterações incorretas nesse arquivo podem impedir o acesso remoto ao servidor, por isso é recomendado sempre manter uma sessão SSH aberta enquanto se testa novas configurações.</p>
+<p>Uma das primeiras boas práticas de segurança é desabilitar o login direto do usuário root, evitando que ele seja alvo de ataques automatizados:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">PermitRootLogin</span> no</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
