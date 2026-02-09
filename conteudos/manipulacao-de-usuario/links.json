@@ -1,0 +1,32 @@
+{ "arquivos": [
+  {
+    "nome": " Usuario e grupo",
+    "url": "1- Usuario e grupo.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": " root",
+    "url": "2- root.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": " Arquivo passwd",
+    "url": "3- Arquivo passwd.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": " Arquivo shadow",
+    "url": "4- Arquivo shadow.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": " Arquivo group",
+    "url": "5- Arquivo group.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": " Gerenciamento de usuários",
+    "url": "6- Gerenciamento de usuários.md",
+    "imagem": "../../assets/setas.svg"
+  }
+] }

@@ -1,0 +1,43 @@
+**Análise de Utilização do Sistema com o Top**
+=====================================================
+
+Neste curso, vamos explorar como ler e analisar a utilização dos recursos do seu sistema. Aprenda a usar ferramentas importantes para monitorar o que um processo está fazendo.
+
+**Introdução ao Top**
+-------------------
+
+O top é uma ferramenta que já exploramos anteriormente, mas vamos aprofundar nos detalhes sobre o que ele realmente está exibindo. Lembre-se de que o top é a ferramenta que usamos para obter uma visão em tempo real da utilização do sistema por nossos processos.
+
+**Exemplo de Saída**
+-------------------
+
+Aqui está um exemplo de saída do top:
+```markdown
+top - 18:06:26 up 6 days,  4:07,  2 users,  load average: 0.92, 0.62, 0.59
+Tasks: 389 total,   1 running, 387 sleeping,   0 stopped,   1 zombie
+%Cpu(s):  1.8 us,  0.4 sy,  0.0 ni, 97.6 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem:  32870888 total, 27467976 used,  5402912 free,   518808 buffers
+KiB Swap: 33480700 total,    39892 used, 33440808 free. 19454152 cached Mem
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                             
+ 6675 patty    20   0 1731472 520960  30876 S   8.3  1.6 160:24.79 chrome                             
+ 6926 patty    20   0  935888 163456  25576 S   4.3  0.5   5:28.13 chrome 
+```
+**Análise da Saída**
+-------------------
+
+Vamos analisar essa saída:
+
+* A primeira linha fornece informações similares às que você veria ao executar o comando `uptime` (mais a isso).
+* A segunda linha lista as tarefas em execução, dormindo, paradas e zumbadas.
+* A terceira linha fornece informações sobre a CPU.
+* As linhas 4 e 5 fornecem informações sobre o uso de memória e swap.
+* A lista de processos em uso lista informações como PID, usuário proprietário, prioridade, valor nice, memória virtual e física utilizadas, memória compartilhada, status do processo e tempo de atividade.
+
+**Módulos de Opção**
+-------------------
+
+Você também pode especificar um ID de processo se quiser monitorar apenas certos processos:
+```bash
+$ top -p 1
+```
+Espero que essa análise tenha ajudado a compreender melhor o que o top está exibindo. Lembre-se de que você não precisa memorizar essas informações, mas pode vir mesmo de volta a esse arquivo como referência.

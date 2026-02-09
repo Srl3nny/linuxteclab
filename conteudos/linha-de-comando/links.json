@@ -1,0 +1,72 @@
+{ "arquivos": [
+  {
+    "nome": "mv",
+    "url": "10-mv.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "mkdir",
+    "url": "11-mkdir.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "rm",
+    "url": "12-rm.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "man",
+    "url": "13-man.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "find",
+    "url": "14-find.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "pwd",
+    "url": "1-pwd.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "cd",
+    "url": "2-cd.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "ls",
+    "url": "3-ls.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "touch",
+    "url": "4-touch.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "file",
+    "url": "5-file.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "cat",
+    "url": "6-cat.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "less",
+    "url": "7-less.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "history",
+    "url": "8-history.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "cp",
+    "url": "9-cp.md",
+    "imagem": "../../assets/setas.svg"
+  }
+] }

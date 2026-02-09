@@ -1,0 +1,245 @@
+{
+  "conteudos/arte-do-texto/1-stdout.md": {
+    "1-stdout.html": "36981ffc"
+  },
+  "conteudos/pacotes/6 - Yum e Apt.md": {
+    "6 - Yum e Apt.html": "c0361ad8"
+  },
+  "conteudos/pacotes/5 - RPM e dpkg.md": {
+    "5 - RPM e dpkg.html": "a210789e"
+  },
+  "conteudos/pacotes/7 - Compilando.md": {
+    "7 - Compilando.html": "2806e6b3"
+  },
+  "conteudos/pacotes/3 - Arquivos Tar e Zip.md": {
+    "3 - Arquivos Tar e Zip.html": "39c04a0d"
+  },
+  "conteudos/pacotes/4 - Dependência de pacotes.md": {
+    "4 - Dependência de pacotes.html": "1b3cebbd"
+  },
+  "conteudos/pacotes/2 - Repositórios.md": {
+    "2 - Repositórios.html": "b6aa7e6e"
+  },
+  "conteudos/pacotes/1 - Distribuição de programas.md": {
+    "1 - Distribuição de programas.html": "0517f0ce"
+  },
+  "conteudos/devices/1-diretorio-dev.md": {
+    "1-diretorio-dev.html": "78560aaa"
+  },
+  "conteudos/devices/2-tipos-de-device.md": {
+    "2-tipos-de-device.html": "373ed59a"
+  },
+  "index.qmd": {
+    "index.html": "022fca5e"
+  },
+  "about.qmd": {
+    "about.html": "6f5310b3"
+  },
+  "conteudos/configurar-rede/SSH.md": {
+    "SSH.html": "c31daf61"
+  },
+  "conteudos/configurar-rede/4-NetworkManager.md": {
+    "4-NetworkManager.html": "e428cf7a"
+  },
+  "conteudos/configurar-rede/3-dhclient.md": {
+    "3-dhclient.html": "a6844f0b"
+  },
+  "conteudos/configurar-rede/1-interfaces-de-rede.md": {
+    "1-interfaces-de-rede.html": "7a5194bd"
+  },
+  "conteudos/configurar-rede/5-arp.md": {
+    "5-arp.html": "f1f80d59"
+  },
+  "conteudos/configurar-rede/2-route.md": {
+    "2-route.html": "24241656"
+  },
+  "conteudos/permissoes/2 - Modificando Permissões.md": {
+    "2 - Modificando Permissões.html": "400b1df6"
+  },
+  "conteudos/permissoes/3 - Alterando proprietário.md": {
+    "3 - Alterando proprietário.html": "07ce4172"
+  },
+  "conteudos/permissoes/6 - Setgid.md": {
+    "6 - Setgid.html": "13464c92"
+  },
+  "conteudos/permissoes/4 - Umask.md": {
+    "4 - Umask.html": "b6b3081f"
+  },
+  "conteudos/permissoes/8 - Sticky Bit.md": {
+    "8 - Sticky Bit.html": "815aa2e6"
+  },
+  "conteudos/permissoes/5 - Setuid.md": {
+    "5 - Setuid.html": "44bd9e2f"
+  },
+  "conteudos/permissoes/1 - Permissões.md": {
+    "1 - Permissões.html": "b21fbffc"
+  },
+  "conteudos/permissoes/7 - ProcessPermissions.md": {
+    "7 - ProcessPermissions.html": "da613abd"
+  },
+  "conteudos/manipulacao-de-usuario/1- Usuario e grupo.md": {
+    "1- Usuario e grupo.html": "bb8f8a66"
+  },
+  "conteudos/manipulacao-de-usuario/5- Arquivo group.md": {
+    "5- Arquivo group.html": "69c70f18"
+  },
+  "conteudos/manipulacao-de-usuario/4- Arquivo shadow.md": {
+    "4- Arquivo shadow.html": "3e3684c9"
+  },
+  "conteudos/manipulacao-de-usuario/2- root.md": {
+    "2- root.html": "8a29d40f"
+  },
+  "conteudos/manipulacao-de-usuario/6- Gerenciamento de usuários.md": {
+    "6- Gerenciamento de usuários.html": "71b81e07"
+  },
+  "conteudos/manipulacao-de-usuario/3- Arquivo passwd.md": {
+    "3- Arquivo passwd.html": "52959216"
+  },
+  "conteudos/compartilhamento/3-SimpleHTTPServer.md": {
+    "3-SimpleHTTPServer.html": "ddd099ab"
+  },
+  "conteudos/compartilhamento/5-Samba.md": {
+    "5-Samba.html": "f3f2a1d9"
+  },
+  "conteudos/compartilhamento/2-rsync.md": {
+    "2-rsync.html": "a9f66653"
+  },
+  "conteudos/compartilhamento/1-compartilhando-arquivos.md": {
+    "1-compartilhando-arquivos.html": "f8d1ef5a"
+  },
+  "conteudos/compartilhamento/4-NFS.md": {
+    "4-NFS.html": "7353668b"
+  },
+  "conteudos/processos/1- Comando ps.md": {
+    "1- Comando ps.html": "e8447394"
+  },
+  "conteudos/processos/10 - _proc filesystem.md": {
+    "10 - _proc filesystem.html": "01a56018"
+  },
+  "conteudos/processos/5 - Finalização de processos.md": {
+    "5 - Finalização de processos.html": "15baff09"
+  },
+  "conteudos/processos/11 - Status de processos.md": {
+    "11 - Status de processos.html": "d3cfffa4"
+  },
+  "conteudos/processos/9 - Controle de Job.md": {
+    "9 - Controle de Job.html": "e71c5ac6"
+  },
+  "conteudos/processos/8 - niceness.md": {
+    "8 - niceness.html": "82be29c3"
+  },
+  "conteudos/processos/2 - Controlando o Terminal.md": {
+    "2 - Controlando o Terminal.html": "c8f40272"
+  },
+  "conteudos/processos/4 - Criação de processos.md": {
+    "4 - Criação de processos.html": "7073449a"
+  },
+  "conteudos/processos/6 - Sinais no Linux.md": {
+    "6 - Sinais no Linux.html": "9cc7e78d"
+  },
+  "conteudos/processos/7 - kill(Terminate).md": {
+    "7 - kill(Terminate).html": "10cac88e"
+  },
+  "conteudos/processos/3 - Sobre processos.md": {
+    "3 - Sobre processos.html": "b6bd2491"
+  },
+  "conteudos/arte-do-texto/7-head.md": {
+    "7-head.html": "7c1858f9"
+  },
+  "conteudos/arte-do-texto/2-stdin.md": {
+    "2-stdin.html": "59e22736"
+  },
+  "conteudos/arte-do-texto/9-grep.md": {
+    "9-grep.html": "1568ce27"
+  },
+  "conteudos/arte-do-texto/8-paste.md": {
+    "8-paste.html": "dfd687c7"
+  },
+  "conteudos/arte-do-texto/6-cut.md": {
+    "6-cut.html": "2789c30e"
+  },
+  "conteudos/arte-do-texto/11-tail.md": {
+    "11-tail.html": "790b676b"
+  },
+  "conteudos/arte-do-texto/10-sort.md": {
+    "10-sort.html": "0b7d4116"
+  },
+  "conteudos/arte-do-texto/13-uniq.md": {
+    "13-uniq.html": "4a5d17bf"
+  },
+  "conteudos/arte-do-texto/5-env.md": {
+    "5-env.html": "f2ef47f1"
+  },
+  "conteudos/arte-do-texto/12-tr.md": {
+    "12-tr.html": "c91d7781"
+  },
+  "conteudos/arte-do-texto/4-pipe_and_tee.md": {
+    "4-pipe_and_tee.html": "f7e72190"
+  },
+  "conteudos/arte-do-texto/3-stderr.md": {
+    "3-stderr.html": "a6e03a5c"
+  },
+  "conteudos/arte-do-texto/15-awk.md": {
+    "15-awk.html": "471436dd"
+  },
+  "conteudos/arte-do-texto/14-sed.md": {
+    "14-sed.html": "cb003f64"
+  },
+  "conteudos/linha-de-comando/11-mkdir.md": {
+    "11-mkdir.html": "0fda9c77"
+  },
+  "conteudos/linha-de-comando/13-man.md": {
+    "13-man.html": "e9b7372b"
+  },
+  "conteudos/linha-de-comando/12-rm.md": {
+    "12-rm.html": "df282ce6"
+  },
+  "conteudos/linha-de-comando/9-cp.md": {
+    "9-cp.html": "1337c633"
+  },
+  "conteudos/linha-de-comando/8-history.md": {
+    "8-history.html": "a8c81f84"
+  },
+  "conteudos/linha-de-comando/7-less.md": {
+    "7-less.html": "0c4fbb96"
+  },
+  "conteudos/linha-de-comando/6-cat.md": {
+    "6-cat.html": "b6b2ac92"
+  },
+  "conteudos/linha-de-comando/14-find.md": {
+    "14-find.html": "06a8c749"
+  },
+  "conteudos/linha-de-comando/5-file.md": {
+    "5-file.html": "7c941205"
+  },
+  "conteudos/linha-de-comando/3-ls.md": {
+    "3-ls.html": "1dc692ca"
+  },
+  "conteudos/linha-de-comando/1-pwd.md": {
+    "1-pwd.html": "e3cfb5e8"
+  },
+  "conteudos/linha-de-comando/10-mv.md": {
+    "10-mv.html": "d8060fbb"
+  },
+  "conteudos/linha-de-comando/4-touch.md": {
+    "4-touch.html": "a43dc92e"
+  },
+  "conteudos/linha-de-comando/2-cd.md": {
+    "2-cd.html": "aeed7e9e"
+  },
+  "conteudos/troubleshooting/4-netstat.md": {
+    "4-netstat.html": "ff06af5b"
+  },
+  "conteudos/troubleshooting/3-traceroute.md": {
+    "3-traceroute.html": "bdd5eca1"
+  },
+  "conteudos/troubleshooting/2-ping.md": {
+    "2-ping.html": "ac38efe5"
+  },
+  "conteudos/troubleshooting/5-Analise-de-pacotes.md": {
+    "5-Analise-de-pacotes.html": "f303fd19"
+  },
+  "conteudos/troubleshooting/1-ICMP.md": {
+    "1-ICMP.html": "ee76ce98"
+  }
+}

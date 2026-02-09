@@ -1,0 +1,29 @@
+**Gerenciando tarefas com cron em Linux**
+
+Apesar de ter discutido sobre o uso de recursos, eu acho que seria o momento perfeito para mencionar uma ferramenta útil em Linux que ajuda a agendar tarefas usando o cron. Existem serviços que executam programas por você em um horário específico que você agendou. Isso é incrivelmente útil se você tiver um script que deseja executar uma vez por dia para fazer algo por você.
+
+Por exemplo, imagine que eu tenho um script localizado no diretório `/home/pete/scripts/change_wallpaper`. Eu uso esse script todo dia para mudar a imagem que uso como wallpaper, mas todas as manhãs eu tenho que executar esse script manualmente. Em vez de fazer isso, eu posso criar um emprego de cron que execute meu script com o cron. Posso especificar o horário em que eu quero que esse emprego de cron execute meu script.
+
+`30 08 * * * /home/pete/scripts/change_wallpaper`
+
+Os campos estão configurados da seguinte maneira, da esquerda para a direita:
+
+* Minuto (0-59)
+* Horário (0-23)
+* Dia do mês (1-31)
+* Mês (1-12)
+* Dia da semana (0-7). 0 e 7 são denotados como domingo
+
+O asterisco no campo significa que deve incluir todos os valores. Então, no meu exemplo acima, eu quero que isso execute todos os dias, em todos os meses, às 8:30 da manhã.
+
+Para criar um emprego de cron, basta editar o arquivo `crontab`:
+```
+crontab -e
+```
+[Cronjob exemplo](arq.txt)
+
+**Notas:**
+
+Ele acrescentou uma nota na tradução para que o leitor entenda melhor como funciona o cronjob.
+
+Ele também adicionou um exemplo de cronjob no final do texto para que o leitor possa copiar e testar.

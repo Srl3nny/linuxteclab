@@ -1,0 +1,21 @@
+_HERE são os nomes de dispositivos mais comuns que você encontrará:
+### Dispositivos SCSI
+Se você tiver algum tipo de armazenamento de massa no seu computador, é provável que esteja usando o protocolo SCSI (pronunciado "scuzzy"). O SCSI (Small Computer System Interface) é um protocolo utilizado para permitir comunicação entre discos, impressoras, scanners e outros periféricos com o sistema. É possível ter ouvido falar de dispositivos SCSI que não estão mais em uso em sistemas modernos, mas os sistemas Linux correspondem os discos SCSI aos discos rígidos nos /dev. Eles são representados por um prefixo de "sd" (SCSI disk):
+### Arquivos de dispositivo SCSI mais comuns:
+
+/arq.txt - O primeiro disco rígido
+/arq.txt - O segundo disco rígido
+/arq.txt-3 - Terceira partição do primeiro disco rígido
+
+### Dispositivos Pseudo
+Como discutimos anteriormente, dispositivos pseudo não estão fisicamente conectados ao seu sistema. Os dispositivos pseudo mais comuns são dispositivos de caráter: 
+
+/arq.txt - Aceita e descarta todo o input, produz um fluxo contínuo de bytes com valor zero (nulo)
+/arq.txt - Aceita e descarta todo o input, produz nenhuma saída
+/arq.txt - Produz números aleatórios
+
+### Dispositivos PATA
+Às vezes, em sistemas mais antigos, você pode ver discos rígidos sendo referidos com um prefixo "hd":
+
+/arq.txt - O primeiro disco rígido
+/arq.txt-2 - Segunda partição do quarto disco rígido

@@ -1,0 +1,67 @@
+{ "arquivos": [
+  {
+    "nome": "sort",
+    "url": "10-sort.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "tail",
+    "url": "11-tail.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "tr",
+    "url": "12-tr.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "uniq",
+    "url": "13-uniq.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "stdout",
+    "url": "1-stdout.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "stdin",
+    "url": "2-stdin.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "stderr",
+    "url": "3-stderr.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "pipe and tee",
+    "url": "4-pipe_and_tee.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "env",
+    "url": "5-env.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "cut",
+    "url": "6-cut.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "head",
+    "url": "7-head.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "paste",
+    "url": "8-paste.md",
+    "imagem": "../../assets/setas.svg"
+  },
+  {
+    "nome": "grep",
+    "url": "9-grep.md",
+    "imagem": "../../assets/setas.svg"
+  }
+] }

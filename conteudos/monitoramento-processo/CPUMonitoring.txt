@@ -1,0 +1,21 @@
+**Uptime e Load Average**
+======================
+
+Vamos reviewing um comando útil, `uptime`.
+
+```
+pete@icebox:~$ uptime
+17:23:35 up 1 dia,  5h59,  2 usuários,  carga média: 0,00, 0,02, 0,05
+```
+
+Já discutimos a `uptime` na aula inicial desse curso, mas ainda não abordamos o campo de carga média. A carga média é uma forma eficaz de avaliar a carga do processador (CPU) em seu sistema. Esses números representam a carga média do CPU em intervalos de 1, 5 e 15 minutos. O que eu entendi por carga do CPU é o número médio de processos aguardando para ser executado pelo CPU.
+
+**Um exemplo** - Imagine que você têm um processador mono-core, pense nesse core como uma única pista de trânsito. Se estiver rush hour, essa pista estará muito ocupada e o trânsito será total ( load of 1). Agora, o trânsito havia se tornado tão ruim que está repuxando a avenida e fazendo as ruas normais serem mais ocupadas do que o dobro da quantidade de carros, podemos dizer que o load é 2 ou 200%. Se o trânsito começar a melhorar e houver apenas metade de carros na pista, podemos dizer que a carga da pista é 0,5. Quando o trânsito é quase inexistente e podemos chegar em casa rapidamente, a carga idealmente deve ser muito baixa, como o trânsito dos finais de semana.
+
+**Os processos são os carros** e esses processos estão apenas esperando para sair da avenida e ir para casa.
+
+**Até que ponto o problema é sério?** - Sim, embora você tenha uma carga média de 1, isso não significa que o seu computador esteja trabalhando muito. Muitas máquinas modernas hoje têm múltiplos cores. Se você tiver um processador quad-core (4 cores) e a sua carga média for 1, está apenas afetando 25% do seu CPU. Pense em cada core como uma pista de trânsito. Você pode ver o número de cores em seu sistema com o comando `cat /proc/cpuinfo`.
+
+**Quando observamos a carga média**, precisamos considerar o número de cores. Se você encontrar que o seu sistema está sempre com uma carga média acima da média, pode haver algo errado acontecendo.
+
+Exemplo: `cat /proc/cpuinfo` - [arquiv.txt](arquiv.txt)

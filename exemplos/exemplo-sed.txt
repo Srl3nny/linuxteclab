@@ -1,0 +1,29 @@
+# ===============================
+# Arquivo de testes para sed
+# LinuxTecLab - Arte do Texto
+# ===============================
+
+[INFO] Sistema iniciado com sucesso
+[INFO] Serviço ssh ativo
+[WARNING] Uso de CPU acima do esperado
+[ERROR] Falha ao iniciar o serviço nginx
+[INFO] Conexão estabelecida com o banco de dados
+[ERROR] Timeout ao acessar o servidor remoto
+[DEBUG] Valor da variável X = 42
+[INFO] Backup concluído com sucesso
+
+# Comentários que devem ser ignorados
+# Ajustar configurações futuramente
+
+usuario1:x:1001:1001:João Silva:/home/usuario1:/bin/bash
+usuario2:x:1002:1002:Maria Souza:/home/usuario2:/bin/zsh
+root:x:0:0:root:/root:/bin/bash
+
+arquivo.txt;1024;2026-01-10
+relatorio.pdf;20480;2026-01-09
+backup.tar.gz;512000;2026-01-08
+
+Linha para teste de substituição
+Linha com palavra erro que deve virar ERRO
+Linha com palavra erro e outro erro
+
