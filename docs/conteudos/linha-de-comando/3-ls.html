@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-eeee2804ecd2abcd400c4b397636e04c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-06e7e98cba7f23e6e3637df4b63211cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -749,7 +749,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Agora que sabemos como nos movimentar pelo sistema, como podemos descobrir o que está disponível para nós? Neste momento é como se estivéssemos nos movendo no escuro. Bem, não mais, podemos usar o maravilhoso comando ls para listar o conteúdo do diretório. O comando ls listará diretórios e arquivos no diretório atual por padrão, mas você pode especificar qual caminho deseja listar os diretórios.</p>
+<p>Além de sabemos como nos movimentar pelo sistema, como podemos descobrir o que há? Podemos usar o comando ls para listar o conteúdo do diretório. O comando <strong>ls</strong> listará diretórios e arquivos no diretório atual por padrão, mas você pode especificar qual caminho deseja listar os diretórios.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-l</span> /home/bruno</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 36</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 2 caires caires 4096 jun 29 14:29 <span class="st">'Área de trabalho'</span></span>
@@ -762,7 +762,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 2 caires caires 4096 jun 29 14:29  Público</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 2 caires caires 4096 jun 29 14:29  Vídeos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>&nbsp;</p>
-<p>ls é uma ferramenta bastante útil, mas também mostra informações detalhadas sobre os arquivos e diretórios que você está visualizando.</p>
+<p><strong>ls</strong> é uma ferramenta bastante útil, mas também mostra informações detalhadas sobre os arquivos e diretórios que você está visualizando.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-la</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 84</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 15 caires caires 4096 jun 29 14:16  .</span>
@@ -776,7 +776,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">drwx------</span>  9 caires caires 4096 jun 29 15:56  .cache</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ex">drwx------</span>  9 caires caires 4096 jun 29 15:56  .config</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  2 caires caires 4096 jun 29 14:29  Documentos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Observe também que nem todos os arquivos em um diretório estarão visíveis. Nomes de arquivos que começam com . estão ocultos, você pode visualizá-los com o comando ls e passar a opção -a para ele (amostra todos arquivos).</p>
+<p>Observe também que nem todos os arquivos em um diretório estarão visíveis. Nomes de arquivos que começam com . estão ocultos, você pode visualizá-los com o comando <strong>ls</strong> e passar a opção <strong>-a</strong> (amostra todos arquivos).</p>
 <p>Há também mais uma opção ls útil, -l para long, que mostra uma lista detalhada de arquivos em um formato longo. Isso mostrará informações detalhadas, começando pela esquerda: permissões de arquivo, número de links, nome do proprietário, grupo de proprietários, tamanho do arquivo, carimbo de data/hora da última modificação e nome do arquivo/diretório.</p>
 <p>Os comandos têm opções (ou argumentos, como você quiser chamá-los) para adicionar mais funcionalidades. Veja como adicionamos -a e -l, bem, você pode adicionar os dois junto com -la. A ordem dos argumentos determina a ordem em que eles entram, na maioria das vezes isso realmente não importa, então você também pode fazer ls -al e ainda assim funcionaria.</p>
 <hr>

@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-eeee2804ecd2abcd400c4b397636e04c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-06e7e98cba7f23e6e3637df4b63211cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -749,7 +749,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Aprenderemos alguns comandos úteis que você pode usar para processar texto. Antes de começarmos, vamos criar um arquivo com o qual trabalharemos. Copie e cole o seguinte comando, depois de fazer isso, adicione uma TAB entre cachorro e preguiçoso (pressione Ctrl-v + TAB, isso insere um caractere de tabulação real).</p>
+<p>Aprenderemos alguns comandos úteis que você pode usar para processar texto. Antes de começarmos, vamos criar um arquivo com o qual trabalharemos.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">'O Linux é rápido; o Linux é seguro'</span> <span class="op">&gt;</span> exemplo.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O comando que aprenderemos é o comando cut. Extrai partes de texto de um arquivo.</p>
 <p>Para extrair o conteúdo por uma lista de caracteres:</p>
@@ -758,7 +758,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Para extrair o conteúdo de um campo, precisaremos fazer uma pequena modificação. O sinalizador -f ou campo corta o texto com base nos campos; por padrão, ele usa TABs como delimitadores, portanto, tudo separado por uma TAB é considerado um campo.</p>
 <p>Você pode combinar o sinalizador de campo com o sinalizador de delimitador para extrair o conteúdo por um delimitador personalizado, assim o -d indica o delimitador que por padrão é o TAB:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 1 <span class="at">-d</span> <span class="st">";"</span> exemplo.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Você pegará o primeiro campo -f 1, e usará como delimitador o caracter “;” -d “;”. Deverá ver no terminal “O Linux é rápido”.</p>
+<p>Você pegará o primeiro campo -f 1, e usará como delimitador o caracter “;” -d “;”. Deverá ver no terminal “O Linux é rápido”. E caso use -f 2, terá o conteúdo do segundo campo “O Linux é seguro”</p>
 <p>&nbsp;</p>
 <hr>
 <section id="vídeo-relacionado" class="level2">
