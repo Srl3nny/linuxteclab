@@ -3,15 +3,13 @@ title: "cp"
 youtube: "https://youtu.be/7Zl1yXe-MB8?si=fb5BDL2H0AK6XXEv"
 ---
 
-
-
-Vamos começar a fazer algumas cópias desses arquivos. Assim como copiar e colar arquivos em outros sistemas operacionais, o shell nos oferece uma maneira ainda mais simples de fazer isso, e nem precisamos do mouse para isso :).
+Assim como copiar e colar arquivos em outros sistemas operacionais, o shell nos oferece uma maneira ainda mais simples de fazer isso, e nem precisamos do mouse para isso.
 
 ```bash
 $ cp meuarquivo /home/bruno/
 ```
 
-meuqrquivo é o arquivo que você deseja copiar e /home/bruno é para onde você está copiando o arquivo. Você pode copiar vários arquivos e diretórios, bem como usar curingas. Um curinga é um caractere que pode substituir uma seleção baseada em padrão, proporcionando mais flexibilidade. Você pode usar curingas em vários comandos para obter mais flexibilidade.
+meuarquivo é o arquivo que você deseja copiar e /home/bruno é para onde você está copiando o arquivo. Você pode copiar vários arquivos e diretórios, bem como usar curingas. Um curinga é um caractere que pode substituir uma seleção baseada em padrão, proporcionando mais flexibilidade. Você pode usar curingas em vários comandos para obter mais flexibilidade.
 
 - \* o curinga dos curingas, é usado para representar todos os caracteres únicos ou qualquer string.
 - ? usado para representar um caractere.
