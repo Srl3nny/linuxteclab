@@ -1,3 +1,12 @@
+---
+title: Como identificar interfaces de rede
+pagetitle: Como identificar interfaces de rede
+description: Como identificar interfaces de rede. Tutorial em português da trilha
+  Configuração de rede do LinuxTecLab.
+categories:
+- Configuração de rede
+---
+
 **Interface de Rede e Comandos ifconfig e ip**
 
 A interface de rede é a conexão entre o lado de software e o lado de hardware da rede, ligando o kernel. podemos ver um exemplo disso:
@@ -68,3 +77,4 @@ $ ip link set eth0 down
 $ ip address add 192.168.1.1/24 dev eth0
 ```
 
+[Mais tutoriais de Configuração de rede](../../temas.qmd#configurar-rede)

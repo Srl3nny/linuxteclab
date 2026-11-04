@@ -1,3 +1,12 @@
+---
+title: Estados de processos no Linux
+pagetitle: Estados de processos no Linux
+description: Estados de processos no Linux. Tutorial em português da trilha Processos
+  do LinuxTecLab.
+categories:
+- Processos
+---
+
 Vamos dar outra olhada no comando `ps aux`:
 
 ```bash
@@ -13,3 +22,5 @@ Na coluna `STATE`, você verá muitas combinações de valores. Um processo no L
 * **T**: O processo está parado, suspensamente ou interrompido.
 
 Lembre-se de que entender o estado de um processo é essencial para troubleshooting e gerenciamento de processos no Linux.
+
+[Mais tutoriais de Processos](../../temas.qmd#processos)

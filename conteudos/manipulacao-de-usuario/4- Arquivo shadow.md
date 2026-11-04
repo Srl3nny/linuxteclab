@@ -1,3 +1,12 @@
+---
+title: Como funciona o arquivo /etc/shadow
+pagetitle: Como funciona o arquivo /etc/shadow
+description: Como funciona o arquivo /etc/shadow. Tutorial em português da trilha
+  Usuários e grupos do LinuxTecLab.
+categories:
+- Usuários e grupos
+---
+
 O arquivo `/etc/shadow` tem como objetivo armazenar informações sobre autenticação de usuários. Para ler este arquivo, é necessário ter permissões de leitura como superusuário.
 
 Exemplo:
@@ -20,3 +29,5 @@ Observe que o conteúdo é muito semelhante ao do arquivo `/etc/passwd`, mas o c
 - 9: Campo reservado para uso futuro
 
 É importante notar que, em muitas das distribuições de hoje, a autenticação de usuários não depende apenas do arquivo `/etc/shadow`, existem outros mecanismos em uso, como as Módulas de Autenticação Pluggable (PAM), que substituem a autenticação.
+
+[Mais tutoriais de Usuários e grupos](../../temas.qmd#manipulacao-de-usuario)

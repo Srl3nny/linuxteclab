@@ -1,3 +1,11 @@
+---
+title: Arquivos tar e zip
+pagetitle: Arquivos tar e zip
+description: Arquivos tar e zip. Tutorial em português da trilha Pacotes do LinuxTecLab.
+categories:
+- Pacotes
+---
+
 # **Arquivos e Compressão no Linux**
 
 Aprenda a gerenciar arquivos compactados no Linux antes de instalar pacotes de diferentes gerenciadores.
@@ -99,7 +107,4 @@ Outra opção muito importante é verificar os arquivos existente, antes da desc
  tar -tzf /home/bruno/Documentos.tar.gz
 ```
 
-
-
-
-
+[Mais tutoriais de Pacotes](../../temas.qmd#pacotes)

@@ -1,3 +1,12 @@
+---
+title: Permissões de processos no Linux
+pagetitle: Permissões de processos no Linux
+description: Permissões de processos no Linux. Tutorial em português da trilha Permissões
+  do LinuxTecLab.
+categories:
+- Permissões
+---
+
 ##*Processos e Permissões em Linux*
 
 Vamos abordar um pouco mais sobre permissões de processos em Linux. Lembrando que quando você executa o comando `passwd` com o bit de permissão SUID habilitado, o programa é executado como root? Isso é verdade, mas isso significa que, como você está temporariamente como root, você pode modificar as senhas de outros usuários? Não, felizmente não!
@@ -15,3 +24,5 @@ Quando você executa o comando `passwd`, sua effective UID é sua ID de usuário
 Imagine que você deseja modificar a senha da Sally, que tem uma UID de 600. Bem, você não vai ter sorte, felizmente, o processo também tem sua UID real nesse caso, 500. Ele sabe que sua UID é 500 e, portanto, você não pode modificar a senha da UID de 600. (Claro que isso é sempre contornado se você for superusuário em uma máquina e pode controlar e alterar tudo.)
 
 Na maioria do tempo, a UID real e a UID effective são as mesmas, mas em casos como o comando `passwd`, elas mudarão.
+
+[Mais tutoriais de Permissões](../../temas.qmd#permissoes)

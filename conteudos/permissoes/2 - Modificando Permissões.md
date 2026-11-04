@@ -1,3 +1,12 @@
+---
+title: chmod · modificar permissões
+pagetitle: chmod · modificar permissões
+description: chmod · modificar permissões. Tutorial em português da trilha Permissões
+  do LinuxTecLab.
+categories:
+- Permissões
+---
+
 Alterar permissões é um processo relativamente simples com o comando `chmod`. Primeiramente, escolha qual conjunto de permissões deseja alterar, usuário, grupo ou outros. Você pode adicionar ou remover permissões com um "+" ou "-", vamos dar uma olhada em alguns exemplos.
 
 **Adicionar uma bit de permissão a um arquivo**
@@ -33,3 +42,5 @@ Lembre-se de que agora estamos combinando todas as permissões em um número ún
 5 = 4 + 1, e todos os outros usuários tem permissão de leitura e execução
 
 Lembre-se de que não é uma boa ideia mudar as permissões aleatoriamente, pois isso pode expor um arquivo sensível para que todos possam modificá-lo. No entanto, se você precisar alterar as permissões, apenas tome cuidado ao usar o comando `chmod`.
+
+[Mais tutoriais de Permissões](../../temas.qmd#permissoes)

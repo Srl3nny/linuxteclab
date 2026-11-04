@@ -1,0 +1,18 @@
+---
+title: "Livros para aprender Linux"
+description: "Duas leituras para praticar comandos e administrar sistemas Debian, com links diretos para as páginas dos autores."
+---
+
+## Para ganhar fluência no terminal
+
+**The Linux Command Line**, de William Shotts, acompanha quem está começando no shell e quer chegar à escrita de scripts. O autor disponibiliza a edição digital gratuita em inglês.
+
+[Ler no site do autor](https://linuxcommand.org/tlcl.php) · [Praticar navegação no LinuxTecLab](conteudos/linha-de-comando/1-pwd.md)
+
+## Para administrar sistemas
+
+O **Manual do Administrador Debian**, de Raphaël Hertzog e Roland Mas, é uma referência para consultar ao configurar pacotes e serviços.
+
+[Acessar o manual em português](https://debian-handbook.info/browse/pt-BR/stable/) · [Estudar gerenciamento de pacotes](temas.qmd#pacotes)
+
+Os links acima levam às páginas dos autores. Links que gerem comissão serão identificados como **link de afiliado** junto à indicação.

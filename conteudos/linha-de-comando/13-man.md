@@ -1,9 +1,12 @@
 ---
-title: "man"
-youtube: "https://youtu.be/FgfwdUl3i-s?si=ASXCPe0jeGiPSCCg"
+title: man
+youtube: https://youtu.be/FgfwdUl3i-s?si=ASXCPe0jeGiPSCCg
+pagetitle: man · consultar manuais de comandos
+description: man · consultar manuais de comandos. Tutorial em português da trilha
+  Linha de comando do LinuxTecLab.
+categories:
+- Linha de comando
 ---
-
-
 
 Um comando que pode te salvar em muitos momentos é o man. É uma interface para manuais, com ele você pode buscar ajuda sem precisar do chatGPT :) . 
 
@@ -28,3 +31,4 @@ $ man -k passwd
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

@@ -1,9 +1,12 @@
 ---
-title: "Pipe (|) e tee"
-youtube: "https://youtu.be/lOMrxK7q4yA?si=86yhzRFevp78MRRk"
+title: Pipe (|) e tee
+youtube: https://youtu.be/lOMrxK7q4yA?si=86yhzRFevp78MRRk
+pagetitle: Pipe e tee · encadear e registrar saídas
+description: Pipe e tee · encadear e registrar saídas. Tutorial em português da trilha
+  Texto e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
-
-
 
 Iremos conhecer o pipe (|) agora, vamos primeiro executar o comando:
 
@@ -33,3 +36,4 @@ $ ls | tee saida.txt
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

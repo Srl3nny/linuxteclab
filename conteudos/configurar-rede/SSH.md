@@ -1,3 +1,12 @@
+---
+title: SSH · acesso remoto seguro no Linux
+pagetitle: SSH · acesso remoto seguro no Linux
+description: SSH · acesso remoto seguro no Linux. Tutorial em português da trilha
+  Configuração de rede do LinuxTecLab.
+categories:
+- Configuração de rede
+---
+
 # SSH — Acesso remoto seguro no Linux
 O SSH (Secure Shell) é um dos serviços mais importantes em ambientes Linux, servidores, homelabs e computação científica. Ele permite acessar máquinas remotamente de forma segura, substituindo protocolos antigos e inseguros como Telnet e rlogin. No LinuxTecLab, o SSH é tratado como um serviço essencial, pois praticamente todo servidor Linux em produção é administrado remotamente via SSH.
 
@@ -20,5 +29,4 @@ Uma das primeiras boas práticas de segurança é desabilitar o login direto do 
 PermitRootLogin no
 ```
 
-
-
+[Mais tutoriais de Configuração de rede](../../temas.qmd#configurar-rede)

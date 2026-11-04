@@ -1,3 +1,11 @@
+---
+title: Dependências de pacotes
+pagetitle: Dependências de pacotes
+description: Dependências de pacotes. Tutorial em português da trilha Pacotes do LinuxTecLab.
+categories:
+- Pacotes
+---
+
 # **Pacotes e Dependências**
 
 Em geral, os pacotes funcionam melhor quando são acompanhados por dependências que os ajudam a trabalhar. Por exemplo, imagine um grupo de restaurantes que preparam diferentes tipos de comida, mas que obtêm seus ingredientes de uma mesma granja. A comida dos restaurantes depende da granja. Se a granja parasasse de fornecer ingredientes abruptamente, os restaurantes estariam em situação gravíssima.
@@ -7,3 +15,5 @@ Nas distribuições Linux, essas dependências são frequentemente outros pacote
 Apenas lembre-se de que os pacotes têm dependências para funcionar, seja essas dependências outros pacotes ou bibliotecas. Se as dependências não forem encontradas, o pacote ficará em estado quebrado e muitas vezes nem sequer será possível instalar.
 
 &nbsp;
+
+[Mais tutoriais de Pacotes](../../temas.qmd#pacotes)

@@ -1,3 +1,12 @@
+---
+title: traceroute · investigar o caminho dos pacotes
+pagetitle: traceroute · investigar o caminho dos pacotes
+description: traceroute · investigar o caminho dos pacotes. Tutorial em português
+  da trilha Diagnóstico de rede do LinuxTecLab.
+categories:
+- Diagnóstico de rede
+---
+
 **Comando de rastreamento de rotas**
 
 O comando `traceroute` é utilizado para entender como os pacotes de dados são roteados na internet. Ele funciona enviando pacotes com valores de TTL (Time To Live) que vão aumentando, começando com 1. Quando um roteador recebe um pacote, decrementa o valor de TTL em um e, portanto, o lança. O roteador então retorna um mensagem ICMP de "Tempo Excedido" para nós. Em seguida, o próximo pacote recebe um TTL de 2, o que o permite passar pelo primeiro roteador, mas quando chega ao segundo roteador, o TTL é 0 e retorna outra mensagem ICMP de "Tempo Excedido". O `traceroute` funciona desse jeito porque, ao enviar pacotes, está construindo uma lista de roteadores que os pacotes percorrem, como se estivesse anotando o caminho, até que finalmente chegue ao seu destino e receba uma mensagem ICMP de "echo reply".
@@ -25,3 +34,5 @@ Podemos usar o traceroute para:
 * Verificar onde está o maior tempo de latência.
 * Mapear a rota de saída da sua rede.
 * Testar a conectividade internacional (ver por onde os pacotes passam até chegar a outro país, por exemplo).
+
+[Mais tutoriais de Diagnóstico de rede](../../temas.qmd#troubleshooting)

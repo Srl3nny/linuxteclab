@@ -1,6 +1,11 @@
 ---
-title: "touch"
-youtube: "https://youtu.be/7Zl1yXe-MB8?si=yZsZASMF07IN6PVF"
+title: touch
+youtube: https://youtu.be/7Zl1yXe-MB8?si=yZsZASMF07IN6PVF
+pagetitle: touch · criar arquivos e atualizar datas
+description: touch · criar arquivos e atualizar datas. Tutorial em português da trilha
+  Linha de comando do LinuxTecLab.
+categories:
+- Linha de comando
 ---
 
 Vamos aprender como fazer alguns arquivos. Uma maneira muito simples é usar o comando touch, touch permite criar novos arquivos vazios.
@@ -19,3 +24,4 @@ Existem muitas outras maneiras de criar arquivos que envolvem outras coisas como
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

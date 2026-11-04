@@ -1,3 +1,12 @@
+---
+title: Como ler o arquivo /etc/passwd
+pagetitle: Como ler o arquivo /etc/passwd
+description: Como ler o arquivo /etc/passwd. Tutorial em português da trilha Usuários
+  e grupos do LinuxTecLab.
+categories:
+- Usuários e grupos
+---
+
 Lembre-se de que os nomes de usuário não são, em realidade, identificadores de usuários. O sistema utiliza um IDENTIFIER DE USUÁRIO (UID) para identificar um usuário. Para descobrir quais usuários estão mapeados para que identificador, veja o arquivo `/etc/passwd`.
 
 ```bash
@@ -27,3 +36,5 @@ Cada linha exibe informações de usuário para um usuário, sendo que o usuári
 Normalmente, na página de configuração de usuário, você espera ver apenas usuários humanos. No entanto, você notará que `/etc/passwd` contém outros usuários. Lembre-se de que os usuários são, na realidade, apenas no sistema para executar processos com permissões diferentes. Às vezes, queremos executar processos com permissões pré-definidas. Por exemplo, o usuário `daemon` é utilizado para processos daemon.
 
 Além disso, é importante notar que você pode editar o arquivo `/etc/passwd` manualmente se quiser adicionar usuários e modificar informações com o tool `vipw`, no entanto, coisas como essas são melhor deixadas para tools, como `useradd` e `userdel`.
+
+[Mais tutoriais de Usuários e grupos](../../temas.qmd#manipulacao-de-usuario)

@@ -1,6 +1,11 @@
 ---
-title: "Comando Paste"
-youtube:
+title: Comando Paste
+youtube: null
+pagetitle: paste · combinar colunas
+description: paste · combinar colunas. Tutorial em português da trilha Texto e filtros
+  do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
 
 O comando paste no Linux é utilizado para combinar linhas de diferentes arquivos de forma horizontal, ou seja, ele "cola" o conteúdo das linhas correspondentes de dois ou mais arquivos lado a lado, separando-as por um delimitador (por padrão, o caractere de tabulação).
@@ -34,3 +39,5 @@ Como resultado teria:
 2   b
 3   c
 ```
+
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

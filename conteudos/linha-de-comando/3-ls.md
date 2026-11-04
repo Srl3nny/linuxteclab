@@ -1,7 +1,13 @@
 ---
-title: "ls"
-youtube: "https://youtu.be/FgfwdUl3i-s?si=IK4moEVv_NtbPE-O"
+title: ls
+youtube: https://youtu.be/FgfwdUl3i-s?si=IK4moEVv_NtbPE-O
+pagetitle: ls · listar arquivos e diretórios
+description: ls · listar arquivos e diretórios. Tutorial em português da trilha Linha
+  de comando do LinuxTecLab.
+categories:
+- Linha de comando
 ---
+
 Além de sabemos como nos movimentar pelo sistema, como podemos descobrir o que há? Podemos usar o comando ls para listar o conteúdo do diretório. O comando **ls** listará diretórios e arquivos no diretório atual por padrão, mas você pode especificar qual caminho deseja listar os diretórios.
 
 ```bash
@@ -52,3 +58,4 @@ Os comandos têm opções (ou argumentos, como você quiser chamá-los) para adi
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

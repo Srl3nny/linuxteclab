@@ -1,3 +1,12 @@
+---
+title: Servir arquivos por HTTP com Python
+pagetitle: Servir arquivos por HTTP com Python
+description: Servir arquivos por HTTP com Python. Tutorial em português da trilha
+  Compartilhamento do LinuxTecLab.
+categories:
+- Compartilhamento
+---
+
 **Servidor de Arquivos Local com Python**
 ================================================
 
@@ -8,3 +17,5 @@ $ sudo python3 -m http.server
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ```
 Portanto, obtenha a endereço IP da máquina que você executou este comando e, em outra máquina, acesse-o no navegador com: http://IP_ADDRESS:8000. Na sua própria máquina, você pode visualizar os arquivos disponíveis digitando: http://localhost:8000 no navegador.
+
+[Mais tutoriais de Compartilhamento](../../temas.qmd#compartilhamento)

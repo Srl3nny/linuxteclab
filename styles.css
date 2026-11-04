@@ -1,1 +1,28 @@
-/* css styles */
+:root{--lab-mint:#83e8b0;--lab-line:#344348;--lab-paper:#152026;--lab-mono:ui-monospace,SFMono-Regular,Consolas,monospace}
+.navbar{border-bottom:1px solid var(--lab-line)}
+.navbar-title,.lab-kicker,.lab-bar,.lab-card a{font-family:var(--lab-mono)}
+.navbar-title{font-weight:700;letter-spacing:-.045em}
+.navbar-title::before{content:">_ ";color:var(--lab-mint)}
+main{line-height:1.66}
+.lab-hero,.lab-lanes{margin:0 auto;max-width:1100px}
+main:has(.lab-hero) > header#title-block-header{display:none}
+.lab-hero{display:grid;grid-template-columns:1.45fr 1fr;align-items:center;gap:clamp(2rem,5vw,5rem);padding:clamp(2.6rem,7vw,6rem) 0;border-bottom:1px solid var(--lab-line)}
+.lab-kicker{font-size:.75rem;letter-spacing:.13em;color:var(--lab-mint)}
+.lab-hero h1{font-size:clamp(3.1rem,7vw,6rem);line-height:1.02;letter-spacing:-.065em;margin:.28em 0}
+.lab-hero h1 span,.lab-console b,.cursor{color:var(--lab-mint)}
+.lab-lead{font-size:1.18rem;max-width:37ch;color:#c5d4d1}
+.lab-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:1.6rem}
+.lab-primary{display:inline-block;background:var(--lab-mint);color:#0c2117!important;padding:.6rem 1rem;border-radius:4px;font-weight:700;text-decoration:none}
+.lab-console,.lab-card{background:var(--lab-paper);border:1px solid var(--lab-line);border-radius:8px}
+.lab-console{background:#10191d}
+.lab-bar{padding:.55rem .9rem;border-bottom:1px solid var(--lab-line);font-size:.8rem;color:var(--lab-mint)}
+.lab-bar span{color:#a6b7b5;margin-left:1rem}
+.lab-console pre{border:0;background:transparent;color:#e1ebe6;padding:1.4rem;margin:0;line-height:1.75}
+.lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.lab-lanes{padding:1rem 0 1.5rem}
+.lab-card{padding:1.2rem}.lab-card p:last-child{margin-bottom:0}
+.lab-card a{font-weight:700}.lab-card:focus-within,.lab-card:hover{border-color:var(--lab-mint)}
+pre.sourceCode{border-left:3px solid #51866f}
+.youtube-box{border-left:2px solid var(--lab-mint);padding-left:1rem}
+a:focus-visible{outline:2px solid var(--lab-mint);outline-offset:3px}
+@media(max-width:720px){.lab-hero,.lab-grid{grid-template-columns:1fr}.lab-hero{gap:1.4rem}.lab-console pre{padding:1rem}}

@@ -1,3 +1,12 @@
+---
+title: Compartilhamento de diretórios com NFS
+pagetitle: Compartilhamento de diretórios com NFS
+description: Compartilhamento de diretórios com NFS. Tutorial em português da trilha
+  Compartilhamento do LinuxTecLab.
+categories:
+- Compartilhamento
+---
+
 **Como configurar um cliente NFS no Linux**
 ================================================================
 
@@ -30,3 +39,5 @@ Se você usa o servidor NFS com frequência e deseja mantê-lo montado permanent
 ```bash
 192.168.1.100:/export/dados /mnt/dados nfs defaults,_netdev 0 0
 ```
+
+[Mais tutoriais de Compartilhamento](../../temas.qmd#compartilhamento)

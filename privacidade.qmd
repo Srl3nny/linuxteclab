@@ -1,0 +1,12 @@
+---
+title: "Privacidade e publicidade"
+description: "Conheça o funcionamento das páginas do LinuxTecLab, dos links de livros e dos serviços externos."
+---
+
+Os tutoriais do LinuxTecLab podem ser lidos sem criar uma conta. Ao solicitar uma página, seu navegador envia dados técnicos, como o endereço IP e o endereço solicitado, ao provedor que entrega o site.
+
+Ao seguir links para vídeos, livros ou redes sociais, você visita serviços com políticas de privacidade próprias. Links de livros que gerem comissão serão identificados ao lado da indicação.
+
+Esta edição do site não carrega scripts de publicidade. Quando anúncios forem ativados, esta página deverá identificar os serviços usados, explicar o uso de cookies e informar como gerenciar as preferências.
+
+Para falar com o responsável pelo conteúdo, consulte a [página do projeto](about.qmd).

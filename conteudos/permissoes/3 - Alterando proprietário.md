@@ -1,3 +1,12 @@
+---
+title: chown · alterar o proprietário
+pagetitle: chown · alterar o proprietário
+description: chown · alterar o proprietário. Tutorial em português da trilha Permissões
+  do LinuxTecLab.
+categories:
+- Permissões
+---
+
 Além de alterar os permissões de um arquivo, você também pode alterar a propriedade do usuário e do grupo associados ao arquivo.  
 
 **Alterar proprietário do usuário**
@@ -23,3 +32,5 @@ Se você usar o carácter de dois pontos após o usuário, poderá alterar usuá
 ```
 sudo chown linuxteclab:TI exemplos.txt
 ```
+
+[Mais tutoriais de Permissões](../../temas.qmd#permissoes)

@@ -1,8 +1,12 @@
 ---
-title: "cut"
-youtube: "https://youtu.be/_7kDsfHoz4k?si=vd7RTy57BcISoW6h"
+title: cut
+youtube: https://youtu.be/_7kDsfHoz4k?si=vd7RTy57BcISoW6h
+pagetitle: cut · extrair campos de texto
+description: cut · extrair campos de texto. Tutorial em português da trilha Texto
+  e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
-
 
 Aprenderemos alguns comandos úteis que você pode usar para processar texto. Antes de começarmos, vamos criar um arquivo com o qual trabalharemos. 
 
@@ -39,3 +43,4 @@ E caso use -f 2, terá o conteúdo do segundo campo "O Linux é seguro"
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

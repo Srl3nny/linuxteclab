@@ -1,20 +1,49 @@
 ---
-about:
-  template: jolla
-  id: about-block
-  links:
-    - icon: youtube
-      text: youtube
-      href: https://www.youtube.com/@LINUXTecLab
-    - icon: github
-      text: Github
-      href: https://github.com/Srl3nny
-    - icon: instagram
-      text: Instagram
-      href: https://www.instagram.com/linuxteclab/ 
+title: LinuxTecLab
+pagetitle: "Tutoriais de Linux em português"
+description: "Aprenda Linux no terminal com tutoriais em português sobre comandos, permissões, processos e redes. Escolha uma trilha e pratique."
+title-block-banner: false
+sidebar: false
+toc: false
+page-layout: full
 ---
-![](tux-estudando.png)
 
-Aprenda Linux com conteúdo estruturado e organizado.
+```{=html}
+<section class="lab-hero">
+<div><p class="lab-kicker">BRUNO CAIRES / CADERNO DE LABORATÓRIO</p>
+<h1>Linux na prática<span>.</span></h1>
+<p class="lab-lead">Do primeiro comando ao diagnóstico de rede. Escolha um assunto, abra o terminal e experimente.</p>
+<div class="lab-actions"><a class="lab-primary" href="conteudos/linha-de-comando/1-pwd.html">Começar pelo terminal →</a><a href="temas.html">Explorar as trilhas</a></div></div>
+<div class="lab-console"><div class="lab-bar">● ● ● <span>bruno@linuxteclab</span></div><pre><b>~ $</b> pwd
+/home/bruno
+<b>~ $</b> uname -s
+Linux
+<b>~ $</b> <span class="cursor">▋</span></pre></div>
+</section>
+```
 
-Conteúdo produzido por Bruno Caires..
+::: {.lab-lanes}
+## Escolha uma trilha
+
+::: {.lab-grid}
+::: {.lab-card}
+[01 / Terminal](conteudos/linha-de-comando/1-pwd.md)
+
+Encontre arquivos, navegue entre diretórios e consulte manuais.
+:::
+::: {.lab-card}
+[02 / Texto e filtros](conteudos/arte-do-texto/9-grep.md)
+
+Encontre uma linha com grep e combine comandos pelo pipe.
+:::
+::: {.lab-card}
+[03 / Redes](conteudos/troubleshooting/2-ping.md)
+
+Teste a comunicação entre máquinas e investigue o caminho dos pacotes.
+:::
+:::
+:::
+
+[Ver todos os assuntos →](temas.qmd) · [Leituras para acompanhar os tutoriais →](livros.qmd)
+
+Acompanhe o LinuxTecLab no [YouTube](https://www.youtube.com/@LINUXTecLab), no [GitHub](https://github.com/Srl3nny) e no [Instagram](https://www.instagram.com/linuxteclab/).

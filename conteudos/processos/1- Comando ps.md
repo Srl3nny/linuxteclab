@@ -1,3 +1,12 @@
+---
+title: ps · listar processos em execução
+pagetitle: ps · listar processos em execução
+description: ps · listar processos em execução. Tutorial em português da trilha Processos
+  do LinuxTecLab.
+categories:
+- Processos
+---
+
 Processos são programas que estão sendo executados na sua máquina. Eles são gerenciados pelo kernel e cada processo tem um ID associado a ele, chamado de ID de processo (PID). Esse PID é atribuído na ordem em que os processos são criados.
 
 execute o comando `ps` para ver uma lista de processos em execução:
@@ -46,3 +55,5 @@ Outra ferramenta muito útil é o comando `top`, que fornece informações em te
 ```markdown
 $ top
 ```
+
+[Mais tutoriais de Processos](../../temas.qmd#processos)

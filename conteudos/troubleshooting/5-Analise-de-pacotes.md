@@ -1,3 +1,12 @@
+---
+title: Análise de pacotes de rede
+pagetitle: Análise de pacotes de rede
+description: Análise de pacotes de rede. Tutorial em português da trilha Diagnóstico
+  de rede do LinuxTecLab.
+categories:
+- Diagnóstico de rede
+---
+
 **Análise de Pacotes com tcpdump**
 =============================
 
@@ -52,4 +61,6 @@ Temos muitas informações, podemos aprender muito sobre o funcionamento da rede
 $ sudo tcpdump -w /some/file
 ```
 
- Algumas últimas palavras: apenas raspamos a superfície do assunto de análise de pacotes. Há muito mais que você pode explorar e não tocamos sequer nos assuntos mais profundos com Hex e ASCII output. 
+ Algumas últimas palavras: apenas raspamos a superfície do assunto de análise de pacotes. Há muito mais que você pode explorar e não tocamos sequer nos assuntos mais profundos com Hex e ASCII output.
+
+[Mais tutoriais de Diagnóstico de rede](../../temas.qmd#troubleshooting)

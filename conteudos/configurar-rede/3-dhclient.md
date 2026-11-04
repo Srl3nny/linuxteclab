@@ -1,3 +1,12 @@
+---
+title: dhclient e configuração por DHCP
+pagetitle: dhclient e configuração por DHCP
+description: dhclient e configuração por DHCP. Tutorial em português da trilha Configuração
+  de rede do LinuxTecLab.
+categories:
+- Configuração de rede
+---
+
 **Configuração de rede com DHCP**
 ===============================
 
@@ -12,3 +21,5 @@ $ sudo dhclient
 ```
 
 Nos sistemas mais modernos (como Ubuntu com systemd), o dhclient pode ser substituído por outros gerenciadores de rede.
+
+[Mais tutoriais de Configuração de rede](../../temas.qmd#configurar-rede)

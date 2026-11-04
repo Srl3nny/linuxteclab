@@ -1,3 +1,12 @@
+---
+title: Distribuição de software no Linux
+pagetitle: Distribuição de software no Linux
+description: Distribuição de software no Linux. Tutorial em português da trilha Pacotes
+  do LinuxTecLab.
+categories:
+- Pacotes
+---
+
 Seu sistema computacional é composto por muitos pacotes, como navegadores de internet, editores de texto, reprodutores de mídia, etc. Esses pacotes são gerenciados por gerenciadores de pacotes, que instalam e mantém o software no seu sistema. No entanto, nem todos os pacotes são instalados via gerenciadores de pacotes. É comum instalar pacotes diretamente a partir do seu código fonte. Mas a maioria do tempo você usará um gerenciador de pacotes para instalar software (apt, dnf..).
 
 Os pacotes mais comuns são do tipo Debian (.deb) e Red Hat (.rpm). Os pacotes do estilo Debian são usados nas distribuições como Debian, Ubuntu, LinuxMint, etc. Já os pacotes do estilo Red Hat são vistos nas distribuições Red Hat Enterprise Linux, Fedora, CentOS, Rocky etc.
@@ -15,3 +24,5 @@ Se você quiser explorar um pacote Debian, por exemplo, você pode baixar o arqu
 Se você quiser olhar o código fonte do pacote RPM, você pode fazer isso baixando o arquivo `wget-1.21.1-5.2.amd64.rpm` e examinando as informações sobre a instalação.
 
 Lembre-se de que esses são apenas exemplos, e os pacotes podem ter nomes e extensões diferentes, dependendo do tipo de pacote e da distribuição utilizada.
+
+[Mais tutoriais de Pacotes](../../temas.qmd#pacotes)

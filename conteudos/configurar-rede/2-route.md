@@ -1,3 +1,12 @@
+---
+title: Como consultar e configurar rotas
+pagetitle: Como consultar e configurar rotas
+description: Como consultar e configurar rotas. Tutorial em português da trilha Configuração
+  de rede do LinuxTecLab.
+categories:
+- Configuração de rede
+---
+
 **Criando rotas**
 
 Já discutimos como visualizar as nossas tabelas de rotas com o comando `route`. Se você deseja adicionar ou remover rotas, pode fazê-lo manualmente.
@@ -52,3 +61,5 @@ E para adicionar ou remover uma rota default com o comando IP:
 sudo ip route add default via 192.168.1.1 dev eth0
 sudo ip route del default via 192.168.1.1 dev eth0
 ```
+
+[Mais tutoriais de Configuração de rede](../../temas.qmd#configurar-rede)

@@ -1,3 +1,12 @@
+---
+title: nice e prioridade de processos
+pagetitle: nice e prioridade de processos
+description: nice e prioridade de processos. Tutorial em português da trilha Processos
+  do LinuxTecLab.
+categories:
+- Processos
+---
+
 Quando executamos vários softwares, como Chrome, Microsoft Word or Photoshop ao mesmo tempo, Pode parecer que o computador roda tudo ao mesmo tempo. No entanto, isso não é exatamente verdade. Os processos utilizam o processador para um pequeno período de tempo chamado time slice. Em seguida, pausam por milissegundos e outro processo recebe um time slice. Por padrão, a gestão de processos ocorre em uma sequência round-robin. Cada processo recebe um número suficiente de time slices até ser concluído.
 O kernel é responsável por fazer as trocas entre os processos e faz um ótimo trabalho nisso a maioria do tempo.
 
@@ -14,3 +23,5 @@ O comando nice é usado para definir a prioridade para um processo novo. O coman
 ```bash
 $ renice 10 -p 3245
 ```
+
+[Mais tutoriais de Processos](../../temas.qmd#processos)

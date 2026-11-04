@@ -1,3 +1,12 @@
+---
+title: Como funcionam os sinais no Linux
+pagetitle: Como funcionam os sinais no Linux
+description: Como funcionam os sinais no Linux. Tutorial em português da trilha Processos
+  do LinuxTecLab.
+categories:
+- Processos
+---
+
 # Sinais no sistema operacional
 
 O sistema operacional emite um sinal (ou notification) para um processo sempre que algo acontece. Por que os sinais?
@@ -29,3 +38,5 @@ Alguns sinais são impossíveis de bloquear, um exemplo é o sinal SIGKILL. O si
 
 **Exemplo de utilização de sinais**
 Para testar o funcionamento dos sinais, execute o comando `kill` seguido do número do sinal desejado. Por exemplo, para gerar o sinal de parada (SIGTERM) para um processo, use `kill 15 <nome_do_processo>`.
+
+[Mais tutoriais de Processos](../../temas.qmd#processos)

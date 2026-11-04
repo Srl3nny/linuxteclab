@@ -1,3 +1,12 @@
+---
+title: Como ler permissões de arquivos
+pagetitle: Como ler permissões de arquivos
+description: Como ler permissões de arquivos. Tutorial em português da trilha Permissões
+  do LinuxTecLab.
+categories:
+- Permissões
+---
+
 Já vimos que os arquivos possuem diferentes permissões ou modos de arquivo. Vamos explorar um exemplo:
 
 ```bash
@@ -21,3 +30,5 @@ Cada caractere representa uma permissão diferente:
 - `-`: vazio ou sem permissão
 
 No exemplo acima, vemos que o usuário “bruno” tem permissões de leitura, escrita e execução no arquivo. O grupo “linuxteclab” tem permissões de leitura e execução. Por fim, os outros usuários (ou seja, todos os demais) têm permissões de leitura e execução.
+
+[Mais tutoriais de Permissões](../../temas.qmd#permissoes)

@@ -1,9 +1,12 @@
 ---
-title: "cd"
-youtube: "https://youtu.be/FgfwdUl3i-s?si=IK4moEVv_NtbPE-O"
+title: cd
+youtube: https://youtu.be/FgfwdUl3i-s?si=IK4moEVv_NtbPE-O
+pagetitle: cd · navegar entre diretórios
+description: cd · navegar entre diretórios. Tutorial em português da trilha Linha
+  de comando do LinuxTecLab.
+categories:
+- Linha de comando
 ---
-
-
 
 Agora que você sabe onde está, vamos nos movimentar um pouco no sistema de arquivos. Existem duas maneiras diferentes de especificar um caminho, também conhecidos com PATH, como caminhos absolutos e relativos.
 
@@ -48,3 +51,4 @@ $cd-
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

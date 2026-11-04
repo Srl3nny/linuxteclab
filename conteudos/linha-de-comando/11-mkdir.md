@@ -1,9 +1,12 @@
 ---
-title: "mkdir"
-youtube: "https://youtu.be/7Zl1yXe-MB8?si=z3e2hWzT506BXN_l"
+title: mkdir
+youtube: https://youtu.be/7Zl1yXe-MB8?si=z3e2hWzT506BXN_l
+pagetitle: mkdir · criar diretórios
+description: mkdir · criar diretórios. Tutorial em português da trilha Linha de comando
+  do LinuxTecLab.
+categories:
+- Linha de comando
 ---
-
-
 
 Precisaremos de alguns diretórios para armazenar todos esses arquivos nos quais estamos trabalhando. O comando mkdir (Make Directory) é útil para isso, ele criará um diretório caso ele ainda não exista. Você pode até criar vários diretórios ao mesmo tempo.
 
@@ -26,3 +29,4 @@ Perceba como o conhecimento do que já vimos irá se acumulando. podemos ver o u
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

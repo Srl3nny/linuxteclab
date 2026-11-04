@@ -1,3 +1,12 @@
+---
+title: Como funciona o bit setuid
+pagetitle: Como funciona o bit setuid
+description: Como funciona o bit setuid. Tutorial em português da trilha Permissões
+  do LinuxTecLab.
+categories:
+- Permissões
+---
+
 Existem muitos casos em que usuários normais precisam de acesso avançado para executar determinadas tarefas. O administrador do sistema não pode estar sempre disponível para digitar a senha de root toda vez que um usuário necessite de acesso a um arquivo protegido, então há bits de permissão de arquivos especiais para permitir esse comportamento. O Set User ID (SUID) permite a um usuário executar um programa como o proprietário do arquivo do programa, em vez de como eles mesmos.
 
 Vamos ver um exemplo:  
@@ -34,3 +43,5 @@ Já que as permissões regulares, há dois jeitos de modificar as permissões SU
 `$ sudo chmod 4755 myfile`
 
 Como você pode ver, o SUID é denotado por um 4 e prefixado ao conjunto de permissões. Você pode ver o SUID denotado como um S maiúsculo, o que significa que ele ainda faz a mesma coisa, mas não tem permissões de execução.
+
+[Mais tutoriais de Permissões](../../temas.qmd#permissoes)

@@ -1,190 +1,217 @@
+format:
+  html:
+    code-copy: true
+    css: styles.css
+    theme:
+    - darkly
+    - lab.scss
+lang: pt-BR
 project:
   output-dir: docs
+  post-render:
+  - python3 scripts/finalizar.py
   resources:
   - CNAME
+  - robots.txt
   type: website
 website:
+  description: Tutoriais práticos de Linux em português por Bruno Caires.
   navbar:
     left:
     - href: index.qmd
-      text: Home
+      text: Início
+    - href: temas.qmd
+      text: Trilhas
+    - href: livros.qmd
+      text: Livros
     - href: about.qmd
       text: Sobre
+  open-graph: true
+  page-footer:
+    left: LinuxTecLab · Bruno Caires
+    right: '[Privacidade e publicidade](/privacidade.html)'
   sidebar:
     collapse-level: 1
     contents:
     - contents:
       - href: conteudos/linha-de-comando/1-pwd.md
-        text: ✅ Pwd
+        text: Pwd
       - href: conteudos/linha-de-comando/2-cd.md
-        text: ✅ Cd
+        text: Cd
       - href: conteudos/linha-de-comando/3-ls.md
-        text: ✅ Ls
+        text: Ls
       - href: conteudos/linha-de-comando/4-touch.md
-        text: ✅ Touch
+        text: Touch
       - href: conteudos/linha-de-comando/5-file.md
-        text: ✅ File
+        text: File
       - href: conteudos/linha-de-comando/6-cat.md
-        text: ✅ Cat
+        text: Cat
       - href: conteudos/linha-de-comando/7-less.md
-        text: ✅ Less
+        text: Less
       - href: conteudos/linha-de-comando/8-history.md
-        text: ✅ History
+        text: History
       - href: conteudos/linha-de-comando/9-cp.md
-        text: ✅ Cp
+        text: Cp
       - href: conteudos/linha-de-comando/10-mv.md
-        text: ✅ Mv
+        text: Mv
       - href: conteudos/linha-de-comando/11-mkdir.md
-        text: ✅ Mkdir
+        text: Mkdir
       - href: conteudos/linha-de-comando/12-rm.md
-        text: ✅ Rm
+        text: Rm
       - href: conteudos/linha-de-comando/13-man.md
-        text: ✅ Man
+        text: Man
       - href: conteudos/linha-de-comando/14-find.md
-        text: ✅ Find
-      section: 📂 Linha De Comando
+        text: Find
+      section: Linha de comando
     - contents:
       - href: conteudos/arte-do-texto/1-stdout.md
-        text: ✅ Stdout
+        text: Stdout
       - href: conteudos/arte-do-texto/2-stdin.md
-        text: ✅ Stdin
+        text: Stdin
       - href: conteudos/arte-do-texto/3-stderr.md
-        text: ✅ Stderr
+        text: Stderr
       - href: conteudos/arte-do-texto/4-pipe_and_tee.md
-        text: ✅ Pipe_And_Tee
+        text: Pipe And Tee
       - href: conteudos/arte-do-texto/5-env.md
-        text: ✅ Env
+        text: Env
       - href: conteudos/arte-do-texto/6-cut.md
-        text: ✅ Cut
+        text: Cut
       - href: conteudos/arte-do-texto/7-head.md
-        text: ✅ Head
+        text: Head
       - href: conteudos/arte-do-texto/8-paste.md
-        text: ✅ Paste
+        text: Paste
       - href: conteudos/arte-do-texto/9-grep.md
-        text: ✅ Grep
+        text: Grep
       - href: conteudos/arte-do-texto/10-sort.md
-        text: ✅ Sort
+        text: Sort
       - href: conteudos/arte-do-texto/11-tail.md
-        text: ✅ Tail
+        text: Tail
       - href: conteudos/arte-do-texto/12-tr.md
-        text: ✅ Tr
+        text: Tr
       - href: conteudos/arte-do-texto/13-uniq.md
-        text: ✅ Uniq
+        text: Uniq
       - href: conteudos/arte-do-texto/14-sed.md
-        text: ✅ Sed
+        text: Sed
       - href: conteudos/arte-do-texto/15-awk.md
-        text: ✅ Awk
-      section: 📂 Arte Do Texto
+        text: Awk
+      section: Texto e filtros
     - contents:
       - href: conteudos/manipulacao-de-usuario/1- Usuario e grupo.md
-        text: ✅ Usuario E Grupo
+        text: Usuario E Grupo
       - href: conteudos/manipulacao-de-usuario/2- root.md
-        text: ✅ Root
+        text: Root
       - href: conteudos/manipulacao-de-usuario/3- Arquivo passwd.md
-        text: ✅ Arquivo Passwd
+        text: Arquivo Passwd
       - href: conteudos/manipulacao-de-usuario/4- Arquivo shadow.md
-        text: ✅ Arquivo Shadow
+        text: Arquivo Shadow
       - href: conteudos/manipulacao-de-usuario/5- Arquivo group.md
-        text: ✅ Arquivo Group
+        text: Arquivo Group
       - href: conteudos/manipulacao-de-usuario/6- Gerenciamento de usuários.md
-        text: ✅ Gerenciamento De Usuários
-      section: 📂 Manipulacao De Usuario
+        text: Gerenciamento De Usuários
+      section: Usuários e grupos
     - contents:
       - href: conteudos/processos/1- Comando ps.md
-        text: ✅ Comando Ps
+        text: Comando Ps
       - href: conteudos/processos/2 - Controlando o Terminal.md
-        text: ✅ Controlando O Terminal
+        text: Controlando O Terminal
       - href: conteudos/processos/3 - Sobre processos.md
-        text: ✅ Sobre Processos
+        text: Sobre Processos
       - href: conteudos/processos/4 - Criação de processos.md
-        text: ✅ Criação De Processos
+        text: Criação De Processos
       - href: conteudos/processos/5 - Finalização de processos.md
-        text: ✅ Finalização De Processos
+        text: Finalização De Processos
       - href: conteudos/processos/6 - Sinais no Linux.md
-        text: ✅ Sinais No Linux
+        text: Sinais No Linux
       - href: conteudos/processos/7 - kill(Terminate).md
-        text: ✅ Kill(Terminate)
+        text: Kill(Terminate)
       - href: conteudos/processos/8 - niceness.md
-        text: ✅ Niceness
+        text: Niceness
       - href: conteudos/processos/9 - Controle de Job.md
-        text: ✅ Controle De Job
+        text: Controle De Job
       - href: conteudos/processos/10 - _proc filesystem.md
-        text: ✅ Proc Filesystem
+        text: Proc Filesystem
       - href: conteudos/processos/11 - Status de processos.md
-        text: ✅ Status De Processos
-      section: 📂 Processos
+        text: Status De Processos
+      section: Processos
     - contents:
       - href: conteudos/pacotes/1 - Distribuição de programas.md
-        text: ✅ Distribuição De Programas
+        text: Distribuição De Programas
       - href: conteudos/pacotes/2 - Repositórios.md
-        text: ✅ Repositórios
+        text: Repositórios
       - href: conteudos/pacotes/3 - Arquivos Tar e Zip.md
-        text: ✅ Arquivos Tar E Zip
+        text: Arquivos Tar E Zip
       - href: conteudos/pacotes/4 - Dependência de pacotes.md
-        text: ✅ Dependência De Pacotes
+        text: Dependência De Pacotes
       - href: conteudos/pacotes/5 - RPM e dpkg.md
-        text: ✅ Rpm E Dpkg
+        text: Rpm E Dpkg
       - href: conteudos/pacotes/6 - Yum e Apt.md
-        text: ✅ Yum E Apt
+        text: Yum E Apt
       - href: conteudos/pacotes/7 - Compilando.md
-        text: ✅ Compilando
-      section: 📂 Pacotes
+        text: Compilando
+      section: Pacotes
     - contents:
       - href: conteudos/permissoes/1 - Permissões.md
-        text: ✅ Permissões
+        text: Permissões
       - href: conteudos/permissoes/2 - Modificando Permissões.md
-        text: ✅ Modificando Permissões
+        text: Modificando Permissões
       - href: conteudos/permissoes/3 - Alterando proprietário.md
-        text: ✅ Alterando Proprietário
+        text: Alterando Proprietário
       - href: conteudos/permissoes/4 - Umask.md
-        text: ✅ Umask
+        text: Umask
       - href: conteudos/permissoes/5 - Setuid.md
-        text: ✅ Setuid
+        text: Setuid
       - href: conteudos/permissoes/6 - Setgid.md
-        text: ✅ Setgid
+        text: Setgid
       - href: conteudos/permissoes/7 - ProcessPermissions.md
-        text: ✅ Processpermissions
+        text: Processpermissions
       - href: conteudos/permissoes/8 - Sticky Bit.md
-        text: ✅ Sticky Bit
-      section: 📂 Permissoes
+        text: Sticky Bit
+      section: Permissões
     - contents:
       - href: conteudos/troubleshooting/1-ICMP.md
-        text: ✅ Icmp
+        text: Icmp
       - href: conteudos/troubleshooting/2-ping.md
-        text: ✅ Ping
+        text: Ping
       - href: conteudos/troubleshooting/3-traceroute.md
-        text: ✅ Traceroute
+        text: Traceroute
       - href: conteudos/troubleshooting/4-netstat.md
-        text: ✅ Netstat
+        text: Netstat
       - href: conteudos/troubleshooting/5-Analise-de-pacotes.md
-        text: ✅ Analise-De-Pacotes
-      section: 📂 Troubleshooting
+        text: Analise-De-Pacotes
+      section: Diagnóstico de rede
     - contents:
       - href: conteudos/compartilhamento/1-compartilhando-arquivos.md
-        text: ✅ Compartilhando-Arquivos
+        text: Compartilhando-Arquivos
       - href: conteudos/compartilhamento/2-rsync.md
-        text: ✅ Rsync
+        text: Rsync
       - href: conteudos/compartilhamento/3-SimpleHTTPServer.md
-        text: ✅ Simplehttpserver
+        text: Simplehttpserver
       - href: conteudos/compartilhamento/4-NFS.md
-        text: ✅ Nfs
+        text: Nfs
       - href: conteudos/compartilhamento/5-Samba.md
-        text: ✅ Samba
-      section: 📂 Compartilhamento
+        text: Samba
+      section: Compartilhamento
     - contents:
       - href: conteudos/configurar-rede/1-interfaces-de-rede.md
-        text: ✅ Interfaces-De-Rede
+        text: Interfaces-De-Rede
       - href: conteudos/configurar-rede/2-route.md
-        text: ✅ Route
+        text: Route
       - href: conteudos/configurar-rede/3-dhclient.md
-        text: ✅ Dhclient
+        text: Dhclient
       - href: conteudos/configurar-rede/4-NetworkManager.md
-        text: ✅ Networkmanager
+        text: Networkmanager
       - href: conteudos/configurar-rede/5-arp.md
-        text: ✅ Arp
+        text: Arp
       - href: conteudos/configurar-rede/SSH.md
-        text: ✅ Ssh
-      section: 📂 Configurar Rede
+        text: Ssh
+      section: Configuração de rede
+    - contents:
+      - href: conteudos/devices/1-diretorio-dev.md
+        text: Diretorio-Dev
+      - href: conteudos/devices/2-tipos-de-device.md
+        text: Tipos-De-Device
+      section: Dispositivos
     search: true
     style: docked
-  title: linuxteclab
+  site-url: https://linuxteclab.com.br
+  title: LinuxTecLab

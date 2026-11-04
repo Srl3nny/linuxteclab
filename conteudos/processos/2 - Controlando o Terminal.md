@@ -1,3 +1,12 @@
+---
+title: Terminais e processos associados
+pagetitle: Terminais e processos associados
+description: Terminais e processos associados. Tutorial em português da trilha Processos
+  do LinuxTecLab.
+categories:
+- Processos
+---
+
 Vimos o campo TTY na saída do comando `ps`. O TTY é o terminal que executou o comando.
 
 Existem dois tipos de terminais: dispositivos de terminal regulares e dispositivos de pseudo terminal. Um dispositivo de terminal regular é um dispositivo de terminal nativo que você pode digitar e enviar saída para o seu sistema. Isso pode soar como a aplicação de terminal que você está lançando para acessar a sua shell, mas não é.
@@ -12,3 +21,5 @@ Um pseudo terminal é o que você tem sido usado para trabalhar, pode ser o term
 Processos são geralmente ligados a um terminal de controle. Por exemplo, se você estivesse executando um programa em sua janela de shell, como o comando `find`, e fechou a janela, o seu processo também iria com ele.
 
 Existem processos especiais como processos de demons, que são processos especiais que estão mantendo o sistema em funcionamento. Eles começam durante a inicialização do sistema e usualmente são terminados quando o sistema é encerrado. Eles funcionam em segundo plano e, já que não queremos que esses processos especiais sejam terminados, eles não estão ligados a um terminal de controle. Na saída do `ps`, o TTY é listado como `?`, indicando que não tem um terminal de controle.
+
+[Mais tutoriais de Processos](../../temas.qmd#processos)

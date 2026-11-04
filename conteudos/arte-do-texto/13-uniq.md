@@ -1,6 +1,11 @@
 ---
-title: "Comando uniq"
-youtube:
+title: Comando uniq
+youtube: null
+pagetitle: uniq · identificar linhas repetidas
+description: uniq · identificar linhas repetidas. Tutorial em português da trilha
+  Texto e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
 
 # **Comandos úteis para manipulação de texto**
@@ -59,3 +64,4 @@ livro
 revista
 ```
 
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

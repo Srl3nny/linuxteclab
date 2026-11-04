@@ -1,3 +1,12 @@
+---
+title: less · percorrer textos no terminal
+pagetitle: less · percorrer textos no terminal
+description: less · percorrer textos no terminal. Tutorial em português da trilha
+  Linha de comando do LinuxTecLab.
+categories:
+- Linha de comando
+---
+
 # less
 
 Se você estiver visualizando arquivos de texto maiores que uma saída simples, use o comando less. (existe um comando chamado more que faz algo semelhante, mas nesse caso menos é mais :)) O texto é exibido em forma de página, para que você possa navegar por um arquivo de texto página por página. Vá em frente e observe o conteúdo de um arquivo com menos. Quando estiver no comando less, você poderá usar outros comandos de teclado para navegar no arquivo.
@@ -14,3 +23,5 @@ g - Vai para o início do arquivo de texto.
 G - Vai para o final do arquivo de texto.  
 /search - Você pode pesquisar um texto específico dentro do documento de texto. Prefaciando as palavras que você deseja pesquisar com /  
 h - Se você precisar de uma ajudinha sobre como usar o less, use a ajuda.
+
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

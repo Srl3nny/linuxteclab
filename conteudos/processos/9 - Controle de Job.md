@@ -1,3 +1,12 @@
+---
+title: Controle de tarefas no shell
+pagetitle: Controle de tarefas no shell
+description: Controle de tarefas no shell. Tutorial em português da trilha Processos
+  do LinuxTecLab.
+categories:
+- Processos
+---
+
 Imagine que você está trabalhando em uma janela de terminal única e está executando um comando que está levando muito tempo. Não pode interagir com o shell até que seja completo, mas quer continuar trabalhando no seu computador. Felizmente, podemos controlar como nossos processos são executados com **jobs**:
 
 ## Envio de um job para o background
@@ -50,3 +59,5 @@ kill %1
 ```
 
 Em caso de dúvida, é sempre recomendável consultar o manual do `jobs` com `man jobs` para obter mais informações.
+
+[Mais tutoriais de Processos](../../temas.qmd#processos)

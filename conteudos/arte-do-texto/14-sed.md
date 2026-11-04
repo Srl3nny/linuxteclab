@@ -1,6 +1,11 @@
 ---
-title: "Comando sed"
-youtube:
+title: Comando sed
+youtube: null
+pagetitle: sed · editar texto por padrão
+description: sed · editar texto por padrão. Tutorial em português da trilha Texto
+  e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
 
 ## sed — Stream EDitor (edição de texto em fluxo)
@@ -101,8 +106,4 @@ Agora vamos usar o sed para mostrar apenas a linha que contenha a palavra INFO (
  sed -n '/INFO/p' exemplo-sed.txt
 ```
 
-
-
- 
-
-
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

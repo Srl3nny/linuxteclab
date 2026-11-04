@@ -1,3 +1,12 @@
+---
+title: history · consultar o histórico do shell
+pagetitle: history · consultar o histórico do shell
+description: history · consultar o histórico do shell. Tutorial em português da trilha
+  Linha de comando do LinuxTecLab.
+categories:
+- Linha de comando
+---
+
 # history
 
 Em seu shell, há um histórico dos comandos que você digitou anteriormente, você pode realmente consultar esses comandos. Isso é bastante útil quando você deseja localizar e executar um comando usado anteriormente sem digitá-lo novamente.
@@ -21,3 +30,5 @@ $ clear
 Enquanto falamos sobre coisas úteis, um dos recursos mais úteis em qualquer ambiente de linha de comando é o Autocompletar usando o ***TAB***. Se você começar a digitar o início de um comando, arquivo, diretório, etc. e pressionar a tecla ***TAB***, ele será preenchido automaticamente com base no que encontrar no diretório que você está pesquisando, desde que você não tenha nenhum outro arquivo que comece com aqueles letras. Por exemplo, se você estava tentando executar o comando chrome, você pode digitar chr e pressionar ***TAB*** e ele preencherá automaticamente o chrome.
 
 Experimente usar o ***TAB,*** isso facilita e vida.
+
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

@@ -1,3 +1,11 @@
+---
+title: Repositórios de pacotes
+pagetitle: Repositórios de pacotes
+description: Repositórios de pacotes. Tutorial em português da trilha Pacotes do LinuxTecLab.
+categories:
+- Pacotes
+---
+
 # **Compreendendo os Repositórios de Pacotes**
 
 Você provavelmente já se perguntou como os pacotes que são subidos na internet acabam chegando nos seus computadores? Você vai a página de download de cada pacote que deseja e clica em download e instalação? Bem, é possível fazer isso, mas há algo melhor chamado repositórios de pacotes. Repositórios são simplesmente locais de armazenamento centralizados para pacotes. Existem montes de repositórios que guardam uma diversidade de pacotes e, melhor ainda, eles estão todos disponíveis na internet.
@@ -15,3 +23,5 @@ deb http://archive.ubuntu.com/ubuntu xenial main restricted
 ```
 
 Isso permitirá que você obtenha pacotes do Ubuntu Xenial naquela fonte.
+
+[Mais tutoriais de Pacotes](../../temas.qmd#pacotes)

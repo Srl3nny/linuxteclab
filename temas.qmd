@@ -1,0 +1,126 @@
+---
+title: "Trilhas de Linux"
+description: "Índice de tutoriais por assunto, do primeiro comando à administração de redes Linux."
+---
+
+Escolha um assunto para consultar suas aulas.
+
+- [Linha de comando](#linha-de-comando)
+- [Texto e filtros](#arte-do-texto)
+- [Usuários e grupos](#manipulacao-de-usuario)
+- [Processos](#processos)
+- [Pacotes](#pacotes)
+- [Permissões](#permissoes)
+- [Diagnóstico de rede](#troubleshooting)
+- [Compartilhamento](#compartilhamento)
+- [Configuração de rede](#configurar-rede)
+- [Dispositivos](#devices)
+
+## Linha de comando {#linha-de-comando}
+
+- [Pwd](conteudos/linha-de-comando/1-pwd.html)
+- [Cd](conteudos/linha-de-comando/2-cd.html)
+- [Ls](conteudos/linha-de-comando/3-ls.html)
+- [Touch](conteudos/linha-de-comando/4-touch.html)
+- [File](conteudos/linha-de-comando/5-file.html)
+- [Cat](conteudos/linha-de-comando/6-cat.html)
+- [Less](conteudos/linha-de-comando/7-less.html)
+- [History](conteudos/linha-de-comando/8-history.html)
+- [Cp](conteudos/linha-de-comando/9-cp.html)
+- [Mv](conteudos/linha-de-comando/10-mv.html)
+- [Mkdir](conteudos/linha-de-comando/11-mkdir.html)
+- [Rm](conteudos/linha-de-comando/12-rm.html)
+- [Man](conteudos/linha-de-comando/13-man.html)
+- [Find](conteudos/linha-de-comando/14-find.html)
+
+## Texto e filtros {#arte-do-texto}
+
+- [Stdout](conteudos/arte-do-texto/1-stdout.html)
+- [Stdin](conteudos/arte-do-texto/2-stdin.html)
+- [Stderr](conteudos/arte-do-texto/3-stderr.html)
+- [Pipe And Tee](conteudos/arte-do-texto/4-pipe_and_tee.html)
+- [Env](conteudos/arte-do-texto/5-env.html)
+- [Cut](conteudos/arte-do-texto/6-cut.html)
+- [Head](conteudos/arte-do-texto/7-head.html)
+- [Paste](conteudos/arte-do-texto/8-paste.html)
+- [Grep](conteudos/arte-do-texto/9-grep.html)
+- [Sort](conteudos/arte-do-texto/10-sort.html)
+- [Tail](conteudos/arte-do-texto/11-tail.html)
+- [Tr](conteudos/arte-do-texto/12-tr.html)
+- [Uniq](conteudos/arte-do-texto/13-uniq.html)
+- [Sed](conteudos/arte-do-texto/14-sed.html)
+- [Awk](conteudos/arte-do-texto/15-awk.html)
+
+## Usuários e grupos {#manipulacao-de-usuario}
+
+- [Usuario E Grupo](conteudos/manipulacao-de-usuario/1-%20Usuario%20e%20grupo.html)
+- [Root](conteudos/manipulacao-de-usuario/2-%20root.html)
+- [Arquivo Passwd](conteudos/manipulacao-de-usuario/3-%20Arquivo%20passwd.html)
+- [Arquivo Shadow](conteudos/manipulacao-de-usuario/4-%20Arquivo%20shadow.html)
+- [Arquivo Group](conteudos/manipulacao-de-usuario/5-%20Arquivo%20group.html)
+- [Gerenciamento De Usuários](conteudos/manipulacao-de-usuario/6-%20Gerenciamento%20de%20usu%C3%A1rios.html)
+
+## Processos {#processos}
+
+- [Comando Ps](conteudos/processos/1-%20Comando%20ps.html)
+- [Controlando O Terminal](conteudos/processos/2%20-%20Controlando%20o%20Terminal.html)
+- [Sobre Processos](conteudos/processos/3%20-%20Sobre%20processos.html)
+- [Criação De Processos](conteudos/processos/4%20-%20Cria%C3%A7%C3%A3o%20de%20processos.html)
+- [Finalização De Processos](conteudos/processos/5%20-%20Finaliza%C3%A7%C3%A3o%20de%20processos.html)
+- [Sinais No Linux](conteudos/processos/6%20-%20Sinais%20no%20Linux.html)
+- [Kill(Terminate)](conteudos/processos/7%20-%20kill%28Terminate%29.html)
+- [Niceness](conteudos/processos/8%20-%20niceness.html)
+- [Controle De Job](conteudos/processos/9%20-%20Controle%20de%20Job.html)
+- [Proc Filesystem](conteudos/processos/10%20-%20_proc%20filesystem.html)
+- [Status De Processos](conteudos/processos/11%20-%20Status%20de%20processos.html)
+
+## Pacotes {#pacotes}
+
+- [Distribuição De Programas](conteudos/pacotes/1%20-%20Distribui%C3%A7%C3%A3o%20de%20programas.html)
+- [Repositórios](conteudos/pacotes/2%20-%20Reposit%C3%B3rios.html)
+- [Arquivos Tar E Zip](conteudos/pacotes/3%20-%20Arquivos%20Tar%20e%20Zip.html)
+- [Dependência De Pacotes](conteudos/pacotes/4%20-%20Depend%C3%AAncia%20de%20pacotes.html)
+- [Rpm E Dpkg](conteudos/pacotes/5%20-%20RPM%20e%20dpkg.html)
+- [Yum E Apt](conteudos/pacotes/6%20-%20Yum%20e%20Apt.html)
+- [Compilando](conteudos/pacotes/7%20-%20Compilando.html)
+
+## Permissões {#permissoes}
+
+- [Permissões](conteudos/permissoes/1%20-%20Permiss%C3%B5es.html)
+- [Modificando Permissões](conteudos/permissoes/2%20-%20Modificando%20Permiss%C3%B5es.html)
+- [Alterando Proprietário](conteudos/permissoes/3%20-%20Alterando%20propriet%C3%A1rio.html)
+- [Umask](conteudos/permissoes/4%20-%20Umask.html)
+- [Setuid](conteudos/permissoes/5%20-%20Setuid.html)
+- [Setgid](conteudos/permissoes/6%20-%20Setgid.html)
+- [Processpermissions](conteudos/permissoes/7%20-%20ProcessPermissions.html)
+- [Sticky Bit](conteudos/permissoes/8%20-%20Sticky%20Bit.html)
+
+## Diagnóstico de rede {#troubleshooting}
+
+- [Icmp](conteudos/troubleshooting/1-ICMP.html)
+- [Ping](conteudos/troubleshooting/2-ping.html)
+- [Traceroute](conteudos/troubleshooting/3-traceroute.html)
+- [Netstat](conteudos/troubleshooting/4-netstat.html)
+- [Analise-De-Pacotes](conteudos/troubleshooting/5-Analise-de-pacotes.html)
+
+## Compartilhamento {#compartilhamento}
+
+- [Compartilhando-Arquivos](conteudos/compartilhamento/1-compartilhando-arquivos.html)
+- [Rsync](conteudos/compartilhamento/2-rsync.html)
+- [Simplehttpserver](conteudos/compartilhamento/3-SimpleHTTPServer.html)
+- [Nfs](conteudos/compartilhamento/4-NFS.html)
+- [Samba](conteudos/compartilhamento/5-Samba.html)
+
+## Configuração de rede {#configurar-rede}
+
+- [Interfaces-De-Rede](conteudos/configurar-rede/1-interfaces-de-rede.html)
+- [Route](conteudos/configurar-rede/2-route.html)
+- [Dhclient](conteudos/configurar-rede/3-dhclient.html)
+- [Networkmanager](conteudos/configurar-rede/4-NetworkManager.html)
+- [Arp](conteudos/configurar-rede/5-arp.html)
+- [Ssh](conteudos/configurar-rede/SSH.html)
+
+## Dispositivos {#devices}
+
+- [Diretorio-Dev](conteudos/devices/1-diretorio-dev.html)
+- [Tipos-De-Device](conteudos/devices/2-tipos-de-device.html)

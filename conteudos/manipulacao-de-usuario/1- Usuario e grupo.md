@@ -1,3 +1,12 @@
+---
+title: Usuários e grupos no Linux
+pagetitle: Usuários e grupos no Linux
+description: Usuários e grupos no Linux. Tutorial em português da trilha Usuários
+  e grupos do LinuxTecLab.
+categories:
+- Usuários e grupos
+---
+
 Em qualquer sistema operacional tradicional, existem usuários e grupos. Eles têm como único propósito gerenciar o acesso e as permissões. Quando um processo é executado, ele executará como proprietário do processo. O acesso a arquivos e a propriedade também são dependentes das permissões. Você não quer que outro usuário veja seus arquivos.
 
 Cada usuário tem seu próprio diretório home, onde seus arquivos específicos são armazenados. Esse diretório pode ser encontrado em `/home/usuario`, mas pode variar dependendo da distribuição e configuração.
@@ -20,3 +29,5 @@ Não vamos abordar permissões ainda, mas o que está acontecendo é que o arqui
 $ sudo cat /etc/shadow
 ```
 Agora você poderá ver o conteúdo do arquivo, caso esteja com permissões de execução do sudo, mas antes terá que usar sua senha!
+
+[Mais tutoriais de Usuários e grupos](../../temas.qmd#manipulacao-de-usuario)

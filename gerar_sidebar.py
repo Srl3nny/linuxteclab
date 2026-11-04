@@ -14,12 +14,13 @@ ORDEM_SECOES = [
     "permissoes",
     "troubleshooting",
     "compartilhamento",
-    "configurar-rede"
+    "configurar-rede",
+    "devices"
 ]
 
 # Função para formatar o nome da seção (troca "-" por espaço e capitaliza)
 def formatar_secao(nome):
-    return " ".join(p.capitalize() for p in nome.split("-"))
+    return {'linha-de-comando': 'Linha de comando', 'arte-do-texto': 'Texto e filtros', 'manipulacao-de-usuario': 'Usuários e grupos', 'processos': 'Processos', 'pacotes': 'Pacotes', 'permissoes': 'Permissões', 'troubleshooting': 'Diagnóstico de rede', 'compartilhamento': 'Compartilhamento', 'configurar-rede': 'Configuração de rede', 'devices': 'Dispositivos'}[nome]
 
 # Verifica se a pasta "conteudos" existe
 if not os.path.exists(PASTA_CONTEUDOS):
@@ -50,11 +51,11 @@ for pasta in pastas_encontradas:
                 nome_arquivo = re.sub(r'^\d+[-_ ]*', '', arquivo).replace('.qmd', '').replace('.md', '').title()
                 contents.append({
                     "href": href,
-                    "text": f"✅ {nome_arquivo}"
+                    "text": nome_arquivo.strip().replace("_", " ")
                 })
 
             conteudo_sidebar.append({
-                "section": f"📂 {formatar_secao(pasta)}",
+                "section": formatar_secao(pasta),
                 "contents": contents
             })
 
@@ -84,3 +85,18 @@ with open("_quarto.yml", "w", encoding="utf-8") as f:
     yaml.dump(quarto_config, f, allow_unicode=True, default_flow_style=False)
 
 print("✅ Sidebar gerada corretamente na ordem definida em ORDEM_SECOES!")
+
+from pathlib import Path
+from urllib.parse import quote
+
+indice = ["---", 'title: "Trilhas de Linux"', 'description: "Índice de tutoriais por assunto, do primeiro comando à administração de redes Linux."', "---", "", "Escolha um assunto para consultar suas aulas.", ""]
+for secao in conteudo_sidebar:
+    slug = Path(secao["contents"][0]["href"]).parent.name
+    indice.append(f'- [{secao["section"]}](#{slug})')
+for secao in conteudo_sidebar:
+    slug = Path(secao["contents"][0]["href"]).parent.name
+    indice.extend(["", f'## {secao["section"]} {{#{slug}}}', ""])
+    for item in secao["contents"]:
+        url = quote(str(Path(item["href"]).with_suffix(".html")))
+        indice.append(f'- [{item["text"]}]({url})')
+Path("temas.qmd").write_text("\n".join(indice) + "\n", encoding="utf-8")

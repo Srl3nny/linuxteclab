@@ -1,3 +1,12 @@
+---
+title: Gerenciar pacotes com yum e apt
+pagetitle: Gerenciar pacotes com yum e apt
+description: Gerenciar pacotes com yum e apt. Tutorial em português da trilha Pacotes
+  do LinuxTecLab.
+categories:
+- Pacotes
+---
+
 ## Gerenciamento de Pacotes: Yum e Apt
 
 Esses sistemas acompanham todos os recursos necessários para tornar a instalação, remoção e alteração de pacotes mais fáceis, incluindo a instalação de dependências de pacote. Dois dos gerenciadores de pacotes mais populares são o dnf e o apt. O dnf é exclusivo da família Red Hat, enquanto o apt é exclusivo da família Debian.
@@ -37,3 +46,5 @@ Exemplo: Remover o pacote `git` no RPM:
 `$ sudo dnf remove git`
 
 Nota: é importante verificar se o repositório é confiável antes de realizar as atualizações.
+
+[Mais tutoriais de Pacotes](../../temas.qmd#pacotes)

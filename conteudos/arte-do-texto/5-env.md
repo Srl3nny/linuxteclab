@@ -1,6 +1,11 @@
 ---
-title: "env Linux"
-youtube:
+title: env Linux
+youtube: null
+pagetitle: env · consultar variáveis de ambiente
+description: env · consultar variáveis de ambiente. Tutorial em português da trilha
+  Texto e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
 
 Execute o seguinte comando, mas digite a variável como em letras maiúsculas:
@@ -43,3 +48,5 @@ $ echo $PATH
 ```
 
 Isso retorna uma lista de caminhos separados por dois pontos que seu sistema pesquisa quando procura um comando. Digamos que você baixe e instale manualmente um pacote da Internet e o coloque em um diretório não padrão e queira executar esse comando, o sistema irá reclamar de comando não encontrado. Mas você está olhando o binário em uma pasta e sabe que ele existe. O que está acontecendo é que a variável $PATH não verifica esse diretório onde este o binário, então está gerando um erro. Digamos que você tenha vários binários que deseja executar nesse diretório. Você pode simplesmente modificar a variável PATH para incluir esse diretório em sua variável de ambiente PATH.
+
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)
