@@ -1,3 +1,12 @@
+---
+title: rsync · sincronizar arquivos
+pagetitle: rsync · sincronizar arquivos
+description: rsync · sincronizar arquivos. Tutorial em português da trilha Compartilhamento
+  do LinuxTecLab.
+categories:
+- Compartilhamento
+---
+
 **Rsync: um Poderoso Ferramenta de Sincronização de Arquivos**
 =============================================
 
@@ -27,3 +36,5 @@ Além disso, o rsync verifica a integridade dos arquivos que está copiando com 
 -----------------------------------------------------------
 
 `$ rsync bruno@192.168.15.100/remoto/dir /local/dir`
+
+[Mais tutoriais de Compartilhamento](../../temas.qmd#compartilhamento)

@@ -1,3 +1,12 @@
+---
+title: Compilar programas a partir do código
+pagetitle: Compilar programas a partir do código
+description: Compilar programas a partir do código. Tutorial em português da trilha
+  Pacotes do LinuxTecLab.
+categories:
+- Pacotes
+---
+
 **Instalando um pacote em forma de código-fonte**
 
 Muitas vezes, você encontrará um pacote obscuro que apenas vem em forma de código-fonte puro. Nesse caso, você precisará usar alguns comandos para converter esse código-fonte em pacote compilável e instalável em seu sistema.
@@ -75,3 +84,5 @@ $ sudo checkinstall
 ```
 
 Esse comando executará o comando `make install` e construirá um arquivo `.deb` e o instalará. Isso torna mais fácil remover o pacote mais tarde.
+
+[Mais tutoriais de Pacotes](../../temas.qmd#pacotes)

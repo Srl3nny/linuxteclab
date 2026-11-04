@@ -1,3 +1,12 @@
+---
+title: ping · testar conectividade
+pagetitle: ping · testar conectividade
+description: ping · testar conectividade. Tutorial em português da trilha Diagnóstico
+  de rede do LinuxTecLab.
+categories:
+- Diagnóstico de rede
+---
+
 **Compreendendo o Ping**
 =====================================================
 
@@ -36,3 +45,5 @@ O campo TTL (Time To Live) é usado como um contador de hops, ao fazer hops, o c
 O tempo de volta é calculado do momento em que você envia o pacote de solicitação de eco até que receba a resposta de eco.
 
 Espero que isso tenha ajudado a iluminar o funcionamento do ping!
+
+[Mais tutoriais de Diagnóstico de rede](../../temas.qmd#troubleshooting)

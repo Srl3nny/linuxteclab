@@ -1,8 +1,12 @@
 ---
-title: "stderr (standard error)"
-youtube: "https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO"
+title: stderr (standard error)
+youtube: https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO
+pagetitle: stderr · separar mensagens de erro
+description: stderr · separar mensagens de erro. Tutorial em português da trilha Texto
+  e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
-
 
 Vamos tentar algo um pouco diferente agora, vamos tentar listar o conteúdo de um diretório que não existe no seu sistema e redirecionar a saída para o arquivo arq.txt novamente.
 
@@ -51,3 +55,4 @@ $ ls /tmp/naoexiste 2> /dev/null
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

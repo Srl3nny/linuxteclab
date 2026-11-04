@@ -1,3 +1,12 @@
+---
+title: ICMP e mensagens de controle
+pagetitle: ICMP e mensagens de controle
+description: ICMP e mensagens de controle. Tutorial em português da trilha Diagnóstico
+  de rede do LinuxTecLab.
+categories:
+- Diagnóstico de rede
+---
+
 **Protocolo de Controle de Mensagens da Internet (ICMP)**
 =====================================================
 
@@ -25,3 +34,5 @@ Vamos explorar alguns dos tipos de mensagens ICMP mais comuns:
 * **Código 1 - Host inalcançável**: o host não consegue ser alcançado.
 
 Essas mensagens terão sentido quando utilizarmos ferramentas de depuração de rede. O ICMP é essencial para a operação saudável da internet, oferecendo uma forma leve e direta de comunicação sobre problemas na entrega de pacotes IP. Embora não envie dados de usuário, é vital para monitoramento, diagnóstico e controle da rede.
+
+[Mais tutoriais de Diagnóstico de rede](../../temas.qmd#troubleshooting)

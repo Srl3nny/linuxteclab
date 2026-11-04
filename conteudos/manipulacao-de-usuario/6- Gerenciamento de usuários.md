@@ -1,3 +1,12 @@
+---
+title: Gerenciamento de contas de usuários
+pagetitle: Gerenciamento de contas de usuários
+description: Gerenciamento de contas de usuários. Tutorial em português da trilha
+  Usuários e grupos do LinuxTecLab.
+categories:
+- Usuários e grupos
+---
+
 Muitas infraestruturas empresariais utilizam sistemas de gerenciamento para gerenciar usuários, contas e senhas. No entanto, em um computador local, há comandos úteis para gerenciar usuários.
 
 # Adicionar Usuários
@@ -31,3 +40,5 @@ $ `passwd bob`
 Isso permitirá que você altere a senha do próprio usuário ou de outro usuário (se você for root).
 
 **Nota:** É recomendável usar o comando `adduser` em vez de `useradd`, pois o primeiro é mais fácil de usar e apresenta recursos mais avançados.
+
+[Mais tutoriais de Usuários e grupos](../../temas.qmd#manipulacao-de-usuario)

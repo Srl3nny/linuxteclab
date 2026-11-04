@@ -1,3 +1,11 @@
+---
+title: O diretório /dev no Linux
+description: O diretório /dev no Linux. Entenda como o kernel apresenta os dispositivos
+  ao sistema.
+categories:
+- Dispositivos
+---
+
 ::: markdown
 
 Quando você conecta um dispositivo a sua máquina, geralmente é necessário um driver de dispositivo para funcionar corretamente. Pode interagir com os drivers de dispositivo através de arquivos de dispositivo ou nós de dispositivo, que são arquivos especiais que se parecem com arquivos regulares. Como esses arquivos de dispositivo são apenas como arquivos regulares, pode usar programas como `ls`, `cat`, etc. para interagir com eles. Esses arquivos de dispositivo são geralmente armazenados na diretório `/dev`. Vá em frente e execute o comando `ls /dev` no seu sistema, verá uma grande quantidade de arquivos de dispositivo que estão no seu sistema.
@@ -14,3 +22,5 @@ verá arquivos como `/dev/null`, que é um dispositivo especial que descarta qua
 :::
 
 Reforcei a tradução para que seja mais fluida e natural, acrescentei parênteses para esclarecer conceitos e usei exemplos para tornar o texto mais claro. Além disso, adicionei um código de block para incluir os exemplos de comando no texto.
+
+[Mais tutoriais de Dispositivos](../../temas.qmd#devices)

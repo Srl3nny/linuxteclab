@@ -1,5 +1,11 @@
 ---
-Title: "find"
+Title: find
+title: find · localizar arquivos
+pagetitle: find · localizar arquivos
+description: find · localizar arquivos. Tutorial em português da trilha Linha de comando
+  do LinuxTecLab.
+categories:
+- Linha de comando
 ---
 
 Com todos esses arquivos que temos no sistema pode ser um pouco desafiador tentar encontrar um arquivo específico. Para isso podemos usar o find.
@@ -21,3 +27,5 @@ Junto ao -type a opção d se refere a diretório, a opção f se refere a um ar
 Uma coisa legal a se notar é que find não para no diretório que você está pesquisando, ele também procurará dentro de quaisquer subdiretórios que esse diretório possa ter.
 
 E caso você queira que a pesquisa seja case insensitive, use -iname.
+
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

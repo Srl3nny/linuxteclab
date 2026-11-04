@@ -1,3 +1,11 @@
+---
+title: Tipos de dispositivos no Linux
+description: Tipos de dispositivos no Linux. Entenda como o kernel apresenta os dispositivos
+  ao sistema.
+categories:
+- Dispositivos
+---
+
 **Gerenciamento de Dispositivos**
 ======================================================
 
@@ -61,3 +69,5 @@ Você pode verificar essas informações em arquivos como [arquivo.txt](arquivo.
 ----------------
 
 Você também pode encontrar exemplos de dispositivos em times de futebol, como [Barcelona.txt](Barcelona.txt) ou [Juventus.txt](Juventus.txt), que contém informações sobre a estrutura de times de futebol, incluindo os jogadores e as estatísticas.
+
+[Mais tutoriais de Dispositivos](../../temas.qmd#devices)

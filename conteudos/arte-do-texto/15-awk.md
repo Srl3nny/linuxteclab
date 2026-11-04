@@ -1,3 +1,12 @@
+---
+title: awk · processar campos de texto
+pagetitle: awk · processar campos de texto
+description: awk · processar campos de texto. Tutorial em português da trilha Texto
+  e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
+---
+
 # awk — Processamento de Texto Orientado a Dados
 
 ## 📌 O que é o awk
@@ -70,4 +79,6 @@ S5;23.8;48
 ```
 ```bash
 awk -F ';' '{print $1,$3}' awk.txt
-``` 
+```
+
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

@@ -1,3 +1,12 @@
+---
+title: kill · enviar sinais a processos
+pagetitle: kill · enviar sinais a processos
+description: kill · enviar sinais a processos. Tutorial em português da trilha Processos
+  do LinuxTecLab.
+categories:
+- Processos
+---
+
 # Sinalização e Processos
 
 Você pode enviar sinais que terminam processos, por exemplo, o comando `kill`. Veja como funciona:
@@ -25,3 +34,5 @@ Esses sinais podem parecer muito semelhantes, mas tem suas diferenças.
 **SIGKILL**: Mata o processo! Não há nenhuma limpeza ou arranjo.
 
 **SIGSTOP**: Pare/suspende um processo.
+
+[Mais tutoriais de Processos](../../temas.qmd#processos)

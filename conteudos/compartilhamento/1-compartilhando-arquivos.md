@@ -1,3 +1,12 @@
+---
+title: Como compartilhar arquivos entre máquinas
+pagetitle: Como compartilhar arquivos entre máquinas
+description: Como compartilhar arquivos entre máquinas. Tutorial em português da trilha
+  Compartilhamento do LinuxTecLab.
+categories:
+- Compartilhamento
+---
+
 **Transferencia de dados entre máquinas na rede**
 ==============================================
 
@@ -32,3 +41,5 @@ Copiar um diretório da máquina local para uma máquina remota:
 ```bash
 $ scp -r /home/bruno bruno@192.168.15.100:/remote/directory
 ```
+
+[Mais tutoriais de Compartilhamento](../../temas.qmd#compartilhamento)

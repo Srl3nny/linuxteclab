@@ -1,3 +1,12 @@
+---
+title: Root e privilégios de administração
+pagetitle: Root e privilégios de administração
+description: Root e privilégios de administração. Tutorial em português da trilha
+  Usuários e grupos do LinuxTecLab.
+categories:
+- Usuários e grupos
+---
+
 Já aprendemos como obter acesso como superusuário usando o comando `sudo`. Outra forma de obter esse acesso é com o comando `su`. Este comando substitui usuários e abre uma shell raiz se não houver usuário especificado. Você pode usá-lo para substituir qualquer usuário desde que saiba a senha.
 
 ```bash
@@ -23,3 +32,5 @@ O comando `visudo` é o executor de edição do arquivo `/etc/sudoers`. Ele abre
 - `sudo -l`: Mostra a lista de comandos que você como superusuário pode executar.
 - `visudo`: Abre o arquivo `/etc/sudoers` em modo de edição segura.
 - `sudo nano /etc/sudoers`: Abre o arquivo `/etc/sudoers` para editar com o nano.
+
+[Mais tutoriais de Usuários e grupos](../../temas.qmd#manipulacao-de-usuario)

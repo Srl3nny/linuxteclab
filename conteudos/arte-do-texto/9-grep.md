@@ -1,6 +1,11 @@
 ---
-title: "Comando Grep"
-youtube:
+title: Comando Grep
+youtube: null
+pagetitle: grep · procurar padrões em arquivos
+description: grep · procurar padrões em arquivos. Tutorial em português da trilha
+  Texto e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
 
 # O comando grep: o seu melhor amigo no tratamento de texto
@@ -42,3 +47,5 @@ $ ls /diretório | grep -E '.txt$'
 ```
 
 Isso deve retornar todos os arquivos que terminam com “.txt” no diretório especificado!
+
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

@@ -1,9 +1,12 @@
 ---
-title: "head"
-youtube: ""
+title: head
+youtube: ''
+pagetitle: head · ler as primeiras linhas
+description: head · ler as primeiras linhas. Tutorial em português da trilha Texto
+  e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
-
-
 
 Vamos imaginar que temos um arquivo muito extenso; na verdade, temos muitos arquivos longos para escolher.
 
@@ -33,3 +36,4 @@ Aqui, a flag `-n` indica o número de linhas que você deseja visualizar.
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

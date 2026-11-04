@@ -1,6 +1,11 @@
 ---
-title: "cp"
-youtube: "https://youtu.be/7Zl1yXe-MB8?si=fb5BDL2H0AK6XXEv"
+title: cp
+youtube: https://youtu.be/7Zl1yXe-MB8?si=fb5BDL2H0AK6XXEv
+pagetitle: cp · copiar arquivos e diretórios
+description: cp · copiar arquivos e diretórios. Tutorial em português da trilha Linha
+  de comando do LinuxTecLab.
+categories:
+- Linha de comando
 ---
 
 Assim como copiar e colar arquivos em outros sistemas operacionais, o shell nos oferece uma maneira ainda mais simples de fazer isso, e nem precisamos do mouse para isso.
@@ -34,3 +39,4 @@ $ cp -i meuarquivo /home/bruno/
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

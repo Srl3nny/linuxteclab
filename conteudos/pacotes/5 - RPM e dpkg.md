@@ -1,3 +1,11 @@
+---
+title: Pacotes com rpm e dpkg
+pagetitle: Pacotes com rpm e dpkg
+description: Pacotes com rpm e dpkg. Tutorial em português da trilha Pacotes do LinuxTecLab.
+categories:
+- Pacotes
+---
+
 # rpm e dpkg
 
 Pense assim, o .exe é um arquivo executável único, assim como .deb e .rpm. Você provavelmente não verá esses arquivos se usar repositórios de pacotes, mas se baixar pacotes diretamente, provavelmente terá que lidar com esses formatos. É claro que eles são exclusivos às suas distribuições, .deb para Debian-based e .rpm para Red Hat-based.
@@ -51,3 +59,5 @@ $ rpm -qa
 ```
 
 `-q` significa query (consulta) e `a` significa all (todos).
+
+[Mais tutoriais de Pacotes](../../temas.qmd#pacotes)

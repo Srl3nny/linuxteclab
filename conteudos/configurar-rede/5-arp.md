@@ -1,3 +1,12 @@
+---
+title: ARP e resolução de endereços
+pagetitle: ARP e resolução de endereços
+description: ARP e resolução de endereços. Tutorial em português da trilha Configuração
+  de rede do LinuxTecLab.
+categories:
+- Configuração de rede
+---
+
 **Como o ARP cache funciona**
 
 Lembre-se de quando procuramos uma endereço MAC com ARP? Primeiramente, o sistema verifica o cache ARP localmente armazenado no nosso sistema. Você pode visualizar esse cache execute o comando `arp`:
@@ -25,3 +34,5 @@ $ ip neighbour show
 Notícias adicionais
 
 **Arp Cache** é uma área de armazenamento na memória RAM que armazena as correspondências entre os endereços IP e as respectivas mídias [1] (Mac Address). Essa cache é populada automaticamente quando um pacote é enviado para um host que não está presente na cache.
+
+[Mais tutoriais de Configuração de rede](../../temas.qmd#configurar-rede)

@@ -1,6 +1,11 @@
 ---
-title: "Comando sort"
-youtube:
+title: Comando sort
+youtube: null
+pagetitle: sort · ordenar linhas
+description: sort · ordenar linhas. Tutorial em português da trilha Texto e filtros
+  do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
 
 # Ordenação de Textos com o Comando `sort`
@@ -42,3 +47,4 @@ $ sort -r arq.txt
 ```
 Agora, a ordenação é feita em ordem inversa, portanto, os termos aparecem na ordem oposta.
 
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

@@ -1,3 +1,12 @@
+---
+title: Compartilhamento de arquivos com Samba
+pagetitle: Compartilhamento de arquivos com Samba
+description: Compartilhamento de arquivos com Samba. Tutorial em português da trilha
+  Compartilhamento do LinuxTecLab.
+categories:
+- Compartilhamento
+---
+
 **Compartilhando arquivos entre Windows e Linux com Samba**
 ==============================================
 
@@ -61,3 +70,5 @@ Em vez de transferir arquivos um a um, você pode simplesmente montar o comparti
 $ sudo apt install cifs-utils
 $ sudo mount -t cifs //IP_do_servidor/Compartilhado /mnt/samba -o username=nome_do_usuario
 ```
+
+[Mais tutoriais de Compartilhamento](../../temas.qmd#compartilhamento)

@@ -1,3 +1,12 @@
+---
+title: Como funciona o bit setgid
+pagetitle: Como funciona o bit setgid
+description: Como funciona o bit setgid. Tutorial em português da trilha Permissões
+  do LinuxTecLab.
+categories:
+- Permissões
+---
+
 Similarmente ao bit de permissão “Set User ID”, há um bit de permissão “Set Group ID” (SGID). Este bit permite que um programa execute como se fosse um membro do grupo correspondente.  
 Vamos verificar um exemplo:
 
@@ -18,3 +27,5 @@ $ sudo chmod 2555 exemplo.txt
 A representação numérica para SGID é 2.
 
 &nbsp;
+
+[Mais tutoriais de Permissões](../../temas.qmd#permissoes)

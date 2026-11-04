@@ -1,8 +1,12 @@
 ---
-title: "stdout (standard out)"
-youtube: "https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO"
+title: stdout (standard out)
+youtube: https://youtu.be/lOMrxK7q4yA?si=xf6UxgGEucrF2kPO
+pagetitle: stdout · entender a saída padrão
+description: stdout · entender a saída padrão. Tutorial em português da trilha Texto
+  e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
-
 
 Um assunto bem interessante no mundo do terminal são os fluxos de E/S (entrada/saída). Veja o comando abaixo.
 
@@ -38,3 +42,4 @@ $ echo Hello World >> saida.txt
 
 {{< video-youtube >}}
 
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

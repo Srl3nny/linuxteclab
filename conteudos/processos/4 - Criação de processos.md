@@ -1,3 +1,12 @@
+---
+title: Como são criados os processos
+pagetitle: Como são criados os processos
+description: Como são criados os processos. Tutorial em português da trilha Processos
+  do LinuxTecLab.
+categories:
+- Processos
+---
+
 Nesse próximo passo, vamos explorar a criação de processos em profundidade. O conteúdo destas lições e da próxima são meramente informativos, para que você possa entender como as coisas funcionam por baixo dos panos. É livre para voltar a este material mais tarde, após trabalhar com processos por um determinado tempo.
 
 **Criando Processos**
@@ -17,4 +26,6 @@ A opção l fornece uma "visão longa" ou mais detalhada dos processos em execu�
 # A "Mãe" de todos os Processos
 
 Se todos os processos têm que ter um pai e são apenas cópias um do outro, haverá uma "mãe" de todos os processos, certo? Sim, você está correto.
-Quando o sistema inicializa, o kernel cria um processo chamado init, que tem um PID de 1. O processo init não pode ser interrompido a menos que o sistema feche. Ele é executado com privilégios de root e executa muitos processos que mantém o sistema em execução. 
+Quando o sistema inicializa, o kernel cria um processo chamado init, que tem um PID de 1. O processo init não pode ser interrompido a menos que o sistema feche. Ele é executado com privilégios de root e executa muitos processos que mantém o sistema em execução.
+
+[Mais tutoriais de Processos](../../temas.qmd#processos)

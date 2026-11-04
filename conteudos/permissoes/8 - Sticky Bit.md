@@ -1,3 +1,12 @@
+---
+title: Sticky bit em diretórios compartilhados
+pagetitle: Sticky bit em diretórios compartilhados
+description: Sticky bit em diretórios compartilhados. Tutorial em português da trilha
+  Permissões do LinuxTecLab.
+categories:
+- Permissões
+---
+
 # **O bit de permissão stick: um recurso útil para diretórios compartilhados**
 
 Um último bit de permissão especial: o bit stick. Quando um bit stick é configurado em um arquivo ou diretório, isso significa que apenas o proprietário do arquivo ou o usuário raiz podem excluí-lo ou modificá-lo. Isso é muito útil em diretórios compartilhados. Veja o exemplo abaixo:
@@ -23,3 +32,5 @@ A representação numérica para o bit stick é `1`.
 ```
 Nota que o bit stick é frequentemente utilizado em diretórios temporários (como `/tmp`), pois permite que vários usuários criem e lerem arquivos nele, mas impede que um usuário exclua o diretório todo da forma que deseja.
 ```
+
+[Mais tutoriais de Permissões](../../temas.qmd#permissoes)

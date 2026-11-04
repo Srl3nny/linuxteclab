@@ -1,6 +1,11 @@
 ---
-title: "Comando Tail"
-youtube:
+title: Comando Tail
+youtube: null
+pagetitle: tail · ler o fim de um arquivo
+description: tail · ler o fim de um arquivo. Tutorial em português da trilha Texto
+  e filtros do LinuxTecLab.
+categories:
+- Texto e filtros
 ---
 
 # Comandos úteis para visualizar arquivos: tail e head
@@ -30,3 +35,5 @@ $ tail -f /var/log/syslog
 ```
 
 Enquanto você interage com seu sistema, o arquivo `syslog` estará constantemente mudando. Com `tail -f`, você pode acompanhar tudo o que é adicionado a esse arquivo.
+
+[Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

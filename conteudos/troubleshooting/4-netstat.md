@@ -1,3 +1,12 @@
+---
+title: netstat · consultar conexões de rede
+pagetitle: netstat · consultar conexões de rede
+description: netstat · consultar conexões de rede. Tutorial em português da trilha
+  Diagnóstico de rede do LinuxTecLab.
+categories:
+- Diagnóstico de rede
+---
+
 **Portas conhecidas Utilizadas**
  Nós vamos falar sobre transmissão de dados através de portas no nosso computador, vamos explorar algumas portas conhecidas utilizadas. Você pode obter uma lista de portas conhecidas procurando o arquivo `/etc/services`:
 
@@ -67,3 +76,5 @@ Consulte a página de manual para obter uma lista de estados de socket, mas aqui
 * ESTABLISHED: O socket tem uma conexão estabelecida.
 * CLOSE_WAIT: O host remoto fechou e estamos aguardando o socket fechar.
 * TIME_WAIT: O socket está esperando após o fechamento para lidar com pacotes ainda presentes na rede.
+
+[Mais tutoriais de Diagnóstico de rede](../../temas.qmd#troubleshooting)
