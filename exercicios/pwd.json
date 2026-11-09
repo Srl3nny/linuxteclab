@@ -1,0 +1,18 @@
+{
+  "id": "pwd-v1",
+  "title": "Missão 01 · Onde estou?",
+  "prompt": "Você acabou de abrir um terminal. Digite o comando que mostra o caminho completo do diretório atual.",
+  "directory": "/home/aluno",
+  "answers": ["pwd", "pwd -L", "pwd -P"],
+  "hints": [
+    "O comando tem três letras e significa print working directory.",
+    "As iniciais de print working directory formam o comando."
+  ],
+  "feedback": {
+    "ls": "ls lista arquivos e diretórios. Precisamos mostrar o caminho do diretório atual.",
+    "cd": "cd muda o diretório atual. Precisamos apenas consultar onde estamos.",
+    "whoami": "whoami mostra o nome do usuário. Aqui queremos descobrir o diretório.",
+    "echo": "Para esta missão, use o comando específico para consultar o diretório."
+  },
+  "success": "Correto! pwd mostra o caminho completo do diretório atual."
+}

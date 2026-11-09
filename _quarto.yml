@@ -13,6 +13,8 @@ project:
   resources:
   - CNAME
   - robots.txt
+  - assets/exercicios/
+  - exercicios/
   type: website
 website:
   description: Tutoriais práticos de Linux em português por Bruno Caires.

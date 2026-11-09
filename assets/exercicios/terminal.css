@@ -1,0 +1,15 @@
+.exercise-terminal{margin:2rem 0;padding:1.25rem;background:#10191d;border:1px solid #527b69;border-radius:8px;color:#e1ebe6}
+.exercise-terminal .exercise-title{margin-top:0;color:#83e8b0;font-size:1.2rem}
+.exercise-terminal .exercise-note{font-size:.85rem;color:#b9c9c2}
+.exercise-history{max-height:14rem;overflow-y:auto;font-family:ui-monospace,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+.exercise-history p{margin:.25rem 0}
+.exercise-terminal label{display:block;font-family:ui-monospace,Consolas,monospace;margin-bottom:.4rem}
+.exercise-input-row{display:flex;gap:.5rem}
+.exercise-terminal input{min-width:0;flex:1;background:#17252a;color:#fff;border:1px solid #77958a;border-radius:4px;padding:.6rem;font-family:ui-monospace,Consolas,monospace}
+.exercise-terminal button{border:1px solid #83e8b0;border-radius:4px;padding:.5rem .8rem;background:#17252a;color:#83e8b0}
+.exercise-terminal button[type=submit]{background:#83e8b0;color:#102016;font-weight:bold}
+.exercise-terminal button:disabled{opacity:.5}
+.exercise-terminal :is(input,button):focus-visible{outline:3px solid #d9ffe9;outline-offset:3px}
+.exercise-status{min-height:3rem;margin:1rem 0;color:#e1ebe6}
+.exercise-actions{display:flex;flex-wrap:wrap;gap:.5rem}
+@media(max-width:420px){.exercise-input-row{flex-direction:column}.exercise-terminal{padding:1rem}}
