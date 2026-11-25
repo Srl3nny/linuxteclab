@@ -1,0 +1,35 @@
+{
+  "id": "ls-v1",
+  "command": "ls",
+  "title": "Missão 02 · O que há nesta pasta?",
+  "prompt": "Digite o comando que lista os arquivos e diretórios da pasta atual.",
+  "directory": "Documentos  Downloads  notas.txt",
+  "answers": [
+    "ls",
+    "ls .",
+    "ls -l",
+    "ls -l .",
+    "ls -a",
+    "ls -a .",
+    "ls -la",
+    "ls -al",
+    "ls -l -a",
+    "ls -a -l",
+    "ls -la .",
+    "ls -al .",
+    "ls -l -a .",
+    "ls -a -l ."
+  ],
+  "hints": [
+    "O comando tem duas letras e vem da palavra list.",
+    "Use ls para listar o conteúdo da pasta atual."
+  ],
+  "feedback": {
+    "pwd": "pwd mostra o caminho do diretório atual. Queremos listar os arquivos e diretórios que estão nele.",
+    "cd": "cd muda de diretório. Aqui basta listar o conteúdo da pasta atual.",
+    "cat": "cat lê o conteúdo de arquivos. Queremos descobrir quais arquivos existem.",
+    "mkdir": "mkdir cria diretórios. Queremos apenas consultar os que já existem."
+  },
+  "syntaxFeedback": "Você encontrou ls. Para esta missão, tente ls ou ls . para listar a pasta atual.",
+  "success": "Correto! ls lista arquivos e diretórios. A saída abaixo é ilustrativa e não reproduz as opções digitadas."
+}
