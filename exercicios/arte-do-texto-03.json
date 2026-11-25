@@ -1,0 +1,20 @@
+{
+  "id": "arte-do-texto-03-v1",
+  "command": "ls",
+  "title": "Desafio · stderr",
+  "prompt": "Use ls para consultar /naoexiste e redirecione apenas os erros para erros.txt.",
+  "directory": "",
+  "answers": [
+    "ls /naoexiste 2> erros.txt"
+  ],
+  "hints": [
+    "stderr usa o descritor 2.",
+    "Uma resposta possível é ls /naoexiste 2> erros.txt."
+  ],
+  "success": "Correto! 2> redireciona stderr; stdout permanece separado.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. stderr usa o descritor 2.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

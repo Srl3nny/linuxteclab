@@ -1,0 +1,20 @@
+{
+  "id": "manipulacao-de-usuario-03-v1",
+  "command": "UID",
+  "title": "Desafio · Arquivo passwd",
+  "prompt": "Em aluno:x:1001:1002:Aluno:/home/aluno:/bin/bash, qual é o UID? Digite apenas o número.",
+  "directory": "",
+  "answers": [
+    "1001"
+  ],
+  "hints": [
+    "O UID é o terceiro campo, separado por dois pontos.",
+    "Uma resposta possível é 1001."
+  ],
+  "success": "Correto! 1001 é o UID e 1002 é o GID.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. O UID é o terceiro campo, separado por dois pontos.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

@@ -1,0 +1,20 @@
+{
+  "id": "permissoes-03-v1",
+  "command": "sudo",
+  "title": "Desafio · Alterando proprietário",
+  "prompt": "Use sudo e chown para definir aluno como proprietário e laboratorio como grupo de dados.txt.",
+  "directory": "",
+  "answers": [
+    "sudo chown aluno:laboratorio dados.txt"
+  ],
+  "hints": [
+    "Separe proprietário e grupo por dois pontos.",
+    "Uma resposta possível é sudo chown aluno:laboratorio dados.txt."
+  ],
+  "success": "Correto! chown usuário:grupo ajusta ambos.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Separe proprietário e grupo por dois pontos.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

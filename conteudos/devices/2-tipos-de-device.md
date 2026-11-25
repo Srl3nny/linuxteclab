@@ -70,4 +70,31 @@ Você pode verificar essas informações em arquivos como [arquivo.txt](arquivo.
 
 Você também pode encontrar exemplos de dispositivos em times de futebol, como [Barcelona.txt](Barcelona.txt) ou [Juventus.txt](Juventus.txt), que contém informações sobre a estrutura de times de futebol, incluindo os jogadores e as estatísticas.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/devices-02.json" aria-labelledby="devices-02-exercise-title">
+  <h3 class="exercise-title" id="devices-02-exercise-title">Desafio · tipos-de-device</h3>
+  <p class="exercise-prompt">Na saída ls -l /dev, qual letra inicial identifica um dispositivo de bloco?</p>
+  <p class="exercise-note">Questão de interpretação. Digite a resposta no campo abaixo. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="devices-02-exercise-input">Sua resposta</label>
+    <div class="exercise-input-row">
+      <input id="devices-02-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite sua resposta" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é b.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Dispositivos](../../temas.qmd#devices)

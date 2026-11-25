@@ -77,4 +77,31 @@ Consulte a página de manual para obter uma lista de estados de socket, mas aqui
 * CLOSE_WAIT: O host remoto fechou e estamos aguardando o socket fechar.
 * TIME_WAIT: O socket está esperando após o fechamento para lidar com pacotes ainda presentes na rede.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/troubleshooting-04.json" aria-labelledby="troubleshooting-04-exercise-title">
+  <h3 class="exercise-title" id="troubleshooting-04-exercise-title">Desafio · netstat</h3>
+  <p class="exercise-prompt">Use netstat para listar sockets TCP em escuta com endereços numéricos.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="troubleshooting-04-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="troubleshooting-04-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é netstat -lnt.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Diagnóstico de rede](../../temas.qmd#troubleshooting)

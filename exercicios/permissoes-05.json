@@ -1,0 +1,21 @@
+{
+  "id": "permissoes-05-v1",
+  "command": "setuid",
+  "title": "Desafio · Setuid",
+  "prompt": "Em -rwsr-xr-x, qual bit especial é indicado pelo s na posição de execução do proprietário?",
+  "directory": "",
+  "answers": [
+    "setuid",
+    "suid"
+  ],
+  "hints": [
+    "É o bit Set User ID.",
+    "Uma resposta possível é setuid."
+  ],
+  "success": "Correto! Em executáveis compatíveis, setuid permite execução com o EUID do proprietário.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. É o bit Set User ID.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

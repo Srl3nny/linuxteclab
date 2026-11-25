@@ -1,0 +1,20 @@
+{
+  "id": "compartilhamento-04-v1",
+  "command": "sudo",
+  "title": "Desafio · NFS",
+  "prompt": "No cenário fictício, /mnt/dados já existe. Use sudo e mount para montar o compartilhamento NFS 192.0.2.10:/export/dados nesse caminho.",
+  "directory": "",
+  "answers": [
+    "sudo mount -t nfs 192.0.2.10:/export/dados /mnt/dados"
+  ],
+  "hints": [
+    "Use mount -t nfs origem destino.",
+    "Uma resposta possível é sudo mount -t nfs 192.0.2.10:/export/dados /mnt/dados."
+  ],
+  "success": "Correto! A origem NFS combina servidor e diretório exportado.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use mount -t nfs origem destino.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

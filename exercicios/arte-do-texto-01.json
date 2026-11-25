@@ -1,0 +1,22 @@
+{
+  "id": "arte-do-texto-01-v1",
+  "command": "echo",
+  "title": "Desafio · stdout",
+  "prompt": "Use echo para escrever Linux na saída padrão e redirecioná-la para saida.txt, substituindo o conteúdo anterior.",
+  "directory": "",
+  "answers": [
+    "echo Linux > saida.txt",
+    "echo \"Linux\" > saida.txt",
+    "echo 'Linux' > saida.txt"
+  ],
+  "hints": [
+    "Use > para redirecionar a saída padrão.",
+    "Uma resposta possível é echo Linux > saida.txt."
+  ],
+  "success": "Correto! > envia stdout para o arquivo e substitui o conteúdo anterior.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use > para redirecionar a saída padrão.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

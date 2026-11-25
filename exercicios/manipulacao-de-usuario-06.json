@@ -1,0 +1,21 @@
+{
+  "id": "manipulacao-de-usuario-06-v1",
+  "command": "sudo",
+  "title": "Desafio · Gerenciamento de usuários",
+  "prompt": "No cenário fictício, use sudo e useradd para criar a conta aluno2 com diretório pessoal.",
+  "directory": "",
+  "answers": [
+    "sudo useradd -m aluno2",
+    "sudo useradd --create-home aluno2"
+  ],
+  "hints": [
+    "Use -m para criar o diretório pessoal.",
+    "Uma resposta possível é sudo useradd -m aluno2."
+  ],
+  "success": "Correto! useradd -m solicita também a criação do diretório pessoal.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use -m para criar o diretório pessoal.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

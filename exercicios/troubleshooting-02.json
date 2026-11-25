@@ -1,0 +1,21 @@
+{
+  "id": "troubleshooting-02-v1",
+  "command": "ping",
+  "title": "Desafio · ping",
+  "prompt": "Use ping para enviar exatamente 4 solicitações ao endereço fictício 192.0.2.1.",
+  "directory": "",
+  "answers": [
+    "ping -c 4 192.0.2.1",
+    "ping -c4 192.0.2.1"
+  ],
+  "hints": [
+    "A opção -c limita a quantidade.",
+    "Uma resposta possível é ping -c 4 192.0.2.1."
+  ],
+  "success": "Correto! -c 4 limita o teste a quatro solicitações.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. A opção -c limita a quantidade.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

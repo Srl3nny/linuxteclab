@@ -1,0 +1,20 @@
+{
+  "id": "arte-do-texto-04-v1",
+  "command": "ls",
+  "title": "Desafio · pipe_and_tee",
+  "prompt": "Liste a pasta atual com ls e use tee para mostrar a saída e salvá-la em lista.txt.",
+  "directory": "",
+  "answers": [
+    "ls | tee lista.txt"
+  ],
+  "hints": [
+    "Conecte ls a tee usando um pipe.",
+    "Uma resposta possível é ls | tee lista.txt."
+  ],
+  "success": "Correto! tee recebe a saída do pipe, exibe e grava no arquivo.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Conecte ls a tee usando um pipe.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

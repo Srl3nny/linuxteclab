@@ -14,6 +14,8 @@ async function iniciar(container) {
     container.querySelector(".exercise-title").textContent = exercise.title;
     container.querySelector(".exercise-prompt").textContent = exercise.prompt;
     const history = container.querySelector(".exercise-history");
+    const label = container.querySelector("label");
+    if (exercise.inputLabel) label.textContent = exercise.inputLabel;
     const key = "linuxteclab.exercise." + exercise.id;
     let hints = 0;
     function save(completed) {
@@ -40,7 +42,7 @@ async function iniciar(container) {
       event.preventDefault();
       const raw = input.value;
       const result = avaliar(raw, exercise);
-      if (result.kind !== "empty") line("aluno@linuxteclab:~$ " + raw, "exercise-command");
+      if (result.kind !== "empty") line(label.textContent + " " + raw, "exercise-command");
       if (result.output) line(result.output, "exercise-output");
       report(result.message);
       if (result.kind === "correct") save(true);

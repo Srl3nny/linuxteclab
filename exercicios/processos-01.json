@@ -1,0 +1,20 @@
+{
+  "id": "processos-01-v1",
+  "command": "ps",
+  "title": "Desafio · Comando ps",
+  "prompt": "Use ps para listar todos os processos no formato BSD com informações de usuário.",
+  "directory": "",
+  "answers": [
+    "ps aux"
+  ],
+  "hints": [
+    "Use as opções BSD aux sem hífen.",
+    "Uma resposta possível é ps aux."
+  ],
+  "success": "Correto! ps aux fornece uma visão geral dos processos.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use as opções BSD aux sem hífen.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

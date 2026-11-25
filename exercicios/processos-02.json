@@ -1,0 +1,20 @@
+{
+  "id": "processos-02-v1",
+  "command": "TTY",
+  "title": "Desafio · Controlando o Terminal",
+  "prompt": "Qual valor na coluna TTY indica que o processo não tem terminal de controle? Digite apenas o símbolo.",
+  "directory": "",
+  "answers": [
+    "?"
+  ],
+  "hints": [
+    "Não é pts/0; é um ponto de interrogação.",
+    "Uma resposta possível é ?."
+  ],
+  "success": "Correto! ? indica ausência de terminal de controle.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Não é pts/0; é um ponto de interrogação.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

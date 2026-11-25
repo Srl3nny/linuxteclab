@@ -106,4 +106,31 @@ Agora vamos usar o sed para mostrar apenas a linha que contenha a palavra INFO (
  sed -n '/INFO/p' exemplo-sed.txt
 ```
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/arte-do-texto-14.json" aria-labelledby="arte-do-texto-14-exercise-title">
+  <h3 class="exercise-title" id="arte-do-texto-14-exercise-title">Desafio · sed</h3>
+  <p class="exercise-prompt">Use sed para trocar todas as ocorrências de AVISO por INFO em cada linha de sistema.log, sem alterar o arquivo original.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="arte-do-texto-14-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="arte-do-texto-14-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é sed &#x27;s/AVISO/INFO/g&#x27; sistema.log.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Texto e filtros](../../temas.qmd#arte-do-texto)

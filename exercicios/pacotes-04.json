@@ -1,0 +1,21 @@
+{
+  "id": "pacotes-04-v1",
+  "command": "dependencia",
+  "title": "Desafio · Dependência de pacotes",
+  "prompt": "Como se chama um pacote ou biblioteca necessário para outro programa funcionar? Digite dependência.",
+  "directory": "",
+  "answers": [
+    "dependência",
+    "dependencia"
+  ],
+  "hints": [
+    "É algo de que o programa depende.",
+    "Uma resposta possível é dependência."
+  ],
+  "success": "Correto! O gerenciador precisa resolver as dependências do pacote.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. É algo de que o programa depende.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

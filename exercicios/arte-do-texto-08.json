@@ -1,0 +1,20 @@
+{
+  "id": "arte-do-texto-08-v1",
+  "command": "paste",
+  "title": "Desafio · paste",
+  "prompt": "Use paste para juntar horizontalmente as linhas correspondentes de nomes.txt e idades.txt, nessa ordem.",
+  "directory": "",
+  "answers": [
+    "paste nomes.txt idades.txt"
+  ],
+  "hints": [
+    "Informe os dois arquivos depois de paste.",
+    "Uma resposta possível é paste nomes.txt idades.txt."
+  ],
+  "success": "Correto! paste combina as linhas correspondentes em colunas.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Informe os dois arquivos depois de paste.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

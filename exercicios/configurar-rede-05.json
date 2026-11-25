@@ -1,0 +1,23 @@
+{
+  "id": "configurar-rede-05-v1",
+  "command": "ip",
+  "title": "Desafio · arp",
+  "prompt": "Use ip para mostrar a tabela de vizinhos da rede.",
+  "directory": "",
+  "answers": [
+    "ip neighbour show",
+    "ip neighbor show",
+    "ip neigh show",
+    "ip neigh"
+  ],
+  "hints": [
+    "Use ip neigh show.",
+    "Uma resposta possível é ip neighbour show."
+  ],
+  "success": "Correto! A tabela associa vizinhos a informações de enlace.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use ip neigh show.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

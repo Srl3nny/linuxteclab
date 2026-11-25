@@ -1,0 +1,21 @@
+{
+  "id": "permissoes-02-v1",
+  "command": "chmod",
+  "title": "Desafio · Modificando Permissões",
+  "prompt": "Use chmod para adicionar execução apenas ao proprietário de script.sh, preservando os demais bits.",
+  "directory": "",
+  "answers": [
+    "chmod u+x script.sh",
+    "chmod u+x ./script.sh"
+  ],
+  "hints": [
+    "Use a notação simbólica u+x.",
+    "Uma resposta possível é chmod u+x script.sh."
+  ],
+  "success": "Correto! u+x adiciona execução ao proprietário.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use a notação simbólica u+x.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

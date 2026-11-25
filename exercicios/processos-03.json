@@ -1,0 +1,20 @@
+{
+  "id": "processos-03-v1",
+  "command": "PID",
+  "title": "Desafio · Sobre processos",
+  "prompt": "Qual sigla representa o identificador de um processo?",
+  "directory": "",
+  "answers": [
+    "PID"
+  ],
+  "hints": [
+    "Process ID.",
+    "Uma resposta possível é PID."
+  ],
+  "success": "Correto! PID identifica uma instância de programa em execução.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Process ID.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

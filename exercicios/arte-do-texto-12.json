@@ -1,0 +1,21 @@
+{
+  "id": "arte-do-texto-12-v1",
+  "command": "tr",
+  "title": "Desafio · tr",
+  "prompt": "Use tr para converter letras minúsculas em maiúsculas, lendo dados.txt pela entrada padrão. Use as classes [:lower:] e [:upper:].",
+  "directory": "",
+  "answers": [
+    "tr '[:lower:]' '[:upper:]' < dados.txt",
+    "tr \"[:lower:]\" \"[:upper:]\" < dados.txt"
+  ],
+  "hints": [
+    "Use tr com as duas classes e < dados.txt.",
+    "Uma resposta possível é tr '[:lower:]' '[:upper:]' < dados.txt."
+  ],
+  "success": "Correto! tr transforma os caracteres e escreve em stdout.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use tr com as duas classes e < dados.txt.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "compartilhamento-01-v1",
+  "command": "scp",
+  "title": "Desafio · compartilhando-arquivos",
+  "prompt": "Use scp para copiar relatorio.txt ao diretório /home/aluno/ do usuário aluno no host fictício 192.0.2.10.",
+  "directory": "",
+  "answers": [
+    "scp relatorio.txt aluno@192.0.2.10:/home/aluno/",
+    "scp relatorio.txt aluno@192.0.2.10:/home/aluno"
+  ],
+  "hints": [
+    "O destino remoto usa usuário@host:caminho.",
+    "Uma resposta possível é scp relatorio.txt aluno@192.0.2.10:/home/aluno/."
+  ],
+  "success": "Correto! scp envia o arquivo ao destino remoto.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. O destino remoto usa usuário@host:caminho.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

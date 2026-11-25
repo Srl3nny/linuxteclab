@@ -2,11 +2,13 @@
 export function avaliar(raw, exercise) {
   const command = raw.trim().replace(/\s+/g, " ");
   if (!command) return { kind: "empty", message: "Digite um comando para tentar." };
-  if (exercise.answers.includes(command)) {
+  if (exercise.answers.some(answer => exercise.caseInsensitive
+    ? answer.toLocaleLowerCase("pt-BR") === command.toLocaleLowerCase("pt-BR")
+    : answer === command)) {
     return { kind: "correct", message: exercise.success, output: exercise.directory };
   }
   if (/[;&|<>\x60]/.test(command) || command.includes("$(")) {
-    return { kind: "unsupported", message: "Este exercício aceita um comando simples por tentativa, sem pipes ou redirecionamentos." };
+    return { kind: "unsupported", message: exercise.unsupportedFeedback || "Este exercício aceita um comando simples por tentativa, sem pipes ou redirecionamentos." };
   }
   const [name] = command.split(" ");
   if (name === (exercise.command || "pwd")) {

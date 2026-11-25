@@ -1,0 +1,22 @@
+{
+  "id": "configurar-rede-01-v1",
+  "command": "ip",
+  "title": "Desafio · interfaces-de-rede",
+  "prompt": "Use ip para consultar todas as interfaces de rede, sem alterar a configuração.",
+  "directory": "",
+  "answers": [
+    "ip link show",
+    "ip link",
+    "ip l"
+  ],
+  "hints": [
+    "Use ip link show.",
+    "Uma resposta possível é ip link show."
+  ],
+  "success": "Correto! ip link show consulta as interfaces.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use ip link show.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

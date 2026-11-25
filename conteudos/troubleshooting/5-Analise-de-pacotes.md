@@ -63,4 +63,31 @@ $ sudo tcpdump -w /some/file
 
  Algumas últimas palavras: apenas raspamos a superfície do assunto de análise de pacotes. Há muito mais que você pode explorar e não tocamos sequer nos assuntos mais profundos com Hex e ASCII output.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/troubleshooting-05.json" aria-labelledby="troubleshooting-05-exercise-title">
+  <h3 class="exercise-title" id="troubleshooting-05-exercise-title">Desafio · Analise-de-pacotes</h3>
+  <p class="exercise-prompt">No cenário fictício, use sudo e tcpdump para capturar exatamente 5 pacotes na interface eth0.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="troubleshooting-05-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="troubleshooting-05-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é sudo tcpdump -i eth0 -c 5.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Diagnóstico de rede](../../temas.qmd#troubleshooting)

@@ -1,0 +1,21 @@
+{
+  "id": "processos-06-v1",
+  "command": "SIGINT",
+  "title": "Desafio · Sinais no Linux",
+  "prompt": "Qual sinal é normalmente gerado por Ctrl+C para o grupo de processos em primeiro plano? Digite o nome simbólico.",
+  "directory": "",
+  "answers": [
+    "SIGINT",
+    "INT"
+  ],
+  "hints": [
+    "É o sinal de interrupção.",
+    "Uma resposta possível é SIGINT."
+  ],
+  "success": "Correto! Ctrl+C normalmente gera SIGINT.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. É o sinal de interrupção.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

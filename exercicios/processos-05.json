@@ -1,0 +1,21 @@
+{
+  "id": "processos-05-v1",
+  "command": "wait",
+  "title": "Desafio · Finalização de processos",
+  "prompt": "Qual família de chamadas permite ao pai coletar o estado de término de um filho? Digite wait ou waitpid.",
+  "directory": "",
+  "answers": [
+    "wait",
+    "waitpid"
+  ],
+  "hints": [
+    "O nome está relacionado a esperar.",
+    "Uma resposta possível é wait."
+  ],
+  "success": "Correto! Essas chamadas permitem recolher o estado do filho terminado.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. O nome está relacionado a esperar.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

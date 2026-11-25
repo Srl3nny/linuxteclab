@@ -1,0 +1,21 @@
+{
+  "id": "arte-do-texto-14-v1",
+  "command": "sed",
+  "title": "Desafio · sed",
+  "prompt": "Use sed para trocar todas as ocorrências de AVISO por INFO em cada linha de sistema.log, sem alterar o arquivo original.",
+  "directory": "",
+  "answers": [
+    "sed 's/AVISO/INFO/g' sistema.log",
+    "sed \"s/AVISO/INFO/g\" sistema.log"
+  ],
+  "hints": [
+    "Use s/AVISO/INFO/g sem a opção -i.",
+    "Uma resposta possível é sed 's/AVISO/INFO/g' sistema.log."
+  ],
+  "success": "Correto! g troca todas as ocorrências por linha; sem -i, o resultado vai para stdout.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use s/AVISO/INFO/g sem a opção -i.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

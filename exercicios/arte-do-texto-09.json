@@ -1,0 +1,22 @@
+{
+  "id": "arte-do-texto-09-v1",
+  "command": "grep",
+  "title": "Desafio · grep",
+  "prompt": "Use grep para mostrar as linhas de sistema.log que contêm ERRO, respeitando maiúsculas.",
+  "directory": "",
+  "answers": [
+    "grep ERRO sistema.log",
+    "grep \"ERRO\" sistema.log",
+    "grep 'ERRO' sistema.log"
+  ],
+  "hints": [
+    "Informe o padrão ERRO e depois o arquivo.",
+    "Uma resposta possível é grep ERRO sistema.log."
+  ],
+  "success": "Correto! grep seleciona as linhas que contêm o padrão.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Informe o padrão ERRO e depois o arquivo.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

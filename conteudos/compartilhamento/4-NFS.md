@@ -40,4 +40,31 @@ Se você usa o servidor NFS com frequência e deseja mantê-lo montado permanent
 192.168.1.100:/export/dados /mnt/dados nfs defaults,_netdev 0 0
 ```
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/compartilhamento-04.json" aria-labelledby="compartilhamento-04-exercise-title">
+  <h3 class="exercise-title" id="compartilhamento-04-exercise-title">Desafio · NFS</h3>
+  <p class="exercise-prompt">No cenário fictício, /mnt/dados já existe. Use sudo e mount para montar o compartilhamento NFS 192.0.2.10:/export/dados nesse caminho.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="compartilhamento-04-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="compartilhamento-04-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é sudo mount -t nfs 192.0.2.10:/export/dados /mnt/dados.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Compartilhamento](../../temas.qmd#compartilhamento)

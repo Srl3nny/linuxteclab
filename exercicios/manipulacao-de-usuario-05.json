@@ -1,0 +1,20 @@
+{
+  "id": "manipulacao-de-usuario-05-v1",
+  "command": "GID",
+  "title": "Desafio · Arquivo group",
+  "prompt": "Em laboratorio:x:2000:aluno, qual é o GID do grupo? Digite apenas o número.",
+  "directory": "",
+  "answers": [
+    "2000"
+  ],
+  "hints": [
+    "O GID é o terceiro campo.",
+    "Uma resposta possível é 2000."
+  ],
+  "success": "Correto! 2000 identifica numericamente o grupo.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. O GID é o terceiro campo.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

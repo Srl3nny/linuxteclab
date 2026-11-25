@@ -1,0 +1,21 @@
+{
+  "id": "manipulacao-de-usuario-02-v1",
+  "command": "sudo",
+  "title": "Desafio · root",
+  "prompt": "Use sudo para listar os comandos que sua conta está autorizada a executar por sudo.",
+  "directory": "",
+  "answers": [
+    "sudo -l",
+    "sudo --list"
+  ],
+  "hints": [
+    "A opção é -l, de list.",
+    "Uma resposta possível é sudo -l."
+  ],
+  "success": "Correto! sudo -l consulta as autorizações da conta.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. A opção é -l, de list.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}
