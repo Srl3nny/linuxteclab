@@ -20,4 +20,31 @@ Quando um processo pai morre antes de um processo filho, o kernel sabe que não 
 O que acontece quando um processo filho termina e o processo pai não fez uma chamada de sistema `wait`? Ainda queremos saber como um processo filho terminou, então embora o processo filho tenha terminado, o kernel converte o processo filho em um processo zumbi. Os recursos utilizados pelo processo filho estão ainda liberados para outros processos, no entanto, há ainda uma entrada na tabela de processos para esse zumbi. Processos zumbis também não podem ser terminados, pois estão tecnicamente "mortos", portanto, você não pode usar sinais para matá-los. Se o processo pai realizar uma chamada de sistema `wait`, o zumbi desaparecerá. Se o processo pai não realizar uma chamada de sistema `wait`, `init` adotará o zumbi e realizará automaticamente `wait` e removerá o zumbi. Ter muitos processos zumbis pode ser ruim, pois eles ocupam espaço na tabela de processos, se ela se preencher, isso impedirá que outros processos iniciem.
 ***
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/processos-05.json" aria-labelledby="processos-05-exercise-title">
+  <h3 class="exercise-title" id="processos-05-exercise-title">Desafio · Finalização de processos</h3>
+  <p class="exercise-prompt">Qual família de chamadas permite ao pai coletar o estado de término de um filho? Digite wait ou waitpid.</p>
+  <p class="exercise-note">Questão de interpretação. Digite a resposta no campo abaixo. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="processos-05-exercise-input">Sua resposta</label>
+    <div class="exercise-input-row">
+      <input id="processos-05-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite sua resposta" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é wait.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Processos](../../temas.qmd#processos)

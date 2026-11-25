@@ -1,0 +1,20 @@
+{
+  "id": "arte-do-texto-15-v1",
+  "command": "awk",
+  "title": "Desafio · awk",
+  "prompt": "Use awk para imprimir a primeira coluna de dados.txt, cujos campos são separados por espaços.",
+  "directory": "",
+  "answers": [
+    "awk '{print $1}' dados.txt"
+  ],
+  "hints": [
+    "Use aspas simples para proteger $1 da expansão pelo shell.",
+    "Uma resposta possível é awk '{print $1}' dados.txt."
+  ],
+  "success": "Correto! $1 é o primeiro campo de cada registro.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use aspas simples para proteger $1 da expansão pelo shell.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

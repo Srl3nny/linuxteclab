@@ -1,0 +1,20 @@
+{
+  "id": "configurar-rede-06-v1",
+  "command": "SSH",
+  "title": "Desafio · SSH",
+  "prompt": "Qual é o caminho absoluto do arquivo de configuração principal do servidor OpenSSH apresentado na aula?",
+  "directory": "",
+  "answers": [
+    "/etc/ssh/sshd_config"
+  ],
+  "hints": [
+    "O servidor é sshd.",
+    "Uma resposta possível é /etc/ssh/sshd_config."
+  ],
+  "success": "Correto! sshd_config configura o servidor; ssh_config configura o cliente.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. O servidor é sshd.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

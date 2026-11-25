@@ -28,4 +28,31 @@ A opção l fornece uma "visão longa" ou mais detalhada dos processos em execu�
 Se todos os processos têm que ter um pai e são apenas cópias um do outro, haverá uma "mãe" de todos os processos, certo? Sim, você está correto.
 Quando o sistema inicializa, o kernel cria um processo chamado init, que tem um PID de 1. O processo init não pode ser interrompido a menos que o sistema feche. Ele é executado com privilégios de root e executa muitos processos que mantém o sistema em execução.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/processos-04.json" aria-labelledby="processos-04-exercise-title">
+  <h3 class="exercise-title" id="processos-04-exercise-title">Desafio · Criação de processos</h3>
+  <p class="exercise-prompt">Na criação tradicional de processos, qual chamada cria um processo filho a partir do pai? Digite o nome, sem parênteses.</p>
+  <p class="exercise-note">Questão de interpretação. Digite a resposta no campo abaixo. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="processos-04-exercise-input">Sua resposta</label>
+    <div class="exercise-input-row">
+      <input id="processos-04-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite sua resposta" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é fork.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Processos](../../temas.qmd#processos)

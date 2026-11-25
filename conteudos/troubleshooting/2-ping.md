@@ -46,4 +46,31 @@ O tempo de volta é calculado do momento em que você envia o pacote de solicita
 
 Espero que isso tenha ajudado a iluminar o funcionamento do ping!
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/troubleshooting-02.json" aria-labelledby="troubleshooting-02-exercise-title">
+  <h3 class="exercise-title" id="troubleshooting-02-exercise-title">Desafio · ping</h3>
+  <p class="exercise-prompt">Use ping para enviar exatamente 4 solicitações ao endereço fictício 192.0.2.1.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="troubleshooting-02-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="troubleshooting-02-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é ping -c 4 192.0.2.1.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Diagnóstico de rede](../../temas.qmd#troubleshooting)

@@ -1,0 +1,20 @@
+{
+  "id": "processos-10-v1",
+  "command": "cat",
+  "title": "Desafio · proc filesystem",
+  "prompt": "Use cat para consultar o arquivo status do processo fictício 1234 em /proc.",
+  "directory": "",
+  "answers": [
+    "cat /proc/1234/status"
+  ],
+  "hints": [
+    "O caminho é /proc/PID/status.",
+    "Uma resposta possível é cat /proc/1234/status."
+  ],
+  "success": "Correto! /proc expõe informações sobre processos e o kernel.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. O caminho é /proc/PID/status.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

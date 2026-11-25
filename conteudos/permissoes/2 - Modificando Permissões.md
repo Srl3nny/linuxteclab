@@ -43,4 +43,31 @@ Lembre-se de que agora estamos combinando todas as permissões em um número ún
 
 Lembre-se de que não é uma boa ideia mudar as permissões aleatoriamente, pois isso pode expor um arquivo sensível para que todos possam modificá-lo. No entanto, se você precisar alterar as permissões, apenas tome cuidado ao usar o comando `chmod`.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/permissoes-02.json" aria-labelledby="permissoes-02-exercise-title">
+  <h3 class="exercise-title" id="permissoes-02-exercise-title">Desafio · Modificando Permissões</h3>
+  <p class="exercise-prompt">Use chmod para adicionar execução apenas ao proprietário de script.sh, preservando os demais bits.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="permissoes-02-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="permissoes-02-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é chmod u+x script.sh.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Permissões](../../temas.qmd#permissoes)

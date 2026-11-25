@@ -1,0 +1,20 @@
+{
+  "id": "processos-11-v1",
+  "command": "Z",
+  "title": "Desafio · Status de processos",
+  "prompt": "Qual letra na coluna STAT do ps identifica um processo zumbi?",
+  "directory": "",
+  "answers": [
+    "Z"
+  ],
+  "hints": [
+    "Zombie começa com essa letra.",
+    "Uma resposta possível é Z."
+  ],
+  "success": "Correto! Z indica processo terminado cujo estado ainda aguarda coleta pelo pai.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Zombie começa com essa letra.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

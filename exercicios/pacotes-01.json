@@ -1,0 +1,21 @@
+{
+  "id": "pacotes-01-v1",
+  "command": "deb",
+  "title": "Desafio · Distribuição de programas",
+  "prompt": "Qual extensão é usada por pacotes do Debian e Ubuntu? Digite a extensão.",
+  "directory": "",
+  "answers": [
+    ".deb",
+    "deb"
+  ],
+  "hints": [
+    "O nome vem de Debian.",
+    "Uma resposta possível é .deb."
+  ],
+  "success": "Correto! .deb é o formato de pacote dessas distribuições.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. O nome vem de Debian.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

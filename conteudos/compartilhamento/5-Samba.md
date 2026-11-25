@@ -71,4 +71,31 @@ $ sudo apt install cifs-utils
 $ sudo mount -t cifs //IP_do_servidor/Compartilhado /mnt/samba -o username=nome_do_usuario
 ```
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/compartilhamento-05.json" aria-labelledby="compartilhamento-05-exercise-title">
+  <h3 class="exercise-title" id="compartilhamento-05-exercise-title">Desafio · Samba</h3>
+  <p class="exercise-prompt">A conta local aluno já existe. Use sudo e smbpasswd para adicioná-la à base de usuários Samba.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="compartilhamento-05-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="compartilhamento-05-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é sudo smbpasswd -a aluno.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Compartilhamento](../../temas.qmd#compartilhamento)

@@ -1,0 +1,20 @@
+{
+  "id": "permissoes-07-v1",
+  "command": "EUID",
+  "title": "Desafio · ProcessPermissions",
+  "prompt": "Qual sigla identifica o UID efetivo de um processo, usado em decisões de permissão?",
+  "directory": "",
+  "answers": [
+    "EUID"
+  ],
+  "hints": [
+    "Effective User ID.",
+    "Uma resposta possível é EUID."
+  ],
+  "success": "Correto! O EUID representa a identidade efetiva do processo.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Effective User ID.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

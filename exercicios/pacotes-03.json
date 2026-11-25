@@ -1,0 +1,23 @@
+{
+  "id": "pacotes-03-v1",
+  "command": "tar",
+  "title": "Desafio · Arquivos Tar e Zip",
+  "prompt": "Use tar para extrair backup.tar.gz na pasta atual.",
+  "directory": "",
+  "answers": [
+    "tar -xzf backup.tar.gz",
+    "tar xzf backup.tar.gz",
+    "tar -xzvf backup.tar.gz",
+    "tar xzvf backup.tar.gz"
+  ],
+  "hints": [
+    "Use x para extrair, z para gzip e f para indicar o arquivo.",
+    "Uma resposta possível é tar -xzf backup.tar.gz."
+  ],
+  "success": "Correto! tar extrai os arquivos do arquivo compactado.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use x para extrair, z para gzip e f para indicar o arquivo.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

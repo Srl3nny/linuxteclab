@@ -1,0 +1,22 @@
+{
+  "id": "arte-do-texto-07-v1",
+  "command": "head",
+  "title": "Desafio · head",
+  "prompt": "Use head para mostrar as primeiras 5 linhas de dados.txt.",
+  "directory": "",
+  "answers": [
+    "head -n 5 dados.txt",
+    "head -n5 dados.txt",
+    "head -5 dados.txt"
+  ],
+  "hints": [
+    "A opção -n define o número de linhas.",
+    "Uma resposta possível é head -n 5 dados.txt."
+  ],
+  "success": "Correto! head mostra o começo do arquivo.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. A opção -n define o número de linhas.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

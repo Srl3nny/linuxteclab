@@ -1,0 +1,20 @@
+{
+  "id": "configurar-rede-03-v1",
+  "command": "sudo",
+  "title": "Desafio · dhclient",
+  "prompt": "No cenário, dhclient está instalado. Use sudo para solicitar configuração DHCP na interface eth0.",
+  "directory": "",
+  "answers": [
+    "sudo dhclient eth0"
+  ],
+  "hints": [
+    "Informe eth0 depois de dhclient.",
+    "Uma resposta possível é sudo dhclient eth0."
+  ],
+  "success": "Correto! dhclient solicita configuração DHCP para a interface indicada.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Informe eth0 depois de dhclient.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

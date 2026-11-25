@@ -1,0 +1,21 @@
+{
+  "id": "arte-do-texto-05-v1",
+  "command": "echo",
+  "title": "Desafio · env",
+  "prompt": "Use echo para mostrar o valor da variável de ambiente HOME.",
+  "directory": "",
+  "answers": [
+    "echo $HOME",
+    "echo \"$HOME\""
+  ],
+  "hints": [
+    "Nomes de variáveis diferenciam maiúsculas e minúsculas; use $HOME.",
+    "Uma resposta possível é echo $HOME."
+  ],
+  "success": "Correto! O shell expande HOME para o diretório pessoal.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Nomes de variáveis diferenciam maiúsculas e minúsculas; use $HOME.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

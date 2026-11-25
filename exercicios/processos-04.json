@@ -1,0 +1,20 @@
+{
+  "id": "processos-04-v1",
+  "command": "fork",
+  "title": "Desafio · Criação de processos",
+  "prompt": "Na criação tradicional de processos, qual chamada cria um processo filho a partir do pai? Digite o nome, sem parênteses.",
+  "directory": "",
+  "answers": [
+    "fork"
+  ],
+  "hints": [
+    "A chamada começa com f e tem quatro letras.",
+    "Uma resposta possível é fork."
+  ],
+  "success": "Correto! fork cria um processo filho com PID próprio.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. A chamada começa com f e tem quatro letras.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "Sua resposta",
+  "caseInsensitive": true
+}

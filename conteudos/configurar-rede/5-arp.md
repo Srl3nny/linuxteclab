@@ -35,4 +35,31 @@ Notícias adicionais
 
 **Arp Cache** é uma área de armazenamento na memória RAM que armazena as correspondências entre os endereços IP e as respectivas mídias [1] (Mac Address). Essa cache é populada automaticamente quando um pacote é enviado para um host que não está presente na cache.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/configurar-rede-05.json" aria-labelledby="configurar-rede-05-exercise-title">
+  <h3 class="exercise-title" id="configurar-rede-05-exercise-title">Desafio · arp</h3>
+  <p class="exercise-prompt">Use ip para mostrar a tabela de vizinhos da rede.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="configurar-rede-05-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="configurar-rede-05-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é ip neighbour show.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Configuração de rede](../../temas.qmd#configurar-rede)

@@ -1,0 +1,20 @@
+{
+  "id": "pacotes-07-v1",
+  "command": "make",
+  "title": "Desafio · Compilando",
+  "prompt": "Após ./configure terminar em um projeto que usa Makefile, qual comando inicia a compilação?",
+  "directory": "",
+  "answers": [
+    "make"
+  ],
+  "hints": [
+    "Use o programa que interpreta o Makefile.",
+    "Uma resposta possível é make."
+  ],
+  "success": "Correto! make executa as regras de compilação do projeto.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use o programa que interpreta o Makefile.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

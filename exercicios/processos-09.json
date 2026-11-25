@@ -1,0 +1,20 @@
+{
+  "id": "processos-09-v1",
+  "command": "fg",
+  "title": "Desafio · Controle de Job",
+  "prompt": "Há uma tarefa 1 parada. Use fg para trazê-la ao primeiro plano.",
+  "directory": "",
+  "answers": [
+    "fg %1"
+  ],
+  "hints": [
+    "O identificador de tarefa usa %.",
+    "Uma resposta possível é fg %1."
+  ],
+  "success": "Correto! fg %1 retoma a tarefa 1 em primeiro plano.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. O identificador de tarefa usa %.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

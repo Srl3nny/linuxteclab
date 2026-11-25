@@ -1,0 +1,21 @@
+{
+  "id": "compartilhamento-03-v1",
+  "command": "python3",
+  "title": "Desafio · SimpleHTTPServer",
+  "prompt": "Use Python 3 para servir a pasta atual por HTTP na porta 8000, escutando apenas em 127.0.0.1.",
+  "directory": "",
+  "answers": [
+    "python3 -m http.server 8000 --bind 127.0.0.1",
+    "python3 -m http.server --bind 127.0.0.1 8000"
+  ],
+  "hints": [
+    "Use -m http.server e --bind 127.0.0.1.",
+    "Uma resposta possível é python3 -m http.server 8000 --bind 127.0.0.1."
+  ],
+  "success": "Correto! --bind limita a escuta ao endereço local.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use -m http.server e --bind 127.0.0.1.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

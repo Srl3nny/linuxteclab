@@ -1,0 +1,21 @@
+{
+  "id": "devices-01-v1",
+  "command": "ls",
+  "title": "Desafio · diretorio-dev",
+  "prompt": "Use ls para listar os nomes dos arquivos de dispositivo em /dev.",
+  "directory": "",
+  "answers": [
+    "ls /dev",
+    "ls /dev/"
+  ],
+  "hints": [
+    "Informe /dev depois de ls.",
+    "Uma resposta possível é ls /dev."
+  ],
+  "success": "Correto! /dev contém nós de dispositivos e outros arquivos especiais.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Informe /dev depois de ls.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

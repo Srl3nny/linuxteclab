@@ -1,0 +1,21 @@
+{
+  "id": "permissoes-06-v1",
+  "command": "chmod",
+  "title": "Desafio · Setgid",
+  "prompt": "Adicione o bit setgid ao diretório equipe preservando as outras permissões. Use chmod.",
+  "directory": "",
+  "answers": [
+    "chmod g+s equipe",
+    "chmod g+s ./equipe"
+  ],
+  "hints": [
+    "Use g+s.",
+    "Uma resposta possível é chmod g+s equipe."
+  ],
+  "success": "Correto! Em diretórios, setgid favorece a herança do grupo nos novos arquivos.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use g+s.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

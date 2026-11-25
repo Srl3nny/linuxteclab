@@ -1,0 +1,21 @@
+{
+  "id": "processos-08-v1",
+  "command": "nice",
+  "title": "Desafio · niceness",
+  "prompt": "Use nice para iniciar sleep 30 com valor de niceness 5.",
+  "directory": "",
+  "answers": [
+    "nice -n 5 sleep 30",
+    "nice --adjustment=5 sleep 30"
+  ],
+  "hints": [
+    "Use nice -n 5 antes do programa.",
+    "Uma resposta possível é nice -n 5 sleep 30."
+  ],
+  "success": "Correto! Aumentar o niceness tende a reduzir a prioridade de CPU.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use nice -n 5 antes do programa.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

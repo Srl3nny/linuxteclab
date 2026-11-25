@@ -33,4 +33,31 @@ O comando `visudo` é o executor de edição do arquivo `/etc/sudoers`. Ele abre
 - `visudo`: Abre o arquivo `/etc/sudoers` em modo de edição segura.
 - `sudo nano /etc/sudoers`: Abre o arquivo `/etc/sudoers` para editar com o nano.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/manipulacao-de-usuario-02.json" aria-labelledby="manipulacao-de-usuario-02-exercise-title">
+  <h3 class="exercise-title" id="manipulacao-de-usuario-02-exercise-title">Desafio · root</h3>
+  <p class="exercise-prompt">Use sudo para listar os comandos que sua conta está autorizada a executar por sudo.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="manipulacao-de-usuario-02-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="manipulacao-de-usuario-02-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é sudo -l.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Usuários e grupos](../../temas.qmd#manipulacao-de-usuario)

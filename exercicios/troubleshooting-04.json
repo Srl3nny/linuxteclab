@@ -1,0 +1,25 @@
+{
+  "id": "troubleshooting-04-v1",
+  "command": "netstat",
+  "title": "Desafio · netstat",
+  "prompt": "Use netstat para listar sockets TCP em escuta com endereços numéricos.",
+  "directory": "",
+  "answers": [
+    "netstat -lnt",
+    "netstat -tln",
+    "netstat -ntl",
+    "netstat -nlt",
+    "netstat -tnl",
+    "netstat -ltn"
+  ],
+  "hints": [
+    "Combine l (escuta), n (numérico) e t (TCP).",
+    "Uma resposta possível é netstat -lnt."
+  ],
+  "success": "Correto! Essas opções filtram TCP em escuta e evitam resolução de nomes.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Combine l (escuta), n (numérico) e t (TCP).",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

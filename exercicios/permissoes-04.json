@@ -1,0 +1,21 @@
+{
+  "id": "permissoes-04-v1",
+  "command": "umask",
+  "title": "Desafio · Umask",
+  "prompt": "Defina a umask da sessão como 022.",
+  "directory": "",
+  "answers": [
+    "umask 022",
+    "umask 0022"
+  ],
+  "hints": [
+    "Use umask seguido do valor octal.",
+    "Uma resposta possível é umask 022."
+  ],
+  "success": "Correto! Com modos de criação usuais, resulta em arquivos 644 e diretórios 755.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use umask seguido do valor octal.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

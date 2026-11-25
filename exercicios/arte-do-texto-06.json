@@ -1,0 +1,23 @@
+{
+  "id": "arte-do-texto-06-v1",
+  "command": "cut",
+  "title": "Desafio · cut",
+  "prompt": "O arquivo dados.txt contém campos separados por ponto e vírgula. Use cut para mostrar o primeiro campo.",
+  "directory": "",
+  "answers": [
+    "cut -d \";\" -f 1 dados.txt",
+    "cut -d ';' -f 1 dados.txt",
+    "cut -d';' -f1 dados.txt",
+    "cut -f 1 -d \";\" dados.txt"
+  ],
+  "hints": [
+    "Use -d para o delimitador e -f 1 para o campo.",
+    "Uma resposta possível é cut -d \";\" -f 1 dados.txt."
+  ],
+  "success": "Correto! cut seleciona o primeiro campo usando ; como separador.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use -d para o delimitador e -f 1 para o campo.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

@@ -1,0 +1,22 @@
+{
+  "id": "arte-do-texto-11-v1",
+  "command": "tail",
+  "title": "Desafio · tail",
+  "prompt": "Use tail para mostrar as últimas 5 linhas de sistema.log.",
+  "directory": "",
+  "answers": [
+    "tail -n 5 sistema.log",
+    "tail -n5 sistema.log",
+    "tail -5 sistema.log"
+  ],
+  "hints": [
+    "A opção -n define quantas linhas finais mostrar.",
+    "Uma resposta possível é tail -n 5 sistema.log."
+  ],
+  "success": "Correto! tail seleciona o fim do arquivo.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. A opção -n define quantas linhas finais mostrar.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "troubleshooting-05-v1",
+  "command": "sudo",
+  "title": "Desafio · Analise-de-pacotes",
+  "prompt": "No cenário fictício, use sudo e tcpdump para capturar exatamente 5 pacotes na interface eth0.",
+  "directory": "",
+  "answers": [
+    "sudo tcpdump -i eth0 -c 5",
+    "sudo tcpdump -c 5 -i eth0"
+  ],
+  "hints": [
+    "Use -i eth0 e -c 5.",
+    "Uma resposta possível é sudo tcpdump -i eth0 -c 5."
+  ],
+  "success": "Correto! -i seleciona a interface e -c limita a captura.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use -i eth0 e -c 5.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

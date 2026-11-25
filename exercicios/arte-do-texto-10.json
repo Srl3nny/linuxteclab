@@ -1,0 +1,21 @@
+{
+  "id": "arte-do-texto-10-v1",
+  "command": "sort",
+  "title": "Desafio · sort",
+  "prompt": "Use sort para ordenar numericamente as linhas de numeros.txt em ordem crescente.",
+  "directory": "",
+  "answers": [
+    "sort -n numeros.txt",
+    "sort --numeric-sort numeros.txt"
+  ],
+  "hints": [
+    "Use -n para comparar números.",
+    "Uma resposta possível é sort -n numeros.txt."
+  ],
+  "success": "Correto! A ordenação numérica evita tratar 10 como menor que 2.",
+  "feedback": {},
+  "syntaxFeedback": "Confira o enunciado. Use -n para comparar números.",
+  "unsupportedFeedback": "Essa entrada não corresponde ao desafio. Confira os operadores, opções e nomes pedidos ou use uma dica.",
+  "inputLabel": "aluno@linuxteclab:~$",
+  "caseInsensitive": false
+}

@@ -37,4 +37,31 @@ Normalmente, na página de configuração de usuário, você espera ver apenas u
 
 Além disso, é importante notar que você pode editar o arquivo `/etc/passwd` manualmente se quiser adicionar usuários e modificar informações com o tool `vipw`, no entanto, coisas como essas são melhor deixadas para tools, como `useradd` e `userdel`.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/manipulacao-de-usuario-03.json" aria-labelledby="manipulacao-de-usuario-03-exercise-title">
+  <h3 class="exercise-title" id="manipulacao-de-usuario-03-exercise-title">Desafio · Arquivo passwd</h3>
+  <p class="exercise-prompt">Em aluno:x:1001:1002:Aluno:/home/aluno:/bin/bash, qual é o UID? Digite apenas o número.</p>
+  <p class="exercise-note">Questão de interpretação. Digite a resposta no campo abaixo. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="manipulacao-de-usuario-03-exercise-input">Sua resposta</label>
+    <div class="exercise-input-row">
+      <input id="manipulacao-de-usuario-03-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite sua resposta" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é 1001.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Usuários e grupos](../../temas.qmd#manipulacao-de-usuario)
