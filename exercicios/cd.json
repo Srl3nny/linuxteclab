@@ -1,0 +1,12 @@
+{
+  "id": "cd-v1",
+  "title": "Missão 03 · Navegue pelas pastas",
+  "home": "/home/aluno",
+  "directories": ["/", "/home", "/home/aluno", "/home/aluno/Documentos", "/home/aluno/Downloads"],
+  "steps": [
+    {"prompt": "Entre na pasta Documentos.", "target": "/home/aluno/Documentos", "answer": "cd Documentos", "hint": "Use cd seguido do nome da pasta."},
+    {"prompt": "Volte ao diretório pai, /home/aluno.", "target": "/home/aluno", "answer": "cd ..", "hint": "Dois pontos representam o diretório pai."},
+    {"prompt": "Entre na pasta Downloads.", "target": "/home/aluno/Downloads", "answer": "cd Downloads", "hint": "A pasta Downloads está no diretório atual."},
+    {"prompt": "Volte à sua pasta pessoal usando cd ou cd ~.", "target": "/home/aluno", "answer": "cd ~", "hint": "cd sem argumentos também leva à pasta pessoal."}
+  ]
+}
