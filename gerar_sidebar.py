@@ -15,12 +15,13 @@ ORDEM_SECOES = [
     "troubleshooting",
     "compartilhamento",
     "configurar-rede",
-    "devices"
+    "devices",
+    "cluster-hpc",
 ]
 
 # Função para formatar o nome da seção (troca "-" por espaço e capitaliza)
 def formatar_secao(nome):
-    return {'linha-de-comando': 'Linha de comando', 'arte-do-texto': 'Texto e filtros', 'manipulacao-de-usuario': 'Usuários e grupos', 'processos': 'Processos', 'pacotes': 'Pacotes', 'permissoes': 'Permissões', 'troubleshooting': 'Diagnóstico de rede', 'compartilhamento': 'Compartilhamento', 'configurar-rede': 'Configuração de rede', 'devices': 'Dispositivos'}[nome]
+    return {'linha-de-comando': 'Linha de comando', 'arte-do-texto': 'Texto e filtros', 'manipulacao-de-usuario': 'Usuários e grupos', 'processos': 'Processos', 'pacotes': 'Pacotes', 'permissoes': 'Permissões', 'troubleshooting': 'Diagnóstico de rede', 'compartilhamento': 'Compartilhamento', 'configurar-rede': 'Configuração de rede', 'devices': 'Dispositivos', 'cluster-hpc': 'Cluster HPC'}[nome]
 
 # Verifica se a pasta "conteudos" existe
 if not os.path.exists(PASTA_CONTEUDOS):
@@ -49,9 +50,15 @@ for pasta in pastas_encontradas:
             for arquivo in arquivos:
                 href = f"{PASTA_CONTEUDOS}/{pasta}/{arquivo}"
                 nome_arquivo = re.sub(r'^\d+[-_ ]*', '', arquivo).replace('.qmd', '').replace('.md', '').title()
+                titulo = nome_arquivo.strip().replace("_", " ")
+                if arquivo.endswith(".qmd"):
+                    with open(href, encoding="utf-8") as f:
+                        front_matter = re.match(r"\A---[ \t]*\n(.*?)\n---[ \t]*(?:\n|$)", f.read(), re.DOTALL)
+                    if front_matter:
+                        titulo = (yaml.safe_load(front_matter.group(1)) or {}).get("title", titulo)
                 contents.append({
                     "href": href,
-                    "text": nome_arquivo.strip().replace("_", " ")
+                    "text": titulo
                 })
 
             conteudo_sidebar.append({

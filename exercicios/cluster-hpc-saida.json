@@ -1,0 +1,18 @@
+{
+  "id": "cluster-hpc-saida-v1",
+  "title": "Leia o log",
+  "prompt": "O job 42 já terminou. A diretiva de saída era --output=saida_%j.txt. Use cat para ler o arquivo gerado.",
+  "answers": [
+    "cat saida_42.txt",
+    "cat ./saida_42.txt"
+  ],
+  "hints": [
+    "O Slurm substituiu %j pelo ID do job.",
+    "O nome do arquivo é saida_42.txt."
+  ],
+  "feedback": {},
+  "success": "Você encontrou a saída da execução.",
+  "command": "cat",
+  "syntaxFeedback": "Use o nome com o ID 42 no lugar de %j.",
+  "directory": "Job: 42\nNó de execução: compute01\nExecução concluída."
+}

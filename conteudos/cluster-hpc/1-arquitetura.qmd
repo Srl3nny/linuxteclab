@@ -1,0 +1,79 @@
+---
+title: "Cluster HPC: arquitetura e primeiros passos"
+description: "Entenda o que é um cluster HPC, o papel de cada nó e o caminho do primeiro job no Linux."
+categories: [Cluster HPC]
+---
+
+Um cluster de computação de alto desempenho (HPC, de *High Performance Computing*) reúne servidores chamados **nós**, conectados por uma rede rápida. Um cluster pode rodar vários trabalhos independentes ao mesmo tempo ou distribuir um cálculo paralelo entre vários nós, se o programa oferecer esse suporte.
+
+Pense em uma simulação que precisa rodar com 100 combinações de parâmetros. Você pode executar cada caso separadamente ou enviar os trabalhos ao cluster para que eles sejam distribuídos pelos recursos disponíveis. Para uma simulação que precisa trocar dados entre nós durante a execução, o programa pode usar MPI.
+
+## Quem faz o quê
+
+```{mermaid}
+%%| fig-cap: "O nó de login encaminha pedidos ao Slurm. Os nós de computação executam os jobs e acessam arquivos compartilhados."
+flowchart TB
+    login["Nó de login"] -->|envia job| servico["Nó de serviço<br/>Controlador Slurm"]
+    servico -->|aloca recursos| computacao["Nós de computação<br/>CPU, RAM e GPU"]
+    login <-->|lê e grava| arquivos["Armazenamento compartilhado"]
+    computacao <-->|lê e grava| arquivos
+```
+
+| Componente | Papel |
+|---|---|
+| Nó de login | Recebe o usuário por SSH. É onde você prepara scripts, organiza arquivos, submete jobs e consulta resultados, conforme a política do cluster. |
+| Nó de serviço | Hospeda serviços de gerenciamento. Em uma instalação com Slurm, o controlador que gerencia as filas pode ficar aqui. O monitoramento também pode ter infraestrutura própria. |
+| Nós de computação | Executam os programas dos jobs. Cada nó tem CPUs, memória e, dependendo da configuração, GPUs e disco local. |
+| Armazenamento | Disponibiliza diretórios compartilhados entre os nós pelo sistema de arquivos configurado. Espaços como home e scratch podem ter cotas e regras de retenção diferentes. |
+
+Um nó tem componentes familiares de um computador pessoal. A capacidade do cluster vem de conseguir reservar e combinar recursos de muitos nós, além do uso de redes e armazenamento dimensionados para a carga de trabalho.
+
+## O que mantém o cluster funcionando
+
+- **Agendador de recursos.** O Slurm organiza a fila e aloca CPUs, memória, GPUs e tempo de execução de acordo com as solicitações e as políticas locais.
+- **Relógios sincronizados.** Serviços como o NTP mantêm horários coerentes entre os nós, o que ajuda a correlacionar logs e atende à tolerância de tempo de alguns mecanismos de autenticação, como Kerberos.
+- **Provisionamento.** Imagens ou outra automação de instalação permitem preparar e recompor nós com uma configuração consistente.
+- **Arquivos e identidades compartilhados.** Os nós precisam encontrar os diretórios de trabalho e reconhecer a identidade e as permissões do usuário. Muitos ambientes centralizam contas em um serviço de diretório.
+- **Autenticação e software.** A autenticação de serviços e usuários depende do ambiente. Chaves SSH são uma opção de acesso ao login quando permitidas. Módulos de ambiente disponibilizam versões de compiladores, bibliotecas e programas.
+
+## Aulas da trilha
+
+1. [Acesso por SSH](2-acesso-ssh.qmd)
+2. [Transferência de arquivos](3-transferencia.qmd)
+3. [Primeiro job com Slurm](4-primeiro-job.qmd)
+4. [Recursos, filas e jobs no Slurm](5-slurm.qmd)
+5. [Environment Modules](6-modulos.qmd)
+6. [Compilação no diretório pessoal](7-compilacao.qmd)
+7. [Contêineres com Apptainer](8-apptainer.qmd)
+
+Os terminais interativos funcionam com um cluster fictício. Para repetir as práticas em um ambiente real, use os nomes de máquinas, partições e módulos fornecidos pela equipe responsável. Se você usa o cluster da Faculdade de Tecnologia da Unicamp, consulte a documentação de acesso do [LaSCADo](https://cluster.ft.unicamp.br/).
+
+## Pratique no terminal
+
+As respostas são conferidas no navegador em um cluster simulado. Use os botões de dica ou solução se precisar.
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-no.json" aria-labelledby="hpc-no-title">
+  <h3 class="exercise-title" id="hpc-no-title">Onde o cálculo roda?</h3>
+  <p class="exercise-prompt">Você já enviou a simulação pelo nó de login. Qual tipo de nó executa o cálculo?</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-no-input">Resposta:</label>
+    <div class="exercise-input-row">
+      <input id="hpc-no-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite sua resposta" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>nó de computação</code>.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
+Próxima aula — [Acesso por SSH](2-acesso-ssh.qmd).

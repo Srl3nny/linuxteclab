@@ -41,6 +41,11 @@ Encontre uma linha com grep e combine comandos pelo pipe.
 
 Teste a comunicação entre máquinas e investigue o caminho dos pacotes.
 :::
+::: {.lab-card}
+[04 / Cluster HPC](conteudos/cluster-hpc/1-arquitetura.qmd)
+
+Entenda como um cluster funciona e aprenda a enviar seu primeiro job com Slurm.
+:::
 :::
 :::
 

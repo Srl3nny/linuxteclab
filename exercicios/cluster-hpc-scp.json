@@ -1,0 +1,22 @@
+{
+  "id": "cluster-hpc-scp-v1",
+  "title": "Envie os dados",
+  "prompt": "Copie dados.csv do diretório atual para o diretório pessoal remoto usando o alias hpc.",
+  "answers": [
+    "scp dados.csv hpc:~/",
+    "scp ./dados.csv hpc:~/",
+    "scp dados.csv hpc:",
+    "scp ./dados.csv hpc:"
+  ],
+  "hints": [
+    "No scp, escreva a origem antes do destino.",
+    "Use hpc:~/ como destino remoto."
+  ],
+  "feedback": {
+    "ssh": "Use scp para transferir o arquivo a partir do terminal local."
+  },
+  "success": "O arquivo foi enviado ao diretório pessoal remoto na simulação.",
+  "command": "scp",
+  "syntaxFeedback": "Coloque dados.csv primeiro e use hpc:~/ como destino.",
+  "directory": "dados.csv   100%"
+}

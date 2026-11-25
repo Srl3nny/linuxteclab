@@ -1,0 +1,22 @@
+{
+  "id": "cluster-hpc-squeue-v1",
+  "title": "Consulte o job 42",
+  "prompt": "Veja se o job 42 está na fila ou em execução. Solicite apenas esse job.",
+  "answers": [
+    "squeue -j 42",
+    "squeue --jobs=42",
+    "squeue --jobs 42",
+    "squeue -j42"
+  ],
+  "hints": [
+    "Use o comando que lista a fila.",
+    "O filtro -j recebe o ID do job."
+  ],
+  "feedback": {
+    "sacct": "O sacct consulta dados de accounting. Nesta prática, consulte a fila."
+  },
+  "success": "O status PD indica que o job está pendente. Resources indica espera por recursos.",
+  "command": "squeue",
+  "syntaxFeedback": "Inclua o filtro de job e o ID 42.",
+  "directory": "42  curta  simulacao  aluno  PD  0:00  1  (Resources)"
+}

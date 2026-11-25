@@ -1,0 +1,17 @@
+{
+  "id": "cluster-hpc-ssh-v1",
+  "title": "Entre pelo bastion",
+  "prompt": "Com OpenSSH, conecte-se como aluno a login.hpc.example passando por aluno@bastion.hpc.example. Use a opção de salto.",
+  "answers": [
+    "ssh -J aluno@bastion.hpc.example aluno@login.hpc.example",
+    "ssh -o ProxyJump=aluno@bastion.hpc.example aluno@login.hpc.example"
+  ],
+  "hints": [
+    "A opção -J recebe primeiro o endereço do bastion.",
+    "Escreva ssh -J aluno@bastion.hpc.example e acrescente o usuário e o destino."
+  ],
+  "feedback": {},
+  "success": "O OpenSSH usa o bastion para chegar ao nó de login.",
+  "command": "ssh",
+  "syntaxFeedback": "Confira a ordem do bastion e do destino. Ambos usam a conta aluno."
+}

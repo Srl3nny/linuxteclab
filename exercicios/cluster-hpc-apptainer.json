@@ -1,0 +1,18 @@
+{
+  "id": "cluster-hpc-apptainer-v1",
+  "title": "Leia a versão do sistema na imagem",
+  "prompt": "Você já tem alpine.sif. Use Apptainer para rodar cat /etc/os-release dentro da imagem, em um único comando.",
+  "answers": [
+    "apptainer exec alpine.sif cat /etc/os-release",
+    "apptainer exec ./alpine.sif cat /etc/os-release"
+  ],
+  "hints": [
+    "O subcomando exec roda o comando que você indicar.",
+    "Após exec, informe a imagem e depois cat /etc/os-release."
+  ],
+  "feedback": {},
+  "success": "O comando cat leu o arquivo /etc/os-release da imagem.",
+  "command": "apptainer",
+  "syntaxFeedback": "Use exec, o nome da imagem e, em seguida, o comando interno.",
+  "directory": "NAME=\"Alpine Linux\"\nVERSION_ID=3.21"
+}

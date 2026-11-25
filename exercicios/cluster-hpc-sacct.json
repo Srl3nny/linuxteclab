@@ -1,0 +1,22 @@
+{
+  "id": "cluster-hpc-sacct-v1",
+  "title": "Descubra como terminou",
+  "prompt": "O job 42 saiu da fila. Com accounting disponível, use sacct e limite a consulta ao ID 42.",
+  "answers": [
+    "sacct -j 42",
+    "sacct --jobs=42",
+    "sacct --jobs 42",
+    "sacct -j42"
+  ],
+  "hints": [
+    "Use o comando de histórico apresentado na aula.",
+    "O filtro pode ser escrito como -j 42."
+  ],
+  "feedback": {
+    "squeue": "O job já saiu da fila. Use os registros de accounting."
+  },
+  "success": "COMPLETED e 0:0 indicam término normal para o Slurm.",
+  "command": "sacct",
+  "syntaxFeedback": "Filtre pelo ID 42, usando -j ou --jobs.",
+  "directory": "42  simulacao  COMPLETED  0:0"
+}

@@ -1,0 +1,105 @@
+---
+title: "Primeiro job com Slurm"
+description: "Escreva um script, envie com sbatch, acompanhe com squeue e encontre a saída da execução."
+categories: [Cluster HPC]
+---
+
+Um **job** é um trabalho entregue ao Slurm com um pedido de recursos. Um script de submissão descreve o que deve rodar e por quanto tempo o cluster precisa reservar recursos.
+
+```{mermaid}
+%%| fig-cap: "Um job submetido aguarda recursos. Após a alocação, o nó executa o script e grava sua saída."
+flowchart TB
+    envio["Submeter com sbatch"] --> espera["Aguardando na fila"]
+    espera -->|recursos disponíveis| execucao["Executar no nó de computação"]
+    execucao --> saida["Consultar o arquivo de saída"]
+    espera --> observacao["Acompanhar com squeue"]
+    execucao --> observacao
+```
+
+## Prepare o script
+
+Depois de entrar no nó de login, crie uma pasta de trabalho em um sistema de arquivos acessível pelos nós de computação. Se o seu home for compartilhado, crie a pasta `~/primeiro-job`, entre nela e salve o script abaixo como `primeiro-job.sh`:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=primeiro-job
+#SBATCH --output=saida_%j.txt
+#SBATCH --time=00:02:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=256M
+
+echo "Job: $SLURM_JOB_ID"
+echo "Nó de execução: $(hostname)"
+sleep 10
+echo "Execução concluída."
+```
+
+As linhas `#SBATCH` aparecem antes dos comandos do script. Em `saida_%j.txt`, o Slurm substitui `%j` pelo ID do job. Se o cluster exigir uma conta ou partição explícita, informe os valores autorizados antes de submeter.
+
+## Envie, acompanhe e leia o resultado
+
+```bash
+sbatch primeiro-job.sh
+```
+
+Se o retorno for `Submitted batch job 42`, por exemplo, use o ID 42 nas consultas:
+
+```bash
+squeue -j 42
+cat saida_42.txt
+```
+
+O ID muda a cada submissão. Um job curto pode sair da fila antes que você consulte `squeue`. Se o arquivo ainda não existir, o job pode estar aguardando recursos. Consulte o [histórico de jobs](5-slurm.qmd#historico-e-cancelamento) para confirmar como ele terminou quando o *accounting* estiver habilitado.
+
+Referências — [sbatch](https://slurm.schedmd.com/sbatch.html) e [squeue](https://slurm.schedmd.com/squeue.html).
+
+## Pratique no terminal
+
+As respostas são conferidas no navegador em um cluster simulado. Use os botões de dica ou solução se precisar.
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-sbatch.json" aria-labelledby="hpc-sbatch-title">
+  <h3 class="exercise-title" id="hpc-sbatch-title">Submeta o primeiro job</h3>
+  <p class="exercise-prompt">Você salvou primeiro-job.sh no diretório atual. Envie o script ao Slurm para execução em lote.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-sbatch-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-sbatch-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>sbatch primeiro-job.sh</code>.</noscript>
+</section>
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-saida.json" aria-labelledby="hpc-saida-title">
+  <h3 class="exercise-title" id="hpc-saida-title">Leia o log</h3>
+  <p class="exercise-prompt">O job 42 já terminou. A diretiva de saída era --output=saida_%j.txt. Use cat para ler o arquivo gerado.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-saida-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-saida-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>cat saida_42.txt</code>.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
+Próxima aula — [Recursos, filas e jobs no Slurm](5-slurm.qmd).

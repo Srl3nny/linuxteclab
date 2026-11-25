@@ -1,0 +1,78 @@
+---
+title: "Acesso ao cluster por SSH"
+description: "Acesse o nó de login no Linux, macOS e Windows e entenda como usar ProxyJump com um bastion."
+categories: [Cluster HPC]
+---
+
+O SSH (*Secure Shell*) abre um terminal remoto por uma conexão criptografada. No cluster, o destino é o **nó de login**. Use o endereço e o usuário fornecidos pela equipe de suporte. Nesta trilha usamos os nomes fictícios `login.hpc.example` e `bastion.hpc.example`.
+
+## Conexão direta
+
+No Linux, macOS e Windows com o cliente OpenSSH disponível, abra um terminal e execute:
+
+```bash
+ssh aluno@login.hpc.example
+```
+
+No Windows, você pode abrir o PowerShell e digitar `ssh -V` para conferir se o cliente está disponível. Se precisar instalá-lo, procure por **Cliente OpenSSH** nos **Recursos opcionais** do Windows. Outra opção é o PuTTY. Em **Session**, informe o host em **Host Name**, mantenha a porta 22 se essa for a porta informada pelo administrador, selecione **SSH** e clique em **Open**.
+
+Na primeira conexão, confira a impressão digital da chave do servidor com o valor fornecido pela equipe do cluster antes de confirmá-la. Em conexões via bastion, confira a chave de cada servidor quando solicitado. Depois, autentique-se com a conta e o método autorizados. Se o SSH informar que uma chave conhecida mudou, confirme a mudança com o suporte antes de prosseguir.
+
+## Acesso de fora da rede
+
+Alguns ambientes oferecem um **bastion**, servidor intermediário autorizado a encaminhar conexões até o nó de login. Se o cluster tiver um bastion, o OpenSSH pode usá-lo com a opção `-J`:
+
+```bash
+ssh -J aluno@bastion.hpc.example aluno@login.hpc.example
+```
+
+```{mermaid}
+%%| fig-cap: "O acesso externo passa pelo bastion. Na rede interna, o nó de login pode ser acessado diretamente."
+flowchart TB
+    fora["Computador fora da rede"] -->|SSH| bastion["Bastion"]
+    bastion -->|encaminha ao destino| login["Nó de login"]
+    dentro["Computador na rede interna"] -->|SSH direto| login
+```
+
+Para salvar essa configuração, adicione o bloco abaixo ao arquivo `~/.ssh/config`. No OpenSSH do Windows, o arquivo fica normalmente em `%USERPROFILE%\.ssh\config`.
+
+```sshconfig
+Host hpc
+    HostName login.hpc.example
+    User aluno
+    ProxyJump aluno@bastion.hpc.example
+```
+
+Na próxima conexão, execute `ssh hpc`. Os usuários do bastion e do cluster podem ser diferentes. Ajuste cada um de acordo com as credenciais recebidas. No PuTTY, você também pode conectar-se ao bastion e, se o ambiente permitir, executar um segundo `ssh` para o nó de login.
+
+Referências — [Manual do OpenSSH para ProxyJump](https://man.openbsd.org/ssh_config#ProxyJump) e [acesso via bastion no LaSCADo](https://cluster.ft.unicamp.br/dicas/03_tunnel_ssh_linux/03_tunnel_ssh_linux.html).
+
+## Pratique no terminal
+
+As respostas são conferidas no navegador em um cluster simulado. Use os botões de dica ou solução se precisar.
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-ssh.json" aria-labelledby="hpc-ssh-title">
+  <h3 class="exercise-title" id="hpc-ssh-title">Entre pelo bastion</h3>
+  <p class="exercise-prompt">Com OpenSSH, conecte-se como aluno a login.hpc.example passando por aluno@bastion.hpc.example. Use a opção de salto.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-ssh-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-ssh-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>ssh -J aluno@bastion.hpc.example aluno@login.hpc.example</code>.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
+Próxima aula — [Transferência de arquivos](3-transferencia.qmd).

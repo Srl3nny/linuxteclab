@@ -1,0 +1,97 @@
+---
+title: "Transferência de arquivos para o cluster"
+description: "Envie dados, copie diretórios e baixe resultados do cluster com scp, rsync ou WinSCP."
+categories: [Cluster HPC]
+---
+
+Execute os exemplos a seguir **no terminal do seu computador**, na pasta onde estão os arquivos. O alias `hpc` é definido na aula de [acesso por SSH](2-acesso-ssh.qmd) e também aplica o bastion às transferências.
+
+## Enviar e baixar com scp
+
+```bash
+# Envia o arquivo local ao diretório pessoal remoto
+scp dados.csv hpc:~/
+
+# Envia uma pasta inteira
+scp -r experimentos/ hpc:~/
+
+# Baixa um resultado para o diretório atual
+scp hpc:~/resultado.csv .
+```
+
+O primeiro argumento é a origem e o segundo é o destino. O caractere `:` separa o host remoto de seu caminho. Com acesso direto, você pode usar `aluno@login.hpc.example:~/` no lugar de `hpc:~/`.
+
+## Sincronizar diretórios com rsync
+
+Se o `rsync` estiver disponível nas duas máquinas, ele evita transferir de novo arquivos que a comparação já identifica como iguais. Crie antes a pasta `experimentos` no diretório pessoal remoto e execute:
+
+```bash
+rsync -avh experimentos/ hpc:~/experimentos/
+```
+
+A barra final em `experimentos/` indica que você está enviando o conteúdo da pasta. Você pode incluir `--dry-run` para conferir o que seria feito ou `-z` para comprimir durante a transferência, se isso ajudar em uma conexão mais lenta com dados compressíveis.
+
+## Windows com WinSCP
+
+No WinSCP, use **SFTP** se o nó de login oferecer esse protocolo. Para conexão direta, informe o endereço do nó de login e a porta SSH. Se o acesso externo passar por um bastion, você pode usar o túnel do WinSCP, em **Configurações avançadas → Conexão → Túnel**, preenchendo ali os dados do bastion. A sessão principal continua com os dados do nó de login.
+
+Se for necessário usar PuTTY e WinSCP juntos, abra no PuTTY uma sessão SSH para o bastion e vá até **Connection → SSH → Tunnels** antes de conectar. Adicione um túnel **Local**, com **Source port** `2222` e **Destination** `login.hpc.example:22`, e mantenha a sessão aberta. No WinSCP use `127.0.0.1`, porta `2222` e a conta do nó de login. Confira a impressão digital da chave do nó de login quando solicitada.
+
+O equivalente para encaminhar a porta com OpenSSH é:
+
+```bash
+ssh -N -L 127.0.0.1:2222:login.hpc.example:22 aluno@bastion.hpc.example
+```
+
+Com a sessão aberta, um segundo terminal pode usar `scp -P 2222 dados.csv aluno@127.0.0.1:~/`. Para as transferências desta trilha, basta o alias `hpc` quando o OpenSSH e o `ProxyJump` estiverem disponíveis.
+
+Referências — [Manual do scp](https://man.openbsd.org/scp) e [túneis no WinSCP](https://winscp.net/eng/docs/ui_login_tunnel).
+
+## Pratique no terminal
+
+As respostas são conferidas no navegador em um cluster simulado. Use os botões de dica ou solução se precisar.
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-scp.json" aria-labelledby="hpc-scp-title">
+  <h3 class="exercise-title" id="hpc-scp-title">Envie os dados</h3>
+  <p class="exercise-prompt">Copie dados.csv do diretório atual para o diretório pessoal remoto usando o alias hpc.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-scp-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-scp-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>scp dados.csv hpc:~/</code>.</noscript>
+</section>
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-baixar.json" aria-labelledby="hpc-baixar-title">
+  <h3 class="exercise-title" id="hpc-baixar-title">Baixe o resultado</h3>
+  <p class="exercise-prompt">Copie resultado.csv do diretório pessoal remoto do alias hpc para o diretório local atual.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-baixar-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-baixar-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>scp hpc:~/resultado.csv .</code>.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
+Próxima aula — [Primeiro job com Slurm](4-primeiro-job.qmd).

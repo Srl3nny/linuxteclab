@@ -18,11 +18,12 @@ main:has(.lab-hero) > header#title-block-header{display:none}
 .lab-bar{padding:.55rem .9rem;border-bottom:1px solid var(--lab-line);font-size:.8rem;color:var(--lab-mint)}
 .lab-bar span{color:#a6b7b5;margin-left:1rem}
 .lab-console pre{border:0;background:transparent;color:#e1ebe6;padding:1.4rem;margin:0;line-height:1.75}
-.lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.lab-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
 .lab-lanes{padding:1rem 0 1.5rem}
 .lab-card{padding:1.2rem}.lab-card p:last-child{margin-bottom:0}
 .lab-card a{font-weight:700}.lab-card:focus-within,.lab-card:hover{border-color:var(--lab-mint)}
 pre.sourceCode{border-left:3px solid #51866f}
 .youtube-box{border-left:2px solid var(--lab-mint);padding-left:1rem}
 a:focus-visible{outline:2px solid var(--lab-mint);outline-offset:3px}
+@media(max-width:980px){.lab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.lab-hero,.lab-grid{grid-template-columns:1fr}.lab-hero{gap:1.4rem}.lab-console pre{padding:1rem}}

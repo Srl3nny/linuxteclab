@@ -1,0 +1,164 @@
+---
+title: "Recursos, filas e jobs no Slurm"
+description: "Interprete filas e estados do Slurm, acompanhe o uso de recursos e rode código OpenMP em um nó."
+categories: [Cluster HPC]
+---
+
+O Slurm é um gerenciador de carga de trabalho para clusters Linux. Ele recebe jobs, organiza a fila, aloca recursos e inicia as tarefas pedidas. Uma **partição** agrupa nós com regras de acesso e limites. Um mesmo nó pode pertencer a mais de uma partição.
+
+## Veja o que pode usar
+
+```bash
+sinfo -s
+scontrol show partition
+scontrol show node
+```
+
+O `sinfo -s` resume as partições. Em `NODES(A/I/O/T)`, os quatro valores indicam nós alocados, ociosos, em outros estados e o total. O `scontrol` detalha limites das partições e características dos nós, como CPUs, memória, estado e recursos disponíveis.
+
+| Pedido no script | Recurso solicitado |
+|---|---|
+| `#SBATCH --time=00:10:00` | Até 10 minutos |
+| `#SBATCH --mem=4G` | 4 GiB de memória por nó |
+| `#SBATCH --ntasks=1` | Uma tarefa |
+| `#SBATCH --cpus-per-task=4` | Quatro CPUs para cada tarefa |
+| `#SBATCH --nodes=2` | Dois nós |
+| `#SBATCH --gres=gpu:1` | Uma GPU por nó, quando configurada como GRES |
+| `#SBATCH --partition=curta` | Partição de exemplo. Use o nome mostrado no seu cluster. |
+
+Esses pedidos são exemplos independentes. Solicite os recursos que seu programa usa. Reservar dois nós, por exemplo, exige um programa ou uma estratégia de execução capaz de distribuir trabalho entre eles. Para um programa OpenMP comum, use um nó, uma tarefa e mais de uma CPU por tarefa.
+
+## Entenda a fila
+
+```bash
+squeue -u "$USER"
+squeue -j 42
+scontrol show job 42
+```
+
+```text
+ JOBID PARTITION       NAME  USER ST  TIME NODES NODELIST(REASON)
+    42     curta simulacao aluno PD  0:00     1 (Resources)
+    41     curta      teste aluno  R  0:08     1 compute01
+```
+
+`PD` indica que o trabalho está pendente. A coluna final mostra o motivo, como `Resources` ou `Priority`. `R` indica que o trabalho está em execução e a coluna final mostra os nós. `CG` indica que o job está encerrando e `F` indica falha. Use `squeue -p curta` para filtrar por partição, `-A` para filtrar por conta e `-s` para listar *job steps*. Em uma alocação existente, um `srun` pode iniciar um desses steps. Fora de uma alocação, `srun` pode solicitar recursos e executar um comando em primeiro plano:
+
+```bash
+srun --nodes=1 --ntasks=1 --time=00:01:00 hostname
+```
+
+## Histórico e cancelamento
+
+Com *accounting* disponível, consulte o estado final, o tempo decorrido, as CPUs alocadas, o pico de memória e o código de saída:
+
+```bash
+sacct -j 42 --format=JobID,JobName,State,Elapsed,AllocCPUS,MaxRSS,ExitCode
+```
+
+`COMPLETED` e `0:0` indicam término normal do ponto de vista do Slurm. `TIMEOUT`, `FAILED` e `CANCELLED` apontam para outros desfechos. A memória pode aparecer nas linhas dos steps, como `42.batch`, dependendo da coleta do cluster. Consulte o log do seu programa para avaliar o resultado científico.
+
+Se você precisar retirar um job seu da fila ou interrompê-lo, confirme o ID e execute `scancel 42`, substituindo 42 pelo ID do seu job.
+
+## Prática avançada com OpenMP
+
+OpenMP permite dividir trabalho em threads dentro de um nó. Salve o programa abaixo como `hello_openmp.c`:
+
+```c
+#include <omp.h>
+#include <stdio.h>
+
+int main(void)
+{
+    #pragma omp parallel
+    {
+        printf("Thread %d de %d\n",
+               omp_get_thread_num(), omp_get_num_threads());
+    }
+    return 0;
+}
+```
+
+Com o GCC disponível, compile com `gcc -fopenmp hello_openmp.c -o hello_openmp`. No diretório do binário, salve este script como `openmp.sh` e envie com `sbatch openmp.sh`:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=openmp
+#SBATCH --output=openmp_%j.log
+#SBATCH --time=00:02:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=256M
+
+export OMP_NUM_THREADS="$SLURM_CPUS_PER_TASK"
+
+echo "Job: $SLURM_JOB_ID"
+echo "Nó: $(hostname)"
+echo "CPUs por tarefa: $SLURM_CPUS_PER_TASK"
+echo "Diretório de submissão: $SLURM_SUBMIT_DIR"
+
+srun ./hello_openmp
+```
+
+A ordem das linhas das threads pode variar. As variáveis abaixo ajudam a documentar a execução:
+
+| Variável | Significado |
+|---|---|
+| `SLURM_JOB_ID` | ID do job |
+| `SLURM_JOB_USER` | Usuário do job |
+| `SLURM_CPUS_PER_TASK` | CPUs solicitadas por tarefa quando a opção correspondente é informada |
+| `SLURM_NTASKS` | Número de tarefas quando definido pela solicitação |
+| `SLURMD_NODENAME` | Nome do nó onde o script está sendo executado, quando disponibilizado |
+| `SLURM_SUBMIT_DIR` | Diretório em que você chamou `sbatch` |
+
+Referências — [comandos do Slurm](https://slurm.schedmd.com/man_index.html) e [campos do sacct](https://slurm.schedmd.com/sacct.html).
+
+## Pratique no terminal
+
+As respostas são conferidas no navegador em um cluster simulado. Use os botões de dica ou solução se precisar.
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-squeue.json" aria-labelledby="hpc-squeue-title">
+  <h3 class="exercise-title" id="hpc-squeue-title">Consulte o job 42</h3>
+  <p class="exercise-prompt">Veja se o job 42 está na fila ou em execução. Solicite apenas esse job.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-squeue-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-squeue-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>squeue -j 42</code>.</noscript>
+</section>
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-sacct.json" aria-labelledby="hpc-sacct-title">
+  <h3 class="exercise-title" id="hpc-sacct-title">Descubra como terminou</h3>
+  <p class="exercise-prompt">O job 42 saiu da fila. Com accounting disponível, use sacct e limite a consulta ao ID 42.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-sacct-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-sacct-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>sacct -j 42</code>.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
+Próxima aula — [Environment Modules](6-modulos.qmd).

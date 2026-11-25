@@ -1,0 +1,21 @@
+{
+  "id": "cluster-hpc-configure-v1",
+  "title": "Escolha o destino da instalação",
+  "prompt": "Você está no código-fonte do GNU Hello. Configure a compilação para instalar em \"$HOME/.local/hello-2.12\".",
+  "answers": [
+    "./configure --prefix=\"$HOME/.local/hello-2.12\"",
+    "./configure --prefix=$HOME/.local/hello-2.12",
+    "./configure --prefix \"$HOME/.local/hello-2.12\"",
+    "./configure --prefix $HOME/.local/hello-2.12"
+  ],
+  "hints": [
+    "Use o script de configuração encontrado no diretório atual.",
+    "A opção --prefix indica o diretório de instalação."
+  ],
+  "feedback": {
+    "make": "Defina o prefixo na configuração. O make vem na etapa seguinte."
+  },
+  "success": "O prefixo indica onde make install vai colocar os arquivos.",
+  "command": "./configure",
+  "syntaxFeedback": "Use --prefix com o diretório do GNU Hello no seu HOME."
+}

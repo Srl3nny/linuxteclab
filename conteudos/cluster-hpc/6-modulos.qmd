@@ -1,0 +1,65 @@
+---
+title: "Environment Modules e versões de software"
+description: "Consulte, carregue e registre as versões de compiladores, bibliotecas e aplicações no cluster."
+categories: [Cluster HPC]
+---
+
+Clusters costumam oferecer várias versões de um mesmo compilador ou aplicativo. O comando `module` ajusta o ambiente do shell, incluindo variáveis como `PATH`, para disponibilizar a versão escolhida.
+
+## Trabalhe com módulos
+
+| Comando | O que faz |
+|---|---|
+| `module avail` | Mostra os módulos disponíveis no ambiente atual. |
+| `module load gcc/12` | Carrega a versão indicada, se ela estiver disponível. |
+| `module list` | Mostra os módulos já carregados. |
+| `module show gcc/12` | Mostra o que o módulo configura. |
+| `module whatis gcc/12` | Mostra a descrição curta fornecida pelo módulo. |
+| `module unload gcc/12` | Descarrega o módulo. |
+| `module switch gcc/11 gcc/12` | Troca a versão carregada de um módulo. |
+
+Os nomes da tabela são exemplos. Confira `module avail`, carregue o compilador oferecido no seu cluster e confirme a versão com `gcc --version`. Bibliotecas de MPI podem ter sido compiladas para um compilador específico. Siga as combinações apresentadas pela equipe do cluster.
+
+## Use o mesmo ambiente no job
+
+Após as diretivas `#SBATCH`, carregue explicitamente os módulos de que o programa precisa e registre as versões no log do job:
+
+```bash
+module load gcc/12 || exit 1
+module list
+gcc --version
+```
+
+Isso ajuda a repetir o experimento em outra sessão. Se o comando `module` estiver disponível no terminal mas faltar no script, consulte a documentação do cluster para saber como inicializar os módulos em um shell de lote.
+
+Referência — [Manual do comando module](https://modules.readthedocs.io/en/latest/module.html).
+
+## Pratique no terminal
+
+As respostas são conferidas no navegador em um cluster simulado. Use os botões de dica ou solução se precisar.
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-module.json" aria-labelledby="hpc-module-title">
+  <h3 class="exercise-title" id="hpc-module-title">Carregue o compilador</h3>
+  <p class="exercise-prompt">O cluster de prática oferece gcc/12. Carregue esse módulo no shell atual.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-module-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-module-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>module load gcc/12</code>.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
+Próxima aula — [Compilação no diretório pessoal](7-compilacao.qmd).
