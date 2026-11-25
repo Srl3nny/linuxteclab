@@ -1,0 +1,20 @@
+{
+  "id": "cluster-hpc-baixar-v1",
+  "title": "Baixe o resultado",
+  "prompt": "Copie resultado.csv do diretório pessoal remoto do alias hpc para o diretório local atual.",
+  "answers": [
+    "scp hpc:~/resultado.csv .",
+    "scp hpc:resultado.csv .",
+    "scp hpc:~/resultado.csv ./",
+    "scp hpc:resultado.csv ./"
+  ],
+  "hints": [
+    "Desta vez, a origem é remota.",
+    "Use hpc:~/resultado.csv como origem e . como destino."
+  ],
+  "feedback": {},
+  "success": "O resultado foi baixado na simulação.",
+  "command": "scp",
+  "syntaxFeedback": "Informe o arquivo remoto primeiro. O ponto representa o diretório atual.",
+  "directory": "resultado.csv   100%"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "cluster-hpc-sbatch-v1",
+  "title": "Submeta o primeiro job",
+  "prompt": "Você salvou primeiro-job.sh no diretório atual. Envie o script ao Slurm para execução em lote.",
+  "answers": [
+    "sbatch primeiro-job.sh",
+    "sbatch ./primeiro-job.sh"
+  ],
+  "hints": [
+    "Procure o comando de submissão em lote do Slurm.",
+    "Use sbatch seguido do nome do script."
+  ],
+  "feedback": {
+    "bash": "bash executaria o script no shell atual. Use a submissão de jobs do Slurm."
+  },
+  "success": "O job entrou no Slurm com o ID 42 nesta simulação.",
+  "command": "sbatch",
+  "syntaxFeedback": "Passe o nome primeiro-job.sh como argumento.",
+  "directory": "Submitted batch job 42"
+}

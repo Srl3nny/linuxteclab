@@ -1,0 +1,25 @@
+{
+  "id": "cluster-hpc-no-v1",
+  "title": "Onde o cálculo roda?",
+  "prompt": "Você já enviou a simulação pelo nó de login. Qual tipo de nó executa o cálculo?",
+  "answers": [
+    "nó de computação",
+    "no de computacao",
+    "nó de processamento",
+    "no de processamento",
+    "nó de cálculo",
+    "no de calculo",
+    "nó computacional",
+    "no computacional"
+  ],
+  "hints": [
+    "O nó de login recebe a submissão. O Slurm escolhe onde o cálculo vai rodar.",
+    "A tabela usa o nome nó de computação para esse servidor."
+  ],
+  "feedback": {
+    "login": "O nó de login é o ponto de entrada."
+  },
+  "success": "O Slurm aloca nós de computação para executar os trabalhos.",
+  "inputLabel": "Resposta:",
+  "caseInsensitive": true
+}

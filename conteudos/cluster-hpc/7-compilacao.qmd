@@ -1,0 +1,85 @@
+---
+title: "Compilação no diretório pessoal"
+description: "Compile GNU Hello e GNU nano a partir do código-fonte e instale versões no seu diretório pessoal."
+categories: [Cluster HPC]
+---
+
+Quando o software de que você precisa não está disponível nos módulos do cluster, uma opção é compilar o código-fonte e instalar o programa em um diretório no seu `$HOME`. Você escolhe a versão e, quando o projeto oferece opções, pode selecionar recursos como suporte a MPI, OpenMP e bibliotecas específicas. Compiladores como GCC, GFortran e os da Intel atendem a linguagens e cadeias de ferramentas diferentes.
+
+```{mermaid}
+%%| fig-cap: "Etapas típicas de um projeto GNU, da configuração à instalação em um diretório escolhido."
+flowchart TB
+    fonte["Código-fonte extraído"] --> configuracao["configure verifica dependências"]
+    configuracao --> build["make compila"]
+    build --> instalacao["make install grava em HOME"]
+    instalacao --> teste["Execute o binário instalado"]
+```
+
+## Compile o GNU Hello
+
+Você precisa de um compilador C, `make`, `tar` e uma forma de baixar o código-fonte, como `wget`. Para builds pesados, use o recurso de compilação ou a partição de computação descrita pela política local.
+
+```bash
+wget https://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz
+tar -xf hello-2.12.tar.gz
+cd hello-2.12
+./configure --help
+./configure --prefix="$HOME/.local/hello-2.12"
+make
+make install
+"$HOME/.local/hello-2.12/bin/hello"
+```
+
+Leia `README` e `INSTALL` nas fontes para confirmar as dependências e o procedimento. Esse exemplo usa o fluxo clássico de projetos GNU. Projetos que usam CMake, Meson ou outros sistemas de build têm etapas próprias.
+
+## Segunda prática com GNU nano
+
+Em um diretório de trabalho, repita a sequência com o GNU nano. O `configure` pode exigir dependências de desenvolvimento, como `ncurses`. Se faltar uma biblioteca, procure primeiro um módulo compatível ou consulte o suporte do cluster.
+
+```bash
+wget https://ftp.gnu.org/gnu/nano/nano-8.1.tar.xz
+tar -xf nano-8.1.tar.xz
+cd nano-8.1
+./configure --prefix="$HOME/.local/nano-8.1"
+make
+make install
+"$HOME/.local/nano-8.1/bin/nano" --version
+```
+
+Em uma alocação com quatro CPUs disponíveis para a compilação, `make -j4` permite compilar com até quatro processos simultâneos. Registre a versão do código-fonte, os módulos carregados, o compilador e os argumentos de configuração. Separar cada versão em seu próprio prefixo permite manter instalações distintas.
+
+## Instalação em Ubuntu ou Debian
+
+Em uma máquina Ubuntu ou Debian na qual você tem acesso administrativo, use o gerenciador de pacotes para instalar software disponível no sistema. Por exemplo, para consultar o pacote do `nano`, execute `apt search nano` e `apt show nano`. Para atualizar o índice e instalar, use `sudo apt update` e `sudo apt install nano`. `sudo apt remove nano` remove o pacote. `sudo apt purge nano` remove também os arquivos de configuração de sistema gerenciados pelo pacote. No cluster, siga os procedimentos de instalação definidos pela equipe. Veja também a [trilha de pacotes](../../temas.qmd#pacotes).
+
+Referências — [GNU Hello](https://www.gnu.org/software/hello/) e [código-fonte do GNU nano](https://ftp.gnu.org/gnu/nano/).
+
+## Pratique no terminal
+
+As respostas são conferidas no navegador em um cluster simulado. Use os botões de dica ou solução se precisar.
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-configure.json" aria-labelledby="hpc-configure-title">
+  <h3 class="exercise-title" id="hpc-configure-title">Escolha o destino da instalação</h3>
+  <p class="exercise-prompt">Você está no código-fonte do GNU Hello. Configure a compilação para instalar em &quot;$HOME/.local/hello-2.12&quot;.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-configure-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-configure-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>./configure --prefix=&quot;$HOME/.local/hello-2.12&quot;</code>.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
+Próxima aula — [Contêineres com Apptainer](8-apptainer.qmd).

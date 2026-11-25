@@ -1,0 +1,19 @@
+{
+  "id": "cluster-hpc-module-v1",
+  "title": "Carregue o compilador",
+  "prompt": "O cluster de prática oferece gcc/12. Carregue esse módulo no shell atual.",
+  "answers": [
+    "module load gcc/12",
+    "module add gcc/12"
+  ],
+  "hints": [
+    "Use o subcomando que carrega um módulo.",
+    "Informe o nome completo gcc/12."
+  ],
+  "feedback": {
+    "gcc": "O comando gcc usa o compilador já presente no ambiente. Primeiro carregue o módulo."
+  },
+  "success": "O módulo disponibiliza o GCC 12 no ambiente atual.",
+  "command": "module",
+  "syntaxFeedback": "Use o subcomando de carregamento seguido de gcc/12."
+}

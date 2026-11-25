@@ -15,6 +15,7 @@ Escolha um assunto para consultar suas aulas.
 - [Compartilhamento](#compartilhamento)
 - [Configuração de rede](#configurar-rede)
 - [Dispositivos](#devices)
+- [Cluster HPC](#cluster-hpc)
 
 ## Linha de comando {#linha-de-comando}
 
@@ -124,3 +125,14 @@ Escolha um assunto para consultar suas aulas.
 
 - [Diretorio-Dev](conteudos/devices/1-diretorio-dev.html)
 - [Tipos-De-Device](conteudos/devices/2-tipos-de-device.html)
+
+## Cluster HPC {#cluster-hpc}
+
+- [Cluster HPC: arquitetura e primeiros passos](conteudos/cluster-hpc/1-arquitetura.html)
+- [Acesso ao cluster por SSH](conteudos/cluster-hpc/2-acesso-ssh.html)
+- [Transferência de arquivos para o cluster](conteudos/cluster-hpc/3-transferencia.html)
+- [Primeiro job com Slurm](conteudos/cluster-hpc/4-primeiro-job.html)
+- [Recursos, filas e jobs no Slurm](conteudos/cluster-hpc/5-slurm.html)
+- [Environment Modules e versões de software](conteudos/cluster-hpc/6-modulos.html)
+- [Compilação no diretório pessoal](conteudos/cluster-hpc/7-compilacao.html)
+- [Contêineres com Apptainer](conteudos/cluster-hpc/8-apptainer.html)

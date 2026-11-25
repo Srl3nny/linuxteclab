@@ -24,6 +24,8 @@ website:
       text: Início
     - href: temas.qmd
       text: Trilhas
+    - href: conteudos/cluster-hpc/1-arquitetura.qmd
+      text: Cluster HPC
     - href: livros.qmd
       text: Livros
     - href: about.qmd
@@ -213,6 +215,24 @@ website:
       - href: conteudos/devices/2-tipos-de-device.md
         text: Tipos-De-Device
       section: Dispositivos
+    - contents:
+      - href: conteudos/cluster-hpc/1-arquitetura.qmd
+        text: 'Cluster HPC: arquitetura e primeiros passos'
+      - href: conteudos/cluster-hpc/2-acesso-ssh.qmd
+        text: Acesso ao cluster por SSH
+      - href: conteudos/cluster-hpc/3-transferencia.qmd
+        text: Transferência de arquivos para o cluster
+      - href: conteudos/cluster-hpc/4-primeiro-job.qmd
+        text: Primeiro job com Slurm
+      - href: conteudos/cluster-hpc/5-slurm.qmd
+        text: Recursos, filas e jobs no Slurm
+      - href: conteudos/cluster-hpc/6-modulos.qmd
+        text: Environment Modules e versões de software
+      - href: conteudos/cluster-hpc/7-compilacao.qmd
+        text: Compilação no diretório pessoal
+      - href: conteudos/cluster-hpc/8-apptainer.qmd
+        text: Contêineres com Apptainer
+      section: Cluster HPC
     search: true
     style: docked
   site-url: https://linuxteclab.com.br

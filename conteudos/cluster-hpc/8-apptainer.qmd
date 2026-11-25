@@ -1,0 +1,76 @@
+---
+title: "Contêineres com Apptainer"
+description: "Use uma imagem SIF para executar comandos, abrir um shell e submeter um job conteinerizado no Slurm."
+categories: [Cluster HPC]
+---
+
+O Apptainer empacota um ambiente de software em uma imagem que pode ser compartilhada e reutilizada. O formato **SIF** (*Singularity Image Format*) permite transportar a imagem como um arquivo. Registre a versão, ou o digest de origem, para ajudar a reproduzir o ambiente. Para executar a imagem em outro cluster, confira a arquitetura, o suporte oferecido pelo host e, se for o caso, as exigências de GPU, MPI e acesso aos dados.
+
+## Prepare e use a imagem
+
+Se o Apptainer estiver disponível e o ambiente permitir downloads externos, use uma imagem de exemplo da biblioteca oficial Alpine no Docker Hub:
+
+```bash
+apptainer pull alpine.sif docker://alpine:3.21
+apptainer exec alpine.sif cat /etc/os-release
+```
+
+Caso os nós não tenham acesso ao registro, prepare a imagem em um ambiente autorizado e [transfira o arquivo](3-transferencia.qmd) para um diretório acessível pelos nós de execução.
+
+| Comando | Para que serve |
+|---|---|
+| `apptainer exec alpine.sif cat /etc/os-release` | Executa o comando informado dentro da imagem. |
+| `apptainer shell alpine.sif` | Abre um shell interativo na imagem. Digite `exit` para sair. |
+| `apptainer run imagem.sif` | Inicia a ação padrão definida na imagem, se houver. |
+
+Se o ambiente usar Singularity em vez de Apptainer, confira qual comando e versão estão instalados. Alguns clusters disponibilizam o runtime como [módulo de ambiente](6-modulos.qmd).
+
+## Execute via Slurm
+
+Na pasta da imagem, salve o exemplo como `container.sh` e use `sbatch container.sh`. Se necessário, acrescente, antes de `srun`, o comando de carregamento do módulo indicado no seu cluster.
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=alpine
+#SBATCH --output=alpine_%j.log
+#SBATCH --time=00:02:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --mem=256M
+
+srun apptainer exec alpine.sif cat /etc/os-release
+```
+
+Em um projeto real, verifique quais diretórios o cluster disponibiliza para a imagem. Se precisar acessar um diretório adicional, o Apptainer aceita `--bind /caminho/no/host:/dados` antes do nome da imagem. A imagem empacota o software. Seus dados, resultados e permissões continuam sujeitos aos diretórios acessíveis no ambiente em que o job roda.
+
+Referências — [Guia rápido do Apptainer](https://apptainer.org/docs/user/latest/quick_start.html) e [montagem de diretórios](https://apptainer.org/docs/user/latest/bind_paths_and_mounts.html).
+
+## Pratique no terminal
+
+As respostas são conferidas no navegador em um cluster simulado. Use os botões de dica ou solução se precisar.
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/cluster-hpc-apptainer.json" aria-labelledby="hpc-apptainer-title">
+  <h3 class="exercise-title" id="hpc-apptainer-title">Leia a versão do sistema na imagem</h3>
+  <p class="exercise-prompt">Você já tem alpine.sif. Use Apptainer para rodar cat /etc/os-release dentro da imagem, em um único comando.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="hpc-apptainer-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="hpc-apptainer-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite o comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Resposta: <code>apptainer exec alpine.sif cat /etc/os-release</code>.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
+[Voltar ao índice da trilha](1-arquitetura.qmd).
