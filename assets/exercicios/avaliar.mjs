@@ -9,8 +9,8 @@ export function avaliar(raw, exercise) {
     return { kind: "unsupported", message: "Este exercício aceita um comando simples por tentativa, sem pipes ou redirecionamentos." };
   }
   const [name] = command.split(" ");
-  if (name === "pwd") {
-    return { kind: "syntax", message: "Você encontrou o comando. Tente pwd sem argumentos. As opções -L e -P também são aceitas." };
+  if (name === (exercise.command || "pwd")) {
+    return { kind: "syntax", message: exercise.syntaxFeedback || "Você encontrou o comando. Tente pwd sem argumentos. As opções -L e -P também são aceitas." };
   }
   if (Object.hasOwn(exercise.feedback, name)) {
     return { kind: "wrong", message: exercise.feedback[name] };

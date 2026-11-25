@@ -64,7 +64,7 @@ async function iniciar(container) {
     input.disabled = false;
     buttons.forEach((button) => { button.disabled = false; });
   } catch {
-    status.textContent = "Não foi possível carregar o exercício. Recarregue a página para tentar novamente. O exemplo de pwd acima continua disponível.";
+    status.textContent = "Não foi possível carregar o exercício. Recarregue a página para tentar novamente. O conteúdo da aula continua disponível.";
   }
 }
 document.querySelectorAll("[data-exercise]").forEach(iniciar);
