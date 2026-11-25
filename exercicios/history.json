@@ -1,0 +1,20 @@
+{
+  "id": "history-v1",
+  "command": "history",
+  "title": "Missão 08 · Consulte seus comandos",
+  "prompt": "Digite o comando que mostra o histórico de comandos do Bash.",
+  "directory": "",
+  "answers": [
+    "history"
+  ],
+  "hints": [
+    "O comando em inglês é history.",
+    "Uma resposta possível é history."
+  ],
+  "feedback": {
+    "clear": "clear limpa a tela. Queremos consultar os comandos anteriores.",
+    "ls": "ls lista arquivos. Queremos consultar o histórico do shell."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. O comando em inglês é history.",
+  "success": "Correto! history consulta o histórico de comandos do Bash."
+}

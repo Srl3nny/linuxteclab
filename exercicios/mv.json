@@ -1,0 +1,21 @@
+{
+  "id": "mv-v1",
+  "command": "mv",
+  "title": "Missão 10 · Renomeie um arquivo",
+  "prompt": "Digite um comando mv para renomear rascunho.txt para artigo.txt na pasta atual.",
+  "directory": "",
+  "answers": [
+    "mv rascunho.txt artigo.txt",
+    "mv ./rascunho.txt ./artigo.txt",
+    "mv -i rascunho.txt artigo.txt"
+  ],
+  "hints": [
+    "Use mv nome-atual novo-nome.",
+    "Uma resposta possível é mv rascunho.txt artigo.txt."
+  ],
+  "feedback": {
+    "cp": "cp cria uma cópia e mantém o nome original. Aqui queremos renomear."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use mv nome-atual novo-nome.",
+  "success": "Correto! mv renomeia rascunho.txt para artigo.txt."
+}

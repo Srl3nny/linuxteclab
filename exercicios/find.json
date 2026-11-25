@@ -1,0 +1,25 @@
+{
+  "id": "find-v1",
+  "command": "find",
+  "title": "Missão 14 · Localize um arquivo pelo nome",
+  "prompt": "Digite um comando find para procurar recursivamente, a partir da pasta atual, arquivos comuns com o nome exato notas.txt.",
+  "directory": "",
+  "answers": [
+    "find . -type f -name notas.txt",
+    "find . -name notas.txt -type f",
+    "find . -type f -name \"notas.txt\"",
+    "find . -type f -name 'notas.txt'",
+    "find . -name \"notas.txt\" -type f",
+    "find . -name 'notas.txt' -type f"
+  ],
+  "hints": [
+    "Use . como início da busca, -type f para arquivos comuns e -name para o nome.",
+    "Uma resposta possível é find . -type f -name notas.txt."
+  ],
+  "feedback": {
+    "ls": "ls lista o conteúdo. A tarefa pede uma busca recursiva filtrada com find.",
+    "grep": "grep procura padrões no conteúdo. Aqui queremos localizar pelo nome."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use . como início da busca, -type f para arquivos comuns e -name para o nome.",
+  "success": "Correto! find percorre a pasta atual e subpastas; -type f seleciona arquivos comuns e -name testa o nome."
+}

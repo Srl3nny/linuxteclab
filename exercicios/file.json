@@ -1,0 +1,20 @@
+{
+  "id": "file-v1",
+  "command": "file",
+  "title": "Missão 05 · Descubra o tipo de arquivo",
+  "prompt": "Digite um comando file para identificar o tipo de arquivo de foto.jpg pelo conteúdo.",
+  "directory": "",
+  "answers": [
+    "file foto.jpg",
+    "file ./foto.jpg"
+  ],
+  "hints": [
+    "Use file seguido do nome do arquivo.",
+    "Uma resposta possível é file foto.jpg."
+  ],
+  "feedback": {
+    "ls": "ls lista nomes e metadados. Para identificar o tipo pelo conteúdo, use file."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use file seguido do nome do arquivo.",
+  "success": "Correto! file examina o conteúdo para identificar o tipo do arquivo."
+}
