@@ -1,0 +1,20 @@
+{
+  "id": "touch-v1",
+  "command": "touch",
+  "title": "Missão 04 · Crie seu primeiro arquivo",
+  "prompt": "O arquivo notas.txt ainda não existe. Digite um comando touch para criá-lo vazio.",
+  "directory": "",
+  "answers": [
+    "touch notas.txt",
+    "touch ./notas.txt"
+  ],
+  "hints": [
+    "Use touch seguido do nome do arquivo.",
+    "Uma resposta possível é touch notas.txt."
+  ],
+  "feedback": {
+    "mkdir": "mkdir cria pastas. Precisamos criar um arquivo vazio."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use touch seguido do nome do arquivo.",
+  "success": "Correto! touch cria o arquivo vazio quando ele ainda não existe."
+}

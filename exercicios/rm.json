@@ -1,0 +1,22 @@
+{
+  "id": "rm-v1",
+  "command": "rm",
+  "title": "Missão 12 · Remova com confirmação",
+  "prompt": "No cenário fictício, temporario.txt pode ser apagado. Digite um comando rm que peça confirmação antes de removê-lo.",
+  "directory": "",
+  "answers": [
+    "rm -i temporario.txt",
+    "rm -i ./temporario.txt",
+    "rm --interactive=always temporario.txt"
+  ],
+  "hints": [
+    "Use a opção -i para pedir confirmação.",
+    "Uma resposta possível é rm -i temporario.txt."
+  ],
+  "feedback": {
+    "rmdir": "rmdir remove diretórios vazios. temporario.txt é um arquivo.",
+    "unlink": "A tarefa pede o comando rm com confirmação antes da remoção."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use a opção -i para pedir confirmação.",
+  "success": "Correto! rm -i pede confirmação. Na simulação, nenhum arquivo é removido."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "cp-v1",
+  "command": "cp",
+  "title": "Missão 09 · Copie sem mover",
+  "prompt": "O arquivo notas.txt existe na pasta atual. Digite um comando cp para criar uma cópia chamada notas-backup.txt na mesma pasta.",
+  "directory": "",
+  "answers": [
+    "cp notas.txt notas-backup.txt",
+    "cp ./notas.txt ./notas-backup.txt",
+    "cp -i notas.txt notas-backup.txt"
+  ],
+  "hints": [
+    "Use cp origem destino.",
+    "Uma resposta possível é cp notas.txt notas-backup.txt."
+  ],
+  "feedback": {
+    "mv": "mv move ou renomeia o original. Precisamos manter o arquivo original.",
+    "cat": "cat exibe conteúdo. A tarefa pede criar uma cópia com cp."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use cp origem destino.",
+  "success": "Correto! cp cria uma cópia e mantém notas.txt no lugar."
+}

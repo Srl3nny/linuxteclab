@@ -20,6 +20,33 @@ Existem muitas outras maneiras de criar arquivos que envolvem outras coisas como
 
 ---
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/touch.json" aria-labelledby="touch-exercise-title">
+  <h3 class="exercise-title" id="touch-exercise-title">Missão 04 · Crie seu primeiro arquivo</h3>
+  <p class="exercise-prompt">O arquivo notas.txt ainda não existe. Digite um comando touch para criá-lo vazio.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="touch-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="touch-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é touch notas.txt.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 ## 📺 Vídeo relacionado
 
 {{< video-youtube >}}

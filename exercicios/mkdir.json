@@ -1,0 +1,22 @@
+{
+  "id": "mkdir-v1",
+  "command": "mkdir",
+  "title": "Missão 11 · Crie uma árvore de pastas",
+  "prompt": "A pasta projetos ainda não existe. Digite um único comando mkdir para criar projetos/linux/exercicios, incluindo as pastas intermediárias.",
+  "directory": "",
+  "answers": [
+    "mkdir -p projetos/linux/exercicios",
+    "mkdir -p ./projetos/linux/exercicios",
+    "mkdir --parents projetos/linux/exercicios"
+  ],
+  "hints": [
+    "A opção -p cria também as pastas intermediárias.",
+    "Uma resposta possível é mkdir -p projetos/linux/exercicios."
+  ],
+  "feedback": {
+    "touch": "touch cria arquivos vazios. Precisamos criar diretórios.",
+    "cd": "cd entra em pastas existentes. Precisamos criá-las."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. A opção -p cria também as pastas intermediárias.",
+  "success": "Correto! mkdir -p cria as pastas intermediárias necessárias."
+}

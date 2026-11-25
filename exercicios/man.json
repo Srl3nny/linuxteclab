@@ -1,0 +1,21 @@
+{
+  "id": "man-v1",
+  "command": "man",
+  "title": "Missão 13 · Consulte o manual",
+  "prompt": "Digite um comando man para abrir a página de manual de ls.",
+  "directory": "",
+  "answers": [
+    "man ls",
+    "man 1 ls"
+  ],
+  "hints": [
+    "Use man seguido do comando que deseja consultar.",
+    "Uma resposta possível é man ls."
+  ],
+  "feedback": {
+    "ls": "ls executa a listagem. Para abrir seu manual, use man ls.",
+    "help": "help consulta ajuda de comandos internos do shell. Aqui queremos o manual de ls."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use man seguido do comando que deseja consultar.",
+  "success": "Correto! man ls abre o manual de ls; man 1 ls explicita a seção de comandos do usuário."
+}

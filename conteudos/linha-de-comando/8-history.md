@@ -31,4 +31,31 @@ Enquanto falamos sobre coisas úteis, um dos recursos mais úteis em qualquer am
 
 Experimente usar o ***TAB,*** isso facilita e vida.
 
+## Pratique no terminal
+
+```{=html}
+<link rel="stylesheet" href="../../assets/exercicios/terminal.css">
+<section class="exercise-terminal" data-exercise="../../exercicios/history.json" aria-labelledby="history-exercise-title">
+  <h3 class="exercise-title" id="history-exercise-title">Missão 08 · Consulte seus comandos</h3>
+  <p class="exercise-prompt">Digite o comando que mostra o histórico de comandos do Bash.</p>
+  <p class="exercise-note">Simulação de uma resposta. Os comandos não são executados no seu computador. O gabarito é público e o progresso fica salvo apenas neste navegador.</p>
+  <div class="exercise-history" role="log" aria-label="Histórico de tentativas" aria-live="off"></div>
+  <form>
+    <label for="history-exercise-input">aluno@linuxteclab:~$</label>
+    <div class="exercise-input-row">
+      <input id="history-exercise-input" type="text" maxlength="200" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite seu comando" disabled>
+      <button type="submit" disabled>Conferir</button>
+    </div>
+  </form>
+  <p class="exercise-status" role="status" aria-live="polite" aria-atomic="true">Carregando exercício…</p>
+  <div class="exercise-actions">
+    <button type="button" data-action="hint" disabled>Pedir dica</button>
+    <button type="button" data-action="answer" disabled>Mostrar solução</button>
+    <button type="button" data-action="reset" disabled>Reiniciar</button>
+  </div>
+  <noscript>Ative o JavaScript para praticar. Uma resposta possível é history.</noscript>
+</section>
+<script type="module" src="../../assets/exercicios/terminal.mjs"></script>
+```
+
 [Mais tutoriais de Linha de comando](../../temas.qmd#linha-de-comando)

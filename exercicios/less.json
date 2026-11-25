@@ -1,0 +1,20 @@
+{
+  "id": "less-v1",
+  "command": "less",
+  "title": "Missão 07 · Leia um texto longo",
+  "prompt": "Digite um comando less para abrir manual.txt e percorrer suas páginas.",
+  "directory": "",
+  "answers": [
+    "less manual.txt",
+    "less ./manual.txt"
+  ],
+  "hints": [
+    "Use less seguido do nome do arquivo.",
+    "Uma resposta possível é less manual.txt."
+  ],
+  "feedback": {
+    "cat": "cat exibe o texto de uma vez. A tarefa pede navegação por páginas com less."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use less seguido do nome do arquivo.",
+  "success": "Correto! No less real, use as setas para navegar e q para sair."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "cat-v1",
+  "command": "cat",
+  "title": "Missão 06 · Leia um arquivo curto",
+  "prompt": "Digite um comando cat para exibir o conteúdo do arquivo notas.txt.",
+  "directory": "",
+  "answers": [
+    "cat notas.txt",
+    "cat ./notas.txt"
+  ],
+  "hints": [
+    "Use cat seguido do nome do arquivo.",
+    "Uma resposta possível é cat notas.txt."
+  ],
+  "feedback": {
+    "ls": "ls lista arquivos, mas não mostra seu conteúdo.",
+    "file": "file identifica o tipo, mas não exibe o texto do arquivo."
+  },
+  "syntaxFeedback": "Confira os nomes e as opções pedidos no enunciado. Use cat seguido do nome do arquivo.",
+  "success": "Correto! cat exibe o conteúdo de notas.txt na saída padrão."
+}
